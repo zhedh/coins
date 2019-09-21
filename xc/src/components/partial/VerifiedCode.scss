@@ -1,0 +1,68 @@
+@import '../../styles/mixin';
+
+.verified-code {
+  display: none;
+  box-sizing: border-box;
+
+  &.show {
+    display: block;
+  }
+
+  .main-content {
+    margin-bottom: 3rem;
+    padding: 0 20px;
+
+    label {
+      position: relative;
+      width: 100%;
+      display: inline-block;
+      margin-top: 3rem;
+
+      .input-main {
+        width: 100%;
+        outline: none;
+        padding: 10px 0;
+        font-size: 1.3rem;
+        @include clearButton;
+        border-bottom: 1px solid $black-border-bottom;
+
+        &:focus {
+          border-bottom: 2px solid $primary-color;
+        }
+
+        &::placeholder {
+          color: $black-font-primary;
+          font-weight: 500;
+        }
+      }
+
+      .sms-code {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(50%);
+        pointer-events: all;
+
+        &.event-none {
+          pointer-events: none;
+        }
+        span {
+          font-weight: 500;
+          color: $primary-color;
+        }
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-assistant + 0.1;
+      margin-top: 2.5rem;
+
+      a {
+        color: $black-font-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}

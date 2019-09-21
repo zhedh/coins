@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="36px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>联系人</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="31个人中心-已登录" transform="translate(-48.000000, -648.000000)">
+            <g id="联系人" transform="translate(48.000000, 648.000000)">
+                <g id="Group-4">
+                    <rect id="Rectangle-32-Copy" stroke="#25292E" stroke-width="2.4" x="1.2" y="1.2" width="40.6" height="33.6"></rect>
+                    <rect id="Rectangle-2-Copy-3" fill="#25292E" x="27" y="9" width="10" height="2.4000001"></rect>
+                    <rect id="Rectangle-2-Copy-4" fill="#25292E" x="27" y="17" width="10" height="2.4000001"></rect>
+                    <rect id="Rectangle-2-Copy-5" fill="#25292E" x="27" y="25" width="10" height="2.4000001"></rect>
+                </g>
+                <circle id="Oval-5" stroke="#25292E" stroke-width="2.4" cx="13.5" cy="12.5" r="4.5"></circle>
+                <path d="M21.1494043,25.5504611 C21.1494043,21.3804566 17.7580946,18 13.5747021,18 C9.39130967,18 6,21.3804566 6,25.5504611 C6,29.7204656 21.1494043,29.7204656 21.1494043,25.5504611 Z" id="Oval-2" stroke="#25292E" stroke-width="2.4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,53 @@
+@import "../../styles/mixin";
+
+#dialog-component {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+
+  .content {
+    width: 27rem;
+    background: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+
+    h1 {
+      @include clearBack;
+      padding: 18px 0 11px;
+      font-size: $font-title-s;
+    }
+
+    p {
+      @include clearBack;
+      font-size: $font-context;
+      padding-bottom: 18px;
+    }
+
+    aside {
+      border-top: 1px solid $background-color;
+
+      button {
+        @include clearButton;
+        box-sizing: border-box;
+        width: 50%;
+        height: 44px;
+        box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 1);
+        font-size: $font-title-s;
+        color: $primary-color;
+
+        &:first-child{
+          border-right: 1px solid $background-color;
+        }
+      }
+    }
+  }
+}

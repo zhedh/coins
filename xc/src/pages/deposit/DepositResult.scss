@@ -1,0 +1,38 @@
+@import '../../styles/_common';
+
+#verified-result {
+  text-align: center;
+
+  .result-img {
+    width: 80%;
+    height: auto;
+    max-width: 55rem;
+    margin-top: 10%;
+  }
+
+  .result-content {
+    padding:30px 20px 30px;
+
+    h2 {
+      color: #36C2CF;
+      font-size: 2.3rem;
+    }
+
+    p {
+      color: $text-sub-color;
+      font-size: $font-assistant;
+      line-height: 1.5;
+    }
+
+    .primary-button{
+      box-sizing: border-box;
+      margin-top: 15px;
+
+      &.hollow{
+        border: 1px solid $primary-color;
+        background: transparent;
+        color: $primary-color;
+      }
+    }
+  }
+}

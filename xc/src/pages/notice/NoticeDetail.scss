@@ -1,0 +1,15 @@
+@import '../../styles/_common';
+
+.notice-detail {
+  box-sizing: border-box;
+  padding-top: $header-height;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  .htmlContent {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

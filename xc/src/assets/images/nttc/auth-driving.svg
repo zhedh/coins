@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="34px" viewBox="0 0 53 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>2填写消息1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2填写消息1" transform="translate(-512.000000, -639.000000)">
+            <rect fill="none" x="0" y="0" width="750" height="1334"></rect>
+            <rect id="矩形" stroke="#161A3A" stroke-width="1.5" fill-rule="nonzero" x="512.75" y="639.75" width="51.5" height="32.5" rx="4"></rect>
+            <rect id="矩形" stroke="#CCCCCC" fill-rule="nonzero" x="477.5" y="610.5" width="124" height="111"></rect>
+            <g id="itmis_sub_system-(1)" transform="translate(526.000000, 644.000000)">
+                <polygon id="路径" stroke="#161A3A" fill="#E0E0E0" points="1 1 25 1 25 19 1 19"></polygon>
+                <path d="M17.5633188,7 L8.43668122,7 C8.17467249,7 8,7.30075188 8,7.75187969 C8,8.2030075 8.17467249,8.50375938 8.43668122,8.50375941 L17.5633188,8.50375941 C17.8253275,8.50375941 18,8.20300753 18,7.75187969 C18,7.30075185 17.7816594,7 17.5633188,7 L17.5633188,7 Z" id="路径" fill="#161A3A"></path>
+                <path d="M18,12.037594 C18,11.5864662 17.8253275,11.2857143 17.5633188,11.2857143 L8.43668122,11.2857143 C8.17467249,11.2857143 8,11.5864661 8,12.037594 C8,12.4887218 8.17467249,12.7894737 8.43668122,12.7894737 L17.5633188,12.7894737 C17.7816594,12.7894737 18,12.4135338 18,12.037594 L18,12.037594 Z" id="路径" fill="#161A3A"></path>
+                <path d="M25,20 L1,20 C0.44771525,20 0,19.5522847 0,19 L0,1 C0,0.44771525 0.44771525,0 1,0 L25,0 C25.5522847,0 26,0.44771525 26,1 L26,19 C26,19.5522847 25.5522847,20 25,20 Z M2,18 L24,18 L24,2 L2,2 L2,18 Z" id="形状" fill="#161A3A" fill-rule="nonzero"></path>
+                <path d="M23,24 L3,24 C2.44771525,24 2,23.5522847 2,23 C2,22.4477153 2.44771525,22 3,22 L23,22 C23.5522847,22 24,22.4477153 24,23 C24,23.5522847 23.5522847,24 23,24 Z" id="路径" fill="#161A3A"></path>
+            </g>
+        </g>
+    </g>
+</svg>
