@@ -1,0 +1,57 @@
+@import "../../styles/mixin";
+
+#deposit-history {
+  @include clearFix;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  background: rgba(247, 247, 248, 1);
+
+  header {
+    background: $white;
+  }
+
+  ul {
+    @include clearList;
+
+    li {
+      margin-top: 15px;
+      padding-bottom: 12px;
+      background: $white;
+
+      aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 40px;
+        padding: 0 16px;
+        border-bottom: 1px solid $background-color;
+
+        span {
+          color: $text-sub-color;
+        }
+
+        small {
+          font-size: $font-context;
+          color: #36C2CF;
+        }
+      }
+
+      p {
+        @include clearBack;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px 0;
+        line-height: 1.6;
+
+        label {
+          color: $text-sub-color;
+        }
+      }
+    }
+  }
+}

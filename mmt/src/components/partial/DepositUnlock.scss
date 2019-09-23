@@ -1,0 +1,171 @@
+@import '../../styles/_common';
+
+.deposit-unlock {
+  display: none;
+  text-align: center;
+
+  &.show {
+    display: block;
+  }
+
+  section {
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    &.content-detail {
+      line-height: 1.5;
+
+      h1 {
+        margin-bottom: -1px;
+      }
+
+      a {
+        color: #2564c1;
+        text-decoration: underline;
+        font-size: $font-assistant + 0.1;
+      }
+
+      span {
+        color: $text-sub-color;
+        font-size: $font-assistant + 0.1;
+      }
+    }
+
+    &.content-charge {
+      margin-top: 35px;
+
+      p {
+        text-align: left;
+        color: #db3f3e;
+        font-weight: 500;
+        font-size: $font-context + 0.1;
+      }
+
+      label {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        font-size: $font-assistant + 0.1;
+        margin-top: 13px;
+
+        input {
+          @include clearInput;
+          width: 100%;
+          padding: 10px 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        span {
+          display: inline-block;
+
+          &.all {
+            position: absolute;
+            right: 0;
+            top: 40%;
+            width: 10%;
+          }
+        }
+
+        small {
+          color: $text-sub-color;
+          font-size: $font-assistant;
+        }
+      }
+
+      h3 {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .primary-button {
+    margin: 50px 20px 20px;
+  }
+
+  .confirm-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+
+    &.show {
+      display: block;
+    }
+
+    .content-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: $white;
+      padding-bottom: 40px;
+
+      .content {
+        box-sizing: border-box;
+        padding: 15px 20px 30px;
+
+        p {
+          @include clearBack;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          font-size: $font-assistant;
+          font-weight: 600;
+
+          &.deposit-price {
+            padding: 6px 0;
+            font-size: $font-title-s;
+          }
+
+          &.service-charge {
+            padding: 5px 0;
+            color: $text-sub-color;
+          }
+        }
+
+        .input-box {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          margin-top: 3rem;
+
+          input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1.3rem;
+            @include clearButton;
+            border-bottom: 1px solid $black-border-bottom;
+
+            &:focus {
+              border-bottom: 2px solid $primary-color;
+            }
+
+            &::placeholder {
+              color: $black-font-primary;
+              font-weight: 500;
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 2.2rem;
+            height: 1.3rem;
+          }
+        }
+      }
+
+      .primary-button {
+        margin: 0 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../styles/mixin";
+
+#bargain-record {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  background: rgba(247, 247, 247, 1);
+
+  header {
+    background: $white;
+  }
+
+  ul {
+    @include clearList;
+
+    li {
+      margin-top: 15px;
+      background: $white;
+
+      time {
+        height: 3.6rem;
+        padding: 0 15px;
+        line-height: 3.6rem;
+        font-size: $font-assistant;
+        color: $text-sub-color;
+      }
+
+      p {
+        @include clearBack;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 4.5rem;
+        padding: 0 15px;
+        border-top: 1px solid $background-color;
+      }
+    }
+  }
+}

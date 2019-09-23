@@ -1,0 +1,194 @@
+@import '../../styles/_common';
+
+.deposit-buy {
+  display: none;
+  height: 90%;
+
+  &.show {
+    display: block;
+  }
+
+  .gears {
+    @include clearList;
+    margin-top: 60px;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    li {
+      box-sizing: border-box;
+      width: 33.33%;
+      padding: 0 9px 20px;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        height: 7.4rem;
+        border: 2px solid $text-sub-color;
+        border-radius: 5px;
+        color: $text-sub-color;
+
+        .price {
+          font-size: $font-title;
+        }
+
+        small {
+          margin-top: 6px;
+          font-size: $font-assistant;
+        }
+      }
+
+      &.active {
+        color: $black;
+        border-color: $primary-color;
+
+        .box {
+          border-color: $primary-color;
+          color: $text-color;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .fee {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: $font-title-s;
+      color: #000;
+    }
+
+    small {
+      color: $text-sub-color;
+      font-size: $font-assistant;
+    }
+  }
+
+  aside {
+    text-align: center;
+    font-size: $font-assistant;
+    margin-bottom: 5rem;
+
+    p {
+      color: #db3f3e;
+
+      a {
+        color: #2564c1;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn {
+    @include clearButton;
+    margin: 0 20px 20px;
+    height: 5rem;
+    border-radius: 2.5rem;
+    color: #fff;
+    background-color: $primary-color;
+    font-size: 1.5rem;
+    text-align: center;
+
+    &.btn-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .confirm-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+
+    &.show {
+      display: block;
+    }
+
+    .content-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: $white;
+      padding-bottom: 40px;
+
+      .content {
+        box-sizing: border-box;
+        padding: 15px 20px 30px;
+
+        p {
+          @include clearBack;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          font-size: $font-assistant;
+          font-weight: 600;
+
+          &.deposit-price {
+            padding: 6px 0;
+            font-size: $font-title-s;
+          }
+
+          &.service-charge {
+            padding: 5px 0;
+            color: $text-sub-color;
+          }
+        }
+
+        .input-box {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          margin-top: 3rem;
+
+          input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1.3rem;
+            @include clearButton;
+            border-bottom: 1px solid $black-border-bottom;
+
+            &:focus {
+              border-bottom: 2px solid $primary-color;
+            }
+
+            &::placeholder {
+              color: $black-font-primary;
+              font-weight: 500;
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 2.2rem;
+            height: 1.3rem;
+          }
+        }
+      }
+
+      .primary-button {
+        margin: 0 20px;
+      }
+    }
+  }
+}

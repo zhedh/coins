@@ -1,0 +1,92 @@
+@import '../../styles/_common';
+
+#verified-identity {
+  @include clearFix;
+  .identity-top {
+    text-align: center;
+    margin-top: -30px;
+    line-height: 1.2;
+
+    img {
+      width: 6.4rem;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      @include clearBack;
+      font-size: $font-title-l;
+      color: #35393e;
+    }
+
+    p {
+      @include clearBack;
+      margin-top: 13px;
+      color: $text-sub-color;
+      font-weight: bold;
+    }
+  }
+
+  .identity-bottom {
+    padding: 3rem 6rem;
+    text-align: center;
+
+    label {
+      display: block;
+      color: #CCCCCC;
+      font-size: $font-assistant;
+    }
+
+    .identity-bottom__type {
+      @include clearList;
+      display: flex;
+      justify-content: space-around;
+      margin: 3rem auto;
+
+      li {
+        width: 7rem;
+        height: 6.2rem;
+        box-sizing: border-box;
+        padding: 1.5rem 1.6rem 0.5rem;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+
+        img {
+          margin-bottom: 5px;
+          width: 2.7rem;
+          height: 1.7rem;
+        }
+
+        &.active {
+          border: 1px solid $primary-color;
+        }
+      }
+    }
+
+    .identity-bottom__input {
+      &.input-center {
+        padding: 5rem 0;
+      }
+
+      input {
+        @include clearInput;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+
+        &::placeholder {
+          font-weight: 600;
+          color: #a7a7a9;
+        }
+
+        &:focus {
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+    }
+  }
+
+  .primary-button {
+    margin: 20px;
+  }
+}

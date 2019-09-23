@@ -1,0 +1,44 @@
+@import '~@csstools/normalize.css';
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.meshim_widget_components_mobileChatButton_ButtonBar .button_text {
+  color: red !important;
+  background-color: red !important;
+}

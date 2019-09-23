@@ -1,0 +1,81 @@
+@import "../../styles/mixin";
+
+#inviter-friend {
+  padding-top: $header-height;
+  line-height: 1.6;
+
+  .section-text {
+    padding: 3.4rem 2rem;
+    text-align: center;
+    font-size: $font-title;
+
+    span {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: $font-context;
+      color: $assistant-color;
+    }
+  }
+
+  .section-qr {
+    margin: 0 2rem;
+    padding: 3rem 0;
+    border-top: 1px solid $border-color;
+    text-align: center;
+
+    .qr-code__box {
+      .qr-code {
+        display: none;
+        width: 10.8rem;
+        height: 10.8rem;
+      }
+
+      img {
+        width: 13rem;
+        height: 13rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 0.8rem;
+        color: $text-sub-color;
+      }
+    }
+
+    p {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-top: 4rem;
+      padding: 8px 15px;
+      line-height: 1.2;
+      background: rgba(247, 247, 247, 1);
+      font-size: $font-context;
+      color: $text-sub-color;
+
+      .icon {
+        margin-left: 5px;
+        font-size: 20px;
+        color: $assistant-color;
+      }
+    }
+  }
+
+  .section-link {
+    padding: 4rem 2rem;
+
+    a {
+      display: block;
+      height: 50px;
+      width: 100%;
+      border-radius: 25px;
+      background: $primary-color;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      color: $white;
+      font-size: $font-context;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../styles/_common';
+
+#notices {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  background-color: #fff;
+
+  ul {
+    flex-grow: 1;
+    @include clearList;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f7f7f7;
+    padding: 2.2rem 2.8rem;
+    font-size: $font-assistant;
+
+    li {
+      line-height: 1.5;
+
+      &:first-child {
+        font-weight: 500;
+        color: $text-color;
+      }
+
+      &:last-child {
+        margin-top: 0.6rem;
+        color: #989c9f;
+      }
+    }
+  }
+
+  .no-data {
+    padding: 12rem 20px;
+    text-align: center;
+
+    img {
+      width: 99px;
+    }
+
+    p {
+      @include clearBack;
+      padding-top: 5px;
+      color: $text-sub-color;
+    }
+  }
+}
