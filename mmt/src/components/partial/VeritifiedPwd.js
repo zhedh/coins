@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import './VeritifiedPwd.scss'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import AccountHeader from './AccountHeader'
 import Button from 'antd-mobile/es/button'
+import {inject, observer} from "mobx-react";
 
+@inject('localeStore')
+@observer
 class VerifiedPwd extends Component {
   state = {
     pwType: 'password',
@@ -13,10 +16,13 @@ class VerifiedPwd extends Component {
 
   onSetType = (currentType, key) => {
     const type = currentType === 'password' ? 'text' : 'password'
-    this.setState({ [key]: type })
+    this.setState({[key]: type})
   }
 
   render() {
+    const {localeStore} = this.props
+    const {PASSWORD, COMMON} = localeStore.language || {}
+
     const {
       show,
       password,
@@ -26,14 +32,14 @@ class VerifiedPwd extends Component {
       onStepChange,
       typeOption
     } = this.props
-    const { pwType, pwConfirmType } = this.state
+    const {pwType, pwConfirmType} = this.state
     const canSubmit = password !== '' && passwordConfirm !== ''
 
     return (
       <div className={'verified-pwd ' + (show ? 'show' : '')}>
         <AccountHeader
-          title={typeOption.type === 'pay' ? '设置密码' : '重置密码'}
-          msg="8-20位字符，不可以是纯数字。"
+          title={typeOption.type === 'pay' ? PASSWORD.SET_PASSWORD : PASSWORD.RESET_PASSWORD}
+          msg={PASSWORD.PASSWORD_REMARK}
           onHandle={() => onStepChange(1)}
         />
         <div className="main-content">
@@ -41,7 +47,7 @@ class VerifiedPwd extends Component {
             <input
               className="input-main"
               type={pwType}
-              placeholder="密码"
+              placeholder={COMMON.PASSWORD_PLACEHOLDER}
               value={password}
               onChange={e => onInputChange(e, 'password')}
             />
@@ -55,7 +61,7 @@ class VerifiedPwd extends Component {
             <input
               className="input-main"
               type={pwConfirmType}
-              placeholder="再次输入密码"
+              placeholder={COMMON.PASSWORD_CONFIRM_PLACEHOLDER}
               value={passwordConfirm}
               onChange={e => onInputChange(e, 'passwordConfirm')}
             />
@@ -73,7 +79,7 @@ class VerifiedPwd extends Component {
           disabled={!canSubmit}
           onClick={onSubmit}
         >
-          {typeOption.type === 'pay' ? '设置' : '重置'}
+          {typeOption.type === 'pay' ? COMMON.SET : COMMON.RESET}
         </Button>
       </div>
     )

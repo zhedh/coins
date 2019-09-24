@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Button, Toast} from 'antd-mobile'
 import {inject, observer} from 'mobx-react'
+import Cookies from "js-cookie"
 import {UserApi} from '../../api'
 import {REG, TOAST_DURATION, COUNT_DOWN} from '../../utils/constants'
 import {isEmail, isMobile} from "../../utils/reg"
@@ -10,26 +11,27 @@ import Captcha from '../../components/common/Captcha'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import registerSuccessImg from '../../assets/images/register-success.png'
+import {FiChevronDown} from "react-icons/fi"
+import TEL_PREFIX_DATA from "../../utils/tel-prefix"
+import TelPrefix from "../../components/partial/TelPrefix"
 import './Register.scss'
-import Cookies from "js-cookie";
-import {FiChevronDown} from "react-icons/fi";
-import TEL_PREFIX_DATA from "../../utils/tel-prefix";
-import TelPrefix from "../../components/partial/TelPrefix";
 
+@inject('localeStore')
+@observer
 class RegisterSuccess extends Component {
 
   render() {
-    const {history} = this.props
-
+    const {history, localeStore} = this.props
+    const {REGISTER} = localeStore.language || {}
     return (
       <div className="register-success">
-        <AccountHeader title="注册成功！"/>
+        <AccountHeader title={REGISTER.REGISTER_SUCCESS}/>
         <main>
           <img src={registerSuccessImg} alt=""/>
-          <p className="text">恭喜您，注册成功 !</p>
+          <p className="text">{REGISTER.HAPPY_REGISTER_SUCCESS}</p>
         </main>
         <Button className="primary-button" onClick={() => history.push('/deposit')}>
-          立即开启
+          {REGISTER.OPEN_FIRST}
         </Button>
       </div>
     )
@@ -129,15 +131,17 @@ class Register extends Component {
   }
 
   getCode = async () => {
-    const {userStore} = this.props
+    const {userStore, localeStore} = this.props
     const {account, captcha, captchaKey, prefix} = this.state
+    const {TOAST} = localeStore.language || {}
+
     if (!isEmail(account) && !isMobile(account)) {
-      Toast.info('请填写正确的邮箱或者手机号', TOAST_DURATION)
+      Toast.info(TOAST.PLEASE_INPUT_CONFIRM_ACCOUNT, TOAST_DURATION)
       return
     }
 
     if (!captcha || captcha.length !== 4) {
-      Toast.info('请输入4位验证码', TOAST_DURATION)
+      Toast.info(TOAST.PLEASE_INPUT_4_CODE, TOAST_DURATION)
       return
     }
 
@@ -162,7 +166,8 @@ class Register extends Component {
   }
 
   onSubmit = () => {
-    const {userStore} = this.props
+    const {userStore, localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
     const {
       account,
       code,
@@ -173,15 +178,15 @@ class Register extends Component {
     } = this.state
 
     if (!REG.EMAIL.test(account) && !REG.MOBILE.test(account)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
+      Toast.info(TOAST.ACCOUNT_ERR, TOAST_DURATION)
       return
     }
     if (!REG.PASSWORD.test(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
+      Toast.info(TOAST.PASSWORD_ERR, TOAST_DURATION)
       return
     }
     if (password !== passwordConfirm) {
-      Toast.info('两次密码不一致', TOAST_DURATION)
+      Toast.info(TOAST.PASSWORD_CONFIRM_ERR, TOAST_DURATION)
       return
     }
 
@@ -198,7 +203,7 @@ class Register extends Component {
         return
       }
       Cookies.remove('PRODUCT_ID')
-      Toast.success('注册成功', TOAST_DURATION, () => this.setState({showSuccess: true}))
+      Toast.success(TOAST.REGISTER_SUCCESS, TOAST_DURATION, () => this.setState({showSuccess: true}))
     })
   }
 

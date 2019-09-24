@@ -52,16 +52,17 @@ class Login extends Component {
   }
 
   onSubmit = () => {
-    const {history, userStore} = this.props
+    const {history, userStore, localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
     const {account, password, prefix} = this.state
 
     if (!isEmail(account) && !isMobile(account)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
+      Toast.info(TOAST.ACCOUNT_ERR, TOAST_DURATION)
       return
     }
 
     if (!isPassword(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
+      Toast.info(TOAST.PASSWORD_ERR, TOAST_DURATION)
       return
     }
 
@@ -76,14 +77,14 @@ class Login extends Component {
         return
       }
       Cookies.remove('PRODUCT_ID')
-      Toast.success('登录成功', TOAST_DURATION)
+      Toast.success(TOAST.LOGIN_SUCCESS, TOAST_DURATION)
       this.timer = setTimeout(() => history.push('/deposit'), TOAST_DURATION * 1000)
     })
   }
 
   render() {
     const {localeStore} = this.props
-    const {LOGIN,COMMON} = localeStore.language || {}
+    const {LOGIN, COMMON} = localeStore.language || {}
     const {account, password, type, prefix, showPrefix} = this.state
     const canSubmit = account === '' || password === ''
 

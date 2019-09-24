@@ -88,22 +88,24 @@ class VerifiedCode extends Component {
   }
 
   emailExist = () => {
-    const {userName} = this.props
+    const {userName, localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
+
     UserApi.emailExist({email: userName}).then(res => {
       if (res.status === -2) {
-        Toast.info('该邮箱未注册')
-        return
+        Toast.info(TOAST.EMAIL_UN_REGISTER)
       }
     })
   }
 
   phoneExist = () => {
-    const {userName} = this.props
+    const {userName, localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
+
     const {prefix} = this.state
     UserApi.emailExist({phoneNo: userName, phonePrefix: prefix && prefix.tel}).then(res => {
       if (res.status === -2) {
-        Toast.info('该手机号未注册')
-        return
+        Toast.info(TOAST.PHONE_UN_REGISTER)
       }
     })
   }
@@ -156,15 +158,16 @@ class VerifiedCode extends Component {
   }
 
   getCode = () => {
-    const {userName} = this.props
+    const {userName,localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
     const {captcha} = this.state
     if (!REG.EMAIL.test(userName) && !REG.MOBILE.test(userName)) {
-      Toast.info('请填写正确的邮箱或者手机号', TOAST_DURATION)
+      Toast.info(TOAST.PLEASE_INPUT_CONFIRM_ACCOUNT, TOAST_DURATION)
       return
     }
 
     if (!captcha || captcha.length !== 4) {
-      Toast.info('请输入4位验证码', TOAST_DURATION)
+      Toast.info(TOAST.PLEASE_INPUT_4_CODE, TOAST_DURATION)
       return
     }
 
@@ -190,7 +193,7 @@ class VerifiedCode extends Component {
       showPrefix,
       prefix
     } = this.state
-    const { COMMON} = localeStore.language || {}
+    const {COMMON} = localeStore.language || {}
     const canSubmit = userName !== '' && code !== ''
 
     return (

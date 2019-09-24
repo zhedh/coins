@@ -8,12 +8,13 @@ import {GoMailRead} from "react-icons/go"
 
 import {formatDate, formatSpecialOffer} from "../../utils/format"
 import userCenterImg from '../../assets/images/user-center.png'
-import {COMMON,HOME} from '../../assets/static'
+import {COMMON_ASSET, HOME_ASSET} from '../../assets'
 import Dialog from "../../components/common/Dialog"
 import Header from '../../components/common/Header'
 import NoData from "../../components/common/NoData"
 import './Index.scss'
 
+@inject('localeStore')
 @inject('userStore')
 @inject('personStore')
 @inject('noticeStore')
@@ -32,7 +33,8 @@ class Index extends Component {
   }
 
   render() {
-    const {history, userStore, personStore, noticeStore, productStore} = this.props;
+    const {history, userStore, personStore, noticeStore, productStore, localeStore} = this.props;
+    const {HOME} = localeStore.language || {}
     const {notices} = noticeStore
     const {depositRecords} = personStore
     const {currentProduct} = productStore
@@ -42,20 +44,17 @@ class Index extends Component {
       <div id="home">
         <section
           className="section-banner"
-          style={{backgroundImage: `url(${HOME.IMG_BG})`}}>
+          style={{backgroundImage: `url(${HOME_ASSET.IMG_BG})`}}>
           <Header
-            title={HOME.TITLE}
+            title={HOME_ASSET.TITLE}
             icon={userCenterImg}
-            onHandle={() => {
-              window.location.href = '/user-center'
-              // history.push("user-center");
-            }}
+            onHandle={() => history.push("user-center")}
           />
           <div className="notice-carousel"
                onClick={() => notices.length ? history.push('/notices') : ''}>
             <label>
               <IoIosMegaphone className="megaphone"/>
-              公告：
+              {HOME.NOTICE}
             </label>
             {notices.length ? <WingBlank>
               <Carousel
@@ -70,9 +69,7 @@ class Index extends Component {
                   <div
                     key={notice.id}
                     className="item"
-                    // onClick={() => window.location.href=notice.linkUrl}
-                    onClick={() => history.push('/notice/' + notice.id)}
-                  >
+                    onClick={() => history.push('/notice/' + notice.id)}>
                     {notice.title}
                   </div>
                 )}
@@ -102,9 +99,6 @@ class Index extends Component {
         </section>
         <section className="section-main">
           <div className="steps">
-            {/*<Link to={userStore.isOnline ? '/home/deposit-history' : '/login'}>*/}
-            {/*参与计划中*/}
-            {/*</Link>*/}
             <span>参与计划中</span>
             <Link to="/home/rule">
               规则介绍
@@ -128,7 +122,7 @@ class Index extends Component {
                 </div>
               </li>
             )}
-          </ul> : <NoData img={COMMON.NO_DATA_IMG} msg="每天存一笔，天天有钱赚！"/>}
+          </ul> : <NoData img={COMMON_ASSET.NO_DATA_IMG} msg="每天存一笔，天天有钱赚！"/>}
         </section>
         <Dialog
           show={false}
