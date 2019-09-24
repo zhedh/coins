@@ -12,8 +12,9 @@
 //   PROJECT: 'MMT',
 // }
 
-export const CONFIG = {
-  ONLINE: false,
+const ONLINE = false
+
+const CONFIG = {
   PROD: {
     API_BASE_URL: 'https://mmt-api.mastermix.io/api'
   },
@@ -21,5 +22,7 @@ export const CONFIG = {
     API_BASE_URL: 'http://47.75.138.157:8090/api'
   }
 }
+
+export default ONLINE ? CONFIG.PROD : CONFIG.DEV
 
 

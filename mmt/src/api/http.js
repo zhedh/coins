@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 import Cookies from 'js-cookie'
-import {CONFIG} from '../config'
+import CONFIG from '../config'
 import {optionsToHump, optionsToLine} from '../utils/common'
 import {Toast} from "antd-mobile"
 import {TOAST_DURATION} from "../utils/constants"

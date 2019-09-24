@@ -2,17 +2,19 @@ import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import {Toast} from 'antd-mobile'
 import {isEmail, isMobile} from "../../utils/reg"
-import {REG, PASSWORD_TYPES, TOAST_DURATION} from '../../utils/constants'
+import {REG, TOAST_DURATION} from '../../utils/constants'
 import {UserApi} from '../../api'
 import VerifiedCode from '../../components/partial/VerifiedCode'
 import VerifiedPwd from '../../components/partial/VeritifiedPwd'
 import './Password.scss'
 
+@inject('localeStore')
 @inject('userStore')
 @inject('personStore')
 @observer
 class Password extends Component {
   state = {
+
     typeOption: {},
     step: 1,
     userName: '',
@@ -24,9 +26,46 @@ class Password extends Component {
   }
 
   componentDidMount() {
-    const {match, history, userStore, personStore} = this.props
+    this.getTypeOption()
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer)
+  }
+
+  getTypeOption = () => {
+    const {match, history, userStore, personStore, localeStore} = this.props
     const {type} = match.params
-    const typeOption = PASSWORD_TYPES.find(item => item.type === type)
+    const {PASSWORD} = localeStore.language || {}
+
+    const passwordTypes = [
+      {
+        type: 'find',
+        title: PASSWORD.FIND_PASSWORD,
+        codeType: 'findpassword',
+        canChangeUser: true
+      },
+      {
+        type: 'reset',
+        title: PASSWORD.RESET_LOGIN_PASSWORD,
+        codeType: 'findpassword',
+        canChangeUser: false
+      },
+      {
+        type: 'pay',
+        title: PASSWORD.SET_PAY_PASSWORD,
+        codeType: 'setpaypassword',
+        canChangeUser: false
+      },
+      {
+        type: 'repay',
+        title: PASSWORD.RESET_PAY_PASSWORD,
+        codeType: 'setpaypassword',
+        canChangeUser: false
+      }
+    ]
+
+    const typeOption = passwordTypes.find(item => item.type === type)
     if (!typeOption) {
       history.push('/404')
     }
@@ -38,10 +77,6 @@ class Password extends Component {
       return
     }
     this.setState({typeOption})
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer)
   }
 
   onBack = () => {

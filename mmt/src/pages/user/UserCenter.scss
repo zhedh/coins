@@ -105,6 +105,49 @@
       }
     }
   }
+
+  .locale-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.show {
+      display: flex;
+    }
+
+    ul {
+      @include clearList;
+      box-sizing: border-box;
+      width: 80%;
+      padding: 0 15px;
+      border-radius: $border-radius;
+      background: $white;
+
+      li {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: $font-title-s;
+        border-bottom: 1px solid $border-color;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.active {
+          color: $primary-color;
+        }
+      }
+    }
+  }
 }
 
 .f-modal {

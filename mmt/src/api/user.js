@@ -1,5 +1,5 @@
 import http from './http'
-import { CONFIG } from '../config'
+import CONFIG from '../config'
 
 class UserApi {
   /**

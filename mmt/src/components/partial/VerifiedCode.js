@@ -10,6 +10,7 @@ import TEL_PREFIX_DATA from "../../utils/tel-prefix"
 import './VerifiedCode.scss'
 import {inject, observer} from "mobx-react";
 
+@inject('localeStore')
 @inject('userStore')
 @observer
 class VerifiedCode extends Component {
@@ -178,7 +179,8 @@ class VerifiedCode extends Component {
       code,
       onInputChange,
       onNext,
-      onBack
+      onBack,
+      localeStore
     } = this.props
     const {
       isGetSms,
@@ -188,6 +190,7 @@ class VerifiedCode extends Component {
       showPrefix,
       prefix
     } = this.state
+    const { COMMON} = localeStore.language || {}
     const canSubmit = userName !== '' && code !== ''
 
     return (
@@ -202,7 +205,7 @@ class VerifiedCode extends Component {
             <input
               className="input-main"
               type="text"
-              placeholder="邮箱/手机号"
+              placeholder={COMMON.ACCOUNT_PLACEHOLDER}
               value={userName}
               readOnly={!typeOption.canChangeUser}
               onChange={e => onInputChange(e, 'userName')}
@@ -222,7 +225,7 @@ class VerifiedCode extends Component {
               className="input-main"
               type="text"
               maxLength={4}
-              placeholder="验证码"
+              placeholder={COMMON.VERIFY_CODE}
               value={code}
               onChange={e => onInputChange(e, 'code')}
             />
@@ -231,7 +234,7 @@ class VerifiedCode extends Component {
               className={`sms-code  ${!isGetSms ? `event-none` : ''}`}
               onClick={this.getCode}
             >
-              {isGetSms ? '获取验证码' : <span>{`${count}s`}</span>}
+              {isGetSms ? COMMON.GET_VERIFY_CODE : <span>{`${count}s`}</span>}
             </span>
           </label>
         </div>
@@ -241,7 +244,7 @@ class VerifiedCode extends Component {
           disabled={!canSubmit}
           onClick={() => onNext(prefix.tel)}
         >
-          下一步
+          {COMMON.NEXT_STEP}
         </Button>
 
         <TelPrefix

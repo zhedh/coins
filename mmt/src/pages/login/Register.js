@@ -36,6 +36,7 @@ class RegisterSuccess extends Component {
   }
 }
 
+@inject('localeStore')
 @inject('userStore')
 @observer
 class Register extends Component {
@@ -202,7 +203,8 @@ class Register extends Component {
   }
 
   render() {
-    const {history} = this.props
+    const {history, localeStore} = this.props
+    const {REGISTER, COMMON} = localeStore.language || {}
     const {
       account,
       code,
@@ -223,7 +225,7 @@ class Register extends Component {
 
     return (
       <div id="register">
-        <AccountHeader title="注册" onHandle={() => history.push('/login')}/>
+        <AccountHeader title={COMMON.REGISTER} onHandle={() => history.push('/login')}/>
         <div className="main-content">
           <label className="account">
             <span onClick={this.onOpenPrefix}>
@@ -233,7 +235,7 @@ class Register extends Component {
             <input
               className="input-main"
               type="text"
-              placeholder="邮箱/手机号"
+              placeholder={COMMON.ACCOUNT_PLACEHOLDER}
               value={account}
               onBlur={this.onAccountBlur}
               onChange={e => this.onInputChange(e, 'account')}
@@ -253,21 +255,21 @@ class Register extends Component {
               className="input-main"
               type="text"
               maxLength={4}
-              placeholder="验证码"
+              placeholder={COMMON.VERIFY_CODE}
               value={code}
               onChange={e => this.onInputChange(e, 'code')}
             />
             <span
               className={`sms-code  ${!isGetSms ? `event-none` : ''}`}
               onClick={this.getCode}>
-              {isGetSms ? '获取验证码' : <span>{`${count}s`}</span>}
+              {isGetSms ? COMMON.GET_VERIFY_CODE : <span>{`${count}s`}</span>}
             </span>
           </label>
           <label>
             <input
               className="input-main"
               type={pwType}
-              placeholder="密码"
+              placeholder={COMMON.PASSWORD_PLACEHOLDER}
               value={password}
               onChange={e => this.onInputChange(e, 'password')}
             />
@@ -282,7 +284,7 @@ class Register extends Component {
             <input
               className="input-main"
               type={pwConfirmType}
-              placeholder="再次输入密码"
+              placeholder={COMMON.PASSWORD_CONFIRM_PLACEHOLDER}
               value={passwordConfirm}
               onChange={e => this.onInputChange(e, 'passwordConfirm')}
             />
@@ -297,7 +299,7 @@ class Register extends Component {
             <input
               className="input-main"
               type="text"
-              placeholder="邀请码"
+              placeholder={COMMON.INVITER_CODE}
               value={recommendCode}
               onChange={e => this.onInputChange(e, 'recommendCode')}
             />
@@ -308,7 +310,7 @@ class Register extends Component {
           className="primary-button"
           disabled={!this.canSubmit()}
           onClick={this.onSubmit}>
-          立即注册
+          {REGISTER.SUBMIT_LABEL}
         </Button>}
         {showSuccess && <RegisterSuccess history={this.props.history}/>}
 

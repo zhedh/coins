@@ -2,7 +2,7 @@ import {observable, action, computed} from 'mobx'
 import languages from '../locales'
 
 class LocaleStore {
-  @observable locale;
+  @observable locale = 'zh_CN';
 
   @computed
   get language() {
@@ -10,8 +10,14 @@ class LocaleStore {
   }
 
   @action
-  getNotice(id) {
-    // return OtherApi.getNoticeDetail({id})
+  changeLocale(locale) {
+    this.locale = locale
+    localStorage.setItem('LOCALE', locale)
+  }
+
+  @action
+  getLocale() {
+    this.locale = localStorage.getItem('LOCALE') || 'zh_CN'
   }
 }
 

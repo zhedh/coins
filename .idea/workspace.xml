@@ -2,201 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mmt/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/env.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/jest/cssTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/jest/fileTransform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/modules.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/paths.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/pnpTs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/config/webpackDevServer.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/public/llqrcode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/scripts/build.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/scripts/online.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/scripts/start.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/scripts/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/other.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/person.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/api/wallet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/account.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/arrow-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/arrow-right-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/arrow-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/back-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/bargain-banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/close-pwd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/auth-driving.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/auth-id-card.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/auth-passport.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/icon-deposit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/icon-home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/icon-wallet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/common/no-data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/identity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/kefu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/left-drawer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/logout.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-card-back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-card-front.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-card-hold.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-driving.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-fail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-id-card.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-passport.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/auth-wait.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/generalize-banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/generalize-user-one.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/generalize-user-two.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/home-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/icon-deposit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/icon-home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/icon-wallet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/mmt/no-data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/notice.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/open-pwd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/recharge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/register-success.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/scan.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/select-country.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/user-center.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/user-header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/wallet-to-login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/wallet-usdt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/wallet-zbs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/withdraw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/static/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/assets/static/mmt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Captcha.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Captcha.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Dialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Dialog.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/InterceptRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/Loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/NoData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/common/NoData.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/AccountHeader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/AccountHeader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/DepositBuy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/DepositBuy.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/DepositUnlock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/DepositUnlock.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/QrCodeBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/QrCodeBox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/QrReader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/QrReader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/TelPrefix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/TelPrefix.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/VeritifiedPwd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/VeritifiedPwd.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/components/partial/WalletCard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/locales/en-US.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/locales/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/models/deposit-item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/deposit/Deposit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/deposit/Deposit.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/deposit/DepositResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/deposit/DepositResult.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/exception/404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Bargain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Bargain.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/BargainRecord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/BargainRecord.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/DepositHistory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/DepositHistory.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Generalize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Generalize.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/GeneralizeDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/GeneralizeDetail.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/InviterFriend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/InviterFriend.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Rule.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/home/Rule.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/login/Login.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/login/Password.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/login/Password.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/login/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/login/Register.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/notice/NoticeDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/notice/NoticeDetail.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/notice/Notices.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/notice/Notices.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/AccountSafe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/AccountSafe.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/ContactUs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/ContactUs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedCountry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedCountry.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedIdentity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedIdentity.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedResult.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedResult.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedUpload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/user/VerifiedUpload.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WalletUsdt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WalletUsdt.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/serviceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/locale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/notice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/person.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/stores/wallet.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/styles/_common.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/styles/_variable.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/styles/mixin.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/utils/common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/utils/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/utils/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/utils/format.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/utils/reg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mmt/src/utils/tel-prefix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mmt/src/assets/images/locale.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/stores/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/api/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/api/http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/api/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/components/common/Captcha.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/components/common/Captcha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/locales/en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/locales/en-US.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/login/Password.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/login/Password.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/login/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/stores/locale.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/stores/locale.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -211,22 +33,23 @@
     <session id="-472934763">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="30" />
+          <entry key="js" value="52" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
           <entry key="md" value="2" />
           <entry key="pub" value="1" />
-          <entry key="scss" value="2" />
+          <entry key="scss" value="3" />
           <entry key="ts" value="1" />
         </counts>
       </usages-collector>
@@ -234,10 +57,10 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="30" />
+          <entry key="JavaScript" value="52" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="SCSS" value="2" />
+          <entry key="SCSS" value="3" />
           <entry key="TypeScript" value="1" />
           <entry key="yarn.lock" value="1" />
         </counts>
@@ -245,15 +68,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="432" />
-          <entry key="scss" value="9" />
+          <entry key="js" value="1568" />
+          <entry key="scss" value="237" />
+          <entry key="txt" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="432" />
-          <entry key="SCSS" value="9" />
+          <entry key="JavaScript" value="1568" />
+          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="SCSS" value="237" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -268,22 +93,84 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mmt/src/locales/en-US.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="4" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="308">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
               <folding>
-                <element signature="e#26#195#0" expanded="true" />
+                <element signature="e#306#352#0" expanded="true" />
+                <element signature="e#509#554#0" expanded="true" />
+                <element signature="e#567#606#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mmt/src/locales/zh-CN.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#237#272#0" expanded="true" />
+                <element signature="e#387#418#0" expanded="true" />
+                <element signature="e#431#461#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mmt/src/locales/zh-CN.js">
+        <entry file="file://$PROJECT_DIR$/mmt/src/pages/login/Password.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            <state relative-caret-position="198">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
               <folding>
-                <element signature="e#26#224#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#530#1221#0" expanded="true" />
+                <element signature="e#1044#1576#0" expanded="true" />
+                <element signature="e#1161#1277#0" expanded="true" />
+                <element signature="e#1192#1312#0" expanded="true" />
+                <element signature="e#1320#1440#0" expanded="true" />
+                <element signature="e#1448#1570#0" expanded="true" />
+                <element signature="e#2001#2123#0" expanded="true" />
+                <element signature="e#3433#3538#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mmt/src/utils/constants.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="569" column="1" lean-forward="true" selection-start-line="544" selection-start-column="13" selection-end-line="569" selection-end-column="1" />
+              <folding>
+                <element signature="e#17867#18283#0" expanded="true" />
+                <element signature="e#17871#17967#0" expanded="true" />
+                <element signature="e#17971#18071#0" expanded="true" />
+                <element signature="e#18075#18175#0" expanded="true" />
+                <element signature="e#18179#18281#0" expanded="true" />
+                <element signature="e#18310#18344#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="245" column="9" lean-forward="true" selection-start-line="245" selection-start-column="9" selection-end-line="245" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mmt/src/pages/login/Register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="206" selection-start-line="206" selection-end-line="207" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -296,6 +183,7 @@
       <find>componentWillMount</find>
       <find>componentWillReceiveProps</find>
       <find>TEL_PREFIX_DATA</find>
+      <find>typeOption</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/mmt/src</dir>
@@ -312,17 +200,25 @@
         <option value="$PROJECT_DIR$/mmt/public/index.html" />
         <option value="$PROJECT_DIR$/mmt/src/components/common/InterceptRouter.js" />
         <option value="$PROJECT_DIR$/mmt/src/styles/mixin.scss" />
-        <option value="$PROJECT_DIR$/mmt/src/config.js" />
         <option value="$PROJECT_DIR$/mmt/src/pages/home/Rule.js" />
         <option value="$PROJECT_DIR$/mmt/src/assets/static/index.js" />
-        <option value="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js" />
-        <option value="$PROJECT_DIR$/mmt/src/App.js" />
         <option value="$PROJECT_DIR$/mmt/src/locales/index.js" />
         <option value="$PROJECT_DIR$/mmt/src/stores/index.js" />
+        <option value="$PROJECT_DIR$/mmt/src/components/common/LocaleSwitch.js" />
+        <option value="$PROJECT_DIR$/mmt/src/config.js" />
+        <option value="$PROJECT_DIR$/mmt/src/api/http.js" />
+        <option value="$PROJECT_DIR$/mmt/src/api/user.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.scss" />
         <option value="$PROJECT_DIR$/mmt/src/stores/locale.js" />
+        <option value="$PROJECT_DIR$/mmt/src/App.js" />
         <option value="$PROJECT_DIR$/mmt/src/pages/login/Login.js" />
-        <option value="$PROJECT_DIR$/mmt/src/locales/en-US.js" />
+        <option value="$PROJECT_DIR$/mmt/src/components/common/Captcha.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/login/Register.js" />
+        <option value="$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js" />
         <option value="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" />
+        <option value="$PROJECT_DIR$/mmt/src/locales/en-US.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/login/Password.js" />
       </list>
     </option>
   </component>
@@ -342,9 +238,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="668" />
+    <option name="x" value="638" />
     <option name="y" value="23" />
-    <option name="width" value="1010" />
+    <option name="width" value="965" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -353,6 +249,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -382,6 +279,13 @@
               <item name="coins" type="462c0819:PsiDirectoryNode" />
               <item name="mmt" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="mmt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -391,6 +295,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="mmt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="mmt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="coins" type="b2602c69:ProjectViewProjectNode" />
@@ -432,7 +351,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -443,7 +361,11 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mmt/src/assets/images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mmt/src/components/common" />
       <recent name="$PROJECT_DIR$/mmt/src" />
       <recent name="$PROJECT_DIR$/mmt" />
       <recent name="$PROJECT_DIR$/xc" />
@@ -473,21 +395,51 @@
       <updated>1569049989559</updated>
       <workItem from="1569049990733" duration="171000" />
       <workItem from="1569050180557" duration="2030000" />
-      <workItem from="1569162190347" duration="4945000" />
+      <workItem from="1569162190347" duration="5232000" />
+      <workItem from="1569205452346" duration="184000" />
+      <workItem from="1569238407801" duration="9273000" />
+      <workItem from="1569326115938" duration="3508000" />
     </task>
+    <task id="LOCAL-00001" summary="[mmt] add locale">
+      <created>1569204056104</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569204056104</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7146000" />
+    <option name="totallyTimeSpent" value="20398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="668" y="23" width="1010" height="979" extended-state="0" />
+    <frame x="638" y="23" width="965" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24974722" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2595339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32919955" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2605932" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -499,16 +451,21 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32919955" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[mmt] add locale" />
+    <option name="LAST_COMMIT_MESSAGE" value="[mmt] add locale" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.ssh/id_rsa.pub">
@@ -546,11 +503,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/stores/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1740">
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/assets/static/mmt.js">
@@ -564,21 +517,12 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/stores/notice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/stores/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -610,9 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding>
-            <element signature="e#145#177#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -620,13 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19672" selection-start-column="19672" selection-end-column="19672" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/common/InterceptRouter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -640,79 +574,25 @@
     <entry file="file://$PROJECT_DIR$/mmt/src/styles/_common.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#258#404#0" expanded="true" />
-            <element signature="e#1007#1069#0" expanded="true" />
-            <element signature="e#1080#1139#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/pages/home/Rule.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#231#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/assets/static/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1352">
-          <caret line="157" column="19" lean-forward="true" selection-start-line="157" selection-start-column="19" selection-end-line="157" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/stores/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1740">
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1740" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/stores/wallet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/stores/notice.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="3" lean-forward="true" selection-end-line="25" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -731,49 +611,175 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="6" column="35" lean-forward="true" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/components/common/InterceptRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/api/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/api/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/components/common/LocaleSwitch.js" />
+    <entry file="file://$PROJECT_DIR$/mmt/src/assets/static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/home/Generalize.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/user/UserCenter.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3938">
+          <caret line="208" column="16" lean-forward="true" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/stores/locale.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="416">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-354">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/pages/login/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-932">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="330">
+          <caret line="15" selection-start-line="15" selection-end-line="16" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#748#864#0" expanded="true" />
+            <element signature="e#771#887#0" expanded="true" />
+            <element signature="e#1780#1885#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/components/common/Captcha.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/utils/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="569" column="1" lean-forward="true" selection-start-line="544" selection-start-column="13" selection-end-line="569" selection-end-column="1" />
+          <folding>
+            <element signature="e#17867#18283#0" expanded="true" />
+            <element signature="e#17871#17967#0" expanded="true" />
+            <element signature="e#17971#18071#0" expanded="true" />
+            <element signature="e#18075#18175#0" expanded="true" />
+            <element signature="e#18179#18281#0" expanded="true" />
+            <element signature="e#18310#18344#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/login/Register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="206" selection-start-line="206" selection-end-line="207" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="245" column="9" lean-forward="true" selection-start-line="245" selection-start-column="9" selection-end-line="245" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/locales/zh-CN.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#237#272#0" expanded="true" />
+            <element signature="e#387#418#0" expanded="true" />
+            <element signature="e#431#461#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/locales/en-US.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" lean-forward="true" selection-start-line="1" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="308">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#26#195#0" expanded="true" />
+            <element signature="e#306#352#0" expanded="true" />
+            <element signature="e#509#554#0" expanded="true" />
+            <element signature="e#567#606#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/locales/zh-CN.js">
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/login/Password.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="198">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
           <folding>
-            <element signature="e#26#224#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#530#1221#0" expanded="true" />
+            <element signature="e#1044#1576#0" expanded="true" />
+            <element signature="e#1161#1277#0" expanded="true" />
+            <element signature="e#1192#1312#0" expanded="true" />
+            <element signature="e#1320#1440#0" expanded="true" />
+            <element signature="e#1448#1570#0" expanded="true" />
+            <element signature="e#2001#2123#0" expanded="true" />
+            <element signature="e#3433#3538#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -13,13 +13,8 @@ class ListItem extends PureComponent {
       <div
         className="list-item"
         onClick={() => {
-          if (onHandle) {
-            onHandle()
-          } else {
-            window.location.href = url
-          }
-        }}
-      >
+          onHandle ? onHandle() : window.location.href = url
+        }}>
         <img className="icon" src={icon} alt=""/>
         <span>{name}</span>
         <img
@@ -33,10 +28,15 @@ class ListItem extends PureComponent {
 }
 
 @inject('userStore')
+@inject('localeStore')
 @inject('personStore')
 @observer
 class UserCenter extends Component {
-  state = {isOnline: true, showFModal: false}
+  state = {
+    isOnline: true,
+    showFModal: false,
+    showLocaleModal: false
+  }
 
   componentDidMount() {
     const {personStore, userStore} = this.props
@@ -53,6 +53,12 @@ class UserCenter extends Component {
   onBack = () => {
     const {history} = this.props
     history.push('/home')
+  }
+
+  onChangeLocale = (locale) => {
+    const {localeStore} = this.props
+    localeStore.changeLocale(locale)
+    this.setState({showLocaleModal: false})
   }
 
   logout = () => {
@@ -89,9 +95,10 @@ class UserCenter extends Component {
   }
 
   render() {
-    const {history, userStore, personStore} = this.props
+    const {history, userStore, personStore, localeStore} = this.props
     const {userInfo} = personStore
-    const {showFModal} = this.state
+    const {locale} = localeStore
+    const {showFModal, showLocaleModal} = this.state
     const hideAuthButton = userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
@@ -160,6 +167,11 @@ class UserCenter extends Component {
             name="联系客服"
             url={'/contact-us'}
           />
+          <ListItem
+            icon={require('../../assets/images/locale.png')}
+            name="切换语言"
+            onHandle={() => this.setState({showLocaleModal: true})}
+          />
         </section>
         {userStore.isOnline && (
           <section className={`list-content list-second`}>
@@ -189,6 +201,20 @@ class UserCenter extends Component {
             当您参与计划成功后，将获得F用户的标示，F用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，f用户的有效期为3个交易日（包含成为当天）。
           </div>
         </Modal>
+        <div className={`locale-modal ${showLocaleModal ? 'show' : ''}`}>
+          <ul>
+            <li
+              className={locale === 'zh_CN' ? 'active' : ''}
+              onClick={() => this.onChangeLocale('zh_CN')}>
+              中文
+            </li>
+            <li
+              className={locale === 'en_US' ? 'active' : ''}
+              onClick={() => this.onChangeLocale('en_US')}>
+              英文
+            </li>
+          </ul>
+        </div>
       </div>
     )
   }

@@ -1,26 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {inject, observer} from "mobx-react";
 import './Captcha.scss'
 
-function CaptchaPng(props) {
-  const {imgSrc, value, onChange, getCaptchaPng} = props;
+@inject('localeStore')
+@observer
+class CaptchaPng extends Component {
+  render() {
+    const {imgSrc, value, onChange, getCaptchaPng, localeStore} = this.props;
+    const {COMMON} = localeStore.language || {}
 
-  return (
-    <div id="captcha-box">
-      <input
-        type="text"
-        maxLength={4}
-        placeholder="图形验证码"
-        value={value}
-        onChange={onChange}
-      />
-      <img
-        id="captcha"
-        src={imgSrc}
-        onClick={getCaptchaPng}
-        alt="图形验证码"
-      />
-    </div>
-  );
+    return (
+      <div id="captcha-box">
+        <input
+          type="text"
+          maxLength={4}
+          placeholder={COMMON.GRAPH_CODE}
+          value={value}
+          onChange={onChange}
+        />
+        <img
+          id="captcha"
+          src={imgSrc}
+          onClick={getCaptchaPng}
+          alt={COMMON.GRAPH_CODE}
+        />
+      </div>
+    );
+  }
+
 }
 
 export default CaptchaPng;

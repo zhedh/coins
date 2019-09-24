@@ -83,13 +83,13 @@ class Login extends Component {
 
   render() {
     const {localeStore} = this.props
-    const {LOGIN} = localeStore.language || {}
+    const {LOGIN,COMMON} = localeStore.language || {}
     const {account, password, type, prefix, showPrefix} = this.state
     const canSubmit = account === '' || password === ''
 
     return (
       <div id="login">
-        <AccountHeader title={LOGIN.TITLE}/>
+        <AccountHeader title={COMMON.LOGIN}/>
         <div className="content">
           <label className="account">
             <span onClick={this.onOpenPrefix}>
@@ -99,7 +99,7 @@ class Login extends Component {
             <input
               className="input-main"
               type="text"
-              placeholder="邮箱/手机号"
+              placeholder={COMMON.ACCOUNT_PLACEHOLDER}
               value={account}
               onChange={(e) => this.onInputChange(e, 'account')}
             />
@@ -108,7 +108,7 @@ class Login extends Component {
             <input
               className="input-main"
               type={type}
-              placeholder="密码"
+              placeholder={COMMON.PASSWORD_PLACEHOLDER}
               value={password}
               onChange={(e) => this.onInputChange(e, 'password')}
             />
@@ -119,8 +119,8 @@ class Login extends Component {
             />
           </label>
           <p>
-            <Link to="/password/find">忘记密码？</Link>
-            <Link to="/register">注册</Link>
+            <Link to="/password/find">{LOGIN.FORGOT_PASSWORD}</Link>
+            <Link to="/register">{COMMON.REGISTER}</Link>
           </p>
         </div>
 
@@ -130,7 +130,7 @@ class Login extends Component {
             className="primary-button"
             disabled={canSubmit}
             onClick={this.onSubmit}>
-            确认
+            {COMMON.CONFIRM}
           </Button>
         </div>
 
