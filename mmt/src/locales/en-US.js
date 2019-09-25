@@ -235,16 +235,17 @@ export default {
     PASTE_ADDRESS: 'Enter or Long Pree to Paste the Address',
     AMOUNT: 'Amount',
     MIN_WITHDRAWAL_AMOUNT: 'Minimum Withdrawal Amount',
+    PHONE_VERIFY_CODE: 'Mobile Verification Code',
     EMAIL_VERIFY_CODE: 'E-mail Verification Code',
     ENTER_VERIFY_CODE: 'Enter Verification Code',
     GET_CODE: 'Receive verification code',
     WARM_REMINDER: 'Warm Reminder',
     MSG_ONE_LIST: [
       'Currently, the maximum withdrawal amount for every account is ',
-      ' MUSDT per day. Each order is limited in',
+      ' per day. Each order is limited in',
       '-',
-      'MUSDT; Fees for each transaction is ',
-      'MUSDT.'
+      '; Fees for each transaction is ',
+      '.'
     ],
     MSG_TWO: 'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
     MSG_THREE: 'Please be noted that MUSDT withdrawal will be converted into MMT withdrawal based on the current rate of MMT/MUSDT.',
@@ -253,9 +254,9 @@ export default {
     COPY_ADDRESS: 'Copy Address',
     DEPOSIT_NOTES: 'Deposit Notes',
     RECHARGE_MSG_ONE: 'MMT deposit will be converted into MUSDT based on the real time rate of MMT/MUSDT, and the conversion time is based on the MMT deposit time.',
-    RECHARGE_MSG_TWO: 'Deposit is automatic. MMT transfer requires confirmation of Ethereum network. Your MMT will automatically deposit to your account.',
+    RECHARGE_MSG_TWO: ['Deposit is automatic. ',' transfer requires confirmation of Ethereum network. Your ',' will automatically deposit to your account.'],
     RECHARGE_MSG_THREE: 'This deposit address is unique and only for your use, you can make several deposits at the same time.',
-    RECHARGE_MSG_FOUR: 'This address doesn\'t allow other assets deposit except MUSDT, any other non MUSDT assets deposited to this address will be lost permanently.',
+    RECHARGE_MSG_FOUR: ['This address doesn\'t allow other assets deposit except MUSDT, any other non ',' assets deposited to this address will be lost permanently.'],
 
     DEPOSIT_USDT: 'Deposit USDT',
     USDT_MSG_ONE: 'Deposit is automatic. USDT transfer requires confirmation of USDT network. Your USDT will automatically deposit to your account.',
@@ -284,5 +285,6 @@ export default {
     CONVERTED_MMT_AMOUNT: 'Converted MMT Amount',
     TRANSFER: 'Transfer',
     ALL_LOADED: 'All Loaded',
+    STATUS: 'Status'
   }
 };

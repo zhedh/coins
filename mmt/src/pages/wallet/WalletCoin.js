@@ -4,18 +4,19 @@ import Header from "../../components/common/Header"
 import walletZbsImg from "../../assets/images/wallet-zbs.png"
 import WalletCard from "../../components/partial/WalletCard"
 import {formatCoinPrice, formatTime} from "../../utils/format"
-import {COMMON} from '../../assets/static'
+import {COMMON_ASSET} from '../../assets'
 import './WalletCoin.scss'
 
 const COIN_CARD = {
   bgImg: walletZbsImg,
-  name: COMMON.COIN_NAME,
+  name: COMMON_ASSET.COIN_NAME,
   asset: '',
   rechargeUrl: '/wallet/recharge/',
   withdrawUrl: '/wallet/withdraw/',
   productId: ''
 }
 
+@inject('localeStore')
 @inject('walletStore')
 @observer
 class WalletCoin extends Component {
@@ -25,6 +26,7 @@ class WalletCoin extends Component {
 
   componentDidMount() {
     const {walletStore, match} = this.props
+
     const {id} = match.params
     walletStore.getCurrentWallet(Number(id)).then(res => {
       const coinCard = {
@@ -42,7 +44,8 @@ class WalletCoin extends Component {
   }
 
   render() {
-    const {walletStore} = this.props
+    const {walletStore, localeStore} = this.props
+    const {WALLET} = localeStore.language || {}
     const {coinCard} = this.state
     const {coinStream} = walletStore
 
@@ -61,7 +64,8 @@ class WalletCoin extends Component {
               </main>
               <aside>
                 {formatCoinPrice(record.amount)}
-                {record.toMmt && <small>折合 {formatCoinPrice(record.toMmt)} MMT</small>}
+                {record.toMmt &&
+                <small>{WALLET.ESTIMATED_VALUE} {formatCoinPrice(record.toMmt)} MMT</small>}
               </aside>
             </li>
           )}

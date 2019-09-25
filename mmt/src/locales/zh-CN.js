@@ -7,7 +7,7 @@ export default {
     PASSWORD: '密码',
     CONFIRM: '确认',
     GRAPH_CODE: '图形验证码',
-    VERIFY_CODE: '图形验证码',
+    VERIFY_CODE: '验证码',
     GET_VERIFY_CODE: '获取验证码',
     PASSWORD_CONFIRM_PLACEHOLDER: '再次输入密码',
     INVITER_CODE: '邀请码',
@@ -236,16 +236,17 @@ export default {
     PASTE_ADDRESS: '输入或长按粘贴地址',
     AMOUNT: '数量',
     MIN_WITHDRAWAL_AMOUNT: '最小提币量',
+    PHONE_VERIFY_CODE: '手机验证码',
     EMAIL_VERIFY_CODE: '邮箱验证码',
     ENTER_VERIFY_CODE: '输入邮箱验证码',
     GET_CODE: '获取验证码',
     WARM_REMINDER: '友情提示',
     MSG_ONE_LIST: [
       '当前，每人每日最高可提现',
-      'MUSDT，单笔转出限额为',
+      '，单笔转出限额为',
       '-',
-      'k MUSDT；手续费',
-      'MUSDT'
+      '；手续费',
+      '。'
     ],
     MSG_TWO: '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。',
     MSG_THREE: '提币MUSDT将自动根据当前汇率（MMT/MUSDT）折合成MMT提币，请悉知',
@@ -254,7 +255,7 @@ export default {
     COPY_ADDRESS: '复制地址',
     DEPOSIT_NOTES: '转入说明',
     RECHARGE_MSG_ONE: '充值MMT后将自动根据MMT/MUSDT的时时汇率自动折合成MUSDT，折合时间根据MMT到账时间为准。',
-    RECHARGE_MSG_TWO: '转入是自动的，MMT转账需要整个ETH网络进行确认，您的MMT会自动充值到您的账户中。',
+    RECHARGE_MSG_TWO: ['转入是自动的，','转账需要整个ETH网络进行确认，您的','会自动充值到您的账户中。'],
     RECHARGE_MSG_THREE: '此地址是您唯一且独自使用的转入地址，您可以同进进行多次充值。',
     RECHARGE_MSG_FOUR: '本地址禁止充值除MUSDT之外的其它资产，任何其它资产充值将不可找回。',
 
@@ -285,5 +286,6 @@ export default {
     CONVERTED_MMT_AMOUNT: '折合MMT',
     TRANSFER: '转账',
     ALL_LOADED: '已加载全部',
+    STATUS: '状态'
   }
 }

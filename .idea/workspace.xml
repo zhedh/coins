@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmt/src/locales/en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/locales/en-US.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmt/src/pages/wallet/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +34,7 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="73" />
+          <entry key="js" value="78" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
           <entry key="md" value="2" />
@@ -46,7 +47,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="73" />
+          <entry key="JavaScript" value="78" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="5" />
@@ -57,7 +58,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="5253" />
+          <entry key="js" value="5568" />
           <entry key="scss" value="260" />
           <entry key="txt" value="39" />
         </counts>
@@ -65,7 +66,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="5253" />
+          <entry key="JavaScript" value="5568" />
           <entry key="PLAIN_TEXT" value="39" />
           <entry key="SCSS" value="260" />
         </counts>
@@ -82,17 +83,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mmt/src/locales/en-US.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="249" column="16" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="16" />
+            <state relative-caret-position="306">
+              <caret line="287" column="10" selection-start-line="287" selection-start-column="4" selection-end-line="287" selection-end-column="10" />
               <folding>
                 <element signature="e#27#584#0" expanded="true" />
                 <element signature="e#595#2886#0" expanded="true" />
                 <element signature="e#2898#2944#0" expanded="true" />
                 <element signature="e#2958#3158#0" expanded="true" />
                 <element signature="e#3172#3509#0" expanded="true" />
-                <element signature="e#3519#5502#0" expanded="true" />
-                <element signature="e#5512#6724#0" expanded="true" />
-                <element signature="e#6738#7880#0" expanded="true" />
+                <element signature="e#3519#5540#0" expanded="true" />
+                <element signature="e#5550#6762#0" expanded="true" />
+                <element signature="e#6776#7935#0" expanded="true" />
+                <element signature="e#7952#8785#0" expanded="true" />
+                <element signature="e#9964#10165#0" expanded="true" />
+                <element signature="e#11754#11953#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,23 +120,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js">
+        <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="177">
+              <caret line="213" column="54" lean-forward="true" selection-start-line="213" selection-start-column="4" selection-end-line="213" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#802#1077#0" expanded="true" />
+                <element signature="e#2992#3078#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js">
+        <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="198">
+              <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#419#454#0" expanded="true" />
-                <element signature="n#!!block;n#componentDidMount#0;n#Recharge#0" />
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#914#1000#0" expanded="true" />
+                <element signature="e#1030#1109#0" expanded="true" />
+                <element signature="e#1139#1216#0" expanded="true" />
+                <element signature="e#1246#1321#0" expanded="true" />
+                <element signature="e#1185#1241#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,17 +153,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mmt/src/locales/zh-CN.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="246" column="13" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="288" selection-start-line="288" selection-end-line="289" />
               <folding>
-                <element signature="e#27#449#0" expanded="true" />
-                <element signature="e#461#1880#0" expanded="true" />
-                <element signature="e#1891#1926#0" expanded="true" />
-                <element signature="e#1940#2068#0" expanded="true" />
-                <element signature="e#2082#2311#0" expanded="true" />
-                <element signature="e#2321#3650#0" expanded="true" />
-                <element signature="e#3660#4318#0" expanded="true" />
-                <element signature="e#4332#5091#0" expanded="true" />
+                <element signature="e#27#448#0" expanded="true" />
+                <element signature="e#460#1878#0" expanded="true" />
+                <element signature="e#1889#1923#0" expanded="true" />
+                <element signature="e#1937#2063#0" expanded="true" />
+                <element signature="e#2077#2305#0" expanded="true" />
+                <element signature="e#2315#3680#0" expanded="true" />
+                <element signature="e#3690#4360#0" expanded="true" />
+                <element signature="e#4374#5153#0" expanded="true" />
+                <element signature="e#6535#6622#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,7 +174,7 @@
         <entry file="file://$PROJECT_DIR$/mmt/src/assets/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#28#123#0" expanded="true" />
                 <element signature="e#372#739#0" expanded="true" />
@@ -184,7 +197,13 @@
       <find>SET_PASSWORD</find>
       <find>COMMON</find>
       <find>保存</find>
+      <find>VERIFY_CODE</find>
+      <find>到账数</find>
+      <find>MSG_ONE_LIST</find>
     </findStrings>
+    <replaceStrings>
+      <replace>COMMON_ASSET</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/mmt/src</dir>
       <dir>$PROJECT_DIR$/mmt</dir>
@@ -224,9 +243,12 @@
         <option value="$PROJECT_DIR$/mmt/src/pages/home/Index.scss" />
         <option value="$PROJECT_DIR$/mmt/src/pages/wallet/Index.js" />
         <option value="$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js" />
         <option value="$PROJECT_DIR$/mmt/src/locales/zh-CN.js" />
         <option value="$PROJECT_DIR$/mmt/src/locales/en-US.js" />
-        <option value="$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js" />
+        <option value="$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js" />
       </list>
     </option>
   </component>
@@ -409,7 +431,7 @@
       <workItem from="1569238407801" duration="9273000" />
       <workItem from="1569326115938" duration="10354000" />
       <workItem from="1569412151585" duration="13896000" />
-      <workItem from="1569434651049" duration="2690000" />
+      <workItem from="1569434651049" duration="5369000" />
     </task>
     <task id="LOCAL-00001" summary="[mmt] add locale">
       <created>1569204056104</created>
@@ -439,11 +461,18 @@
       <option name="project" value="LOCAL" />
       <updated>1569431470370</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[mmt] update locale">
+      <created>1569437402633</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569437402633</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43830000" />
+    <option name="totallyTimeSpent" value="46509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="638" y="41" width="965" height="922" extended-state="0" />
@@ -503,32 +532,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="[mmt] update locale" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xc/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="22">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/stores/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1740" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/assets/static/mmt.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -809,11 +812,18 @@
     <entry file="file://$PROJECT_DIR$/mmt/src/assets/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#28#123#0" expanded="true" />
             <element signature="e#372#739#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -832,55 +842,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js">
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="258">
+          <caret line="31" selection-start-line="31" selection-end-line="32" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#419#454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WalletUsdt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-358">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#426#562#0" expanded="true" />
+            <element signature="e#667#696#0" expanded="true" />
+            <element signature="e#875#939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="47" selection-start-line="47" selection-end-line="48" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#452#611#0" expanded="true" />
+            <element signature="e#645#674#0" expanded="true" />
+            <element signature="e#856#1161#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="213" column="54" lean-forward="true" selection-start-line="213" selection-start-column="4" selection-end-line="213" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#802#1077#0" expanded="true" />
+            <element signature="e#2992#3078#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/locales/zh-CN.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="246" column="13" selection-start-line="246" selection-start-column="4" selection-end-line="246" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="288" selection-start-line="288" selection-end-line="289" />
           <folding>
-            <element signature="e#27#449#0" expanded="true" />
-            <element signature="e#461#1880#0" expanded="true" />
-            <element signature="e#1891#1926#0" expanded="true" />
-            <element signature="e#1940#2068#0" expanded="true" />
-            <element signature="e#2082#2311#0" expanded="true" />
-            <element signature="e#2321#3650#0" expanded="true" />
-            <element signature="e#3660#4318#0" expanded="true" />
-            <element signature="e#4332#5091#0" expanded="true" />
+            <element signature="e#27#448#0" expanded="true" />
+            <element signature="e#460#1878#0" expanded="true" />
+            <element signature="e#1889#1923#0" expanded="true" />
+            <element signature="e#1937#2063#0" expanded="true" />
+            <element signature="e#2077#2305#0" expanded="true" />
+            <element signature="e#2315#3680#0" expanded="true" />
+            <element signature="e#3690#4360#0" expanded="true" />
+            <element signature="e#4374#5153#0" expanded="true" />
+            <element signature="e#6535#6622#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/locales/en-US.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="249" column="16" selection-start-line="249" selection-start-column="4" selection-end-line="249" selection-end-column="16" />
+        <state relative-caret-position="306">
+          <caret line="287" column="10" selection-start-line="287" selection-start-column="4" selection-end-line="287" selection-end-column="10" />
           <folding>
             <element signature="e#27#584#0" expanded="true" />
             <element signature="e#595#2886#0" expanded="true" />
             <element signature="e#2898#2944#0" expanded="true" />
             <element signature="e#2958#3158#0" expanded="true" />
             <element signature="e#3172#3509#0" expanded="true" />
-            <element signature="e#3519#5502#0" expanded="true" />
-            <element signature="e#5512#6724#0" expanded="true" />
-            <element signature="e#6738#7880#0" expanded="true" />
+            <element signature="e#3519#5540#0" expanded="true" />
+            <element signature="e#5550#6762#0" expanded="true" />
+            <element signature="e#6776#7935#0" expanded="true" />
+            <element signature="e#7952#8785#0" expanded="true" />
+            <element signature="e#9964#10165#0" expanded="true" />
+            <element signature="e#11754#11953#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js">
+    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        <state relative-caret-position="198">
+          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#419#454#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Recharge#0" />
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#914#1000#0" expanded="true" />
+            <element signature="e#1030#1109#0" expanded="true" />
+            <element signature="e#1139#1216#0" expanded="true" />
+            <element signature="e#1246#1321#0" expanded="true" />
+            <element signature="e#1185#1241#0" expanded="true" />
           </folding>
         </state>
       </provider>
