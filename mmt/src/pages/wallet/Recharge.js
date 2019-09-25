@@ -29,18 +29,18 @@ class Recharge extends Component {
 
   render() {
     const { localeStore } = this.props
-    const { TOAST } = localeStore.language || {}
+    const { TOAST,WALLET } = localeStore.language || {}
     const { type, address } = this.state
     const isUsdt = type === 'USDT'
 
     return (
       <div id="recharge">
-        <Header title={`${type}充值`} isFixed isShadow bgWhite />
+        <Header title={`${type} ${WALLET.DEPOSIT}`} isFixed isShadow bgWhite />
         <section className="section-main">
           <div className="group qr-code__group">
             <QrCodeBox key={address} codeMsg={address} />
             <br />
-            <span>点击或长按二维码保存图片</span>
+            <span>{WALLET.SAVE_QR_CODE}</span>
           </div>
           <div className="group address">
             <p>{address}</p>

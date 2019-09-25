@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { inject, observer } from 'mobx-react'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+import {inject, observer} from 'mobx-react'
 import Header from '../../components/common/Header'
 import WalletCard from '../../components/partial/WalletCard'
 import walletToLoginImg from '../../assets/images/wallet-to-login.png'
 import walletZbsImg from '../../assets/images/wallet-zbs.png'
 import walletUsdtImg from '../../assets/images/wallet-usdt.png'
-import { COMMON } from '../../assets/static'
+import {COMMON_ASSET} from '../../assets'
 import './Index.scss'
 
 const USDT_CARD = {
@@ -20,7 +20,7 @@ const USDT_CARD = {
 
 const WALLET_CARD = {
   bgImg: walletZbsImg,
-  name: COMMON.COIN_NAME,
+  name: COMMON_ASSET.COIN_NAME,
   asset: '',
   locked: '',
   rechargeUrl: '/wallet/recharge/',
@@ -31,12 +31,12 @@ const WALLET_CARD = {
 
 class CardList extends Component {
   render() {
-    const { cards } = this.props
+    const {cards} = this.props
     return (
       <ul className="cards-warp">
         {cards.map(card => (
           <li key={card.name}>
-            <WalletCard card={card} />
+            <WalletCard card={card}/>
           </li>
         ))}
       </ul>
@@ -44,20 +44,28 @@ class CardList extends Component {
   }
 }
 
-function ToLogin() {
-  return (
-    <div className="login-warp">
-      <main>
-        <img src={walletToLoginImg} alt="去登录" />
-        <p>您未登录，不能进行操作</p>
-      </main>
-      <aside>
-        <Link to="/login">去登录</Link>
-      </aside>
-    </div>
-  )
+@inject('localeStore')
+@observer
+class ToLogin extends Component {
+  render() {
+    const {localeStore} = this.props
+    const {WALLET} = localeStore.language || {}
+    return (
+      <div className="login-warp">
+        <main>
+          <img src={walletToLoginImg} alt="去登录"/>
+          <p>{WALLET.SIGNIN_TO_OPERATE}</p>
+        </main>
+        <aside>
+          <Link to="/login">{WALLET.TO_LOGIN}</Link>
+        </aside>
+      </div>
+    )
+  }
+
 }
 
+@inject('localeStore')
 @inject('userStore')
 @inject('personStore')
 @inject('walletStore')
@@ -72,11 +80,11 @@ class Index extends Component {
   }
 
   getProductCards = async () => {
-    const { personStore, walletStore } = this.props
+    const {personStore, walletStore} = this.props
     await personStore.getUserInfo()
     await walletStore.getWallets()
-    const { userInfo } = personStore
-    const { wallets } = walletStore
+    const {userInfo} = personStore
+    const {wallets} = walletStore
     const cards = []
     cards.push({
       ...USDT_CARD,
@@ -95,17 +103,18 @@ class Index extends Component {
       }
     })
     cards.push(...walletCards)
-    this.setState({ cards })
+    this.setState({cards})
   }
 
   render() {
-    const { userStore } = this.props
-    const { cards } = this.state
+    const {userStore,localeStore} = this.props
+    const {cards} = this.state
+    const {WALLET} = localeStore.language || {}
 
     return (
       <div id="wallet">
-        <Header hideIcon title="钱包" isFixed isShadow />
-        {userStore.isOnline ? <CardList cards={cards} /> : <ToLogin />}
+        <Header hideIcon title={WALLET.WALLET} isFixed isShadow/>
+        {userStore.isOnline ? <CardList cards={cards}/> : <ToLogin/>}
       </div>
     )
   }
