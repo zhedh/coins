@@ -18,11 +18,12 @@ export default {
     // footer
     HOMEPAGE: 'Homepage',
     NODE: 'Node',
-    WALLET: 'Wallet',
+    WALLET: 'Wallet'
   },
   TOAST: {
-    ACCOUNT_ERR: 'Account doesn\'t exist!',
-    PASSWORD_ERR: 'Password is at least 8 digits, consisting of letters and numbers.',
+    ACCOUNT_ERR: "Account doesn't exist!",
+    PASSWORD_ERR:
+      'Password is at least 8 digits, consisting of letters and numbers.',
     LOGIN_SUCCESS: 'Login successfully!',
     CODE_ERR: 'Verification code is wrong.',
     PASSWORD_CONFIRM_ERR: 'Password is not the same.',
@@ -39,9 +40,10 @@ export default {
     SCAN_FAILED: 'Scan failed.',
     EMAIL_UN_REGISTER: 'The e-mail is not registered yet.',
     PHONE_UN_REGISTER: 'The phone number is not registered yet.',
-    PLEASE_INPUT_CONFIRM_ACCOUNT: 'Please fill in the correct e-mail or phone number.',
+    PLEASE_INPUT_CONFIRM_ACCOUNT:
+      'Please fill in the correct e-mail or phone number.',
     PLEASE_INPUT_4_CODE: 'Please enter the 4-digit verification code.',
-    PAGE_NOT_AND_TO_HOME: 'Page doesn\'t exist, returning to homepage…',
+    PAGE_NOT_AND_TO_HOME: "Page doesn't exist, returning to homepage…",
     COPIED: 'Copied.',
     PLEASE_INPUT_CARD_NUMBER: 'Please enter 7-18 digits document number.',
     PLEASE_INPUT_ADDRESS: 'Please fill in the withdrawal address.',
@@ -50,7 +52,8 @@ export default {
     LESS_MIN_AMOUNT: 'Less than minimum withdrawal amount.',
     MORE_MIN_AMOUNT: 'Exceed withdrawal maximum limit.',
     INSUFFICIENT_ACCOUNT: 'Insufficient funds.',
-    WITHDRAW_SUCCESS: 'Withdrawal successfully, returning to withdrawal record.',
+    WITHDRAW_SUCCESS:
+      'Withdrawal successfully, returning to withdrawal record.',
     UPLOAD_SUCCESS: 'Upload successfully.',
     IS_SIGN_OUT: 'Confirm to sign out?',
     UNVERIFIED: 'Unverified',
@@ -63,7 +66,7 @@ export default {
     PASSPORT: 'Passport',
     DRIVING_LICENSE: 'Driving License',
     FAILED: 'Failed',
-    UN_LOGIN_NOT_DO: 'You haven\'t signed in, cannot operate.\n',
+    UN_LOGIN_NOT_DO: "You haven't signed in, cannot operate.\n",
     TO_LOGIN: 'Go to sign in.',
     REVIEWING: 'Reviewing',
     PROCESSING: 'Processing',
@@ -72,14 +75,13 @@ export default {
   },
 
   LOGIN: {
-    FORGOT_PASSWORD: 'Forgot password?',
+    FORGOT_PASSWORD: 'Forgot password?'
   },
   REGISTER: {
     SUBMIT_LABEL: 'Singup immediately',
     REGISTER_SUCCESS: 'Register successfully!',
     HAPPY_REGISTER_SUCCESS: 'Congratulations, register successfully.',
-    OPEN_FIRST: 'Back to Account',
-
+    OPEN_FIRST: 'Back to Account'
   },
   PASSWORD: {
     FIND_PASSWORD: 'Find password',
@@ -88,16 +90,19 @@ export default {
     RESET_LOGIN_PASSWORD: 'Reset Signin Password',
     SET_PAY_PASSWORD: 'Set Pay Password',
     RESET_PAY_PASSWORD: 'Reset Pay Password',
-    PASSWORD_REMARK: 'The password is in 8-10 digits, pure numbers is not allowed.',
+    PASSWORD_REMARK:
+      'The password is in 8-10 digits, pure numbers is not allowed.'
   },
   HOME: {
     NOTICE: 'Notice:',
+    MUSDT_AVAILABLE: 'USDT Specials',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT Available Promotion Quota',
     INVITATION_REWARDS: 'Invitation Rewards',
     ACTIVATED: 'Activated',
     RULES: 'Rules',
     WARM_REMINDER: 'Warm Reminder',
-    DEPOSIT_BEFORE_AUTH: 'Subscribing to deposit plan requires identity verification.',
+    DEPOSIT_BEFORE_AUTH:
+      'Subscribing to deposit plan requires identity verification.',
     GOT_IT: 'Got it',
     VERIFY_FIRST: 'Verify immediately',
     JOIN_EVERYDAY: 'Subscribe everyday, make profits everyday!',
@@ -115,7 +120,8 @@ export default {
     MANAGEMENT_REWARDS: 'Management Rewards',
     TEAM_REWARDS: 'Team Rewards',
     OPERATION_REWARDS: 'Operation Rewards',
-    REWARDS_MSG: 'The daily rewarding quota will expire in two trading days. The rewarding quota will be expired if it is not used before settlement of the second trading day.',
+    REWARDS_MSG:
+      'The daily rewarding quota will expire in two trading days. The rewarding quota will be expired if it is not used before settlement of the second trading day.',
     PROMOTION_QUOTA_RECORDS: 'Promotion Quota Records',
     UNLOCK_QUOTA: 'Unlock Quota',
     EXPIRED: 'Expired',
@@ -136,11 +142,12 @@ export default {
     REBATE_PROPORTION: 'Rebate Proportion',
     GENERATION_REFERRALS: ' Generation Referrals',
     MEMBERS: 'Members',
-    REFERRING_DATE: 'Referring Date',
+    REFERRING_DATE: 'Referring Date'
   },
   AUTH: {
     INPUT_MSG: 'Fill in the Information',
-    CONFIRM_MSG_AND_CARD: 'Make sure the information you fill is consistent with the identity documents you provide',
+    CONFIRM_MSG_AND_CARD:
+      'Make sure the information you fill is consistent with the identity documents you provide',
     SELECT_AUTH_WAY: 'You can select a document to verify',
     ID_CARD: 'Identity Card',
     PASSPORT: 'Passport',
@@ -149,8 +156,10 @@ export default {
     LAST_NAME: 'Last name',
     CARD_NUMBER: 'Document Number',
     IDENTITY_VERIFICATION: 'Identity Verification',
-    AUTH_EXPLAIN_ONE: 'Please make sure the photo you upload is clear and intacted in the format of jpg, jpeg, or png, which is less than 2M. The document must be within the expiry date.',
-    AUTH_EXPLAIN_TWO: 'Please upload the photo of you holding your verification document, and a white paper written with "NTTC" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
+    AUTH_EXPLAIN_ONE:
+      'Please make sure the photo you upload is clear and intacted in the format of jpg, jpeg, or png, which is less than 2M. The document must be within the expiry date.',
+    AUTH_EXPLAIN_TWO:
+      'Please upload the photo of you holding your verification document, and a white paper written with "NTTC" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
     SUBMIT_VERIFY: 'Submit',
     SUBMIT_AND_WAIT: 'Sumbitted, waiting for review…',
     RESULT_MSG: 'Verification result will be shown at Profile',
@@ -158,17 +167,18 @@ export default {
     FAILED_REASON: 'Reason',
     CONTINUE_TO_VERIFY: 'Continue to Verify',
     YOUR_NAME: 'Name'
-
   },
 
   DEPOSIT: {
     SUPER_NODE: 'Super Node',
     JOIN_NODE: 'Join a node',
     UNLOCK_AMOUNT: 'Unlock Amount',
+    FEE: 'FEES',
     FEES: 'Fees',
-    AUTH_MSG_ONE: 'You can\'t join as you haven\'t passed the identity verification.',
+    AUTH_MSG_ONE:
+      "You can't join as you haven't passed the identity verification.",
     TO_AUTH: 'Go to Verify',
-    AUTH_MSG_TWO: 'You can\'t join as you haven\'t set trade password.',
+    AUTH_MSG_TWO: "You can't join as you haven't set trade password.",
     TO_SET: 'Go to Set',
     JOIN_AND_GET: 'Join a node and get NTTC promotion quota',
     JOIN_SUPER_NODE: 'Join a Super Node',
@@ -197,6 +207,6 @@ export default {
     Identitiy_Verification: 'Identitiy Verification',
     Not_F_Member: 'Not a F Member, cannot get the referring rewards.',
     Announcements: 'Announcements',
-    Account_Security: 'Account Security',
+    Account_Security: 'Account Security'
   }
-};
+}

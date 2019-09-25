@@ -1,9 +1,10 @@
-import React, {Component} from 'react'
-import {Toast} from 'antd-mobile'
+import React, { Component } from 'react'
+import { Toast } from 'antd-mobile'
+import { inject } from 'mobx-react'
 import Header from '../../components/common/Header'
 import OtherApi from '../../api/other'
 import './Rule.scss'
-
+@inject('localeStore')
 class Rule extends Component {
   state = {
     content: ''
@@ -19,16 +20,18 @@ class Rule extends Component {
         Toast.info(res.msg)
         return
       }
-      this.setState({content: res.data[0].content})
+      this.setState({ content: res.data[0].content })
     })
   }
 
   render() {
-    const {content} = this.state
+    const { localeStore } = this.props
+    const { HOME } = localeStore.language || {}
+    const { content } = this.state
     return (
       <div id="rule">
-        <Header title="MUSDT规则说明" isFixed isShadow bgWhite/>
-        <div dangerouslySetInnerHTML={{__html: content}}/>
+        <Header title={`MUSDT${HOME.RULES}`} isFixed isShadow bgWhite />
+        <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     )
   }

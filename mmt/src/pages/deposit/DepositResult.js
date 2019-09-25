@@ -1,46 +1,46 @@
-import React, {Component} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Button} from 'antd-mobile'
-import {AUTH, COMMON} from '../../assets/static'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Button } from 'antd-mobile'
+import { AUTH, COMMON, DEPOSIT } from '../../assets/static'
 import './DepositResult.scss'
 
+@inject('localeStore')
 @inject('personStore')
 @observer
 class DepositResult extends Component {
   handleFinish = () => {
-    const {history, location} = this.props
+    const { history, location } = this.props
     const isUnLock = location.state === 'unLock'
-    isUnLock ?
-      history.push({pathname: '/deposit', state: 1}) :
-      history.push('/home')
+    isUnLock
+      ? history.push({ pathname: '/deposit', state: 1 })
+      : history.push('/home')
   }
 
   render() {
-    const {history, location} = this.props
+    const { history, location, localeStore } = this.props
+    const { DEPOSIT } = localeStore
     const isUnLock = location.state === 'unLock'
     return (
       <div id="verified-result">
-        <img
-          className="result-img"
-          alt="结果图片"
-          src={AUTH.IMG_SUCCESS}
-        />
+        <img className="result-img" alt="结果图片" src={AUTH.IMG_SUCCESS} />
         <div className="result-content">
-          <h2>支付成功！</h2>
+          <h2>{DEPOSIT.PAY_SUCCESS}！</h2>
           <Button
             activeClassName="active"
             className="primary-button"
             onClick={this.handleFinish}
           >
-            完成
+            {DEPOSIT.FINISH}
           </Button>
-          {!isUnLock && <Button
-            activeClassName="active"
-            className="primary-button hollow"
-            onClick={() => history.push({pathname: '/deposit', state: 1})}
-          >
-            解锁{COMMON.COIN_NAME}
-          </Button>}
+          {!isUnLock && (
+            <Button
+              activeClassName="active"
+              className="primary-button hollow"
+              onClick={() => history.push({ pathname: '/deposit', state: 1 })}
+            >
+              {DEPOSIT.UNLOCK_MUSDT}
+            </Button>
+          )}
         </div>
       </div>
     )
