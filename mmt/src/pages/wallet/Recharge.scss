@@ -1,0 +1,49 @@
+@import '../../styles/_common';
+
+#recharge {
+  @include clearFix;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  font-weight: 600;
+
+  .section-main {
+    text-align: center;
+
+    .qr-code__group {
+      padding: 4.7rem 0;
+
+      span {
+        color: $text-disable-color;
+      }
+    }
+
+    .address {
+      padding: 1.5rem 0;
+      font-size: 1.3rem;
+
+      p {
+        @include clearBack;
+        margin-bottom: 20px;
+      }
+
+      span {
+        color: $assistant-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .section-aside {
+    padding: 15px 30px;
+    color: $text-sub-color;
+    font-size: $font-assistant;
+
+    p {
+      @include clearBack;
+      padding: 5px 0;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  }
+}

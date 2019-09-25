@@ -1,0 +1,48 @@
+@import '../../styles/_common';
+
+#wallet-usdt {
+  @include clearFix;
+  box-sizing: border-box;
+  padding-top: $header-height;
+  min-height: 100vh;
+  background:rgba(247,247,248,1);
+
+  header {
+    background: $white;
+  }
+
+  .card {
+    padding: 15px 13px;
+    background: $white;
+  }
+
+  .records {
+    @include clearList;
+    padding: 15px 0;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding: 0 15px;
+      height: 7.2rem;
+      background: $white;
+      line-height: 1.6;
+      font-weight: bold;
+
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        small{
+          margin-top: 5px;
+          color: $text-sub-color;
+          font-size: $font-assistant;
+        }
+      }
+    }
+  }
+}

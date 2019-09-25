@@ -1,0 +1,30 @@
+@import "../../styles/mixin";
+
+#captcha-box {
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3.6rem;
+  }
+
+  input {
+    @include clearButton;
+    width: 100%;
+    outline: none;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    border-bottom: 1px solid $black-border-bottom;
+
+    &:focus {
+      border-bottom: 2px solid $primary-color;
+    }
+
+    &::placeholder {
+      color: $black-font-primary;
+      font-weight: 500;
+    }
+  }
+}

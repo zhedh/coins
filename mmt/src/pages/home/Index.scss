@@ -1,0 +1,198 @@
+@import "../../styles/mixin";
+
+#home {
+  position: relative;
+  padding-top: 19.5rem;
+  padding-bottom: $footer-height;
+
+  header img{
+    width: 1.62rem;
+    height: 1.8rem;
+  }
+
+  .section-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 19.5rem;
+    //background: $primary-color;
+    color: $white;
+    //background-image: url("");
+    background-size: cover;
+    background-position: center;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1 {
+      @include clearBack;
+      position: relative;
+      height: 6.5rem;
+      text-align: center;
+      line-height: 6.5rem;
+      font-size: $font-title;
+
+      .fa-user {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        margin: auto;
+      }
+    }
+
+    .notice-carousel {
+      @include clearBack;
+      position: relative;
+      padding: 0 5px 0 64px;
+      font-size: $font-context;
+
+      label {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+
+        .megaphone {
+          font-size: 13px;
+          margin-right: 5px;
+        }
+      }
+
+      .item {
+        height: 36px;
+        line-height: 36px;
+        @include overflow(1);
+      }
+
+      span{
+        margin-left: 15px;
+      }
+    }
+
+    .tabs {
+      @include clearList;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      margin: 2.5rem 30px 0;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        box-sizing: border-box;
+        width: 13.8rem;
+        height: 4.8rem;
+        padding: 8px;
+        border: 2px solid $white;
+        border-radius: 5px;
+
+        .text {
+          font-size: $font-assistant;
+
+          span {
+            font-size: $font-title-s;
+          }
+
+          b {
+            font-size: 2.1rem;
+            font-weight: normal;
+          }
+
+          small {
+            font-size: 0.9rem;
+          }
+
+          &.inviter-award {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .icon {
+              margin: 0 8px;
+            }
+          }
+        }
+
+        .icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .section-main {
+    .steps {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 14px 18px;
+
+      span, a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $text-color;
+        text-decoration: none;
+
+        .icon {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .list {
+      @include clearList;
+      padding: 15px 13px;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 10px;
+        padding: 8px 15px;
+        background: rgba(255, 249, 247, 1);
+        border-radius: 7px;
+        line-height: 1.6;
+
+        .main {
+          display: flex;
+          flex-direction: column;
+          font-size: $font-title;
+
+          small {
+            font-size: 1rem;
+          }
+
+          span {
+            font-size: 1.1rem;
+          }
+        }
+
+        .aside {
+          display: flex;
+          flex-direction: column;
+          text-align: right;
+
+          time {
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../styles/mixin";
+
+#generalize-detail {
+  padding-top: $header-height;
+  header {
+    background: $white;
+  }
+
+  ul {
+    @include clearList;
+    padding: 15px 20px;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      padding: 4px 0;
+      line-height: 1.6;
+      font-weight: 600;
+
+      span {
+        display: block;
+        width: 60%;
+        margin-right: 10px;
+        padding: 5px 0;
+        color: #5A5A5A;
+        overflow-y: auto;
+      }
+
+      time {
+        padding: 5px 0;
+        color: #A7A7A9;
+      }
+
+      &:first-child {
+        span, time {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}

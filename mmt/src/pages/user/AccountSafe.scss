@@ -1,0 +1,20 @@
+@import '../../styles/_common';
+
+#account-safe {
+  min-height: 100vh;
+  background-color: #fff;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.8rem;
+    margin-top: 1rem;
+    color: $text-color;
+    text-decoration: none;
+
+    .arrow {
+      height: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/_common';
+
+#verified-country {
+  padding-top: 44px;
+
+  .next-step {
+    font-size: $font-context + 0.1;
+    font-weight: 500;
+  }
+
+  .country-list {
+    @include clearList;
+    box-sizing: border-box;
+    padding: 1rem 1.5rem;
+    font-size: $font-title-s;
+    font-weight: 600;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+
+      img {
+        width: auto;
+        height: 1.6rem;
+      }
+    }
+  }
+}

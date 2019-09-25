@@ -1,0 +1,136 @@
+@import '../../styles/mixin';
+
+#generalize {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: rgba(247, 247, 248, 1);
+
+  .section-banner {
+    background-size: cover;
+    color: $white;
+
+    h1 {
+      @include clearBack;
+      padding: 1.9rem 30px 1.1rem;
+      font-size: 2.4rem;
+
+      img {
+        margin-right: 15px;
+        width: 0.9rem;
+        transform: rotate(180deg);
+      }
+    }
+
+    .content {
+      padding: 1.2rem 0 3.4rem;
+      text-align: center;
+
+      .count {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 14.9rem;
+        height: 6.9rem;
+        background: $generalize-linear-gradient;
+        border-radius: 6px;
+        font-size: 3rem;
+
+        small {
+          margin-top: 5px;
+          font-size: $font-assistant;
+        }
+      }
+    }
+  }
+
+  .section-main {
+    padding: 16px 27px 30px;
+
+    label {
+      display: inline-block;
+      padding: 8px 0;
+      font-size: $font-assistant;
+    }
+
+    .list {
+      @include clearList;
+      padding-top: 8px;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 16px;
+        padding: 17px;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+
+        p {
+          @include clearBack;
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 12px;
+            width: 2rem;
+          }
+        }
+
+        aside {
+          display: flex;
+          align-items: center;
+          font-size: $font-title;
+
+          img {
+            margin-left: 12px;
+            width: 8px;
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    .team {
+      @include clearList;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      margin-top: 8px;
+      background: $white;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 19px 0 14px;
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          box-shadow: 0 1px 22px 0 rgba(0, 0, 0, 0.1);
+          font-size: $font-context;
+          font-weight: 500;
+        }
+
+        small {
+          display: inline-block;
+          margin-top: 14px;
+          font-size: $font-context;
+        }
+      }
+    }
+  }
+}

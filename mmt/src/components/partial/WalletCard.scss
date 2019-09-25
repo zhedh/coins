@@ -1,0 +1,67 @@
+@import "../../styles/mixin";
+
+.wallet-card {
+  @include clearFix;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 19.3rem;
+  padding: 20px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  h1 {
+    @include clearBack;
+    font-size: 3rem;
+    line-height: 1.6;
+
+    small {
+      display: block;
+      padding: 3px 0;
+      font-size: $font-assistant;
+      font-weight: normal;
+    }
+
+    aside{
+      font-size: $font-assistant;
+    }
+  }
+
+  ul {
+    @include clearList;
+    display: flex;
+    flex-direction: row;
+    padding-top: 2.7rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 3.5rem;
+      font-size: $font-assistant;
+
+      img {
+        margin-bottom: 5px;
+        width: 3rem;
+      }
+    }
+  }
+
+  .arrow-right, .update-time {
+    position: absolute;
+    right: 20px;
+  }
+
+  .arrow-right{
+    top: 20px;
+    width: 1rem;
+  }
+
+  .update-time{
+    bottom: 20px;
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+}

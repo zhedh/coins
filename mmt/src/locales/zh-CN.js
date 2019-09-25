@@ -1,0 +1,90 @@
+export default {
+  COMMON: {
+    LOGIN: '登录',
+    ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
+    PASSWORD_PLACEHOLDER: '密码',
+    REGISTER: '注册',
+    PASSWORD: '密码',
+    CONFIRM: '确认',
+    GRAPH_CODE: '图形验证码',
+    VERIFY_CODE: '图形验证码',
+    GET_VERIFY_CODE: '获取验证码',
+    PASSWORD_CONFIRM_PLACEHOLDER: '再次输入密码',
+    INVITER_CODE: '邀请码',
+    NEXT_STEP: '下一步',
+    SET: '设置',
+    RESET: '重置'
+  },
+
+  TOAST: {
+    ACCOUNT_ERR: '账号输入错误',
+    PASSWORD_ERR: '密码最少8位，字母加数字',
+    LOGIN_SUCCESS: '登录成功',
+    CODE_ERR: '验证码输入错误',
+    PASSWORD_CONFIRM_ERR: '两次密码不一致',
+    PASSWORD_HAS_RESET: '密码已重置，请重新登录',
+    PASSWORD_RESET_TO_LOGIN: '重置成功，请重新登录',
+    SET_SUCCESS: '设置成功',
+    RESET_SUCCESS: '重置成功',
+
+    PLEASE_WAIT: '请稍后...',
+    PLEASE_LOGIN_FIRST: '请先登录',
+    LOADING: '加载中',
+    PLEASE_VERIFY_IDENTITY: '请进行身份认证',
+    PLEASE_SET_TRADE_PWD: '请设置交易密码',
+    SCAN_FAILED: '扫描失败',
+    EMAIL_UN_REGISTER: '该邮箱未注册',
+    PHONE_UN_REGISTER: '该手机号未注册',
+    PLEASE_INPUT_CONFIRM_ACCOUNT: '请填写正确的邮箱或者手机号',
+    PLEASE_INPUT_4_CODE: '请输入4位验证码',
+    PAGE_NOT_AND_TO_HOME: '页面不存在，正在跳转首页',
+    COPIED: '复制成功',
+    PLEASE_INPUT_CARD_NUMBER: '请输入7-18位证件号码',
+    PLEASE_INPUT_ADDRESS: '请填写提币地址',
+    PLEASE_INPUT_AMOUNT: '请输入提币数量',
+    ADRESS_ERROR: '地址格式错误',
+    LESS_MIN_AMOUNT: '低于最小提币数量',
+    MORE_MIN_AMOUNT: '提币量超过限制',
+    INSUFFICIENT_ACCOUNT: '账户不足',
+    WITHDRAW_SUCCESS: '提现成功，正在跳转提币记录页',
+    UPLOAD_SUCCESS: '上传成功',
+    IS_SIGN_OUT: '是否退出登录？',
+    UNVERIFIED: '未实名认证',
+    VERIFYING: '等待审核',
+    VERIFIED: '已审核',
+    HAS_REAL_NAME_AUTH: '已实名认证',
+    VERIFY_FAILED: '认证失败',
+    IDENTIFY_FAILED: '识别失败',
+    ID_CARD: '身份证',
+    PASSPORT: '护照',
+    DRIVING_LICENSE: '驾照',
+    FAILED: '失败',
+    UN_LOGIN_NOT_DO: '您未登录，不能进行操作',
+    TO_LOGIN: '去登录',
+    REVIEWING: '待审核',
+    PROCESSING: '已审核',
+    COMPLETED: '提币成功',
+    REJECTED: '审核拒绝'
+  },
+  LOGIN: {
+    FORGOT_PASSWORD: '忘记密码？'
+  },
+  REGISTER: {
+    REGISTER_SUCCESS: '注册成功！',
+    SUBMIT_LABEL: '立即注册',
+    HAPPY_REGISTER_SUCCESS: '恭喜您，注册成功！',
+    OPEN_FIRST: '立即开启'
+  },
+  PASSWORD: {
+    FIND_PASSWORD: '找回密码',
+    SET_PASSWORD: '设置密码',
+    RESET_PASSWORD: '重置密码',
+    RESET_LOGIN_PASSWORD: '重置登录密码',
+    SET_PAY_PASSWORD: '设置交易密码',
+    RESET_PAY_PASSWORD: '重置交易密码',
+    PASSWORD_REMARK: '8-20位字符，不可以是纯数字。'
+  },
+  HOME: {
+    NOTICE: '公告：'
+  }
+}

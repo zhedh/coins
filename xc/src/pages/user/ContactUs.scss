@@ -1,0 +1,39 @@
+@import '../../styles/_common';
+
+#contact-us {
+  min-height: 100vh;
+  background-color: #fff;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.8rem;
+    margin-top: 1rem;
+    color: $text-color;
+    text-decoration: none;
+
+    .arrow {
+      height: 1.4rem;
+    }
+  }
+
+  ul {
+    @include clearList;
+    box-sizing: border-box;
+    padding: 20px;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid $border-color;
+      line-height: 1.6;
+
+      label {
+        color: #666;
+      }
+    }
+  }
+}

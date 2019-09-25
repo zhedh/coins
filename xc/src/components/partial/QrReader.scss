@@ -1,0 +1,51 @@
+@import '../../styles/mixin';
+
+.qr-reader__popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 100vh;
+  display: none;
+
+  &.show{
+    display: block;
+  }
+
+  header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    padding: 0 15px;
+    color: $white;
+    font-size: $font-title;
+
+    img{
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  .qr-reader__box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+}

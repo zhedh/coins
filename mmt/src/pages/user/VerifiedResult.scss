@@ -1,0 +1,47 @@
+@import '../../styles/_common';
+
+#verified-result {
+  text-align: center;
+
+  .result-img {
+    width: 80%;
+    height: auto;
+    max-width: 55rem;
+    margin-top: 15%;
+  }
+
+  .result-content {
+    margin-top: 8.7rem;
+
+    div {
+      font-weight: 600;
+      &.submit-success {
+        color: #35393e;
+        font-size: $font-title;
+      }
+
+      &.submit-small {
+        color: #5a5a5a;
+        font-size: $font-assistant + 0.1;
+        line-height: 4;
+      }
+
+      &.verified-success {
+        color: #36c2cf;
+        font-size: $font-title-xl - 0.1;
+      }
+
+      &.verified-fail {
+        color: #db3f3e;
+        font-size: $font-title;
+        margin-top: -6rem;
+      }
+
+      &.fail-reason {
+        color: #5a5a5a;
+        font-size: $font-assistant + 0.1;
+        line-height: 3;
+      }
+    }
+  }
+}

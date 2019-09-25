@@ -1,0 +1,58 @@
+@import '../../styles/_common';
+
+$text-sub-color: #5A5A5A;
+
+#withdraw-record {
+  @include clearFix;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  font-weight: 600;
+
+  header {
+    background: $white;
+  }
+
+  ul {
+    @include clearList;
+    padding: 0 20px;
+
+    li {
+      padding: 12px 0;
+      border-bottom: 1px solid $border-color;
+      font-size: $font-assistant;
+      color: $text-sub-color;
+
+      p {
+        @include clearBack;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 7px 0;
+
+        label {
+          display: inline-block;
+          width: 80px;
+        }
+
+        span {
+          flex: 1;
+          word-break: break-all;
+          line-height: 1.4;
+
+          &.succeed {
+            color: $succeed-color;
+          }
+
+          &.danger {
+            color: $danger-color;
+          }
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
