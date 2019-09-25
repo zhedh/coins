@@ -8,7 +8,7 @@ import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import { formatCoinPrice } from '../../utils/format'
 import { COIN_POINT_LENGTH } from '../../utils/constants'
-import { DEPOSIT } from '../../assets/static'
+import { DEPOSIT, COMMON } from '../../assets/static'
 import './DepositBuy.scss'
 
 @inject('localeStore')
@@ -72,7 +72,14 @@ class DepositBuy extends Component {
   }
 
   render() {
-    const { show, productStore, userStore, personStore } = this.props
+    const {
+      show,
+      productStore,
+      userStore,
+      personStore,
+      localeStore
+    } = this.props
+    const { COMMON, DEPOSIT } = localeStore.language || {}
     const { showConfirm, payPassword, pwdType } = this.state
     const { productDetail, gears, gearNum } = productStore
     const hasGears = gears && gears.length > 0
@@ -99,23 +106,25 @@ class DepositBuy extends Component {
         <div className="fee">
           {gearNum && (
             <p>
-              <span>参与送{productDetail.productName}特价额度</span>
+              <span>{DEPOSIT.JOIN_AND_GET}</span>
               <span>{gearNum ? (gearNum / 10).toFixed(0) : 0}</span>
             </p>
           )}
-          <small>手续费费率：{(productDetail.serviceCharge || 0) * 100}%</small>
+          <small>
+            {DEPOSIT.FEES}：{(productDetail.serviceCharge || 0) * 100}%
+          </small>
         </div>
         <aside>
           {!personStore.isAuth && (
             <p>
-              *您暂未通过实名认证，无法参与计划
-              <Link to="/verified-country">去认证</Link>
+              *{DEPOSIT.AUTH_MSG_ONE}
+              <Link to="/verified-country">{DEPOSIT.TO_AUTH}</Link>
             </p>
           )}
           {!userStore.hasPayPassword && (
             <p>
-              *您暂未设置交易密码，无法参与
-              <Link to="/password/pay">去设置</Link>
+              *{DEPOSIT.AUTH_MSG_TWO}
+              <Link to="/password/pay">{DEPOSIT.TO_SET}</Link>
             </p>
           )}
         </aside>
@@ -132,7 +141,7 @@ class DepositBuy extends Component {
           <div className="content-box">
             <Header
               isShadow
-              title="确认支付"
+              title={DEPOSIT.CONFIRM_PAYMENT}
               icon={require('../../assets/images/close.png')}
               onHandle={() => this.setState({ showConfirm: false })}
             />
@@ -142,13 +151,16 @@ class DepositBuy extends Component {
                 <span>{gearNum || '--'}</span>
               </p>
               <p className="service-charge">
-                <span>手续费{productDetail.serviceCharge * 100}%</span>
+                <span>
+                  {DEPOSIT.FEES}
+                  {productDetail.serviceCharge * 100}%
+                </span>
                 <span>
                   {formatCoinPrice(gearNum * productDetail.serviceCharge)}
                 </span>
               </p>
               <p>
-                <span>可用</span>
+                <span>{DEPOSIT.AVAILABLE}</span>
                 <span>
                   {formatCoinPrice(
                     productDetail.userWarehouse,
@@ -175,7 +187,7 @@ class DepositBuy extends Component {
               className="primary-button"
               onClick={this.onSubmit}
             >
-              确认
+              {COMMON.CONFIRM}
             </Button>
           </div>
         </div>

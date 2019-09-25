@@ -18,7 +18,7 @@ export default {
     // footer
     HOMEPAGE: '首页',
     NODE: '节点',
-    WALLET: '钱包',
+    WALLET: '钱包'
   },
 
   TOAST: {
@@ -69,17 +69,16 @@ export default {
     REVIEWING: '待审核',
     PROCESSING: '已审核',
     COMPLETED: '提币成功',
-    REJECTED: '审核拒绝',
+    REJECTED: '审核拒绝'
   },
   LOGIN: {
-    FORGOT_PASSWORD: '忘记密码？',
+    FORGOT_PASSWORD: '忘记密码？'
   },
   REGISTER: {
     REGISTER_SUCCESS: '注册成功！',
     SUBMIT_LABEL: '立即注册',
     HAPPY_REGISTER_SUCCESS: '恭喜您，注册成功！',
-    OPEN_FIRST: '立即开启',
-
+    OPEN_FIRST: '立即开启'
   },
   PASSWORD: {
     FIND_PASSWORD: '找回密码',
@@ -88,10 +87,11 @@ export default {
     RESET_LOGIN_PASSWORD: '重置登录密码',
     SET_PAY_PASSWORD: '设置交易密码',
     RESET_PAY_PASSWORD: '重置交易密码',
-    PASSWORD_REMARK: '8-20位字符，不可以是纯数字。',
+    PASSWORD_REMARK: '8-20位字符，不可以是纯数字。'
   },
   HOME: {
     NOTICE: '公告：',
+    MUSDT_AVAILABLE: 'USDT特价',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT可用特价额度',
     INVITATION_REWARDS: '邀请奖励',
     ACTIVATED: '参与中',
@@ -115,7 +115,8 @@ export default {
     MANAGEMENT_REWARDS: '管理奖',
     TEAM_REWARDS: '团队奖',
     OPERATION_REWARDS: '运营奖',
-    REWARDS_MSG: '当日得到的奖励额度，有效期俩个交易日，若第二个交易日结算时还未使用，则奖励额度失效。',
+    REWARDS_MSG:
+      '当日得到的奖励额度，有效期俩个交易日，若第二个交易日结算时还未使用，则奖励额度失效。',
     PROMOTION_QUOTA_RECORDS: '特价额度记录',
     UNLOCK_QUOTA: '解锁额度',
     EXPIRED: '额度失效',
@@ -133,10 +134,10 @@ export default {
     REFERRING_TEAM: '推荐团队',
     ACTIVE_MEMBER: '有效成员',
     TEAM_LEVEL: '团队等级',
-    REBATE_PROPORTION: '返利比例',
+    REBATE_PROPORTION: '返还比例',
     GENERATION_REFERRALS: '代推荐',
     MEMBERS: '用户',
-    REFERRING_DATE: '推广时间',
+    REFERRING_DATE: '推广时间'
   },
   AUTH: {
     INPUT_MSG: '填写信息',
@@ -149,8 +150,10 @@ export default {
     LAST_NAME: '名',
     CARD_NUMBER: '证件号',
     IDENTITY_VERIFICATION: '身份认证',
-    AUTH_EXPLAIN_ONE: '请确保照片完整，清晰可见，格式为jpg, jpeg,或png，需小于2M。证件必须 在有效期限内。',
-    AUTH_EXPLAIN_TWO: '请上传手持证件照片，照片中需附一张白纸写有（“NTTC"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
+    AUTH_EXPLAIN_ONE:
+      '请确保照片完整，清晰可见，格式为jpg, jpeg,或png，需小于2M。证件必须 在有效期限内。',
+    AUTH_EXPLAIN_TWO:
+      '请上传手持证件照片，照片中需附一张白纸写有（“NTTC"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
     SUBMIT_VERIFY: '提交审核',
     SUBMIT_AND_WAIT: '提交成功，等待审核…',
     RESULT_MSG: '认证结果将会显示在个人中心',
@@ -164,6 +167,7 @@ export default {
     SUPER_NODE: '超级节点',
     JOIN_NODE: '参与节点',
     UNLOCK_AMOUNT: '解锁额度',
+    FEE: '手续费',
     FEES: '手续费费率',
     AUTH_MSG_ONE: '您暂未通过实名认证，无法参与',
     TO_AUTH: '去认证',
@@ -180,14 +184,14 @@ export default {
     AVAILABLE_MUSDT_UNLOCK: '可解锁MUSDT特价额度',
     CHECK_DETAILS: '查看详情',
     SPECIAL_PRICE: '特价',
-    ENTER_UNLOCK_AMOUNT:'输入解锁数量',
+    ENTER_UNLOCK_AMOUNT: '输入解锁数量',
     BALANCE: '余额',
     TRADING_AMOUNT: '交易额',
     UNLOCK: '解锁',
-    CONFIRM_PAYMENT:'确认支付',
+    CONFIRM_PAYMENT: '确认支付',
     TOTAL_PAYMENT: '支付总额',
-    AMOUNT_TO_DEDUCT:'扣款时依照最新的总价为准',
-    CONFIRM_BUY:'确认买入',
+    AMOUNT_TO_DEDUCT: '扣款时依照最新的总价为准',
+    CONFIRM_BUY: '确认买入',
     PLEASE_ENTER_PASSWORD: '请输入密码'
   },
   USER_CENTER: {

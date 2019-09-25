@@ -32,10 +32,10 @@ const Rule = Loadable({
   loader: () => import('./pages/home/Rule'),
   loading: Loading
 })
-const DepositHistory = Loadable({
-  loader: () => import('./pages/home/DepositHistory'),
-  loading: Loading
-})
+// const DepositHistory = Loadable({
+//   loader: () => import('./pages/home/DepositHistory'),
+//   loading: Loading
+// })
 
 const Wallet = Loadable({
   loader: () => import('./pages/wallet/Index'),
@@ -128,38 +128,38 @@ const DepositResult = Loadable({
 
 export default [
   // 主页
-  {path: '/', name: 'Home', component: Home},
-  {path: '/home', name: 'Home', component: Home},
+  { path: '/', name: 'Home', component: Home },
+  { path: '/home', name: 'Home', component: Home },
   {
     path: '/home/inviter-friend',
     name: 'InviterFriend',
     component: InviterFriend
   },
-  {path: '/home/generalize', name: 'Generalize', component: Generalize},
+  { path: '/home/generalize', name: 'Generalize', component: Generalize },
   {
     path: '/home/generalize/:id',
     name: 'GeneralizeDetail',
     component: GeneralizeDetail
   },
-  {path: '/home/bargain', name: 'Bargain', component: Bargain},
+  { path: '/home/bargain', name: 'Bargain', component: Bargain },
   {
     path: '/home/bargain/record',
     name: 'BargainRecord',
     component: BargainRecord
   },
-  {path: '/home/rule', name: 'Rule', component: Rule},
-  {
-    path: '/home/deposit-history',
-    name: 'DepositHistory',
-    component: DepositHistory
-  },
+  { path: '/home/rule', name: 'Rule', component: Rule },
+  // {
+  //   path: '/home/deposit-history',
+  //   name: 'DepositHistory',
+  //   component: DepositHistory
+  // },
 
   // 钱包
-  {path: '/wallet', name: 'Wallet', component: Wallet},
-  {path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt},
-  {path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin},
-  {path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw},
-  {path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge},
+  { path: '/wallet', name: 'Wallet', component: Wallet },
+  { path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt },
+  { path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin },
+  { path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw },
+  { path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge },
   {
     path: '/wallet/withdraw-record/:type',
     name: 'WithdrawRecord',
@@ -201,8 +201,8 @@ export default [
   },
 
   // X PLAN
-  {path: '/deposit', name: 'Deposit', component: Deposit},
-  {path: '/deposit/result', name: 'DepositResult', component: DepositResult},
+  { path: '/deposit', name: 'Deposit', component: Deposit },
+  { path: '/deposit/result', name: 'DepositResult', component: DepositResult },
 
   // 404
 

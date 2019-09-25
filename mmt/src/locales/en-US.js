@@ -92,6 +92,7 @@ export default {
   },
   HOME: {
     NOTICE: 'Notice:',
+    MUSDT_AVAILABLE: 'USDT Specials',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT Available Promotion Quota',
     INVITATION_REWARDS: 'Invitation Rewards',
     ACTIVATED: 'Activated',
@@ -165,6 +166,7 @@ export default {
     SUPER_NODE: 'Super Node',
     JOIN_NODE: 'Join a node',
     UNLOCK_AMOUNT: 'Unlock Amount',
+    FEE: 'FEES',
     FEES: 'Fees',
     AUTH_MSG_ONE: 'You can\'t join as you haven\'t passed the identity verification.',
     TO_AUTH: 'Go to Verify',

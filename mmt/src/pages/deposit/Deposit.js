@@ -1,13 +1,13 @@
-import React, {Component} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Drawer, SegmentedControl} from 'antd-mobile'
-import {DEPOSIT} from '../../assets/static'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Drawer, SegmentedControl } from 'antd-mobile'
 import Header from '../../components/common/Header'
 import DepositBuy from '../../components/partial/DepositBuy'
 import DepositUnlock from '../../components/partial/DepositUnlock'
 import leftDrawerIcon from '../../assets/images/left-drawer.png'
 import './Deposit.scss'
 
+@inject('localeStore')
 @inject('personStore')
 @inject('productStore')
 @observer
@@ -19,9 +19,9 @@ class Deposit extends Component {
   }
 
   componentDidMount() {
-    const {productStore, personStore, location} = this.props
+    const { productStore, personStore, location } = this.props
     const selectTabIndex = location.state || 0
-    this.setState({selectTabIndex})
+    this.setState({ selectTabIndex })
     personStore.getUserInfo()
     personStore.getSpecial()
     productStore.getProducts().then(productId => {
@@ -32,24 +32,24 @@ class Deposit extends Component {
   }
 
   onClose = () => {
-    this.setState({ensureToPay: false, ensureToUnlock: false})
+    this.setState({ ensureToPay: false, ensureToUnlock: false })
   }
 
   onDepositBuy = () => {
-    this.setState({ensureToPay: true})
+    this.setState({ ensureToPay: true })
   }
 
   onUnlockLimit = () => {
-    this.setState({ensureToUnlock: true})
+    this.setState({ ensureToUnlock: true })
   }
 
   onSegmentedChange = e => {
-    const {selectedSegmentIndex} = e.nativeEvent
-    this.setState({selectTabIndex: selectedSegmentIndex})
+    const { selectedSegmentIndex } = e.nativeEvent
+    this.setState({ selectTabIndex: selectedSegmentIndex })
   }
 
   onDeposit = () => {
-    const {selectTabIndex} = this.state
+    const { selectTabIndex } = this.state
     if (selectTabIndex === 0) {
       this.onDepositBuy()
     } else {
@@ -58,29 +58,32 @@ class Deposit extends Component {
   }
 
   selectProduct = id => {
-    const {productStore} = this.props
-    this.setState({showDrawer: false}, () => {
+    const { productStore } = this.props
+    this.setState({ showDrawer: false }, () => {
       productStore.changeProduct(id, true)
     })
   }
 
   render() {
-    const {productStore} = this.props
-    const {products, productDetail} = productStore
-    const {showDrawer, selectTabIndex} = this.state
+    const { productStore, localeStore } = this.props
+    const { DEPOSIT } = localeStore.language || {}
+    const { products, productDetail } = productStore
+    const { showDrawer, selectTabIndex } = this.state
+
+    const tabs = ['参与节点', '特价额度']
 
     const sidebar = (
       <div className="sidebar">
         <header className="sidebar-header">
-          <span>{DEPOSIT.SIDEBAR_TITLE}</span>
+          <span>选择参与基金</span>
           <img
             src={leftDrawerIcon}
             alt="抽屉"
-            onClick={() => this.setState({showDrawer: false})}
+            onClick={() => this.setState({ showDrawer: false })}
           />
         </header>
         <ul>
-          <li>全部</li>
+          <li>{DEPOSIT.ALL}</li>
           {products.map(product => (
             <li
               key={product.id}
@@ -100,7 +103,7 @@ class Deposit extends Component {
           className="am-drawer"
           sidebar={sidebar}
           open={showDrawer}
-          onOpenChange={() => this.setState({showDrawer: !showDrawer})}
+          onOpenChange={() => this.setState({ showDrawer: !showDrawer })}
         >
           <main>
             <Header
@@ -118,7 +121,7 @@ class Deposit extends Component {
             <section className="select-bar">
               <SegmentedControl
                 className="segmented-control"
-                values={DEPOSIT.TABS}
+                values={tabs}
                 selectedIndex={selectTabIndex}
                 onChange={this.onSegmentedChange}
               />

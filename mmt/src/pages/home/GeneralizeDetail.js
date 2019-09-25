@@ -1,12 +1,13 @@
-import React, {Component} from 'react'
-import {Toast} from "antd-mobile"
-import OtherApi from "../../api/other"
-import {chineseCapital} from "../../utils/common"
-import {formatTime} from "../../utils/format"
-import Header from "../../components/common/Header"
-import NoData from "../../components/common/NoData"
+import React, { Component } from 'react'
+import { Toast } from 'antd-mobile'
+import { inject } from 'mobx-react'
+import OtherApi from '../../api/other'
+import { chineseCapital } from '../../utils/common'
+import { formatTime } from '../../utils/format'
+import Header from '../../components/common/Header'
+import NoData from '../../components/common/NoData'
 import './GeneralizeDetail.scss'
-
+@inject('localeStore')
 class GeneralizeDetail extends Component {
   state = {
     title: '一代推荐',
@@ -14,47 +15,53 @@ class GeneralizeDetail extends Component {
   }
 
   componentDidMount() {
-    const {match} = this.props
-    const {id} = match.params
-    this.setState({title: chineseCapital(id) + '代推荐'})
+    const { localeStore } = this.props
+    const { HOME } = localeStore
+    const { match } = this.props
+    const { id } = match.params
+    this.setState({ title: chineseCapital(id) + HOME.GENERATION_REFERRALS })
     this.getSpreadList(id)
   }
 
-  getSpreadList = (id) => {
+  getSpreadList = id => {
     OtherApi.getSpreadList({
       type: id
     }).then(res => {
       if (res.status !== 1) {
         Toast.info(res.msg)
-        return;
+        return
       }
-      this.setState({users: res.data})
+      this.setState({ users: res.data })
     })
   }
 
   render() {
-    const {title, users} = this.state;
+    const { localeStore } = this.props
+    const { HOME } = localeStore
+    const { title, users } = this.state
     const hasUsers = users && users.length > 0
 
     return (
       <div id="generalize-detail">
-        <Header title={title} isShadow isFixed/>
-        {hasUsers ?
+        <Header title={title} isShadow isFixed />
+        {hasUsers ? (
           <ul>
             <li>
-              <span>用户</span>
-              <time>推广时间</time>
+              <span>{HOME.MEMBERS}</span>
+              <time>{HOME.REFERRING_DATE}</time>
             </li>
-            {users.map(user =>
+            {users.map(user => (
               <li key={user.regTime}>
                 <span>{user.phoneNo || user.email}</span>
                 <time>{formatTime(user.regTime)}</time>
-              </li>)
-            }
-          </ul> : <NoData msg="暂无数据"/>
-        }
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <NoData msg="暂无数据" />
+        )}
       </div>
-    );
+    )
   }
 }
 

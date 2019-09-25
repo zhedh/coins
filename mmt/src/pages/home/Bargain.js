@@ -1,27 +1,29 @@
-import React, {Component} from 'react'
-import {inject, observer} from "mobx-react"
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
 import arrowLeft from '../../assets/images/arrow-left.png'
-import {BARGAIN} from '../../assets/static'
+import { BARGAIN, HOME } from '../../assets/static'
 import './Bargain.scss'
-import {formatSpecialOffer} from "../../utils/format";
+import { formatSpecialOffer } from '../../utils/format'
 
+@inject('localeStore')
 @inject('personStore')
 @inject('productStore')
 @observer
 class Bargain extends Component {
   componentDidMount() {
-    const {personStore, productStore} = this.props
+    const { personStore, productStore } = this.props
     personStore.getSpecial()
     personStore.getLastClearTime()
 
     productStore.getProductId().then(productId => {
-      personStore.getSpecialAwards({productId})
+      personStore.getSpecialAwards({ productId })
     })
   }
 
   render() {
-    const {history, personStore} = this.props
-    const {allUsableSpecial, lastClearTime, specialAwards} = personStore
+    const { history, personStore, localeStore } = this.props
+    const { HOME } = localeStore.language || {}
+    const { allUsableSpecial, lastClearTime, specialAwards } = personStore
 
     return (
       <div id="bargain">
@@ -31,19 +33,26 @@ class Bargain extends Component {
             alt="返回"
             onClick={() => history.push('/home')}
           />
-          <span>特价奖励详情</span>
+          <span>{HOME.PROMOTION_REWARDS_DETAILS}</span>
           <aside onClick={() => history.push('/home/bargain/record')}>
-            查看明细
+            {HOME.LOOK_DETAIL}
           </aside>
         </header>
         <section className="section-banner">
           <div className="banner">
             <div className="info">
-              <span>{BARGAIN.BANNER_LABEL}{formatSpecialOffer(allUsableSpecial)}</span>
-              <br/>
-              <small>上次结算时间：{lastClearTime}</small>
+              <span>
+                {BARGAIN.BANNER_LABEL}
+                {formatSpecialOffer(allUsableSpecial)}
+              </span>
+              <br />
+              <small>
+                {HOME.LAST_SET_DATE}：{lastClearTime}
+              </small>
             </div>
-            <button onClick={() => history.push({pathname: '/deposit', state: 1})}>
+            <button
+              onClick={() => history.push({ pathname: '/deposit', state: 1 })}
+            >
               认购
             </button>
           </div>
@@ -52,12 +61,12 @@ class Bargain extends Component {
         <section className="section-main">
           <h2>上次结算奖励额度</h2>
           <ul>
-            {specialAwards.map(award =>
+            {specialAwards.map(award => (
               <li key={award.remark}>
                 <label>{award.remark}</label>
                 <span>{formatSpecialOffer(award.amount)}</span>
-              </li>)
-            }
+              </li>
+            ))}
           </ul>
         </section>
         <section className="section-aside">

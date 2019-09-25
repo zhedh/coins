@@ -55,7 +55,7 @@ class InviterFriend extends Component {
 
   render() {
     const { history, personStore, localeStore } = this.props
-    const { TOAST } = localeStore.language || {}
+    const { TOAST, HOME } = localeStore.language || {}
     const { userInfo } = personStore
     const { origin } = window.location
     const inviterUrl =
@@ -64,7 +64,7 @@ class InviterFriend extends Component {
     return (
       <div id="inviter-friend">
         <Header
-          title="邀请好友"
+          title={HOME.INVITE_FRIENDS}
           isShadow={true}
           isFixed={true}
           bgWhite
@@ -79,7 +79,7 @@ class InviterFriend extends Component {
             text={userInfo.recommendCode}
             onCopy={() => Toast.info(TOAST.COPIED)}
           >
-            <span>复制邀请码</span>
+            <span>{HOME.COPY_INVITATION_CODE}</span>
           </CopyToClipboard>
         </section>
         <section className="section-qr">
@@ -95,7 +95,7 @@ class InviterFriend extends Component {
           </p>
         </section>
         <section className="section-link">
-          <Link to="/home/generalize">查看推广</Link>
+          <Link to="/home/generalize">{HOME.CHECK_REFERRING_DETAILS}</Link>
         </section>
       </div>
     )
