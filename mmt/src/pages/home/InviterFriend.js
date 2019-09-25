@@ -1,12 +1,12 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import QRCode from 'qrcode.react'
-import {Link} from 'react-router-dom'
-import {inject, observer} from "mobx-react"
-import {Toast} from "antd-mobile"
-import {CopyToClipboard} from 'react-copy-to-clipboard'
-import {MdContentCopy} from 'react-icons/md'
+import { Link } from 'react-router-dom'
+import { inject, observer } from 'mobx-react'
+import { Toast } from 'antd-mobile'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { MdContentCopy } from 'react-icons/md'
 import Header from '../../components/common/Header'
-import {TOAST_DURATION} from "../../utils/constants"
+import { TOAST_DURATION } from '../../utils/constants'
 import './InviterFriend.scss'
 
 class QrCodeBox extends Component {
@@ -16,47 +16,50 @@ class QrCodeBox extends Component {
 
   componentDidMount() {
     const canvas = document.querySelector('.qr-code__box canvas')
-    const codeUrl = canvas.toDataURL('image/png');
-    this.setState({codeUrl})
+    const codeUrl = canvas.toDataURL('image/png')
+    this.setState({ codeUrl })
   }
 
   render() {
-    const {inviterUrl} = this.props
-    const {codeUrl} = this.state
+    const { inviterUrl } = this.props
+    const { codeUrl } = this.state
 
     return (
       <div className="qr-code__box">
-        <QRCode
-          className="qr-code"
-          value={inviterUrl}
-        />
-        <br/>
-        <img src={codeUrl} alt=""/>
-        <br/>
+        <QRCode className="qr-code" value={inviterUrl} />
+        <br />
+        <img src={codeUrl} alt="" />
+        <br />
         <span>点击或长按二维码保存图片</span>
       </div>
-    );
+    )
   }
 }
 
+@inject('localeStore')
 @inject('personStore')
 @inject('userStore')
 @observer
 class InviterFriend extends Component {
   componentDidMount() {
-    const {personStore, userStore, history} = this.props
+    const { personStore, userStore, history, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
     if (!userStore.isOnline) {
-      Toast.info('请先登录', TOAST_DURATION, () => history.push('/login'))
+      Toast.info(TOAST.PLEASE_LOGIN_FIRST, TOAST_DURATION, () =>
+        history.push('/login')
+      )
       return
     }
     personStore.getUserInfo()
   }
 
   render() {
-    const {history, personStore} = this.props;
-    const {userInfo} = personStore
-    const {origin} = window.location
-    const inviterUrl = origin + '/register?recommendCode=' + userInfo.recommendCode
+    const { history, personStore, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
+    const { userInfo } = personStore
+    const { origin } = window.location
+    const inviterUrl =
+      origin + '/register?recommendCode=' + userInfo.recommendCode
 
     return (
       <div id="inviter-friend">
@@ -66,29 +69,28 @@ class InviterFriend extends Component {
           isFixed={true}
           bgWhite
           onHandle={() => {
-            history.push('/home');
+            history.push('/home')
           }}
         />
         <section className="section-text">
           {userInfo.recommendCode}
-          <br/>
+          <br />
           <CopyToClipboard
             text={userInfo.recommendCode}
-            onCopy={() => Toast.info('复制成功')}>
+            onCopy={() => Toast.info(TOAST.COPIED)}
+          >
             <span>复制邀请码</span>
           </CopyToClipboard>
         </section>
         <section className="section-qr">
-          <QrCodeBox
-            key={userInfo.recommendCode}
-            inviterUrl={inviterUrl}
-          />
+          <QrCodeBox key={userInfo.recommendCode} inviterUrl={inviterUrl} />
           <p>
             {inviterUrl}
             <CopyToClipboard
               text={inviterUrl}
-              onCopy={() => Toast.info('复制成功')}>
-              <MdContentCopy className="icon"/>
+              onCopy={() => Toast.info(TOAST.COPIED)}
+            >
+              <MdContentCopy className="icon" />
             </CopyToClipboard>
           </p>
         </section>
@@ -96,8 +98,8 @@ class InviterFriend extends Component {
           <Link to="/home/generalize">查看推广</Link>
         </section>
       </div>
-    );
+    )
   }
 }
 
-export default InviterFriend;
+export default InviterFriend

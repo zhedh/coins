@@ -1,16 +1,16 @@
-import React, {Component} from 'react'
-import {inject, observer} from "mobx-react"
-import {Button, Toast} from 'antd-mobile'
-import Cookies from "js-cookie"
-import {Link} from 'react-router-dom'
-import {TOAST_DURATION} from '../../utils/constants'
-import {FiChevronDown} from "react-icons/fi"
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Button, Toast } from 'antd-mobile'
+import Cookies from 'js-cookie'
+import { Link } from 'react-router-dom'
+import { TOAST_DURATION } from '../../utils/constants'
+import { FiChevronDown } from 'react-icons/fi'
 import TEL_PREFIX_DATA from '../../utils/tel-prefix'
-import {isEmail, isMobile, isPassword} from "../../utils/reg"
-import AccountHeader from "../../components/partial/AccountHeader"
+import { isEmail, isMobile, isPassword } from '../../utils/reg'
+import AccountHeader from '../../components/partial/AccountHeader'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
-import TelPrefix from "../../components/partial/TelPrefix"
+import TelPrefix from '../../components/partial/TelPrefix'
 import './Login.scss'
 
 @inject('localeStore')
@@ -29,32 +29,32 @@ class Login extends Component {
     clearTimeout(this.timer)
   }
 
-  onOpenPrefix = (e) => {
+  onOpenPrefix = e => {
     e.preventDefault()
-    this.setState({showPrefix: true})
+    this.setState({ showPrefix: true })
   }
 
-  onConfirmPrefix = (prefix) => {
-    this.setState({showPrefix: false, prefix})
+  onConfirmPrefix = prefix => {
+    this.setState({ showPrefix: false, prefix })
   }
 
   onCancelPrefix = () => {
-    this.setState({showPrefix: false})
+    this.setState({ showPrefix: false })
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
+    const { value } = e.target
+    this.setState({ [key]: value })
   }
 
   onSetType = currentType => {
-    this.setState({type: currentType === 'text' ? 'password' : 'text'})
+    this.setState({ type: currentType === 'text' ? 'password' : 'text' })
   }
 
   onSubmit = () => {
-    const {history, userStore, localeStore} = this.props
-    const {TOAST} = localeStore.language || {}
-    const {account, password, prefix} = this.state
+    const { history, userStore, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
+    const { account, password, prefix } = this.state
 
     if (!isEmail(account) && !isMobile(account)) {
       Toast.info(TOAST.ACCOUNT_ERR, TOAST_DURATION)
@@ -67,42 +67,47 @@ class Login extends Component {
     }
 
     // 登录接口，成功后前往首页
-    userStore.login({
-      phonePrefix: isMobile(account) ? prefix.tel : null,
-      userName: account,
-      password
-    }).then(res => {
-      if (res.status !== 1) {
-        Toast.info(res.msg, TOAST_DURATION)
-        return
-      }
-      Cookies.remove('PRODUCT_ID')
-      Toast.success(TOAST.LOGIN_SUCCESS, TOAST_DURATION)
-      this.timer = setTimeout(() => history.push('/deposit'), TOAST_DURATION * 1000)
-    })
+    userStore
+      .login({
+        phonePrefix: isMobile(account) ? prefix.tel : null,
+        userName: account,
+        password
+      })
+      .then(res => {
+        if (res.status !== 1) {
+          Toast.info(res.msg, TOAST_DURATION)
+          return
+        }
+        Cookies.remove('PRODUCT_ID')
+        Toast.success(TOAST.LOGIN_SUCCESS, TOAST_DURATION)
+        this.timer = setTimeout(
+          () => history.push('/deposit'),
+          TOAST_DURATION * 1000
+        )
+      })
   }
 
   render() {
-    const {localeStore} = this.props
-    const {LOGIN, COMMON} = localeStore.language || {}
-    const {account, password, type, prefix, showPrefix} = this.state
+    const { localeStore } = this.props
+    const { LOGIN, COMMON } = localeStore.language || {}
+    const { account, password, type, prefix, showPrefix } = this.state
     const canSubmit = account === '' || password === ''
 
     return (
       <div id="login">
-        <AccountHeader title={COMMON.LOGIN}/>
+        <AccountHeader title={COMMON.LOGIN} />
         <div className="content">
           <label className="account">
             <span onClick={this.onOpenPrefix}>
               +{prefix.tel}
-              <FiChevronDown/>
+              <FiChevronDown />
             </span>
             <input
               className="input-main"
               type="text"
               placeholder={COMMON.ACCOUNT_PLACEHOLDER}
               value={account}
-              onChange={(e) => this.onInputChange(e, 'account')}
+              onChange={e => this.onInputChange(e, 'account')}
             />
           </label>
           <label>
@@ -111,7 +116,7 @@ class Login extends Component {
               type={type}
               placeholder={COMMON.PASSWORD_PLACEHOLDER}
               value={password}
-              onChange={(e) => this.onInputChange(e, 'password')}
+              onChange={e => this.onInputChange(e, 'password')}
             />
             <img
               src={type === 'text' ? openPwdImg : closePwdImg}
@@ -130,7 +135,8 @@ class Login extends Component {
             activeClassName="active"
             className="primary-button"
             disabled={canSubmit}
-            onClick={this.onSubmit}>
+            onClick={this.onSubmit}
+          >
             {COMMON.CONFIRM}
           </Button>
         </div>

@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import {inject, observer} from 'mobx-react'
-import {USER} from '../../assets/static'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { USER } from '../../assets/static'
 import Header from '../../components/common/Header'
 import './ContactUs.scss'
 
@@ -8,7 +8,7 @@ import './ContactUs.scss'
 @observer
 class ContactUs extends Component {
   render() {
-    const {history} = this.props
+    const { history } = this.props
     return (
       <div id="contact-us">
         <Header
@@ -17,10 +17,12 @@ class ContactUs extends Component {
           onHandle={() => history.push('/user-center')}
         />
         <ul>
-          {USER.CUSTOMERS.map(i => <li>
-            <label>{i.LABEL}：</label>
-            <span>{i.VALUE}</span>
-          </li>)}
+          {USER.CUSTOMERS.map((i, key) => (
+            <li key={key.toString()}>
+              <label>{i.LABEL}：</label>
+              <span>{i.VALUE}</span>
+            </li>
+          ))}
         </ul>
       </div>
     )

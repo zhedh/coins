@@ -11,6 +11,7 @@ import { COIN_POINT_LENGTH } from '../../utils/constants'
 import { DEPOSIT } from '../../assets/static'
 import './DepositBuy.scss'
 
+@inject('localeStore')
 @inject('productStore')
 @inject('userStore')
 @inject('personStore')
@@ -32,13 +33,15 @@ class DepositBuy extends Component {
   }
 
   onDeposit = gearNum => {
-    const { personStore, userStore } = this.props
+    const { personStore, userStore, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
+
     if (!personStore.isAuth) {
-      Toast.info('请进行身份认证')
+      Toast.info(TOAST.PLEASE_VERIFY_IDENTITY)
       return
     }
     if (!userStore.hasPayPassword) {
-      Toast.info('请设置交易密码')
+      Toast.info(TOAST.PLEASE_SET_TRADE_PWD)
       return
     }
     if (gearNum) this.setState({ showConfirm: true })

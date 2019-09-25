@@ -1,20 +1,21 @@
-import React, {Component} from 'react';
-import {Toast} from "antd-mobile";
-import {TOAST_DURATION} from "../../utils/constants";
+import React, { Component } from 'react'
+import { inject } from 'mobx-react'
+import { Toast } from 'antd-mobile'
+import { TOAST_DURATION } from '../../utils/constants'
 
+@inject('localeStore')
 class NoMatch extends Component {
   componentDidMount() {
-    const {history} = this.props
-    Toast.info('页面不存在，正在跳转首页', TOAST_DURATION, () => history.push('/home'))
+    const { history, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
+    Toast.info(TOAST.PAGE_NOT_AND_TO_HOME, TOAST_DURATION, () =>
+      history.push('/home')
+    )
   }
 
   render() {
-    return (
-      <div>
-
-      </div>
-    );
+    return <div></div>
   }
 }
 
-export default NoMatch;
+export default NoMatch

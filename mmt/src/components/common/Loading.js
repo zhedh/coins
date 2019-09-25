@@ -1,10 +1,15 @@
-import {Component} from "react";
-import {Toast} from "antd-mobile";
-import React from "react";
+import { Component } from 'react'
+import { inject } from 'mobx-react'
+import { Toast } from 'antd-mobile'
+import React from 'react'
 
+@inject('localeStore')
 class Loading extends Component {
   componentDidMount() {
-    Toast.loading('加载中')
+    const { localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
+
+    Toast.loading(TOAST.LOADING)
   }
 
   componentWillUnmount() {
@@ -12,7 +17,7 @@ class Loading extends Component {
   }
 
   render() {
-    return <div></div>;
+    return <div></div>
   }
 }
 

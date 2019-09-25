@@ -1,9 +1,9 @@
-import React, {Component, Fragment} from 'react'
-import {Button, Toast} from 'antd-mobile'
-import {inject, observer} from 'mobx-react'
-import {AUTH} from '../../assets/static'
+import React, { Component, Fragment } from 'react'
+import { Button, Toast } from 'antd-mobile'
+import { inject, observer } from 'mobx-react'
+import { AUTH } from '../../assets/static'
 import Header from '../../components/common/Header'
-import {COUNTRIES_LIST, TOAST_DURATION} from '../../utils/constants'
+import { COUNTRIES_LIST, TOAST_DURATION } from '../../utils/constants'
 import './VerifiedIdentity.scss'
 
 const typeList = [
@@ -24,6 +24,7 @@ const typeList = [
   }
 ]
 
+@inject('localeStore')
 @inject('authStore')
 @observer
 class VerifiedIdentity extends Component {
@@ -38,16 +39,16 @@ class VerifiedIdentity extends Component {
   }
 
   componentDidMount() {
-    const {authStore, match} = this.props
-    const {country} = match.params
+    const { authStore, match } = this.props
+    const { country } = match.params
     if (country) {
-      this.setState({isChina: country === COUNTRIES_LIST[0]})
+      this.setState({ isChina: country === COUNTRIES_LIST[0] })
       authStore.changeInfoItem(country, 'country')
     }
   }
 
   canSubmit = () => {
-    const {authStore} = this.props
+    const { authStore } = this.props
     const {
       country,
       cardType,
@@ -55,17 +56,18 @@ class VerifiedIdentity extends Component {
       lastName,
       cardId
     } = authStore.authInfo
-    const {isChina} = this.state
+    const { isChina } = this.state
     return isChina
       ? firstName && cardId
       : country && cardType && firstName && lastName && cardId
   }
 
   onSubmit = () => {
-    const {history, authStore} = this.props
-    const {cardId} = authStore.authInfo
+    const { history, authStore, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
+    const { cardId } = authStore.authInfo
     if (cardId.length < 7 && cardId.length <= 18) {
-      Toast.info('请输入7-18位证件号码', TOAST_DURATION)
+      Toast.info(TOAST.PLEASE_INPUT_CARD_NUMBER, TOAST_DURATION)
       return
     }
     authStore.submitAuthentication().then(res => {
@@ -78,15 +80,15 @@ class VerifiedIdentity extends Component {
   }
 
   render() {
-    const {authStore} = this.props
-    const {cardType, firstName, lastName, cardId} = authStore.authInfo
-    const {isChina} = this.state
+    const { authStore } = this.props
+    const { cardType, firstName, lastName, cardId } = authStore.authInfo
+    const { isChina } = this.state
 
     return (
       <div id="verified-identity">
-        <Header/>
+        <Header />
         <div className="identity-top">
-          <img src={require('../../assets/images/identity.png')} alt=""/>
+          <img src={require('../../assets/images/identity.png')} alt="" />
           <h2>填写信息</h2>
           <p>确认所填信息与证件一致</p>
         </div>
@@ -128,7 +130,7 @@ class VerifiedIdentity extends Component {
                       src={cardType === type.name ? type.active : type.icon}
                       alt=""
                     />
-                    <br/>
+                    <br />
                     <small>{type.name}</small>
                   </li>
                 ))}
@@ -169,7 +171,8 @@ class VerifiedIdentity extends Component {
           activeClassName="active"
           className="primary-button"
           disabled={!this.canSubmit()}
-          onClick={this.onSubmit}>
+          onClick={this.onSubmit}
+        >
           下一步
         </Button>
       </div>
