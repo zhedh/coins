@@ -26,6 +26,7 @@ let timer
 
 // 添加请求拦截器
 instance.interceptors.request.use(config => {
+  console.log()
   if (config.data && config.data.noLogin) {
     delete config.data.noLogin
   } else {
