@@ -150,7 +150,8 @@ export default {
     REBATE_PROPORTION: '返还比例',
     GENERATION_REFERRALS: '代推荐',
     MEMBERS: '用户',
-    REFERRING_DATE: '推广时间'
+    REFERRING_DATE: '推广时间',
+    GENERALIZE_LEVELS: ['无', '一级', '二级', '三级', '四级', '超级'],
   },
   AUTH: {
     INPUT_MSG: '填写信息',

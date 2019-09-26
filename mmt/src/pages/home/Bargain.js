@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import arrowLeft from '../../assets/images/arrow-left.png'
-import { BARGAIN, HOME } from '../../assets/static'
+// import { BARGAIN, HOME } from '../../assets/static'
 import './Bargain.scss'
 import { formatSpecialOffer } from '../../utils/format'
 
@@ -42,8 +42,7 @@ class Bargain extends Component {
           <div className="banner">
             <div className="info">
               <span>
-                {BARGAIN.BANNER_LABEL}
-                {formatSpecialOffer(allUsableSpecial)}
+                {HOME.MUSDT_PROMOTION} {formatSpecialOffer(allUsableSpecial)}
               </span>
               <br />
               <small>

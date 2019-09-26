@@ -97,6 +97,10 @@
         border: 2px solid $white;
         border-radius: 5px;
 
+        &:first-child {
+          margin-right: 10px;
+        }
+
         .text {
           font-size: $font-assistant;
 
@@ -110,6 +114,7 @@
           }
 
           small {
+            @include overflow(1);
             font-size: 0.9rem;
           }
 

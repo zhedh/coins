@@ -18,7 +18,7 @@ class GeneralizeDetail extends Component {
     const { match, localeStore } = this.props
     const { HOME } = localeStore.language || {}
     const { id } = match.params
-    this.setState({ title: chineseCapital(id) + HOME.GENERATION_REFERRALS })
+    this.setState({ title: chineseCapital(id,localeStore.isCn) + HOME.GENERATION_REFERRALS })
     this.getSpreadList(id)
   }
 

@@ -1,47 +1,16 @@
 const MMT = {
-<<<<<<< HEAD
-  COMMON: {
-    COIN_NAME: 'MMT',
-    COIN_TITLE: 'MMT',
-    NO_DATA_IMG: require('../images/mmt/no-data.png')
-  },
-  FOOTER: {
-    ICON_HOME: require('../images/mmt/icon-home.png'),
-    ICON_DEPOSIT: require('../images/mmt/icon-deposit.png'),
-    ICON_WALLET: require('../images/mmt/icon-wallet.png'),
-    LABEL_DEPOSIT: 'MMT'
-  },
-  HOME_MMT: {
-=======
-
-
-  HOME: {
->>>>>>> 6a751656a2a9d0498afbfaaf3ea02340f5e07fe9
-    TITLE: 'MMT',
-    IMG_BG: require('../images/mmt/home-bg.png'),
-    GENERALIZE_BG: require('../images/mmt/generalize-banner.png'),
-    GENERALIZE_LEVEL: ['无', '一级', '二级', '三级', '四级', '超级'],
-    GENERALIZE_USER_ONE_ICON: require('../images/mmt/generalize-user-one.png'),
-    GENERALIZE_USER_TWO_ICON: require('../images/mmt/generalize-user-two.png'),
-    RULE_TITLE: 'MUSDT规则说明'
-  },
+  // HOME: {
+  //   TITLE: 'MMT',
+  //   IMG_BG: require('../images/mmt/home-bg.png'),
+  //   GENERALIZE_BG: require('../images/mmt/generalize-banner.png'),
+  //   GENERALIZE_LEVEL: ['无', '一级', '二级', '三级', '四级', '超级'],
+  //   GENERALIZE_USER_ONE_ICON: require('../images/mmt/generalize-user-one.png'),
+  //   GENERALIZE_USER_TWO_ICON: require('../images/mmt/generalize-user-two.png'),
+  //   RULE_TITLE: 'MUSDT规则说明'
+  // },
   BARGAIN: {
     BANNER_LABEL: '特价XC奖励额度：'
   },
-<<<<<<< HEAD
-  AUTH_MMT: {
-    IMG_BACK: require('../images/mmt/auth-card-back.png'),
-    IMG_FRONT: require('../images/mmt/auth-card-front.png'),
-    IMG_HOLD: require('../images/mmt/auth-card-hold.png'),
-    IMG_ID_CARD: require('../images/mmt/auth-id-card.svg'),
-    IMG_PASSPORT: require('../images/mmt/auth-passport.svg'),
-    IMG_DRIVING: require('../images/mmt/auth-driving.svg'),
-    IMG_WAIT: require('../images/mmt/auth-wait.png'),
-    IMG_SUCCESS: require('../images/mmt/auth-success.png'),
-    IMG_FAIL: require('../images/mmt/auth-fail.png'),
-    UPLOAD_WRITE: 'MMT'
-  },
-=======
   // AUTH: {
   //   IMG_BACK: require('../images/mmt/auth-card-back.png'),
   //   IMG_FRONT: require('../images/mmt/auth-card-front.png'),
@@ -54,7 +23,6 @@ const MMT = {
   //   IMG_FAIL: require('../images/mmt/auth-fail.png'),
   //   UPLOAD_WRITE: 'MMT'
   // },
->>>>>>> 6a751656a2a9d0498afbfaaf3ea02340f5e07fe9
   DEPOSIT: {
     COIN_NAME: '参与节点',
     TITLE: '超级节点',

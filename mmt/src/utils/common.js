@@ -8,21 +8,10 @@ export function convertCanvasToImage(canvas) {
   return image
 }
 
-export function chineseCapital(num) {
-  const capitals = [
-    '零',
-    '一',
-    '二',
-    '三',
-    '四',
-    '五',
-    '六',
-    '七',
-    '八',
-    '九',
-    '十'
-  ]
-  return capitals[num]
+export function chineseCapital(num, isCn) {
+  const capitals = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十']
+  const enCapitals = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+  return isCn ? capitals[num] : enCapitals[num]
 }
 
 /**

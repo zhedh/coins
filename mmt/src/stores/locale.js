@@ -9,6 +9,11 @@ class LocaleStore {
     return languages[this.locale] || languages.en_US
   }
 
+  @computed
+  get isCn() {
+    return this.locale === 'zh_CN'
+  }
+
   @action
   changeLocale(locale) {
     this.locale = locale

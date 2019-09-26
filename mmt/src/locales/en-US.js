@@ -156,7 +156,9 @@ export default {
     REBATE_PROPORTION: 'Rebate Proportion',
     GENERATION_REFERRALS: ' Generation Referrals',
     MEMBERS: 'Members',
-    REFERRING_DATE: 'Referring Date'
+    REFERRING_DATE: 'Referring Date',
+    GENERALIZE_LEVELS: ['0 level', '1 level', '2 level', '3 level', '4 level', 'super level'],
+
   },
   AUTH: {
     INPUT_MSG: 'Fill in the Information',

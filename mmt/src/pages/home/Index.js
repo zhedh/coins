@@ -94,11 +94,7 @@ class Index extends Component {
             )}
           </div>
           <ul className="tabs">
-            <li
-              onClick={() =>
-                history.push(userStore.isOnline ? '/home/bargain' : '/login')
-              }
-            >
+            <li onClick={() => history.push(userStore.isOnline ? '/home/bargain' : '/login')}>
               <div className="text">
                 {userStore.isOnline ? (
                   <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
@@ -110,13 +106,7 @@ class Index extends Component {
               </div>
               <FiChevronRight className="icon" />
             </li>
-            <li
-              onClick={() =>
-                history.push(
-                  userStore.isOnline ? '/home/inviter-friend' : '/login'
-                )
-              }
-            >
+            <li onClick={() => history.push(userStore.isOnline ? '/home/inviter-friend' : '/login')}>
               <div className="text inviter-award">
                 <GoMailRead className="icon" />
                 {HOME.INVITATION_REWARDS}

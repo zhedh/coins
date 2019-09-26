@@ -15,7 +15,8 @@ const axiosConfig = {
   }], // 对data进行转换处理
   headers: {
     'Accept': 'application/json, text/plain, */*',
-    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+    'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+    // 'HTTP_ACCEPT_LANGUAGE': 'zh-cn'
   },
   timeout: 100000
 };
@@ -26,7 +27,7 @@ let timer
 
 // 添加请求拦截器
 instance.interceptors.request.use(config => {
-  console.log()
+  // console.log(config)
   if (config.data && config.data.noLogin) {
     delete config.data.noLogin
   } else {
@@ -34,9 +35,12 @@ instance.interceptors.request.use(config => {
     config.data.openId = Cookies.get('OPENID')
     config.data.token = Cookies.get('TOKEN')
   }
+  // config.data.lang = 'zh_CN'
   requestCount++
   if (requestCount === 1) {
-    requestToast.loading('请稍后...', 10)
+    const locale = localStorage.getItem('LOCALE')
+    const msg = locale === 'zh_CN' ? '请稍后...' : 'Loading...'
+    requestToast.loading(msg, 10)
   }
   return config
 }, error => {
@@ -47,14 +51,6 @@ instance.interceptors.request.use(config => {
 // 添加响应拦截器
 instance.interceptors.response.use(response => {
   let res = response.data
-
-  // timer = setTimeout(() => {
-  //   requestCount--
-  //   if (requestCount <= 0) {
-  //     requestToast.hide()
-  //     clearTimeout(timer)
-  //   }
-  // }, 30)
 
   requestCount--
   if (requestCount <= 0) {
@@ -68,7 +64,9 @@ instance.interceptors.response.use(response => {
     Cookies.remove('OPENID')
     Cookies.remove('TOKEN')
     Cookies.remove('PAY_PASSWORD')
-    Toast.info('请先登录', TOAST_DURATION, () => window.location.href = '/login')
+    const locale = localStorage.getItem('LOCALE')
+    const msg = locale === 'zh_CN' ? '请先登录' : 'Please sign in first.'
+    Toast.info(msg, TOAST_DURATION, () => window.location.href = '/login')
     return res
   }
 
