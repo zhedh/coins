@@ -16,7 +16,7 @@ const axiosConfig = {
   headers: {
     'Accept': 'application/json, text/plain, */*',
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    // 'HTTP_ACCEPT_LANGUAGE': 'zh-cn'
+    'LANG': 'zh-cn'
   },
   timeout: 100000
 };
@@ -27,7 +27,10 @@ let timer
 
 // 添加请求拦截器
 instance.interceptors.request.use(config => {
-  // console.log(config)
+  const locale = localStorage.getItem('LOCALE')
+
+  config.headers['LANG'] = locale === 'zh_CN' ? 'zh-cn' : 'en-us'
+  console.log(config.headers)
   if (config.data && config.data.noLogin) {
     delete config.data.noLogin
   } else {
@@ -38,7 +41,6 @@ instance.interceptors.request.use(config => {
   // config.data.lang = 'zh_CN'
   requestCount++
   if (requestCount === 1) {
-    const locale = localStorage.getItem('LOCALE')
     const msg = locale === 'zh_CN' ? '请稍后...' : 'Loading...'
     requestToast.loading(msg, 10)
   }
