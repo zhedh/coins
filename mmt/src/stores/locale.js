@@ -1,12 +1,12 @@
-import {observable, action, computed} from 'mobx'
+import { observable, action, computed } from 'mobx'
 import languages from '../locales'
 
 class LocaleStore {
-  @observable locale = 'zh_CN';
+  @observable locale = 'zh_CN'
 
   @computed
   get language() {
-    return languages[this.locale] || languages.en_US
+    return languages[this.locale] || languages.zh_CN
   }
 
   @computed

@@ -1,36 +1,38 @@
-import React, {Component} from 'react'
-import {Button, Toast} from 'antd-mobile'
-import {inject, observer} from 'mobx-react'
-import Cookies from "js-cookie"
-import {UserApi} from '../../api'
-import {REG, TOAST_DURATION, COUNT_DOWN} from '../../utils/constants'
-import {isEmail, isMobile} from "../../utils/reg"
-import {compatibleFixedButton, getQueryParam} from '../../utils/common'
+import React, { Component } from 'react'
+import { Button, Toast } from 'antd-mobile'
+import { inject, observer } from 'mobx-react'
+import Cookies from 'js-cookie'
+import { UserApi } from '../../api'
+import { REG, TOAST_DURATION, COUNT_DOWN } from '../../utils/constants'
+import { isEmail, isMobile } from '../../utils/reg'
+import { compatibleFixedButton, getQueryParam } from '../../utils/common'
 import AccountHeader from '../../components/partial/AccountHeader'
 import Captcha from '../../components/common/Captcha'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import registerSuccessImg from '../../assets/images/register-success.png'
-import {FiChevronDown} from "react-icons/fi"
-import TEL_PREFIX_DATA from "../../utils/tel-prefix"
-import TelPrefix from "../../components/partial/TelPrefix"
+import { FiChevronDown } from 'react-icons/fi'
+import TEL_PREFIX_DATA from '../../utils/tel-prefix'
+import TelPrefix from '../../components/partial/TelPrefix'
 import './Register.scss'
 
 @inject('localeStore')
 @observer
 class RegisterSuccess extends Component {
-
   render() {
-    const {history, localeStore} = this.props
-    const {REGISTER} = localeStore.language || {}
+    const { history, localeStore } = this.props
+    const { REGISTER } = localeStore.language || {}
     return (
       <div className="register-success">
-        <AccountHeader title={REGISTER.REGISTER_SUCCESS}/>
+        <AccountHeader title={REGISTER.REGISTER_SUCCESS} />
         <main>
-          <img src={registerSuccessImg} alt=""/>
+          <img src={registerSuccessImg} alt="" />
           <p className="text">{REGISTER.HAPPY_REGISTER_SUCCESS}</p>
         </main>
-        <Button className="primary-button" onClick={() => history.push('/deposit')}>
+        <Button
+          className="primary-button"
+          onClick={() => history.push('/deposit')}
+        >
           {REGISTER.OPEN_FIRST}
         </Button>
       </div>
@@ -66,10 +68,10 @@ class Register extends Component {
 
   componentDidMount() {
     const recommendCode = getQueryParam('recommendCode') || ''
-    this.setState({recommendCode})
+    this.setState({ recommendCode })
     this.getCaptchaPng()
     compatibleFixedButton(isShow => {
-      this.setState({showBtn: isShow})
+      this.setState({ showBtn: isShow })
     })
   }
 
@@ -80,39 +82,39 @@ class Register extends Component {
   getCaptchaPng = () => {
     const key = +new Date()
 
-    UserApi.getCaptchaPng({key}).then(res => {
-      this.setState({captchaKey: key, imgSrc: res})
+    UserApi.getCaptchaPng({ key }).then(res => {
+      this.setState({ captchaKey: key, imgSrc: res })
     })
   }
 
-  onOpenPrefix = (e) => {
+  onOpenPrefix = e => {
     e.preventDefault()
-    this.setState({showPrefix: true})
+    this.setState({ showPrefix: true })
   }
 
-  onConfirmPrefix = (prefix) => {
-    this.setState({showPrefix: false, prefix})
+  onConfirmPrefix = prefix => {
+    this.setState({ showPrefix: false, prefix })
   }
 
   onCancelPrefix = () => {
-    this.setState({showPrefix: false})
+    this.setState({ showPrefix: false })
   }
 
   canSubmit = () => {
-    const {account, code, password, passwordConfirm} = this.state
+    const { account, code, password, passwordConfirm } = this.state
     return !!(account && code && password && passwordConfirm)
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
+    const { value } = e.target
+    this.setState({ [key]: value })
   }
 
   onAccountBlur = e => {
-    const {value} = e.target
-    const {preAccount} = this.state
+    const { value } = e.target
+    const { preAccount } = this.state
     if (value !== preAccount) {
-      this.setState({preAccount: value})
+      this.setState({ preAccount: value })
       this.getCaptchaPng()
     }
   }
@@ -122,18 +124,18 @@ class Register extends Component {
 
     this.timer = setInterval(() => {
       if (count <= 0) {
-        this.setState({isGetSms: true, count: COUNT_DOWN})
+        this.setState({ isGetSms: true, count: COUNT_DOWN })
         clearInterval(this.timer)
       } else {
-        this.setState({isGetSms: false, count: count--})
+        this.setState({ isGetSms: false, count: count-- })
       }
     }, 1000)
   }
 
   getCode = async () => {
-    const {userStore, localeStore} = this.props
-    const {account, captcha, captchaKey, prefix} = this.state
-    const {TOAST} = localeStore.language || {}
+    const { userStore, localeStore } = this.props
+    const { account, captcha, captchaKey, prefix } = this.state
+    const { TOAST } = localeStore.language || {}
 
     if (!isEmail(account) && !isMobile(account)) {
       Toast.info(TOAST.PLEASE_INPUT_CONFIRM_ACCOUNT, TOAST_DURATION)
@@ -145,29 +147,34 @@ class Register extends Component {
       return
     }
 
-    userStore.getCode({
-      captcha,
-      account,
-      prefix: prefix.tel,
-      type: 'reg'
-    }, {key: captchaKey}).then(res => {
-      if (res.status !== 1) {
-        Toast.info(res.msg)
-        this.getCaptchaPng()
-        return
-      }
-      this.codeCountDown()
-    })
+    userStore
+      .getCode(
+        {
+          captcha,
+          account,
+          prefix: prefix.tel,
+          type: 'reg'
+        },
+        { key: captchaKey }
+      )
+      .then(res => {
+        if (res.status !== 1) {
+          Toast.info(res.msg)
+          this.getCaptchaPng()
+          return
+        }
+        this.codeCountDown()
+      })
   }
 
   onSetType = (currentType, key) => {
     const type = currentType === 'password' ? 'text' : 'password'
-    this.setState({[key]: type})
+    this.setState({ [key]: type })
   }
 
   onSubmit = () => {
-    const {userStore, localeStore} = this.props
-    const {TOAST} = localeStore.language || {}
+    const { userStore, localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
     const {
       account,
       code,
@@ -190,26 +197,30 @@ class Register extends Component {
       return
     }
 
-    userStore.register({
-      phonePrefix: isMobile(account) ? prefix.tel : null,
-      userName: account,
-      code,
-      password,
-      passwordConfirm,
-      recommendCode
-    }).then(res => {
-      if (res.status !== 1) {
-        Toast.info(res.msg, TOAST_DURATION)
-        return
-      }
-      Cookies.remove('PRODUCT_ID')
-      Toast.success(TOAST.REGISTER_SUCCESS, TOAST_DURATION, () => this.setState({showSuccess: true}))
-    })
+    userStore
+      .register({
+        phonePrefix: isMobile(account) ? prefix.tel : null,
+        userName: account,
+        code,
+        password,
+        passwordConfirm,
+        recommendCode
+      })
+      .then(res => {
+        if (res.status !== 1) {
+          Toast.info(res.msg, TOAST_DURATION)
+          return
+        }
+        Cookies.remove('PRODUCT_ID')
+        Toast.success(TOAST.REGISTER_SUCCESS, TOAST_DURATION, () =>
+          this.setState({ showSuccess: true })
+        )
+      })
   }
 
   render() {
-    const {history, localeStore} = this.props
-    const {REGISTER, COMMON} = localeStore.language || {}
+    const { history, localeStore } = this.props
+    const { REGISTER, COMMON } = localeStore.language || {}
     const {
       account,
       code,
@@ -230,12 +241,16 @@ class Register extends Component {
 
     return (
       <div id="register">
-        <AccountHeader title={COMMON.REGISTER} onHandle={() => history.push('/login')}/>
+        <AccountHeader
+          title={COMMON.REGISTER}
+          text="切换语言"
+          onHandle={() => history.push('/login')}
+        />
         <div className="main-content">
           <label className="account">
             <span onClick={this.onOpenPrefix}>
               +{prefix.tel}
-              <FiChevronDown/>
+              <FiChevronDown />
             </span>
             <input
               className="input-main"
@@ -266,7 +281,8 @@ class Register extends Component {
             />
             <span
               className={`sms-code  ${!isGetSms ? `event-none` : ''}`}
-              onClick={this.getCode}>
+              onClick={this.getCode}
+            >
               {isGetSms ? COMMON.GET_VERIFY_CODE : <span>{`${count}s`}</span>}
             </span>
           </label>
@@ -310,14 +326,17 @@ class Register extends Component {
             />
           </label>
         </div>
-        {showBtn && <Button
-          activeClassName="active"
-          className="primary-button"
-          disabled={!this.canSubmit()}
-          onClick={this.onSubmit}>
-          {REGISTER.SUBMIT_LABEL}
-        </Button>}
-        {showSuccess && <RegisterSuccess history={this.props.history}/>}
+        {showBtn && (
+          <Button
+            activeClassName="active"
+            className="primary-button"
+            disabled={!this.canSubmit()}
+            onClick={this.onSubmit}
+          >
+            {REGISTER.SUBMIT_LABEL}
+          </Button>
+        )}
+        {showSuccess && <RegisterSuccess history={this.props.history} />}
 
         <TelPrefix
           show={showPrefix}

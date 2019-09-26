@@ -95,7 +95,7 @@ class Login extends Component {
 
     return (
       <div id="login">
-        <AccountHeader title={COMMON.LOGIN} />
+        <AccountHeader title={COMMON.LOGIN} text={COMMON.SWITCH_LANG} />
         <div className="content">
           <label className="account">
             <span onClick={this.onOpenPrefix}>

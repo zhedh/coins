@@ -1,5 +1,6 @@
 export default {
   COMMON: {
+    SWITCH_LANG: 'Switch Language',
     LOGIN: '登录',
     ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
     PASSWORD_PLACEHOLDER: '密码',
@@ -151,7 +152,7 @@ export default {
     GENERATION_REFERRALS: '代推荐',
     MEMBERS: '用户',
     REFERRING_DATE: '推广时间',
-    GENERALIZE_LEVELS: ['无', '一级', '二级', '三级', '四级', '超级'],
+    GENERALIZE_LEVELS: ['无', '一级', '二级', '三级', '四级', '超级']
   },
   AUTH: {
     INPUT_MSG: '填写信息',

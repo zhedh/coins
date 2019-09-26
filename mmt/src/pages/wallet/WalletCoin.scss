@@ -36,20 +36,20 @@
         flex-direction: column;
         justify-content: center;
 
-        small{
+        small {
           margin-top: 5px;
           color: $text-sub-color;
           font-size: $font-assistant;
         }
       }
 
-      aside{
+      aside {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-end;
 
-        small{
+        small {
+          text-align: end;
           margin-top: 5px;
           color: $text-sub-color;
           font-size: $font-assistant;

@@ -1,5 +1,6 @@
 export default {
   COMMON: {
+    SWITCH_LANG: '切换语言',
     LOGIN: 'Sign In',
     ACCOUNT_PLACEHOLDER: 'E-mail/ Mobile Phone',
     PASSWORD_PLACEHOLDER: 'Password',
@@ -123,7 +124,7 @@ export default {
     NODE_LEVEL: 'Node Level',
     JOIN_NODE: 'Join a node',
     RETURN_DATE: 'Redemption Date',
-    PROMOTION_REWARDS_DETAILS: 'Promotion Rewards Details',
+    PROMOTION_REWARDS_DETAILS: 'Details',
     LOOK_DETAIL: 'Check the details',
     MUSDT_PROMOTION: 'MUSDT Promotion Rewards Quota',
     LAST_SET_DATE: 'Last Settlement Date',
@@ -157,8 +158,14 @@ export default {
     GENERATION_REFERRALS: ' Generation Referrals',
     MEMBERS: 'Members',
     REFERRING_DATE: 'Referring Date',
-    GENERALIZE_LEVELS: ['0 level', '1 level', '2 level', '3 level', '4 level', 'super level'],
-
+    GENERALIZE_LEVELS: [
+      '0 level',
+      '1 level',
+      '2 level',
+      '3 level',
+      '4 level',
+      'super level'
+    ]
   },
   AUTH: {
     INPUT_MSG: 'Fill in the Information',

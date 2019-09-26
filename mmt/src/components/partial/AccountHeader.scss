@@ -5,12 +5,18 @@
   padding: 20px;
   min-height: 14rem;
 
-  img {
-    padding: 15px 30px 15px 8px;
-    width: 8px;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    &.hidden {
-      visibility: hidden;
+    img {
+      padding: 15px 30px 15px 8px;
+      width: 8px;
+
+      &.hidden {
+        visibility: hidden;
+      }
     }
   }
 

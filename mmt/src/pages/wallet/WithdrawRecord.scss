@@ -1,6 +1,6 @@
 @import '../../styles/_common';
 
-$text-sub-color: #5A5A5A;
+$text-sub-color: #5a5a5a;
 
 #withdraw-record {
   @include clearFix;
@@ -32,7 +32,7 @@ $text-sub-color: #5A5A5A;
 
         label {
           display: inline-block;
-          width: 80px;
+          width: 100px;
         }
 
         span {
