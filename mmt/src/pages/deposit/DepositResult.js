@@ -18,7 +18,7 @@ class DepositResult extends Component {
 
   render() {
     const { history, location, localeStore } = this.props
-    const { DEPOSIT } = localeStore
+    const { DEPOSIT } = localeStore.language || {}
     const isUnLock = location.state === 'unLock'
     return (
       <div id="verified-result">

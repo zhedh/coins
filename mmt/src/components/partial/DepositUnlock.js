@@ -171,11 +171,11 @@ class DepositUnlock extends Component {
                 <span>{DEPOSIT.AVAILABLE}</span>
                 <span>{formatCoinPrice(userBalance, USDT_POINT_LENGTH)}</span>
               </p>
-              <p className="service-charge">*扣款时依照最新的兑价为准</p>
+              <p className="service-charge">*{DEPOSIT.DEDUCTING_FUNDS}</p>
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder="支付密码"
+                  placeholder={DEPOSIT.PAY_PWD}
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />

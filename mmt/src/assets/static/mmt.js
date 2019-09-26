@@ -10,7 +10,7 @@ const MMT = {
     ICON_WALLET: require('../images/mmt/icon-wallet.png'),
     LABEL_DEPOSIT: 'MMT'
   },
-  HOME: {
+  HOME_MMT: {
     TITLE: 'MMT',
     IMG_BG: require('../images/mmt/home-bg.png'),
     GENERALIZE_BG: require('../images/mmt/generalize-banner.png'),
@@ -22,7 +22,7 @@ const MMT = {
   BARGAIN: {
     BANNER_LABEL: '特价XC奖励额度：'
   },
-  AUTH: {
+  AUTH_MMT: {
     IMG_BACK: require('../images/mmt/auth-card-back.png'),
     IMG_FRONT: require('../images/mmt/auth-card-front.png'),
     IMG_HOLD: require('../images/mmt/auth-card-hold.png'),

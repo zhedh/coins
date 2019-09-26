@@ -1,21 +1,22 @@
-import React, {Component, PureComponent} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Modal} from 'antd-mobile'
-import {FaRegQuestionCircle} from 'react-icons/fa'
+import React, { Component, PureComponent } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Modal } from 'antd-mobile'
+import { FaRegQuestionCircle } from 'react-icons/fa'
 import Header from '../../components/common/Header'
-import {hideChatButton} from "../../utils/common"
+import { hideChatButton } from '../../utils/common'
 import './UserCenter.scss'
 
 class ListItem extends PureComponent {
   render() {
-    const {icon, name, url, onHandle} = this.props
+    const { icon, name, url, onHandle } = this.props
     return (
       <div
         className="list-item"
         onClick={() => {
-          onHandle ? onHandle() : window.location.href = url
-        }}>
-        <img className="icon" src={icon} alt=""/>
+          onHandle ? onHandle() : (window.location.href = url)
+        }}
+      >
+        <img className="icon" src={icon} alt="" />
         <span>{name}</span>
         <img
           className="arrow"
@@ -39,7 +40,7 @@ class UserCenter extends Component {
   }
 
   componentDidMount() {
-    const {personStore, userStore} = this.props
+    const { personStore, userStore } = this.props
 
     if (userStore.isOnline) {
       personStore.getUserInfo()
@@ -47,30 +48,32 @@ class UserCenter extends Component {
   }
 
   componentWillUnmount() {
-    hideChatButton();
+    hideChatButton()
   }
 
   onBack = () => {
-    const {history} = this.props
+    const { history } = this.props
     history.push('/home')
   }
 
-  onChangeLocale = (locale) => {
-    const {localeStore} = this.props
+  onChangeLocale = locale => {
+    const { localeStore } = this.props
     localeStore.changeLocale(locale)
-    this.setState({showLocaleModal: false})
+    this.setState({ showLocaleModal: false })
   }
 
   logout = () => {
-    const {history, userStore} = this.props
+    const { history, userStore, localeStore } = this.props
+    const { TOAST, COMMON } = localeStore.language || {}
+
     // 调取退出登录接口
-    Modal.alert('是否退出登录？', '', [
+    Modal.alert(TOAST.IS_SIGN_OUT, '', [
       {
-        text: '取消',
+        text: TOAST.CANCEL_SIGN_OUT,
         style: 'default'
       },
       {
-        text: '确认',
+        text: COMMON.CONFIRM,
         onPress: () => {
           userStore.logout()
           history.push('/')
@@ -79,32 +82,35 @@ class UserCenter extends Component {
     ])
   }
 
-  getAuthLabel = (status) => {
+  getAuthLabel = status => {
+    const { localeStore } = this.props
+    const { TOAST } = localeStore.language || {}
     switch (status) {
       case 0:
-        return '未实名认证'
+        return TOAST.UNVERIFIED
       case 1:
-        return '等待审核'
+        return TOAST.VERIFYING
       case 2:
-        return '已实名认证'
+        return TOAST.HAS_REAL_NAME_AUTH
       case 3:
-        return '认证失败'
+        return TOAST.VERIFY_FAILED
       default:
         return ''
     }
   }
 
   render() {
-    const {history, userStore, personStore, localeStore} = this.props
-    const {userInfo} = personStore
-    const {locale} = localeStore
-    const {showFModal, showLocaleModal} = this.state
-    const hideAuthButton = userInfo.authentication === 1 || userInfo.authentication === 2
+    const { history, userStore, personStore, localeStore } = this.props
+    const { userInfo } = personStore
+    const { locale, USER_CENTER } = localeStore.language || {}
+    const { showFModal, showLocaleModal } = this.state
+    const hideAuthButton =
+      userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
       <div id="user-center">
         <Header
-          title="个人中心"
+          title={USER_CENTER.USER_CENTER}
           isShadow={true}
           bgWhite
           onHandle={() => this.onBack()}
@@ -126,13 +132,13 @@ class UserCenter extends Component {
                   className={'auth-btn'}
                   onClick={() => history.push('/verified-country')}
                 >
-                  实名认证
+                  {USER_CENTER.IDENTITIY_VERIFICATION}
                 </button>
               )}
             </div>
           ) : (
             <h1 onClick={() => history.push('/login')}>
-              您好，请登录
+              {USER_CENTER.HI_TO_LOGIN}
               <img
                 src={require('../../assets/images/arrow-left.png')}
                 alt="返回"
@@ -141,43 +147,47 @@ class UserCenter extends Component {
           )}
           <div className="list-tip">
             {userInfo.isF ? (
-              <span className="active">F用户生效中，{userInfo.isFTime}失效</span>
+              <span className="active">
+                {USER_CENTER.F_MEMBER_ING}
+                {userInfo.isFTime}
+                {USER_CENTER.F_MEMBER_INVALID}
+              </span>
             ) : (
-              <span> 非F用户，暂不可享推广奖励</span>
+              <span> {USER_CENTER.NOT_F_MEMBER}</span>
             )}
             &nbsp;
             <FaRegQuestionCircle
-              onClick={() => this.setState({showFModal: true})}
+              onClick={() => this.setState({ showFModal: true })}
             />
           </div>
         </section>
         <section className={`list-content list-second`}>
           <ListItem
             icon={require('../../assets/images/notice.svg')}
-            name="公告列表"
+            name={USER_CENTER.ANNOUNCEMENTS}
             url="/notices"
           />
           <ListItem
             icon={require('../../assets/images/account.svg')}
-            name="账户安全"
+            name={USER_CENTER.ACCOUNT_SECURITY}
             url={userStore.isOnline ? '/account' : '/login'}
           />
           <ListItem
             icon={require('../../assets/images/kefu.png')}
-            name="联系客服"
+            name={USER_CENTER.CONTACT_CUSTOMER_SERVICE}
             url={'/contact-us'}
           />
           <ListItem
             icon={require('../../assets/images/locale.png')}
-            name="切换语言"
-            onHandle={() => this.setState({showLocaleModal: true})}
+            name={USER_CENTER.CHANGE_LANG}
+            onHandle={() => this.setState({ showLocaleModal: true })}
           />
         </section>
         {userStore.isOnline && (
           <section className={`list-content list-second`}>
             <ListItem
               icon={require('../../assets/images/logout.svg')}
-              name="退出登录"
+              name={USER_CENTER.SIGN_OUT}
               url="/login"
               onHandle={this.logout}
             />
@@ -189,29 +199,32 @@ class UserCenter extends Component {
           closable
           maskClosable
           transparent
-          title="F用户说明"
-          onClose={() => this.setState({showFModal: false})}
+          title={USER_CENTER.F_MEMBER_INTRODUCTION}
+          onClose={() => this.setState({ showFModal: false })}
         >
           <div
             style={{
               fontSize: '1.5rem',
               textAlign: 'justify',
               padding: '10px'
-            }}>
-            当您参与计划成功后，将获得F用户的标示，F用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，f用户的有效期为3个交易日（包含成为当天）。
+            }}
+          >
+            {USER_CENTER.F_INFO}
           </div>
         </Modal>
         <div className={`locale-modal ${showLocaleModal ? 'show' : ''}`}>
           <ul>
             <li
               className={locale === 'zh_CN' ? 'active' : ''}
-              onClick={() => this.onChangeLocale('zh_CN')}>
+              onClick={() => this.onChangeLocale('zh_CN')}
+            >
               中文
             </li>
             <li
               className={locale === 'en_US' ? 'active' : ''}
-              onClick={() => this.onChangeLocale('en_US')}>
-              英文
+              onClick={() => this.onChangeLocale('en_US')}
+            >
+              English
             </li>
           </ul>
         </div>

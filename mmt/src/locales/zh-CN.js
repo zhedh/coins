@@ -14,6 +14,9 @@ export default {
     NEXT_STEP: '下一步',
     SET: '设置',
     RESET: '重置',
+    NO_DATA: '暂无数据',
+    NO_ANNOUN: '暂无公告',
+    LOGIN_TO_VIEW: '登录查看',
 
     // footer
     HOMEPAGE: '首页',
@@ -54,6 +57,7 @@ export default {
     WITHDRAW_SUCCESS: '提现成功，正在跳转提币记录页',
     UPLOAD_SUCCESS: '上传成功',
     IS_SIGN_OUT: '是否退出登录？',
+    CANCEL_SIGN_OUT: '取消',
     UNVERIFIED: '未实名认证',
     VERIFYING: '等待审核',
     VERIFIED: '已审核',
@@ -90,9 +94,11 @@ export default {
     PASSWORD_REMARK: '8-20位字符，不可以是纯数字。'
   },
   HOME: {
-    NOTICE: '公告：',
+    NOTICE: '公告',
     MUSDT_AVAILABLE: 'USDT特价',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT可用特价额度',
+    AVAILABLE_PROMOTION: '可用特价额度',
+    PROMOTION: '特价额度',
     INVITATION_REWARDS: '邀请奖励',
     ACTIVATED: '参与中',
     RULES: '规则介绍',
@@ -101,7 +107,13 @@ export default {
     GOT_IT: '知道了',
     VERIFY_FIRST: '立即认证',
     JOIN_EVERYDAY: '每天参与，天天有的赚！',
+    LAST_REWARDING: '上次结算奖励额度',
+    REWARDING_NOTICE:
+      '当前得到的奖励额度，有效期为俩个交易日，若俩个交易日结算前未使用，则奖励额度失效，请尽快认购。',
+    DEPOSIT_TIP: '每天存一笔，天天有钱赚！',
+    IDENTIFY_CONFIRM: '参与计划需先进行身份认证哦',
 
+    NODE_LEVEL: '节点等级',
     JOIN_NODE: '参与节点',
     RETURN_DATE: '返还日期',
     PROMOTION_REWARDS_DETAILS: '特价奖励详情',
@@ -153,22 +165,31 @@ export default {
     AUTH_EXPLAIN_ONE:
       '请确保照片完整，清晰可见，格式为jpg, jpeg,或png，需小于2M。证件必须 在有效期限内。',
     AUTH_EXPLAIN_TWO:
-      '请上传手持证件照片，照片中需附一张白纸写有（“NTTC"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
+      '请上传手持证件照片，照片中需附一张白纸写有（“MMT"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
     SUBMIT_VERIFY: '提交审核',
     SUBMIT_AND_WAIT: '提交成功，等待审核…',
     RESULT_MSG: '认证结果将会显示在个人中心',
     VERIFICATION_FAILED: '认证失败！',
     FAILED_REASON: '失败原因',
     CONTINUE_TO_VERIFY: '重新验证',
-    YOUR_NAME: '您的姓名'
+    CERTIFICATE_PASSED: '认证通过',
+    YOUR_NAME: '您的姓名',
+    ID_NUMBER: '身份证号',
+    ID_AND_PASSPORT_FRONT: '身份证/护照正面照',
+    ID_AND_PASSPORT_BACK: '身份证/护照反面照',
+    ID_AND_PASSPORT_HOLD: '手持身份证/护照照片'
   },
 
   DEPOSIT: {
+    CHOOSE_FUNDS: '选择参与基金',
+    JOIN_PLAN: '参与计划',
     SUPER_NODE: '超级节点',
     JOIN_NODE: '参与节点',
     UNLOCK_AMOUNT: '解锁额度',
+    PAY_PWD: '支付密码',
     FEE: '手续费',
     FEES: '手续费费率',
+    DEDUCTING_FUNDS: '扣款时依照最新的兑价为准',
     AUTH_MSG_ONE: '您暂未通过实名认证，无法参与',
     TO_AUTH: '去认证',
     AUTH_MSG_TWO: '您暂未设置交易密码，无法参与',
@@ -196,16 +217,22 @@ export default {
   },
   USER_CENTER: {
     USER_CENTER: '个人中心',
+    CONTACT_US: '联系我们',
     UNVERIFIED: '未实名认证',
     IDENTITIY_VERIFICATION: '实名认证',
     NOT_F_MEMBER: '非F用户，暂不可享推广奖励',
     ANNOUNCEMENTS: '公告列表',
     ACCOUNT_SECURITY: '账户安全',
     CONTACT_CUSTOMER_SERVICE: '联系客服',
-    SIGN_OUT:'退出登录',
-    F_MEMBER_INTRODUCTION:'F用户说明',
-    F_INFO: '当您参与超级节点成功后，将获得F用户的标示，F用户标示代表着您能够享受买配奖、代数管理奖、团队奖等相关奖励，F用户标示有效期为48小时',
-    HI_TO_LOGIN:'您好，请登录',
+    CHANGE_LANG: '切换语言',
+    SIGN_OUT: '退出登录',
+    CHANGE_COUNTRY: '选择国家',
+    F_MEMBER_INTRODUCTION: 'F用户说明',
+    F_MEMBER_ING: 'F用户生效中，',
+    F_MEMBER_INVALID: '失效',
+    F_INFO:
+      '当您参与超级节点成功后，将获得F用户的标示，F用户标示代表着您能够享受买配奖、代数管理奖、团队奖等相关奖励，F用户标示有效期为48小时',
+    HI_TO_LOGIN: '您好，请登录',
     SECURITY_CENTER: '安全中心',
     RESET_LOGIN_PASSWORD: '重置登录密码',
     SET_TRADE_PASSWORD: '设置交易密码'
@@ -245,7 +272,7 @@ export default {
       '当前，每人每日最高可提现',
       '，单笔转出限额为',
       '-',
-      '；手续费',
+      '手续费',
       '。'
     ],
     MSG_TWO: '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。',
@@ -254,15 +281,25 @@ export default {
     SAVE_QR_CODE: '点击或长按二维码保存图片',
     COPY_ADDRESS: '复制地址',
     DEPOSIT_NOTES: '转入说明',
-    RECHARGE_MSG_ONE: '充值MMT后将自动根据MMT/MUSDT的时时汇率自动折合成MUSDT，折合时间根据MMT到账时间为准。',
-    RECHARGE_MSG_TWO: ['转入是自动的，','转账需要整个ETH网络进行确认，您的','会自动充值到您的账户中。'],
-    RECHARGE_MSG_THREE: '此地址是您唯一且独自使用的转入地址，您可以同进进行多次充值。',
-    RECHARGE_MSG_FOUR: '本地址禁止充值除MUSDT之外的其它资产，任何其它资产充值将不可找回。',
+    RECHARGE_MSG_ONE:
+      '充值MMT后将自动根据MMT/MUSDT的时时汇率自动折合成MUSDT，折合时间根据MMT到账时间为准。',
+    RECHARGE_MSG_TWO: [
+      '转入是自动的，',
+      '转账需要整个ETH网络进行确认，您的',
+      '会自动充值到您的账户中。'
+    ],
+    RECHARGE_MSG_THREE:
+      '此地址是您唯一且独自使用的转入地址，您可以同进进行多次充值。',
+    RECHARGE_MSG_FOUR:
+      '本地址禁止充值除MUSDT之外的其它资产，任何其它资产充值将不可找回。',
 
     DEPOSIT_USDT: 'USDT充值',
-    USDT_MSG_ONE: '转入是自动的，USDT转账需要整个USDT网络进行确认，您的USDT会自动充值到您的账户中。',
-    USDT_MSG_TWO: '此地址是您唯一且独自使用的转入地址，您可以同进进行多次充值。',
-    USDT_MSG_THREE: '本地址禁止充值除USDT之外的其它资产，任何其它资产充值将不可找回。',
+    USDT_MSG_ONE:
+      '转入是自动的，USDT转账需要整个USDT网络进行确认，您的USDT会自动充值到您的账户中。',
+    USDT_MSG_TWO:
+      '此地址是您唯一且独自使用的转入地址，您可以同进进行多次充值。',
+    USDT_MSG_THREE:
+      '本地址禁止充值除USDT之外的其它资产，任何其它资产充值将不可找回。',
 
     WITHDRAW_USDT: 'USDT提币',
     WITHDRAW_USDT_MSG1: [
@@ -272,7 +309,8 @@ export default {
       'k USDT；手续费；手续费',
       'USDT'
     ],
-    WITHDRAW_USDT_MSG2: '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。',
+    WITHDRAW_USDT_MSG2:
+      '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。',
     WITHDRAWAL_RECORD: '提币记录',
     ADDRESS: '地址',
     DATE: '时间',

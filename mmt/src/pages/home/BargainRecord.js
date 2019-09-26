@@ -20,7 +20,7 @@ class BargainRecord extends Component {
   render() {
     const { personStore, localeStore } = this.props
     const { specialRecords } = personStore
-    const { HOME } = localeStore
+    const { HOME, COMMON } = localeStore.language || {}
     return (
       <div id="bargain-record">
         <Header title={HOME.PROMOTION_QUOTA_RECORDS} isFixed isShadow bgWhite />
@@ -34,7 +34,7 @@ class BargainRecord extends Component {
               </p>
             </li>
           ))}
-          {specialRecords.length <= 0 && <NoData msg="暂无数据" />}
+          {specialRecords.length <= 0 && <NoData msg={COMMON.NO_DATA} />}
         </ul>
       </div>
     )

@@ -41,7 +41,7 @@ class Index extends Component {
       productStore,
       localeStore
     } = this.props
-    const { HOME } = localeStore.language || {}
+    const { HOME, COMMON } = localeStore.language || {}
     const { notices } = noticeStore
     const { depositRecords } = personStore
     const { currentProduct } = productStore
@@ -65,7 +65,7 @@ class Index extends Component {
           >
             <label>
               <IoIosMegaphone className="megaphone" />
-              {HOME.NOTICE}
+              {HOME.NOTICE}:
             </label>
             {notices.length ? (
               <WingBlank>
@@ -90,7 +90,7 @@ class Index extends Component {
                 </Carousel>
               </WingBlank>
             ) : (
-              <span className="item">暂无公告</span>
+              <span className="item">{COMMON.NO_ANNOUN}</span>
             )}
           </div>
           <ul className="tabs">
@@ -103,10 +103,10 @@ class Index extends Component {
                 {userStore.isOnline ? (
                   <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
                 ) : (
-                  <span>登录查看</span>
+                  <span>{COMMON.LOGIN_TO_VIEW}</span>
                 )}
                 <br />
-                <small>可用特价额度</small>
+                <small>{HOME.AVAILABLE_PROMOTION}</small>
               </div>
               <FiChevronRight className="icon" />
             </li>
@@ -154,16 +154,13 @@ class Index extends Component {
               ))}
             </ul>
           ) : (
-            <NoData
-              img={COMMON_ASSET.NO_DATA_IMG}
-              msg="每天存一笔，天天有钱赚！"
-            />
+            <NoData img={COMMON_ASSET.NO_DATA_IMG} msg={HOME.DEPOSIT_TIP} />
           )}
         </section>
         <Dialog
           show={false}
           title={HOME.WARM_REMINDER}
-          msg="参与计划需先进行身份认证哦"
+          msg={HOME.IDENTIFY_CONFIRM}
         />
       </div>
     )

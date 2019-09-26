@@ -1,30 +1,31 @@
-import React, {Component} from 'react'
-import {inject, observer} from "mobx-react"
-import {COUNTRIES_LIST} from '../../utils/constants'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { COUNTRIES_LIST } from '../../utils/constants'
 import Header from '../../components/common/Header'
 import './VerifiedCountry.scss'
-
+import { COMMON } from '../../assets/static'
 
 @inject('authStore')
+@inject('localeStore')
 @observer
 class VerifiedCountry extends Component {
-
   selectCountry = () => {
-    const {history, authStore} = this.props
-    const {country} = authStore.authInfo
+    const { history, authStore } = this.props
+    const { country } = authStore.authInfo
     history.push('/verified-identity/' + country)
   }
 
   render() {
-    const {authStore} = this.props
-    const {country} = authStore.authInfo
+    const { authStore, localeStore } = this.props
+    const { country } = authStore.authInfo
+    const { USER_CENTER, COMMON } = localeStore.language || {}
     const selectedCountry = country
 
     return (
       <div id="verified-country">
-        <Header title="选择国家" isFixed bgWhite>
+        <Header title={USER_CENTER.CHANGE_COUNTRY} isFixed bgWhite>
           <p className="next-step" onClick={() => this.selectCountry()}>
-            下一步
+            {COMMON.NEXT_STEP}
           </p>
         </Header>
 
@@ -32,12 +33,15 @@ class VerifiedCountry extends Component {
           {COUNTRIES_LIST.map((country, key) => (
             <li
               key={key.toString()}
-              onClick={() => authStore.changeInfoItem(country, 'country')}>
+              onClick={() => authStore.changeInfoItem(country, 'country')}
+            >
               <span>{country}</span>
-              {selectedCountry === country && <img
-                src={require('../../assets/images/select-country.png')}
-                alt=""
-              />}
+              {selectedCountry === country && (
+                <img
+                  src={require('../../assets/images/select-country.png')}
+                  alt=""
+                />
+              )}
             </li>
           ))}
         </ul>

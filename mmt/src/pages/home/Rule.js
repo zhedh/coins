@@ -30,7 +30,7 @@ class Rule extends Component {
     const { content } = this.state
     return (
       <div id="rule">
-        <Header title={`MUSDT${HOME.RULES}`} isFixed isShadow bgWhite />
+        <Header title={`MUSDT ${HOME.RULES}`} isFixed isShadow bgWhite />
         <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     )

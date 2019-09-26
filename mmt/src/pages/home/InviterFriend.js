@@ -8,7 +8,7 @@ import { MdContentCopy } from 'react-icons/md'
 import Header from '../../components/common/Header'
 import { TOAST_DURATION } from '../../utils/constants'
 import './InviterFriend.scss'
-
+@inject('localeStore')
 class QrCodeBox extends Component {
   state = {
     codeUrl: ''
@@ -21,7 +21,8 @@ class QrCodeBox extends Component {
   }
 
   render() {
-    const { inviterUrl } = this.props
+    const { inviterUrl, localeStore } = this.props
+    const { WALLET } = localeStore.language || {}
     const { codeUrl } = this.state
 
     return (
@@ -30,7 +31,7 @@ class QrCodeBox extends Component {
         <br />
         <img src={codeUrl} alt="" />
         <br />
-        <span>点击或长按二维码保存图片</span>
+        <span>{WALLET.SAVE_QR_CODE}</span>
       </div>
     )
   }

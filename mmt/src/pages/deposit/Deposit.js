@@ -66,16 +66,16 @@ class Deposit extends Component {
 
   render() {
     const { productStore, localeStore } = this.props
-    const { DEPOSIT } = localeStore.language || {}
+    const { DEPOSIT, HOME } = localeStore.language || {}
     const { products, productDetail } = productStore
     const { showDrawer, selectTabIndex } = this.state
 
-    const tabs = ['参与节点', '特价额度']
+    const tabs = [HOME.JOIN_NODE, HOME.PROMOTION]
 
     const sidebar = (
       <div className="sidebar">
         <header className="sidebar-header">
-          <span>选择参与基金</span>
+          <span>{DEPOSIT.CHOOSE_FUNDS}</span>
           <img
             src={leftDrawerIcon}
             alt="抽屉"

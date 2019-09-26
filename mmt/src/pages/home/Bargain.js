@@ -22,7 +22,7 @@ class Bargain extends Component {
 
   render() {
     const { history, personStore, localeStore } = this.props
-    const { HOME } = localeStore.language || {}
+    const { HOME, WALLET } = localeStore.language || {}
     const { allUsableSpecial, lastClearTime, specialAwards } = personStore
 
     return (
@@ -53,13 +53,13 @@ class Bargain extends Component {
             <button
               onClick={() => history.push({ pathname: '/deposit', state: 1 })}
             >
-              认购
+              {WALLET.SUBSCRIBE}
             </button>
           </div>
           {/*<p>* 解锁后的特价XC将直接充值到您的账户</p>*/}
         </section>
         <section className="section-main">
-          <h2>上次结算奖励额度</h2>
+          <h2>{HOME.LAST_REWARDING}</h2>
           <ul>
             {specialAwards.map(award => (
               <li key={award.remark}>
@@ -69,9 +69,7 @@ class Bargain extends Component {
             ))}
           </ul>
         </section>
-        <section className="section-aside">
-          当前得到的奖励额度，有效期为俩个交易日，若俩个交易日结算前未使用，则奖励额度失效，请尽快认购。
-        </section>
+        <section className="section-aside">{HOME.REWARDING_NOTICE}</section>
       </div>
     )
   }

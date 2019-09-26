@@ -14,15 +14,20 @@ export default {
     NEXT_STEP: 'Next Step',
     SET: 'Set',
     RESET: 'Reset',
+    NO_DATA: 'No data',
+    NO_ANNOUN: 'No announcement',
+    LOGIN_TO_VIEW: 'Sign in to view',
 
     // footer
-    HOMEPAGE: 'Homepage',
+    HOMEPAGE: 'Home',
     NODE: 'Node',
-    WALLET: 'Wallet',
+    WALLET: 'Wallet'
   },
+
   TOAST: {
-    ACCOUNT_ERR: 'Account doesn\'t exist!',
-    PASSWORD_ERR: 'Password is at least 8 digits, consisting of letters and numbers.',
+    ACCOUNT_ERR: "Account doesn't exist!",
+    PASSWORD_ERR:
+      'Password is at least 8 digits, consisting of letters and numbers.',
     LOGIN_SUCCESS: 'Login successfully!',
     CODE_ERR: 'Verification code is wrong.',
     PASSWORD_CONFIRM_ERR: 'Password is not the same.',
@@ -39,9 +44,10 @@ export default {
     SCAN_FAILED: 'Scan failed.',
     EMAIL_UN_REGISTER: 'The e-mail is not registered yet.',
     PHONE_UN_REGISTER: 'The phone number is not registered yet.',
-    PLEASE_INPUT_CONFIRM_ACCOUNT: 'Please fill in the correct e-mail or phone number.',
+    PLEASE_INPUT_CONFIRM_ACCOUNT:
+      'Please fill in the correct e-mail or phone number.',
     PLEASE_INPUT_4_CODE: 'Please enter the 4-digit verification code.',
-    PAGE_NOT_AND_TO_HOME: 'Page doesn\'t exist, returning to homepage…',
+    PAGE_NOT_AND_TO_HOME: "Page doesn't exist, returning to homepage…",
     COPIED: 'Copied.',
     PLEASE_INPUT_CARD_NUMBER: 'Please enter 7-18 digits document number.',
     PLEASE_INPUT_ADDRESS: 'Please fill in the withdrawal address.',
@@ -50,8 +56,10 @@ export default {
     LESS_MIN_AMOUNT: 'Less than minimum withdrawal amount.',
     MORE_MIN_AMOUNT: 'Exceed withdrawal maximum limit.',
     INSUFFICIENT_ACCOUNT: 'Insufficient funds.',
-    WITHDRAW_SUCCESS: 'Withdrawal successfully, returning to withdrawal record.',
+    WITHDRAW_SUCCESS:
+      'Withdrawal successfully, returning to withdrawal record.',
     UPLOAD_SUCCESS: 'Upload successfully.',
+    CANCEL_SIGN_OUT: 'Cancel',
     IS_SIGN_OUT: 'Confirm to sign out?',
     UNVERIFIED: 'Unverified',
     VERIFYING: 'Verifying',
@@ -63,7 +71,7 @@ export default {
     PASSPORT: 'Passport',
     DRIVING_LICENSE: 'Driving License',
     FAILED: 'Failed',
-    UN_LOGIN_NOT_DO: 'You haven\'t signed in, cannot operate.\n',
+    UN_LOGIN_NOT_DO: "You haven't signed in, cannot operate.\n",
     TO_LOGIN: 'Go to sign in.',
     REVIEWING: 'Reviewing',
     PROCESSING: 'Processing',
@@ -72,14 +80,13 @@ export default {
   },
 
   LOGIN: {
-    FORGOT_PASSWORD: 'Forgot password?',
+    FORGOT_PASSWORD: 'Forgot password?'
   },
   REGISTER: {
     SUBMIT_LABEL: 'Singup immediately',
     REGISTER_SUCCESS: 'Register successfully!',
     HAPPY_REGISTER_SUCCESS: 'Congratulations, register successfully.',
-    OPEN_FIRST: 'Back to Account',
-
+    OPEN_FIRST: 'Back to Account'
   },
   PASSWORD: {
     FIND_PASSWORD: 'Find password',
@@ -88,21 +95,31 @@ export default {
     RESET_LOGIN_PASSWORD: 'Reset Signin Password',
     SET_PAY_PASSWORD: 'Set Pay Password',
     RESET_PAY_PASSWORD: 'Reset Pay Password',
-    PASSWORD_REMARK: 'The password is in 8-10 digits, pure numbers is not allowed.',
+    PASSWORD_REMARK:
+      'The password is in 8-10 digits, pure numbers is not allowed.'
   },
   HOME: {
-    NOTICE: 'Notice:',
+    NOTICE: 'Notice',
     MUSDT_AVAILABLE: 'USDT Specials',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT Available Promotion Quota',
+    AVAILABLE_PROMOTION: 'Available special amount',
+    PROMOTION: 'Special amount',
     INVITATION_REWARDS: 'Invitation Rewards',
     ACTIVATED: 'Activated',
     RULES: 'Rules',
     WARM_REMINDER: 'Warm Reminder',
-    DEPOSIT_BEFORE_AUTH: 'Subscribing to deposit plan requires identity verification.',
+    DEPOSIT_BEFORE_AUTH:
+      'Subscribing to deposit plan requires identity verification.',
     GOT_IT: 'Got it',
     VERIFY_FIRST: 'Verify immediately',
     JOIN_EVERYDAY: 'Subscribe everyday, make profits everyday!',
+    LAST_REWARDING: 'Rewarding Quota of Last Settlement',
+    REWARDING_NOTICE:
+      'The rewarding quota you get at the moment will be expired in two trading days. If it remains unused before settlements of these two trading days, it will be invalid. Please submit as soon as possible.',
+    DEPOSIT_TIP: 'Deposit everyday, make profits everyday!',
+    IDENTIFY_CONFIRM: 'Identity verification required before joining the plan',
 
+    NODE_LEVEL: 'Node Level',
     JOIN_NODE: 'Join a node',
     RETURN_DATE: 'Redemption Date',
     PROMOTION_REWARDS_DETAILS: 'Promotion Rewards Details',
@@ -116,7 +133,8 @@ export default {
     MANAGEMENT_REWARDS: 'Management Rewards',
     TEAM_REWARDS: 'Team Rewards',
     OPERATION_REWARDS: 'Operation Rewards',
-    REWARDS_MSG: 'The daily rewarding quota will expire in two trading days. The rewarding quota will be expired if it is not used before settlement of the second trading day.',
+    REWARDS_MSG:
+      'The daily rewarding quota will expire in two trading days. The rewarding quota will be expired if it is not used before settlement of the second trading day.',
     PROMOTION_QUOTA_RECORDS: 'Promotion Quota Records',
     UNLOCK_QUOTA: 'Unlock Quota',
     EXPIRED: 'Expired',
@@ -137,11 +155,12 @@ export default {
     REBATE_PROPORTION: 'Rebate Proportion',
     GENERATION_REFERRALS: ' Generation Referrals',
     MEMBERS: 'Members',
-    REFERRING_DATE: 'Referring Date',
+    REFERRING_DATE: 'Referring Date'
   },
   AUTH: {
     INPUT_MSG: 'Fill in the Information',
-    CONFIRM_MSG_AND_CARD: 'Make sure the information you fill is consistent with the identity documents you provide',
+    CONFIRM_MSG_AND_CARD:
+      'Make sure the information you fill is consistent with the identity documents you provide',
     SELECT_AUTH_WAY: 'You can select a document to verify',
     ID_CARD: 'Identity Card',
     PASSPORT: 'Passport',
@@ -150,27 +169,38 @@ export default {
     LAST_NAME: 'Last name',
     CARD_NUMBER: 'Document Number',
     IDENTITY_VERIFICATION: 'Identity Verification',
-    AUTH_EXPLAIN_ONE: 'Please make sure the photo you upload is clear and intacted in the format of jpg, jpeg, or png, which is less than 2M. The document must be within the expiry date.',
-    AUTH_EXPLAIN_TWO: 'Please upload the photo of you holding your verification document, and a white paper written with "NTTC" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
+    AUTH_EXPLAIN_ONE:
+      'Please make sure the photo you upload is clear and intacted in the format of jpg, jpeg, or png, which is less than 2M. The document must be within the expiry date.',
+    AUTH_EXPLAIN_TWO:
+      'Please upload the photo of you holding your verification document, and a white paper written with "NTTC" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
     SUBMIT_VERIFY: 'Submit',
     SUBMIT_AND_WAIT: 'Sumbitted, waiting for review…',
     RESULT_MSG: 'Verification result will be shown at Profile',
     VERIFICATION_FAILED: 'Verification failed!',
     FAILED_REASON: 'Reason',
     CONTINUE_TO_VERIFY: 'Continue to Verify',
-    YOUR_NAME: 'Name'
-
+    CERTIFICATE_PASSED: 'Certification Passed',
+    YOUR_NAME: 'Name',
+    ID_NUMBER: 'ID Number',
+    ID_AND_PASSPORT_FRONT: 'ID card / passport front photo',
+    ID_AND_PASSPORT_BACK: 'ID card / passport back photo',
+    ID_AND_PASSPORT_HOLD: 'Handheld ID/passport photo'
   },
 
   DEPOSIT: {
+    CHOOSE_FUNDS: 'Select funds to join',
+    JOIN_PLAN: 'Join The Plan',
     SUPER_NODE: 'Super Node',
     JOIN_NODE: 'Join a node',
     UNLOCK_AMOUNT: 'Unlock Amount',
+    PAY_PWD: 'Payment Password',
     FEE: 'FEES',
     FEES: 'Fees',
-    AUTH_MSG_ONE: 'You can\'t join as you haven\'t passed the identity verification.',
+    DEDUCTING_FUNDS: 'Based on the latest rates when deducting funds',
+    AUTH_MSG_ONE:
+      "You can't join as you haven't passed the identity verification.",
     TO_AUTH: 'Go to Verify',
-    AUTH_MSG_TWO: 'You can\'t join as you haven\'t set trade password.',
+    AUTH_MSG_TWO: "You can't join as you haven't set trade password.",
     TO_SET: 'Go to Set',
     JOIN_AND_GET: 'Join a node and get NTTC promotion quota',
     JOIN_SUPER_NODE: 'Join a Super Node',
@@ -195,15 +225,21 @@ export default {
   },
   USER_CENTER: {
     USER_CENTER: 'Profile',
+    CONTACT_US: 'Contact Us',
     UNVERIFIED: 'Unverified',
     IDENTITIY_VERIFICATION: 'Identitiy Verification',
     NOT_F_MEMBER: 'Not a F Member, cannot get the referring rewards.',
     ANNOUNCEMENTS: 'Announcements',
     ACCOUNT_SECURITY: 'Account Security',
     CONTACT_CUSTOMER_SERVICE: 'Contact Customer Service',
+    CHANGE_LANG: 'Switch Language',
     SIGN_OUT: 'Sign Out',
+    CHANGE_COUNTRY: 'Select Country',
     F_MEMBER_INTRODUCTION: 'F Member Introduction',
-    F_INFO: 'You will be marked as a F member after you successfully join a super node. F member marks that you can enjoy promotion rewards, referring rewards, management rewards, team rewards and others. The expiry date of a  F member mark is 48 hours.',
+    F_MEMBER_ING: 'F Memberis in effect，',
+    F_MEMBER_INVALID: 'Invalid',
+    F_INFO:
+      'You will be marked as a F member after you successfully join a super node. F member marks that you can enjoy promotion rewards, referring rewards, management rewards, team rewards and others. The expiry date of a  F member mark is 48 hours.',
     HI_TO_LOGIN: 'Hello, Sign In Here',
     SECURITY_CENTER: 'Security Center',
     RESET_LOGIN_PASSWORD: 'Reset Login Password',
@@ -218,7 +254,8 @@ export default {
     SIGNIN_TO_OPERATE: 'Signin to Operate',
     TO_LOGIN: 'Go to Signin',
     PROMOTION_QUOTA_UNLOCK: 'Promotion Quota Unlock',
-    SUBSCRIBING_PROMOTION_QUOTA_FREEZING: 'Subscribing Promotion Quota Freezing',
+    SUBSCRIBING_PROMOTION_QUOTA_FREEZING:
+      'Subscribing Promotion Quota Freezing',
     YOU_WILL_GET: 'You will Get',
     DEPOSIT_AMOUNT: 'Deposit Amount',
     NODE_REBATE: 'Node Rebate',
@@ -244,24 +281,38 @@ export default {
       'Currently, the maximum withdrawal amount for every account is ',
       ' per day. Each order is limited in',
       '-',
-      '; Fees for each transaction is ',
+      'Fees for each transaction is ',
       '.'
     ],
-    MSG_TWO: 'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
-    MSG_THREE: 'Please be noted that MUSDT withdrawal will be converted into MMT withdrawal based on the current rate of MMT/MUSDT.',
+    MSG_TWO:
+      'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
+    MSG_THREE:
+      'Please be noted that MUSDT withdrawal will be converted into MMT withdrawal based on the current rate of MMT/MUSDT.',
     DEPOSIT_MUSDT: 'Deposit MUSDT',
     SAVE_QR_CODE: 'Click or long press the qr code to save the picture',
     COPY_ADDRESS: 'Copy Address',
     DEPOSIT_NOTES: 'Deposit Notes',
-    RECHARGE_MSG_ONE: 'MMT deposit will be converted into MUSDT based on the real time rate of MMT/MUSDT, and the conversion time is based on the MMT deposit time.',
-    RECHARGE_MSG_TWO: ['Deposit is automatic. ',' transfer requires confirmation of Ethereum network. Your ',' will automatically deposit to your account.'],
-    RECHARGE_MSG_THREE: 'This deposit address is unique and only for your use, you can make several deposits at the same time.',
-    RECHARGE_MSG_FOUR: ['This address doesn\'t allow other assets deposit except MUSDT, any other non ',' assets deposited to this address will be lost permanently.'],
+    RECHARGE_MSG_ONE:
+      'MMT deposit will be converted into MUSDT based on the real time rate of MMT/MUSDT, and the conversion time is based on the MMT deposit time.',
+    RECHARGE_MSG_TWO: [
+      'Deposit is automatic. ',
+      ' transfer requires confirmation of Ethereum network. Your ',
+      ' will automatically deposit to your account.'
+    ],
+    RECHARGE_MSG_THREE:
+      'This deposit address is unique and only for your use, you can make several deposits at the same time.',
+    RECHARGE_MSG_FOUR: [
+      "This address doesn't allow other assets deposit except MUSDT, any other non ",
+      ' assets deposited to this address will be lost permanently.'
+    ],
 
     DEPOSIT_USDT: 'Deposit USDT',
-    USDT_MSG_ONE: 'Deposit is automatic. USDT transfer requires confirmation of USDT network. Your USDT will automatically deposit to your account.',
-    USDT_MSG_TWO: 'This deposit address is unique and only for your use, you can make several deposits at the same time.',
-    USDT_MSG_THREE: 'This address doesn\'t allow other assets deposit except USDT, any other non USDT assets deposited to this address will be lost permanently.',
+    USDT_MSG_ONE:
+      'Deposit is automatic. USDT transfer requires confirmation of USDT network. Your USDT will automatically deposit to your account.',
+    USDT_MSG_TWO:
+      'This deposit address is unique and only for your use, you can make several deposits at the same time.',
+    USDT_MSG_THREE:
+      "This address doesn't allow other assets deposit except USDT, any other non USDT assets deposited to this address will be lost permanently.",
 
     WITHDRAW_USDT: 'Withdraw USDT',
     WITHDRAW_USDT_MSG1: [
@@ -271,7 +322,8 @@ export default {
       ' USDT; Fees for each transaction is ',
       ' USDT.'
     ],
-    WITHDRAW_USDT_MSG2: 'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
+    WITHDRAW_USDT_MSG2:
+      'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
     WITHDRAWAL_RECORD: 'Withdrawal Record',
     ADDRESS: 'Address',
     DATE: 'Date',
@@ -287,4 +339,4 @@ export default {
     ALL_LOADED: 'All Loaded',
     STATUS: 'Status'
   }
-};
+}

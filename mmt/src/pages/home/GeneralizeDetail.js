@@ -15,9 +15,8 @@ class GeneralizeDetail extends Component {
   }
 
   componentDidMount() {
-    const { localeStore } = this.props
-    const { HOME } = localeStore
-    const { match } = this.props
+    const { match, localeStore } = this.props
+    const { HOME } = localeStore.language || {}
     const { id } = match.params
     this.setState({ title: chineseCapital(id) + HOME.GENERATION_REFERRALS })
     this.getSpreadList(id)
@@ -37,7 +36,7 @@ class GeneralizeDetail extends Component {
 
   render() {
     const { localeStore } = this.props
-    const { HOME } = localeStore
+    const { HOME, COMMON } = localeStore.language || {}
     const { title, users } = this.state
     const hasUsers = users && users.length > 0
 
@@ -58,7 +57,7 @@ class GeneralizeDetail extends Component {
             ))}
           </ul>
         ) : (
-          <NoData msg="暂无数据" />
+          <NoData msg={COMMON.NO_DATA} />
         )}
       </div>
     )

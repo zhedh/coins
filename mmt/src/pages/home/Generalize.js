@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Toast } from 'antd-mobile'
 import { inject } from 'mobx-react'
 import { OtherApi } from '../../api'
+import { HOME_MMT } from '../../assets/static'
 import arrowLeft from '../../assets/images/arrow-left.png'
 import arrowRightWhite from '../../assets/images/arrow-right-white.png'
 import './Generalize.scss'
@@ -33,7 +34,7 @@ class Generalize extends Component {
 
   render() {
     const { localeStore } = this.props
-    const { HOME } = localeStore
+    const { HOME } = localeStore.language || {}
     const { mySpread = {} } = this.state
     return (
       <div id="generalize">
@@ -60,7 +61,7 @@ class Generalize extends Component {
             <ul className="list">
               <li onClick={() => this.toDetail(1)}>
                 <p>
-                  <img src={HOME.GENERALIZE_USER_ONE_ICON} alt="" />
+                  <img src={HOME_MMT.GENERALIZE_USER_ONE_ICON} alt="" />
                   {HOME.FIRST_GENERATION_REFERRALS}
                 </p>
                 <aside>
@@ -88,8 +89,8 @@ class Generalize extends Component {
                 <small>{HOME.ACTIVE_MEMBER}</small>
               </li>
               <li>
-                <span>{HOME.GENERALIZE_LEVEL[mySpread.teamLevel]}</span>
-                <small>节点等级</small>
+                <span>{HOME_MMT.GENERALIZE_LEVEL[mySpread.teamLevel]}</span>
+                <small>{HOME.NODE_LEVEL}</small>
               </li>
               <li>
                 <span>{mySpread.rebate}</span>

@@ -8,7 +8,6 @@ import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import { formatCoinPrice } from '../../utils/format'
 import { COIN_POINT_LENGTH } from '../../utils/constants'
-import { DEPOSIT, COMMON } from '../../assets/static'
 import './DepositBuy.scss'
 
 @inject('localeStore')
@@ -133,7 +132,7 @@ class DepositBuy extends Component {
           activeClassName="btn-common__active"
           onClick={() => this.onDeposit(gearNum)}
         >
-          参与计划
+          {DEPOSIT.JOIN_PLAN}
         </Button>
 
         {/*参与计划弹窗*/}
@@ -171,7 +170,7 @@ class DepositBuy extends Component {
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder="支付密码"
+                  placeholder={DEPOSIT.PAY_PWD}
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />

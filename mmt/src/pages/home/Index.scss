@@ -1,4 +1,4 @@
-@import "../../styles/mixin";
+@import '../../styles/mixin';
 
 #home {
   position: relative;
@@ -81,9 +81,8 @@
       @include clearList;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-
       margin: 2.5rem 30px 0;
 
       li {
@@ -91,9 +90,8 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
         box-sizing: border-box;
-        width: 13.8rem;
+        max-width: 50%;
         height: 4.8rem;
         padding: 8px;
         border: 2px solid $white;
@@ -140,7 +138,8 @@
       justify-content: space-between;
       padding: 14px 18px;
 
-      span, a {
+      span,
+      a {
         display: flex;
         flex-direction: row;
         align-items: center;

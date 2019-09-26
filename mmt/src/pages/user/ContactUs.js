@@ -5,14 +5,16 @@ import Header from '../../components/common/Header'
 import './ContactUs.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class ContactUs extends Component {
   render() {
-    const { history } = this.props
+    const { history, localeStore } = this.props
+    const { USER_CENTER } = localeStore.language || {}
     return (
       <div id="contact-us">
         <Header
-          title="联系我们"
+          title={USER_CENTER.CONTACT_US}
           isShadow={true}
           onHandle={() => history.push('/user-center')}
         />
