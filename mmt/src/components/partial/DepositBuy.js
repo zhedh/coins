@@ -146,7 +146,7 @@ class DepositBuy extends Component {
             />
             <div className="content">
               <p className="deposit-price">
-                <span>{DEPOSIT.COIN_NAME}</span>
+                <span>{DEPOSIT.AMOUNT_JOIN}</span>
                 <span>{gearNum || '--'}</span>
               </p>
               <p className="service-charge">

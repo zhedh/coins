@@ -182,7 +182,7 @@ export default {
     AUTH_EXPLAIN_ONE:
       'Please make sure the photo you upload is clear and intacted in the format of jpg, jpeg, or png, which is less than 2M. The document must be within the expiry date.',
     AUTH_EXPLAIN_TWO:
-      'Please upload the photo of you holding your verification document, and a white paper written with "NTTC" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
+      'Please upload the photo of you holding your verification document, and a white paper written with "MMT" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
     SUBMIT_VERIFY: 'Submit',
     SUBMIT_AND_WAIT: 'Sumbitted, waiting for review…',
     RESULT_MSG: 'Verification result will be shown at Profile',
@@ -198,6 +198,7 @@ export default {
   },
 
   DEPOSIT: {
+    AMOUNT_JOIN: 'Participation quantity',
     CHOOSE_FUNDS: 'Select funds to join',
     JOIN_PLAN: 'Join The Plan',
     SUPER_NODE: 'Super Node',
@@ -212,7 +213,7 @@ export default {
     TO_AUTH: 'Go to Verify',
     AUTH_MSG_TWO: "You can't join as you haven't set trade password.",
     TO_SET: 'Go to Set',
-    JOIN_AND_GET: 'Join a node and get NTTC promotion quota',
+    JOIN_AND_GET: 'Join a node and get MMT promotion quota',
     JOIN_SUPER_NODE: 'Join a Super Node',
     AVAILABLE: 'Available',
     PAY_SUCCESS: 'Pay Successfully!',

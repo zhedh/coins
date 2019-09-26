@@ -184,6 +184,7 @@ export default {
   },
 
   DEPOSIT: {
+    AMOUNT_JOIN: '参与数量',
     CHOOSE_FUNDS: '选择参与基金',
     JOIN_PLAN: '参与计划',
     SUPER_NODE: '超级节点',
