@@ -19,10 +19,10 @@ class AccountHeader extends Component {
   switchLang = () => {
     const { localeStore, text } = this.props
     let locale
-    if (text === '切换语言') {
-      locale = 'zh_CN'
-    } else {
+    if (text === 'English') {
       locale = 'en_US'
+    } else {
+      locale = 'zh_CN'
     }
     localeStore.changeLocale(locale)
   }

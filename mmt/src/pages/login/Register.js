@@ -243,7 +243,7 @@ class Register extends Component {
       <div id="register">
         <AccountHeader
           title={COMMON.REGISTER}
-          text="切换语言"
+          text={COMMON.SWITCH_LANG}
           onHandle={() => history.push('/login')}
         />
         <div className="main-content">

@@ -1,6 +1,6 @@
 export default {
   COMMON: {
-    SWITCH_LANG: 'Switch Language',
+    SWITCH_LANG: 'English',
     LOGIN: '登录',
     ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
     PASSWORD_PLACEHOLDER: '密码',
