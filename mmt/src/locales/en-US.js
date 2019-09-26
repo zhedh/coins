@@ -100,6 +100,7 @@ export default {
   },
   HOME: {
     NOTICE: 'Notice',
+    NO_NOTICE: 'No notice!',
     MUSDT_AVAILABLE: 'USDT Specials',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT Available Promotion Quota',
     AVAILABLE_PROMOTION: 'Available special amount',
@@ -221,7 +222,8 @@ export default {
     TOTAL_PAYMENT: 'Total Payment',
     AMOUNT_TO_DEDUCT: 'Amount to deduct is based on the latest total price.',
     CONFIRM_BUY: 'Confirm Buy In',
-    PLEASE_ENTER_PASSWORD: 'Please Enter Password'
+    PLEASE_ENTER_PAY_PASSWORD: 'Please Enter Payment Password',
+    SUBSCRIBE: 'Subscribe'
   },
   USER_CENTER: {
     USER_CENTER: 'Profile',

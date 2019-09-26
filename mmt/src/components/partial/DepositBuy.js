@@ -170,7 +170,7 @@ class DepositBuy extends Component {
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder={DEPOSIT.PAY_PWD}
+                  placeholder={DEPOSIT.PLEASE_ENTER_PAY_PASSWORD}
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />

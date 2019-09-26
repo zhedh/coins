@@ -103,10 +103,10 @@ class Index extends Component {
                 {userStore.isOnline ? (
                   <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
                 ) : (
-                  <span>{COMMON.LOGIN_TO_VIEW}</span>
+                  <span>{HOME.TO_LOGIN}</span>
                 )}
                 <br />
-                <small>{HOME.AVAILABLE_PROMOTION}</small>
+                <small>{HOME.MUSDT_AVAILABLE_PROMOTION}</small>
               </div>
               <FiChevronRight className="icon" />
             </li>

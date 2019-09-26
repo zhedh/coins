@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button } from 'antd-mobile'
-import { AUTH, COMMON, DEPOSIT } from '../../assets/static'
+import { AUTH_ASSET } from '../../assets'
 import './DepositResult.scss'
 
 @inject('localeStore')
@@ -22,7 +22,7 @@ class DepositResult extends Component {
     const isUnLock = location.state === 'unLock'
     return (
       <div id="verified-result">
-        <img className="result-img" alt="结果图片" src={AUTH.IMG_SUCCESS} />
+        <img className="result-img" alt="结果图片" src={AUTH_ASSET.IMG_SUCCESS} />
         <div className="result-content">
           <h2>{DEPOSIT.PAY_SUCCESS}！</h2>
           <Button

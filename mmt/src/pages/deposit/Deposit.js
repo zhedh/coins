@@ -70,7 +70,7 @@ class Deposit extends Component {
     const { products, productDetail } = productStore
     const { showDrawer, selectTabIndex } = this.state
 
-    const tabs = [HOME.JOIN_NODE, HOME.PROMOTION]
+    const tabs = [DEPOSIT.JOIN_NODE, DEPOSIT.UNLOCK_AMOUNT]
 
     const sidebar = (
       <div className="sidebar">
@@ -110,7 +110,7 @@ class Deposit extends Component {
               isFixed
               isShadow
               bgWhite
-              title={DEPOSIT.TITLE}
+              title={DEPOSIT.SUPER_NODE}
               // onHandle={() => this.setState({showDrawer: true})}
               onHandle={() => null}
               hideIcon

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { inject } from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 import { withRouter } from 'react-router'
-import { FOOTER } from '../../assets/static'
+import { FOOTER_ASSET } from '../../assets'
 import FindSvg from '../../assets/images/common/icon-home.svg'
 import DepositSvg from '../../assets/images/common/icon-deposit.svg'
 import WalletSvg from '../../assets/images/common/icon-wallet.svg'
@@ -15,7 +15,9 @@ const PATHS = [
   '/wallet',
   '/wallet/'
 ]
+
 @inject('localeStore')
+@observer
 class Footer extends Component {
   handleChange = pathname => {
     const { history } = this.props
@@ -31,19 +33,19 @@ class Footer extends Component {
         pathname: '/home',
         label: COMMON.HOMEPAGE,
         image: FindSvg,
-        imagePre: FOOTER.ICON_HOME
+        imagePre: FOOTER_ASSET.ICON_HOME
       },
       {
         pathname: '/deposit',
-        label: FOOTER.LABEL_DEPOSIT,
+        label: FOOTER_ASSET.LABEL_DEPOSIT,
         image: DepositSvg,
-        imagePre: FOOTER.ICON_DEPOSIT
+        imagePre: FOOTER_ASSET.ICON_DEPOSIT
       },
       {
         pathname: '/wallet',
         label: COMMON.WALLET,
         image: WalletSvg,
-        imagePre: FOOTER.ICON_WALLET
+        imagePre: FOOTER_ASSET.ICON_WALLET
       }
     ]
 

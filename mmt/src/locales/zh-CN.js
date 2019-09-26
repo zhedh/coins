@@ -95,6 +95,7 @@ export default {
   },
   HOME: {
     NOTICE: '公告',
+    NO_NOTICE: '暂无公告',
     MUSDT_AVAILABLE: 'USDT特价',
     MUSDT_AVAILABLE_PROMOTION: 'MUSDT可用特价额度',
     AVAILABLE_PROMOTION: '可用特价额度',
@@ -103,7 +104,7 @@ export default {
     ACTIVATED: '参与中',
     RULES: '规则介绍',
     WARM_REMINDER: '温馨提示',
-    DEPOSIT_BEFORE_AUTH: '参与定存需先进行身份认证',
+    DEPOSIT_BEFORE_AUTH: '参与计划需先进行身份认证',
     GOT_IT: '知道了',
     VERIFY_FIRST: '立即认证',
     JOIN_EVERYDAY: '每天参与，天天有的赚！',
@@ -213,7 +214,8 @@ export default {
     TOTAL_PAYMENT: '支付总额',
     AMOUNT_TO_DEDUCT: '扣款时依照最新的总价为准',
     CONFIRM_BUY: '确认买入',
-    PLEASE_ENTER_PASSWORD: '请输入密码'
+    PLEASE_ENTER_PAY_PASSWORD: '请输入支付密码',
+    SUBSCRIBE: '认购'
   },
   USER_CENTER: {
     USER_CENTER: '个人中心',
