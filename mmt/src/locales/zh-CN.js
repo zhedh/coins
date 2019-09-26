@@ -198,7 +198,7 @@ export default {
     TO_AUTH: '去认证',
     AUTH_MSG_TWO: '您暂未设置交易密码，无法参与',
     TO_SET: '去设置',
-    JOIN_AND_GET: '参与送MMT特价额度',
+    JOIN_AND_GET: '参与送MUSDT特价额度',
     JOIN_SUPER_NODE: '参与超级节点',
     AVAILABLE: '可用',
     PAY_SUCCESS: '支付成功！',

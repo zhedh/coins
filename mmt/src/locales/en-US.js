@@ -213,7 +213,7 @@ export default {
     TO_AUTH: 'Go to Verify',
     AUTH_MSG_TWO: "You can't join as you haven't set trade password.",
     TO_SET: 'Go to Set',
-    JOIN_AND_GET: 'Join a node and get MMT promotion quota',
+    JOIN_AND_GET: 'Join a node and get MUSDT promotion quota',
     JOIN_SUPER_NODE: 'Join a Super Node',
     AVAILABLE: 'Available',
     PAY_SUCCESS: 'Pay Successfully!',
