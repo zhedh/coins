@@ -61,7 +61,8 @@ class AuthStore {
           Toast.info(res.msg)
           return
         }
-        Toast.info('上传成功')
+        const locale = localStorage.getItem('LOCALE')
+        Toast.info(locale === 'en_US' ? 'Upload successfully.' : '上传成功')
         this.getPhotoItem(image, key)
       })
     })
