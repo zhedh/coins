@@ -12,7 +12,7 @@
 //   PROJECT: 'MMT',
 // }
 
-const ONLINE = true
+const ONLINE = false
 
 const CONFIG = {
   PROD: {
@@ -24,5 +24,3 @@ const CONFIG = {
 }
 
 export default ONLINE ? CONFIG.PROD : CONFIG.DEV
-
-
