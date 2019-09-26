@@ -70,12 +70,12 @@ class Deposit extends Component {
     const { products, productDetail } = productStore
     const { showDrawer, selectTabIndex } = this.state
 
-    const tabs = ['参与节点', '特价额度']
+    const tabs = [DEPOSIT.JOIN_NODE, DEPOSIT.UNLOCK_AMOUNT]
 
     const sidebar = (
       <div className="sidebar">
         <header className="sidebar-header">
-          <span>选择参与基金</span>
+          <span>{DEPOSIT.SELECT_SUPER_NODE}</span>
           <img
             src={leftDrawerIcon}
             alt="抽屉"
@@ -110,7 +110,7 @@ class Deposit extends Component {
               isFixed
               isShadow
               bgWhite
-              title={DEPOSIT.TITLE}
+              title={DEPOSIT.SUPER_NODE}
               // onHandle={() => this.setState({showDrawer: true})}
               onHandle={() => null}
               hideIcon

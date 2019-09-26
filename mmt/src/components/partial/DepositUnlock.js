@@ -136,7 +136,7 @@ class DepositUnlock extends Component {
           disabled={!userSpecial}
           onClick={() => this.onDeposit(unLockAmount)}
         >
-          认购
+          {DEPOSIT.SUBSCRIBE}
         </Button>
 
         {/*解锁弹窗*/}
@@ -171,11 +171,11 @@ class DepositUnlock extends Component {
                 <span>{DEPOSIT.AVAILABLE}</span>
                 <span>{formatCoinPrice(userBalance, USDT_POINT_LENGTH)}</span>
               </p>
-              <p className="service-charge">*扣款时依照最新的兑价为准</p>
+              <p className="service-charge">*{DEPOSIT.AMOUNT_TO_DEDUCT}</p>
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder="支付密码"
+                  placeholder={DEPOSIT.PLEASE_ENTER_PAY_PASSWORD}
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />

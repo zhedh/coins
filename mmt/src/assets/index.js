@@ -3,12 +3,12 @@ export const COMMON_ASSET = {
   COIN_TITLE: 'MMT',
   NO_DATA_IMG: require('./images/mmt/no-data.png')
 }
-// FOOTER= {
-//   ICON_HOME: require('../images/mmt/icon-home.png'),
-//   ICON_DEPOSIT: require('../images/mmt/icon-deposit.png'),
-//   ICON_WALLET: require('../images/mmt/icon-wallet.png'),
-//   LABEL_DEPOSIT: 'MMT'
-// }
+export const FOOTER_ASSET = {
+  ICON_HOME: require('./images/mmt/icon-home.png'),
+  ICON_DEPOSIT: require('./images/mmt/icon-deposit.png'),
+  ICON_WALLET: require('./images/mmt/icon-wallet.png'),
+  LABEL_DEPOSIT: 'MMT'
+}
 export const HOME_ASSET = {
   TITLE: 'MMT',
   IMG_BG: require('./images/mmt/home-bg.png'),
@@ -21,18 +21,18 @@ export const HOME_ASSET = {
 // BARGAIN: {
 //   BANNER_LABEL: '特价XC奖励额度：'
 // },
-// AUTH: {
-//   IMG_BACK: require('../images/mmt/auth-card-back.png'),
-//   IMG_FRONT: require('../images/mmt/auth-card-front.png'),
-//   IMG_HOLD: require('../images/mmt/auth-card-hold.png'),
-//   IMG_ID_CARD: require('../images/mmt/auth-id-card.svg'),
-//   IMG_PASSPORT: require('../images/mmt/auth-passport.svg'),
-//   IMG_DRIVING: require('../images/mmt/auth-driving.svg'),
-//   IMG_WAIT: require('../images/mmt/auth-wait.png'),
-//   IMG_SUCCESS: require('../images/mmt/auth-success.png'),
-//   IMG_FAIL: require('../images/mmt/auth-fail.png'),
-//   UPLOAD_WRITE: 'MMT'
-// },
+export const AUTH_ASSET = {
+  IMG_BACK: require('./images/mmt/auth-card-back.png'),
+  IMG_FRONT: require('./images/mmt/auth-card-front.png'),
+  IMG_HOLD: require('./images/mmt/auth-card-hold.png'),
+  IMG_ID_CARD: require('./images/mmt/auth-id-card.svg'),
+  IMG_PASSPORT: require('./images/mmt/auth-passport.svg'),
+  IMG_DRIVING: require('./images/mmt/auth-driving.svg'),
+  IMG_WAIT: require('./images/mmt/auth-wait.png'),
+  IMG_SUCCESS: require('./images/mmt/auth-success.png'),
+  IMG_FAIL: require('./images/mmt/auth-fail.png'),
+  UPLOAD_WRITE: 'MMT'
+}
 // DEPOSIT: {
 //   COIN_NAME: '参与节点',
 //   TITLE: '超级节点',

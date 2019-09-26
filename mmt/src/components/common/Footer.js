@@ -1,31 +1,12 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
-import { FOOTER } from '../../assets/static'
+import { FOOTER_ASSET } from '../../assets'
 import FindSvg from '../../assets/images/common/icon-home.svg'
 import DepositSvg from '../../assets/images/common/icon-deposit.svg'
 import WalletSvg from '../../assets/images/common/icon-wallet.svg'
 import './Footer.scss'
+import {inject, observer} from "mobx-react";
 
-const TABS = [
-  {
-    pathname: '/home',
-    label: '首页',
-    image: FindSvg,
-    imagePre: FOOTER.ICON_HOME
-  },
-  {
-    pathname: '/deposit',
-    label: FOOTER.LABEL_DEPOSIT,
-    image: DepositSvg,
-    imagePre: FOOTER.ICON_DEPOSIT
-  },
-  {
-    pathname: '/wallet',
-    label: '钱包',
-    image: WalletSvg,
-    imagePre: FOOTER.ICON_WALLET
-  }
-]
 
 const PATHS = [
   '/home',
@@ -36,6 +17,8 @@ const PATHS = [
   '/wallet/'
 ]
 
+@inject('localeStore')
+@observer
 class Footer extends Component {
   handleChange = pathname => {
     const { history } = this.props
@@ -43,8 +26,30 @@ class Footer extends Component {
   }
 
   render() {
-    const { location } = this.props
+    const {  location,localeStore } = this.props
+    const { COMMON } = localeStore.language || {}
     const show = PATHS.includes(location.pathname)
+    const TABS = [
+      {
+        pathname: '/home',
+        label: COMMON.HOMEPAGE,
+        image: FindSvg,
+        imagePre: FOOTER_ASSET.ICON_HOME
+      },
+      {
+        pathname: '/deposit',
+        label: FOOTER_ASSET.LABEL_DEPOSIT,
+        image: DepositSvg,
+        imagePre: FOOTER_ASSET.ICON_DEPOSIT
+      },
+      {
+        pathname: '/wallet',
+        label: COMMON.WALLET,
+        image: WalletSvg,
+        imagePre: FOOTER_ASSET.ICON_WALLET
+      }
+    ]
+
 
     return show ? (
       <footer>
