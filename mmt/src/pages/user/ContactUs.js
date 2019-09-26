@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
-import { USER } from '../../assets/static'
+import React, {Component} from 'react'
+import {inject, observer} from 'mobx-react'
+import {USER_ASSET} from '../../assets'
 import Header from '../../components/common/Header'
 import './ContactUs.scss'
 
@@ -9,8 +9,8 @@ import './ContactUs.scss'
 @observer
 class ContactUs extends Component {
   render() {
-    const { history, localeStore } = this.props
-    const { USER_CENTER } = localeStore.language || {}
+    const {history, localeStore} = this.props
+    const {USER_CENTER} = localeStore.language || {}
     return (
       <div id="contact-us">
         <Header
@@ -19,7 +19,7 @@ class ContactUs extends Component {
           onHandle={() => history.push('/user-center')}
         />
         <ul>
-          {USER.CUSTOMERS.map((i, key) => (
+          {USER_ASSET.CUSTOMERS.map((i, key) => (
             <li key={key.toString()}>
               <label>{i.LABEL}：</label>
               <span>{i.VALUE}</span>

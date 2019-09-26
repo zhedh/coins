@@ -1,8 +1,9 @@
-import React, { Component, Fragment } from 'react'
-import { Button, Toast } from 'antd-mobile'
-import { inject, observer } from 'mobx-react'
+import React, {Component, Fragment} from 'react'
+import {Button, Toast} from 'antd-mobile'
+import {inject, observer} from 'mobx-react'
 import Header from '../../components/common/Header'
-import { COUNTRIES_LIST, TOAST_DURATION } from '../../utils/constants'
+import {COUNTRIES_LIST, TOAST_DURATION} from '../../utils/constants'
+import {AUTH_ASSET} from '../../assets'
 import './VerifiedIdentity.scss'
 
 @inject('localeStore')
@@ -20,16 +21,16 @@ class VerifiedIdentity extends Component {
   }
 
   componentDidMount() {
-    const { authStore, match } = this.props
-    const { country } = match.params
+    const {authStore, match} = this.props
+    const {country} = match.params
     if (country) {
-      this.setState({ isChina: country === COUNTRIES_LIST[0] })
+      this.setState({isChina: country === COUNTRIES_LIST[0]})
       authStore.changeInfoItem(country, 'country')
     }
   }
 
   canSubmit = () => {
-    const { authStore } = this.props
+    const {authStore} = this.props
     const {
       country,
       cardType,
@@ -37,16 +38,16 @@ class VerifiedIdentity extends Component {
       lastName,
       cardId
     } = authStore.authInfo
-    const { isChina } = this.state
+    const {isChina} = this.state
     return isChina
       ? firstName && cardId
       : country && cardType && firstName && lastName && cardId
   }
 
   onSubmit = () => {
-    const { history, authStore, localeStore } = this.props
-    const { TOAST } = localeStore.language || {}
-    const { cardId } = authStore.authInfo
+    const {history, authStore, localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
+    const {cardId} = authStore.authInfo
     if (cardId.length < 7 && cardId.length <= 18) {
       Toast.info(TOAST.PLEASE_INPUT_CARD_NUMBER, TOAST_DURATION)
       return
@@ -61,32 +62,32 @@ class VerifiedIdentity extends Component {
   }
 
   render() {
-    const { authStore, localeStore } = this.props
-    const { TOAST, AUTH, COMMON } = localeStore.language || {}
-    const { cardType, firstName, lastName, cardId } = authStore.authInfo
-    const { isChina } = this.state
+    const {authStore, localeStore} = this.props
+    const {TOAST, AUTH, COMMON} = localeStore.language || {}
+    const {cardType, firstName, lastName, cardId} = authStore.authInfo
+    const {isChina} = this.state
     const typeList = [
       {
         name: TOAST.ID_CARD,
         icon: require('../../assets/images/common/auth-id-card.svg'),
-        active: AUTH.IMG_ID_CARD
+        active: AUTH_ASSET.IMG_ID_CARD
       },
       {
         name: TOAST.PASSPORT,
         icon: require('../../assets/images/common/auth-passport.svg'),
-        active: AUTH.IMG_PASSPORT
+        active: AUTH_ASSET.IMG_PASSPORT
       },
       {
         name: TOAST.DRIVING_LICENSE,
         icon: require('../../assets/images/common/auth-driving.svg'),
-        active: AUTH.IMG_DRIVING
+        active: AUTH_ASSET.IMG_DRIVING
       }
     ]
     return (
       <div id="verified-identity">
-        <Header />
+        <Header/>
         <div className="identity-top">
-          <img src={require('../../assets/images/identity.png')} alt="" />
+          <img src={require('../../assets/images/identity.png')} alt=""/>
           <h2>{AUTH.INPUT_MSG}</h2>
           <p>{AUTH.CONFIRM_MSG_AND_CARD}</p>
         </div>
@@ -128,7 +129,7 @@ class VerifiedIdentity extends Component {
                       src={cardType === type.name ? type.active : type.icon}
                       alt=""
                     />
-                    <br />
+                    <br/>
                     <small>{type.name}</small>
                   </li>
                 ))}

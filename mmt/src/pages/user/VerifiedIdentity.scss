@@ -21,6 +21,7 @@
     p {
       @include clearBack;
       margin-top: 13px;
+      padding: 0 15px;
       color: $text-sub-color;
       font-weight: bold;
     }

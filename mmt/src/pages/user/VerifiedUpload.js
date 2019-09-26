@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button, Toast } from 'antd-mobile'
-import { AUTH } from '../../assets/static'
+import {AUTH_ASSET} from '../../assets'
+
 import Header from '../../components/common/Header'
 import './VerifiedUpload.scss'
 
@@ -37,7 +38,7 @@ class VerifiedUpload extends Component {
 
         <div className="upload-content">
           <p>{AUTH.ID_AND_PASSPORT_FRONT}</p>
-          <img src={cardFront ? cardFront : AUTH.IMG_FRONT} alt="" />
+          <img src={cardFront ? cardFront : AUTH_ASSET.IMG_FRONT} alt="" />
           <input
             type="file"
             className="upload-photo"
@@ -47,7 +48,7 @@ class VerifiedUpload extends Component {
         </div>
         <div className="upload-content">
           <p>{AUTH.ID_AND_PASSPORT_BACK}</p>
-          <img src={cardBack ? cardBack : AUTH.IMG_BACK} alt="" />
+          <img src={cardBack ? cardBack : AUTH_ASSET.IMG_BACK} alt="" />
           <input
             type="file"
             className="upload-photo"
@@ -57,7 +58,7 @@ class VerifiedUpload extends Component {
         </div>
         <div className="upload-content">
           <p>{AUTH.ID_AND_PASSPORT_HOLD}</p>
-          <img src={cardHold ? cardHold : AUTH.IMG_HOLD} alt="" />
+          <img src={cardHold ? cardHold : AUTH_ASSET.IMG_HOLD} alt="" />
           <input
             type="file"
             className="upload-photo"

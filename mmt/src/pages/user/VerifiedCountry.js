@@ -3,7 +3,6 @@ import { inject, observer } from 'mobx-react'
 import { COUNTRIES_LIST } from '../../utils/constants'
 import Header from '../../components/common/Header'
 import './VerifiedCountry.scss'
-import { COMMON } from '../../assets/static'
 
 @inject('authStore')
 @inject('localeStore')

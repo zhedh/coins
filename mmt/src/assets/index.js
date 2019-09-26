@@ -37,33 +37,33 @@ export const AUTH_ASSET = {
 //   TABS: ['参与节点', '特价额度'],
 //   SIDEBAR_TITLE: '选择参与基金'
 // },
-// USER: {
-//   CUSTOMERS: [
-//     {
-//       LABEL: '微信客服1',
-//       VALUE: 'flare_nazzi'
-//     },
-//     {
-//       LABEL: '微信客服2',
-//       VALUE: 'Flare_foundation'
-//     },
-//     {
-//       LABEL: '微信客服3',
-//       VALUE: 'FlareFoundation_Anna'
-//     },
-//     {
-//       LABEL: 'Telegram',
-//       VALUE: 'https://t.me/flare_Nazzi'
-//     },
-//     {
-//       LABEL: 'Telegram',
-//       VALUE: 'https://t.me/Flare_Rita'
-//     },
-//     {
-//       LABEL: 'Telegram',
-//       VALUE: 'https://t.me/MMT_Anna'
-//     }
-//   ]
-// }
+export const USER_ASSET = {
+  CUSTOMERS: [
+    {
+      LABEL: '微信客服1',
+      VALUE: 'flare_nazzi'
+    },
+    {
+      LABEL: '微信客服2',
+      VALUE: 'Flare_foundation'
+    },
+    {
+      LABEL: '微信客服3',
+      VALUE: 'FlareFoundation_Anna'
+    },
+    {
+      LABEL: 'Telegram',
+      VALUE: 'https://t.me/flare_Nazzi'
+    },
+    {
+      LABEL: 'Telegram',
+      VALUE: 'https://t.me/Flare_Rita'
+    },
+    {
+      LABEL: 'Telegram',
+      VALUE: 'https://t.me/MMT_Anna'
+    }
+  ]
+}
 
 

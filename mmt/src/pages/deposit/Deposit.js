@@ -66,7 +66,7 @@ class Deposit extends Component {
 
   render() {
     const { productStore, localeStore } = this.props
-    const { DEPOSIT, HOME } = localeStore.language || {}
+    const { DEPOSIT } = localeStore.language || {}
     const { products, productDetail } = productStore
     const { showDrawer, selectTabIndex } = this.state
 
