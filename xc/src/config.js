@@ -10,20 +10,14 @@
 // NTTC代码仓库：
 // ssh://www@47.75.138.157/data/git/nttc-front.git
 
-// XC线上访问地址：www.zbxcoin.com
-// XC测试环境访问地址：http://47.75.138.157:81/
+// XC正式站访问地址：www.zbxcoin.com
+// XC测试站访问地址：http://47.75.138.157:81/
 
-// nttc正式站接口地址：http://api.naturenode.org
-// nttc测式站接口地址：http://47.75.138.157:8080
-//
-// nttc正式站访问地址：http://www.naturenode.org
-// nttc测试站访问地址：http://47.75.138.157:8081
+// NTTC正式站访问地址：http://www.naturenode.org
+// NTTC测试站访问地址：http://47.75.138.157:8081
 
-// mmt正式站接口地址：http://api.naturenode.org
-// mmt测式站接口地址：http://47.75.138.157:8080
-//
-// mmt正式站访问地址：http://www.naturenode.org
-// mmt测试站访问地址：http://47.75.138.157:8091
+// MMT正式站访问地址：https://mmt.mastermix.io/
+// MMT测试站访问地址：http://47.75.138.157:8091
 
 /**
  * @description 开关配置，打包前修改配置
@@ -33,8 +27,8 @@
  * */
 
 export const SWITCH = {
-  PROJECT: 'XC',
-  // PROJECT: 'NTTC',
+  // PROJECT: 'XC',
+  PROJECT: 'NTTC',
   // PROJECT: 'MMT',
   ONLINE: true
 }
@@ -42,7 +36,7 @@ export const SWITCH = {
 const COIN = {
   XC: {
     PROD: {
-      API_BASE_URL: 'https://api.zbxcoin.com/api'
+      API_BASE_URL: 'http://api.zbxcoin.com/api'
     },
     DEV: {
       API_BASE_URL: 'http://47.75.138.157/api'
@@ -58,7 +52,7 @@ const COIN = {
   },
   MMT: {
     PROD: {
-      API_BASE_URL: 'http://api.naturenode.org/api'
+      API_BASE_URL: 'https://mmt-api.mastermix.io/api'
     },
     DEV: {
       API_BASE_URL: 'http://47.75.138.157:8090/api'

@@ -1,4 +1,4 @@
-import UserStore from "./user"
+import UserStore from './user'
 import PersonStore from "./person";
 import WalletStore from "./wallet";
 import AuthStore from "./auth";

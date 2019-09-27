@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {inject, observer} from "mobx-react"
 import {Button, Toast} from 'antd-mobile'
-import Cookies from 'js-cookie'
 import {Link} from 'react-router-dom'
 import {TOAST_DURATION} from '../../utils/constants'
 import {isEmail, isMobile, isPassword} from "../../utils/reg"
@@ -17,6 +16,12 @@ class Login extends Component {
     account: '',
     password: '',
     type: 'password',
+    hideBack: false
+  }
+
+  componentDidMount() {
+    const {location: {state}} = this.props
+    this.setState({hideBack: state && state.hideBack})
   }
 
   componentWillUnmount() {
@@ -56,19 +61,19 @@ class Login extends Component {
         Toast.info(res.msg, TOAST_DURATION)
         return
       }
-      Cookies.remove('PRODUCT_ID')
+
       Toast.success('登录成功', TOAST_DURATION)
       this.timer = setTimeout(() => history.push('/deposit'), TOAST_DURATION * 1000)
     })
   }
 
   render() {
-    const {account, password, type} = this.state
+    const {account, password, type, hideBack} = this.state
     const canSubmit = account === '' || password === ''
-
+    console.log(hideBack)
     return (
       <div id="login">
-        <AccountHeader title="登录"/>
+        <AccountHeader hideBack={hideBack} title="登录"/>
         <div className="content">
           <label>
             <input
@@ -108,7 +113,6 @@ class Login extends Component {
             确认
           </Button>
         </div>
-
       </div>
     )
   }

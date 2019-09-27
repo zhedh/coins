@@ -17,7 +17,6 @@ const NTTC = {
     GENERALIZE_LEVEL: ['无', '一级', '二级', '三级', '四级', '超级'],
     GENERALIZE_USER_ONE_ICON: require('../images/nttc/generalize-user-one.png'),
     GENERALIZE_USER_TWO_ICON: require('../images/nttc/generalize-user-two.png'),
-    RULE_TITLE: 'NTTC规则说明'
   },
   BARGAIN: {
     BANNER_LABEL: '特价NTTC奖励额度：'
@@ -38,20 +37,20 @@ const NTTC = {
     COIN_NAME: '参与节点',
     TITLE: '超级节点',
     TABS: ['参与节点', '特价额度'],
-    SIDEBAR_TITLE: '选择参与基金'
+    SIDEBAR_TITLE: '选择参与基金',
   },
   USER: {
     CUSTOMERS: [
       {
         LABEL: '技术邮箱',
         VALUE: 'nttcte@sohu.com'
-      },
-      {
+      }, {
         LABEL: '市场邮箱',
         VALUE: 'nttcma@sohu.com'
       }
     ]
   }
+
 }
 
 export default NTTC

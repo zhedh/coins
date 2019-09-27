@@ -5,6 +5,7 @@ import {AUTH} from '../../assets/static'
 import Header from '../../components/common/Header'
 import {COUNTRIES_LIST, TOAST_DURATION} from '../../utils/constants'
 import './VerifiedIdentity.scss'
+import {isIdCard, isLetter} from "../../utils/reg";
 
 const typeList = [
   {
@@ -46,6 +47,17 @@ class VerifiedIdentity extends Component {
     }
   }
 
+  onChangeIdCard = (e) => {
+    const {authStore} = this.props
+    const {isChina} = this.state
+    const {value} = e.target
+    if (isChina) {
+      authStore.changeInfoItem('身份证', 'cardType')
+    }
+    if (value && !isLetter(value)) return
+    authStore.changeInfoItem(value, 'cardId')
+  }
+
   canSubmit = () => {
     const {authStore} = this.props
     const {
@@ -64,8 +76,8 @@ class VerifiedIdentity extends Component {
   onSubmit = () => {
     const {history, authStore} = this.props
     const {cardId} = authStore.authInfo
-    if (cardId.length < 7 && cardId.length <= 18) {
-      Toast.info('请输入7-18位证件号码', TOAST_DURATION)
+    if (!isIdCard(cardId)) {
+      Toast.info('请输入9或18位证件号码', TOAST_DURATION)
       return
     }
     authStore.submitAuthentication().then(res => {
@@ -106,10 +118,7 @@ class VerifiedIdentity extends Component {
                 type="text"
                 placeholder="身份证号"
                 value={cardId}
-                onChange={e => {
-                  authStore.changeInfoItem('身份证', 'cardType')
-                  authStore.changeInfoItem(e.target.value, 'cardId')
-                }}
+                onChange={(e) => this.onChangeIdCard(e)}
               />
             </div>
           ) : (
@@ -157,9 +166,7 @@ class VerifiedIdentity extends Component {
                   maxLength={18}
                   placeholder="证件号"
                   value={cardId}
-                  onChange={e =>
-                    authStore.changeInfoItem(e.target.value, 'cardId')
-                  }
+                  onChange={e => this.onChangeIdCard(e)}
                 />
               </div>
             </Fragment>

@@ -68,7 +68,6 @@ class Withdraw extends Component {
         return
       }
       this.setState({newServiceCharge: res.data.serviceCharge})
-      // this.setState({newServiceCharge: 0})
     })
   }
 

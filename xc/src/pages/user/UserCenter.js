@@ -1,15 +1,15 @@
-import React, { Component, PureComponent } from 'react'
-import { inject, observer } from 'mobx-react'
-import { Modal } from 'antd-mobile'
-import { SWITCH } from '../../config'
-import { FaRegQuestionCircle } from 'react-icons/fa'
+import React, {Component, PureComponent} from 'react'
+import {inject, observer} from 'mobx-react'
+import {Modal} from 'antd-mobile'
+import {SWITCH} from '../../config'
+import {FaRegQuestionCircle} from 'react-icons/fa'
 import Header from '../../components/common/Header'
-import { hideChatButton } from '../../utils/common'
+import {hideChatButton} from "../../utils/common"
 import './UserCenter.scss'
 
 class ListItem extends PureComponent {
   render() {
-    const { icon, name, url, onHandle } = this.props
+    const {icon, name, url, onHandle} = this.props
     return (
       <div
         className="list-item"
@@ -21,7 +21,7 @@ class ListItem extends PureComponent {
           }
         }}
       >
-        <img className="icon" src={icon} alt="" />
+        <img className="icon" src={icon} alt=""/>
         <span>{name}</span>
         <img
           className="arrow"
@@ -37,11 +37,11 @@ class ListItem extends PureComponent {
 @inject('personStore')
 @observer
 class UserCenter extends Component {
-  state = { isOnline: true, showFModal: false }
+  state = {isOnline: true, showFModal: false}
 
   componentDidMount() {
-    const { personStore, userStore } = this.props
-    if (SWITCH.PROJECT === 'XC') {
+    const {personStore, userStore} = this.props
+    if(SWITCH.PROJECT === 'XC'){
       this.createIframe()
     }
 
@@ -51,7 +51,7 @@ class UserCenter extends Component {
   }
 
   componentWillUnmount() {
-    hideChatButton()
+    hideChatButton();
   }
 
   createIframe = () => {
@@ -62,17 +62,17 @@ class UserCenter extends Component {
     script.defer = true
     script.id = 'ze-snippet'
     script.src =
-      'https://static.zdassets.com/ekr/snippet.js?key=3abd36b7-3c9c-408f-ab7e-0b54e85bd08c'
+      'https://static.zdassets.com/ekr/snippet.js?key=46514fb7-9da7-4496-b5c3-d942215d5215'
     document.body.appendChild(script)
   }
 
   onBack = () => {
-    const { history } = this.props
+    const {history} = this.props
     history.push('/home')
   }
 
   logout = () => {
-    const { history, userStore } = this.props
+    const {history, userStore} = this.props
     // 调取退出登录接口
     Modal.alert('是否退出登录？', '', [
       {
@@ -89,7 +89,7 @@ class UserCenter extends Component {
     ])
   }
 
-  getAuthLabel = status => {
+  getAuthLabel = (status) => {
     switch (status) {
       case 0:
         return '未实名认证'
@@ -105,11 +105,10 @@ class UserCenter extends Component {
   }
 
   render() {
-    const { history, userStore, personStore } = this.props
-    const { userInfo } = personStore
-    const { showFModal } = this.state
-    const hideAuthButton =
-      userInfo.authentication === 1 || userInfo.authentication === 2
+    const {history, userStore, personStore} = this.props
+    const {userInfo} = personStore
+    const {showFModal} = this.state
+    const hideAuthButton = userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
       <div id="user-center">
@@ -151,15 +150,13 @@ class UserCenter extends Component {
           )}
           <div className="list-tip">
             {userInfo.isF ? (
-              <span className="active">
-                F用户生效中，{userInfo.isFTime}失效
-              </span>
+              <span className="active">F用户生效中，{userInfo.isFTime}失效</span>
             ) : (
               <span> 非F用户，暂不可享推广奖励</span>
             )}
             &nbsp;
             <FaRegQuestionCircle
-              onClick={() => this.setState({ showFModal: true })}
+              onClick={() => this.setState({showFModal: true})}
             />
           </div>
         </section>
@@ -174,13 +171,11 @@ class UserCenter extends Component {
             name="账户安全"
             url={userStore.isOnline ? '/account' : '/login'}
           />
-          {SWITCH.PROJECT !== 'XC' && (
-            <ListItem
-              icon={require('../../assets/images/kefu.png')}
-              name="联系客服"
-              url={'/contact-us'}
-            />
-          )}
+          {SWITCH.PROJECT !== 'XC' && <ListItem
+          icon={require('../../assets/images/account.svg')}
+          name="联系客服"
+          url={'/contact-us'}
+          />}
         </section>
         {userStore.isOnline && (
           <section className={`list-content list-second`}>
@@ -199,15 +194,14 @@ class UserCenter extends Component {
           maskClosable
           transparent
           title="F用户说明"
-          onClose={() => this.setState({ showFModal: false })}
+          onClose={() => this.setState({showFModal: false})}
         >
           <div
             style={{
               fontSize: '1.5rem',
               textAlign: 'justify',
               padding: '10px'
-            }}
-          >
+            }}>
             当您参与计划成功后，将获得F用户的标示，F用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，f用户的有效期为3个交易日（包含成为当天）。
           </div>
         </Modal>

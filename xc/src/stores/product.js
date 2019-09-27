@@ -17,7 +17,7 @@ class ProductStore {
 
   @computed
   get currentProduct() {
-    if(!this.products.length) return {}
+    if (!this.products.length) return {}
     return this.products.find(product => product.id === Number(this.productId)) || this.products[0]
   }
 
@@ -72,6 +72,10 @@ class ProductStore {
         return
       }
       this.productDetail = res.data
+    }).catch(err => {
+      Cookies.remove('PRODUCT_ID')
+      this.getProducts().then(id => this.getProductDetail(id))
+      console.log(err)
     })
   }
 
