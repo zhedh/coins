@@ -21,15 +21,13 @@ import './Index.scss'
 @observer
 class Index extends Component {
   componentDidMount() {
-    const {userStore, personStore, noticeStore, productStore, history} = this.props
+    const {userStore, personStore, noticeStore, productStore} = this.props
     noticeStore.getNotices()
     if (userStore.isOnline) {
       personStore.getSpecial()
       productStore.getProducts().then(productId => {
         personStore.getDepositRecords({productId, status: 0})
       })
-    } else {
-      history.push({pathname: '/login', state: {hideBack: true}})
     }
   }
 

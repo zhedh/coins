@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {withRouter} from "react-router"
+import {withRouter} from 'react-router'
 import {inject, observer} from 'mobx-react'
 import {Button, Toast} from 'antd-mobile'
 import Header from '../common/Header'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
-import {formatCoinPrice} from "../../utils/format"
-import {COIN_POINT_LENGTH} from "../../utils/constants"
+import {formatCoinPrice} from '../../utils/format'
+import {COIN_POINT_LENGTH} from '../../utils/constants'
 import {DEPOSIT} from '../../assets/static'
 import './DepositBuy.scss'
 
@@ -19,7 +19,8 @@ class DepositBuy extends Component {
   state = {
     showConfirm: false,
     payPassword: '',
-    pwdType: 'password'
+    pwdType: 'password',
+    isSubmit: false
   }
 
   onInputChange = (e, key) => {
@@ -32,11 +33,11 @@ class DepositBuy extends Component {
   }
 
   onDeposit = gearNum => {
-    const {personStore, userStore} = this.props
-    if (!personStore.isAuth) {
-      Toast.info('请进行身份认证')
-      return
-    }
+    const {userStore} = this.props
+    // if (!personStore.isAuth) {
+    //   Toast.info('请进行实名认证')
+    //   return
+    // }
     if (!userStore.hasPayPassword) {
       Toast.info('请设置交易密码')
       return
@@ -47,6 +48,7 @@ class DepositBuy extends Component {
   onSubmit = () => {
     const {history, userStore, productStore} = this.props
     const {payPassword} = this.state
+    this.setState({isSubmit: true})
     userStore
       .getPayToken({payPassword})
       .then(res => {
@@ -57,8 +59,12 @@ class DepositBuy extends Component {
         return res.data.token
       })
       .then(payToken => {
-        if (!payToken) return
+        if (!payToken) {
+          this.setState({isSubmit: false})
+          return
+        }
         productStore.createDepositOrder(payToken).then(res => {
+          this.setState({isSubmit: false})
           if (res.status !== 1) {
             Toast.info(res.msg)
             return
@@ -66,14 +72,17 @@ class DepositBuy extends Component {
           history.push('/deposit/result')
         })
       })
+      .catch(err => {
+        console.log(err)
+        this.setState({isSubmit: false})
+      })
   }
 
   render() {
     const {show, productStore, userStore, personStore} = this.props
-    const {showConfirm, payPassword, pwdType} = this.state
+    const {showConfirm, payPassword, pwdType, isSubmit} = this.state
     const {productDetail, gears, gearNum} = productStore
     const hasGears = gears && gears.length > 0
-    console.log(DEPOSIT)
 
     return (
       <div className={`deposit-buy ${show ? 'show' : ''}`}>
@@ -95,19 +104,21 @@ class DepositBuy extends Component {
           ))}
         </ul>
         <div className="fee">
-          {gearNum && <p>
-            <span>参与送{productDetail.productName}特价额度</span>
-            <span>{gearNum ? (gearNum / 10).toFixed(0) : 0}</span>
-          </p>}
+          {gearNum && (
+            <p>
+              <span>参与送{productDetail.productName}特价额度</span>
+              <span>{gearNum ? (gearNum / 10).toFixed(0) : 0}</span>
+            </p>
+          )}
           <small>手续费费率：{(productDetail.serviceCharge || 0) * 100}%</small>
         </div>
         <aside>
-          {!personStore.isAuth && (
-            <p>
-              *您暂未通过实名认证，无法参与计划
-              <Link to="/verified-country">去认证</Link>
-            </p>
-          )}
+          {/*{!personStore.isAuth && (*/}
+          {/*<p>*/}
+          {/**您暂未通过实名认证，无法参与计划*/}
+          {/*<Link to="/verified-country">去认证</Link>*/}
+          {/*</p>*/}
+          {/*)}*/}
           {!userStore.hasPayPassword && (
             <p>
               *您暂未设置交易密码，无法参与
@@ -118,7 +129,8 @@ class DepositBuy extends Component {
         <Button
           className={`btn ${!gearNum ? 'btn-disabled' : ''}`}
           activeClassName="btn-common__active"
-          onClick={() => this.onDeposit(gearNum)}>
+          onClick={() => this.onDeposit(gearNum)}
+        >
           参与计划
         </Button>
 
@@ -134,7 +146,7 @@ class DepositBuy extends Component {
             <div className="content">
               <p className="deposit-price">
                 <span>{DEPOSIT.COIN_NAME}</span>
-                <span>{gearNum}</span>
+                <span>{gearNum || '--'}</span>
               </p>
               <p className="service-charge">
                 <span>手续费{productDetail.serviceCharge * 100}%</span>
@@ -144,7 +156,12 @@ class DepositBuy extends Component {
               </p>
               <p>
                 <span>可用</span>
-                <span>{formatCoinPrice(productDetail.userWarehouse, COIN_POINT_LENGTH)}</span>
+                <span>
+                  {formatCoinPrice(
+                    productDetail.userWarehouse,
+                    COIN_POINT_LENGTH
+                  )}
+                </span>
               </p>
               <div className="input-box">
                 <input
@@ -163,6 +180,7 @@ class DepositBuy extends Component {
             <Button
               activeClassName="active"
               className="primary-button"
+              disabled={isSubmit}
               onClick={this.onSubmit}
             >
               确认

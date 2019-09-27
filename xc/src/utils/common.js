@@ -169,7 +169,7 @@ export function hideChatButton() {
   if (len <= 0) return
   for (let i = 0; i < len; i++) {
     let win = iframes[i].contentWindow
-    let button = win.document.querySelector('.jx_ui_Widget')
+    let button = win.document.querySelector('#Embed')
     if (button) {
       button.style.display = 'none'
     }

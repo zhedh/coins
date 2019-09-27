@@ -1,23 +1,8 @@
-// 项目配置文件
-
-// 修改样式配置文件：
-// 1.styles 文件夹下 mixin.scss 修改 variable 的引用
-// 2.package.json 下修改 antd-mobile 主题颜色
-
 // X PLAN代码仓库：
 // ssh://www@47.75.138.157/data/git/zmfund-front.git
-//
-// NTTC代码仓库：
-// ssh://www@47.75.138.157/data/git/nttc-front.git
 
-// XC正式站访问地址：www.zbxcoin.com
-// XC测试站访问地址：http://47.75.138.157:81/
-
-// NTTC正式站访问地址：http://www.naturenode.org
-// NTTC测试站访问地址：http://47.75.138.157:8081
-
-// MMT正式站访问地址：https://mmt.mastermix.io/
-// MMT测试站访问地址：http://47.75.138.157:8091
+// XC生产访问地址：http://www.zbxcoin.com
+// XC开发访问地址：http://47.75.138.157:81/
 
 /**
  * @description 开关配置，打包前修改配置
@@ -27,37 +12,19 @@
  * */
 
 export const SWITCH = {
-  // PROJECT: 'XC',
-  PROJECT: 'NTTC',
-  // PROJECT: 'MMT',
+  PROJECT: 'XC',
   ONLINE: true
 }
 
 const COIN = {
   XC: {
     PROD: {
-      API_BASE_URL: 'http://api.zbxcoin.com/api'
+      API_BASE_URL: 'https://api.zbxcoin.com/api'
     },
     DEV: {
       API_BASE_URL: 'http://47.75.138.157/api'
     }
   },
-  NTTC: {
-    PROD: {
-      API_BASE_URL: 'http://api.naturenode.org/api'
-    },
-    DEV: {
-      API_BASE_URL: 'http://47.75.138.157:8080/api'
-    }
-  },
-  MMT: {
-    PROD: {
-      API_BASE_URL: 'https://mmt-api.mastermix.io/api'
-    },
-    DEV: {
-      API_BASE_URL: 'http://47.75.138.157:8090/api'
-    }
-  }
 }
 
 const CURRENT_PROJECT = COIN[SWITCH.PROJECT]

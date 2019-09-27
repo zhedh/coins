@@ -4,7 +4,7 @@ import {Modal} from 'antd-mobile'
 import {SWITCH} from '../../config'
 import {FaRegQuestionCircle} from 'react-icons/fa'
 import Header from '../../components/common/Header'
-import {hideChatButton} from "../../utils/common"
+import {hideChatButton} from '../../utils/common'
 import './UserCenter.scss'
 
 class ListItem extends PureComponent {
@@ -41,9 +41,7 @@ class UserCenter extends Component {
 
   componentDidMount() {
     const {personStore, userStore} = this.props
-    if(SWITCH.PROJECT === 'XC'){
-      this.createIframe()
-    }
+    this.createIframe()
 
     if (userStore.isOnline) {
       personStore.getUserInfo()
@@ -51,7 +49,7 @@ class UserCenter extends Component {
   }
 
   componentWillUnmount() {
-    hideChatButton();
+    hideChatButton()
   }
 
   createIframe = () => {
@@ -62,7 +60,7 @@ class UserCenter extends Component {
     script.defer = true
     script.id = 'ze-snippet'
     script.src =
-      'https://static.zdassets.com/ekr/snippet.js?key=46514fb7-9da7-4496-b5c3-d942215d5215'
+      'https://static.zdassets.com/ekr/snippet.js?key=3abd36b7-3c9c-408f-ab7e-0b54e85bd08c'
     document.body.appendChild(script)
   }
 
@@ -89,7 +87,7 @@ class UserCenter extends Component {
     ])
   }
 
-  getAuthLabel = (status) => {
+  getAuthLabel = status => {
     switch (status) {
       case 0:
         return '未实名认证'
@@ -108,7 +106,8 @@ class UserCenter extends Component {
     const {history, userStore, personStore} = this.props
     const {userInfo} = personStore
     const {showFModal} = this.state
-    const hideAuthButton = userInfo.authentication === 1 || userInfo.authentication === 2
+    const hideAuthButton =
+      userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
       <div id="user-center">
@@ -150,7 +149,9 @@ class UserCenter extends Component {
           )}
           <div className="list-tip">
             {userInfo.isF ? (
-              <span className="active">F用户生效中，{userInfo.isFTime}失效</span>
+              <span className="active">
+                F用户生效中，{userInfo.isFTime}失效
+              </span>
             ) : (
               <span> 非F用户，暂不可享推广奖励</span>
             )}
@@ -171,11 +172,13 @@ class UserCenter extends Component {
             name="账户安全"
             url={userStore.isOnline ? '/account' : '/login'}
           />
-          {SWITCH.PROJECT !== 'XC' && <ListItem
-          icon={require('../../assets/images/account.svg')}
-          name="联系客服"
-          url={'/contact-us'}
-          />}
+          {SWITCH.PROJECT !== 'XC' && (
+            <ListItem
+              icon={require('../../assets/images/kefu.png')}
+              name="联系客服"
+              url={'/contact-us'}
+            />
+          )}
         </section>
         {userStore.isOnline && (
           <section className={`list-content list-second`}>
@@ -201,7 +204,8 @@ class UserCenter extends Component {
               fontSize: '1.5rem',
               textAlign: 'justify',
               padding: '10px'
-            }}>
+            }}
+          >
             当您参与计划成功后，将获得F用户的标示，F用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，f用户的有效期为3个交易日（包含成为当天）。
           </div>
         </Modal>

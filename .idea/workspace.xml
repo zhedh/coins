@@ -3,7 +3,74 @@
   <component name="ChangeListManager">
     <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mmt/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/mmt/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/xc/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/xc/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/api/other.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/api/other.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/api/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/api/person.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/kefu.png" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/assets/images/kefu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-card-back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-card-front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-card-hold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-driving.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-fail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-id-card.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-passport.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-wait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/generalize-banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/generalize-user-one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/generalize-user-two.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/home-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/icon-deposit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/icon-home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/icon-wallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/no-data.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-card-back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-card-front.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-card-hold.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-driving.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-fail.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-id-card.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-id-card.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-passport.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-wait.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/generalize-banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/generalize-user-one.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/generalize-user-two.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/home-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/icon-deposit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/icon-home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/icon-wallet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/no-data.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/assets/static/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/mmt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/nttc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/xc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/components/common/InterceptRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/common/InterceptRouter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/DepositUnlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/DepositUnlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/models/deposit-item.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/deposit/DepositResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/deposit/DepositResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/home/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/home/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/home/Rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/home/Rule.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/user/VerifiedIdentity.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/user/VerifiedIdentity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/wallet/Withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/wallet/Withdraw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/stores/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/stores/wallet.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/wallet.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/styles/_variable-mmt.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/styles/_variable-nttc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/styles/_variable-xc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/styles/_variable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/styles/mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/styles/mixin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/utils/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/utils/reg.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/reg.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,23 +87,23 @@
         <counts>
           <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="8" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="141" />
+          <entry key="js" value="150" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
           <entry key="md" value="2" />
           <entry key="pub" value="1" />
-          <entry key="scss" value="10" />
+          <entry key="scss" value="13" />
           <entry key="ts" value="2" />
         </counts>
       </usages-collector>
@@ -44,10 +111,10 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="141" />
+          <entry key="JavaScript" value="150" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="SCSS" value="10" />
+          <entry key="SCSS" value="13" />
           <entry key="TypeScript" value="2" />
           <entry key="yarn.lock" value="1" />
         </counts>
@@ -55,17 +122,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="6146" />
-          <entry key="scss" value="305" />
-          <entry key="txt" value="55" />
+          <entry key="js" value="6197" />
+          <entry key="scss" value="307" />
+          <entry key="txt" value="70" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="6146" />
-          <entry key="PLAIN_TEXT" value="55" />
-          <entry key="SCSS" value="305" />
+          <entry key="JavaScript" value="6197" />
+          <entry key="PLAIN_TEXT" value="70" />
+          <entry key="SCSS" value="307" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -78,121 +145,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/pages/user/VerifiedUpload.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/styles/mixin.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="176">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/assets/static/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#36#141#0" expanded="true" />
+                <element signature="e#378#749#0" expanded="true" />
+                <element signature="e#773#804#0" expanded="true" />
+                <element signature="e#825#1355#0" expanded="true" />
+                <element signature="e#1378#1475#0" expanded="true" />
+                <element signature="e#1495#1514#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/auth.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/pages/home/Rule.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1034">
-              <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+            <state relative-caret-position="308">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#1235#1278#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#265#286#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/index.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/locale.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/person.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/product.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1980">
-              <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-                <element signature="e#2041#2165#0" expanded="true" />
-                <element signature="e#2294#2417#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1892">
-              <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-                <element signature="e#1974#2123#0" expanded="true" />
-                <element signature="e#2162#2256#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/wallet.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mmt/src/config.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/pages/user/UserCenter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+            <state relative-caret-position="-2570">
+              <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
               <folding>
-                <element signature="e#265#399#0" expanded="true" />
-                <element signature="e#275#333#0" expanded="true" />
-                <element signature="e#342#397#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mmt/src/stores/notice.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#1877#1931#0" expanded="true" />
+                <element signature="e#1939#2060#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -202,7 +212,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>typeOption</find>
       <find>REGISTER</find>
       <find>REGISTER_SUCCESS</find>
       <find>prefix</find>
@@ -232,6 +241,7 @@
       <find>等待审核</find>
       <find>上传成功</find>
       <find>UPLOAD_SUCCESS</find>
+      <find>SWITCH</find>
     </findStrings>
     <replaceStrings>
       <replace>COMMON_ASSET</replace>
@@ -239,6 +249,7 @@
     <dirStrings>
       <dir>$PROJECT_DIR$/mmt/src</dir>
       <dir>$PROJECT_DIR$/mmt</dir>
+      <dir>$PROJECT_DIR$/xc/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -247,13 +258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mmt/src/pages/home/Rule.js" />
-        <option value="$PROJECT_DIR$/mmt/src/locales/index.js" />
-        <option value="$PROJECT_DIR$/mmt/src/stores/index.js" />
-        <option value="$PROJECT_DIR$/mmt/src/components/common/LocaleSwitch.js" />
-        <option value="$PROJECT_DIR$/mmt/src/api/user.js" />
-        <option value="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.js" />
-        <option value="$PROJECT_DIR$/mmt/src/pages/user/UserCenter.scss" />
         <option value="$PROJECT_DIR$/mmt/src/App.js" />
         <option value="$PROJECT_DIR$/mmt/src/components/common/Captcha.js" />
         <option value="$PROJECT_DIR$/mmt/src/pages/login/Register.scss" />
@@ -298,6 +302,13 @@
         <option value="$PROJECT_DIR$/mmt/src/api/http.js" />
         <option value="$PROJECT_DIR$/mmt/src/stores/auth.js" />
         <option value="$PROJECT_DIR$/mmt/src/config.js" />
+        <option value="$PROJECT_DIR$/xc/src/App.js" />
+        <option value="$PROJECT_DIR$/xc/src/styles/mixin.scss" />
+        <option value="$PROJECT_DIR$/xc/src/assets/static/xc.js" />
+        <option value="$PROJECT_DIR$/xc/src/config.js" />
+        <option value="$PROJECT_DIR$/xc/src/pages/home/Rule.js" />
+        <option value="$PROJECT_DIR$/xc/src/assets/static/index.js" />
+        <option value="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" />
       </list>
     </option>
   </component>
@@ -309,6 +320,7 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/mmt/node_modules" />
+    <handled-path value="$PROJECT_DIR$/xc/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -317,7 +329,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="69" />
+    <option name="x" value="553" />
     <option name="y" value="128" />
     <option name="width" value="965" />
     <option name="height" value="922" />
@@ -338,33 +350,13 @@
             <path>
               <item name="coins" type="b2602c69:ProjectViewProjectNode" />
               <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="mmt" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="coins" type="b2602c69:ProjectViewProjectNode" />
               <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="mmt" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="mmt" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="mmt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="locales" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="mmt" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="stores" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -381,14 +373,14 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mmt/src/assets/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/xc" />
       <recent name="$PROJECT_DIR$/mmt/src/components/common" />
       <recent name="$PROJECT_DIR$/mmt/src" />
       <recent name="$PROJECT_DIR$/mmt" />
-      <recent name="$PROJECT_DIR$/xc" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mmt/src/assets/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,6 +420,7 @@
       <workItem from="1569503322586" duration="522000" />
       <workItem from="1569503915534" duration="342000" />
       <workItem from="1569509685821" duration="1276000" />
+      <workItem from="1569597051627" duration="2183000" />
     </task>
     <task id="LOCAL-00001" summary="[mmt] add locale">
       <created>1569204056104</created>
@@ -506,15 +499,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569500490477</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[xc] first commit">
+      <created>1569597206825</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1569597206825</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63568000" />
+    <option name="totallyTimeSpent" value="65751000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="638" y="41" width="965" height="922" extended-state="0" />
-    <editor active="true" />
+    <frame x="553" y="128" width="965" height="922" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2595339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -528,8 +527,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49788135" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49364406" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50635594" side_tool="true" visible="true" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49258474" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50741524" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -573,75 +572,10 @@
     <MESSAGE value="[mmt] update locale 6" />
     <MESSAGE value="[mmt] update http" />
     <MESSAGE value="[mmt] update auth.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="[mmt] update auth.js" />
+    <MESSAGE value="[xc] first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="[xc] first commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mmt/node_modules/antd-mobile/lib/wing-blank/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/WalletCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Recharge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="31" selection-start-line="31" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WalletUsdt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-358">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WalletCoin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="47" selection-start-line="47" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/WithdrawRecord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/exception/404.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Withdraw.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="154" column="18" lean-forward="true" selection-start-line="154" selection-start-column="18" selection-end-line="154" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/common/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/wallet/Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/pages/deposit/Deposit.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -861,17 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/stores/auth.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#1235#1278#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/stores/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -942,12 +865,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="e#265#399#0" expanded="true" />
             <element signature="e#275#333#0" expanded="true" />
             <element signature="e#342#397#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mmt/src/stores/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="64" column="64" selection-start-line="64" selection-start-column="64" selection-end-line="64" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1235#1278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/styles/_variable.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1052" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/models/deposit-item.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/utils/file.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/assets/static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/styles/mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/assets/static/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#36#141#0" expanded="true" />
+            <element signature="e#378#749#0" expanded="true" />
+            <element signature="e#773#804#0" expanded="true" />
+            <element signature="e#825#1355#0" expanded="true" />
+            <element signature="e#1378#1475#0" expanded="true" />
+            <element signature="e#1495#1514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/pages/home/Rule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#265#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/pages/user/UserCenter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2570">
+          <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+          <folding>
+            <element signature="e#1877#1931#0" expanded="true" />
+            <element signature="e#1939#2060#0" expanded="true" />
           </folding>
         </state>
       </provider>

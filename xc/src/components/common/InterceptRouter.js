@@ -10,27 +10,17 @@ class InterceptRouter extends Component {
   componentWillMount() {
     const {userStore} = this.props
     userStore.setUserStatus()
-
   }
 
   componentDidMount() {
-    const {userStore, history, location} = this.props
+    const {history, location} = this.props
     if (location.pathname === '/') {
-      history.push('/home')
-      // history.push('/login')
+      // history.push('/home')
+      history.push('/login')
     }
     if (location.pathname !== '/user-center') {
       hideChatButton();
     }
-
-    if (!userStore.isOnline && !this.isToLogin(location.pathname)) {
-      history.push({pathname: '/login', state: {hideBack: true}})
-    }
-  }
-
-  isToLogin(pathname) {
-    const paths = ['login', 'register', 'password']
-    return paths.some(path => pathname.includes(path))
   }
 
   render() {

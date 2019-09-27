@@ -205,6 +205,7 @@ export default [
   {path: '/deposit/result', name: 'DepositResult', component: DepositResult},
 
   // 404
+
   {
     path: '/404',
     name: '404',

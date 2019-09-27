@@ -6,6 +6,7 @@ import InterceptRouter from './components/common/InterceptRouter'
 import routes from './routes'
 import stores from './stores'
 import NoMatch from './pages/exception/404'
+import {SWITCH} from './config'
 
 import './App.scss'
 
@@ -19,7 +20,7 @@ const LoadableFooter = Loadable({
 class App extends Component {
 
   componentDidMount() {
-    document.title = 'X PLAN'
+    document.title = SWITCH.PROJECT === 'XC' ? 'X PLAN' : SWITCH.PROJECT
   }
 
   render() {

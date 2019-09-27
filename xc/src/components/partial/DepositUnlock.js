@@ -17,7 +17,8 @@ class DepositUnlock extends Component {
   state = {
     showConfirm: false,
     payPassword: '',
-    pwdType: 'password'
+    pwdType: 'password',
+    isSubmit: false,
   }
 
   onInputChange = (e, key) => {
@@ -42,6 +43,7 @@ class DepositUnlock extends Component {
   onSubmit = () => {
     const {history, userStore, productStore} = this.props
     const {payPassword} = this.state
+    this.setState({isSubmit: true})
     userStore
       .getPayToken({payPassword})
       .then(res => {
@@ -52,8 +54,12 @@ class DepositUnlock extends Component {
         return res.data.token
       })
       .then(payToken => {
-        if (!payToken) return
+        if (!payToken) {
+          this.setState({isSubmit: false})
+          return
+        }
         productStore.createSpecialOrder(payToken).then(res => {
+          this.setState({isSubmit: false})
           if (res.status !== 1) {
             Toast.info(res.msg)
             return
@@ -61,10 +67,14 @@ class DepositUnlock extends Component {
           history.push({pathname: '/deposit/result', state: 'unLock'})
         })
       })
+      .catch(err => {
+        console.log(err)
+        this.setState({isSubmit: false})
+      })
   }
 
   render() {
-    const {showConfirm, payPassword, pwdType} = this.state
+    const {showConfirm, payPassword, pwdType, isSubmit} = this.state
     const {show, productStore} = this.props
     const {
       productDetail,
@@ -179,6 +189,7 @@ class DepositUnlock extends Component {
             <Button
               activeClassName="btn-common__active"
               className="primary-button"
+              disabled={isSubmit}
               onClick={this.onSubmit}
             >
               确认

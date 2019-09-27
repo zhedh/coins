@@ -53,6 +53,15 @@ class OtherApi {
   static getVersion(options = {}) {
     return http.post('/other/version', options)
   }
+
+  /**
+   * 规则说明
+   *
+   * @required
+   **/
+  static getRules() {
+    return http.get('/other/rules')
+  }
 }
 
 export default OtherApi
