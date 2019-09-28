@@ -83,6 +83,7 @@ instance.interceptors.response.use(response => {
   return res;
 }, error => {
   console.log(error)
+  Toast.fail('网络错误，请重试')
 });
 
 export default instance;

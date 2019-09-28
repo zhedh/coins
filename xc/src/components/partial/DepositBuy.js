@@ -79,7 +79,7 @@ class DepositBuy extends Component {
   }
 
   render() {
-    const {show, productStore, userStore, personStore} = this.props
+    const {show, productStore, userStore} = this.props
     const {showConfirm, payPassword, pwdType, isSubmit} = this.state
     const {productDetail, gears, gearNum} = productStore
     const hasGears = gears && gears.length > 0

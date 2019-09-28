@@ -1,10 +1,9 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
-import { Button, Toast } from 'antd-mobile'
+import React, {Component} from 'react'
+import {inject, observer} from 'mobx-react'
+import {Button, Toast} from 'antd-mobile'
 import AccountHeader from '../../components/partial/AccountHeader'
 import './InviteCode.scss'
 
-@inject('authStore')
 @inject('userStore')
 @observer
 class InviteCode extends Component {
@@ -13,37 +12,49 @@ class InviteCode extends Component {
   }
 
   onInputChange = (e, key) => {
-    const { value } = e.target
-    this.setState({ [key]: value })
+    const {value} = e.target
+    this.setState({[key]: value})
   }
 
   onSubmit = () => {
-    const { code } = this.state
-    const { history, userStore, authStore } = this.props
-    const { infoKey } = authStore
+    const {code} = this.state
+    const {history, userStore} = this.props
+    const infoKey = userStore.getInfoKey()
+    console.log(infoKey)
+    if (!infoKey) {
+      Toast.fail('授权失效，请返回重试')
+      return
+    }
 
     userStore
-      .newUserLogin({ info_key: infoKey, recommend_code: code })
-      .then(() => {
-        Toast.success('授权成功', 0.9, () => {
-          history.push('/home')
-        })
+      .newUserLogin({
+        infoKey,
+        recommendCode: code
+      })
+      .then(res => {
+        if (res.status === 200) {
+          Toast.success('授权成功', 1, () => {
+            history.push('/deposit')
+          })
+          return
+        }
+        Toast.info(res.msg)
       })
   }
 
   render() {
-    const { code } = this.state
+    const {code} = this.state
     const canSubmit = code === ''
 
     return (
       <div id="inviteCode">
-        <AccountHeader title="输入邀请码" />
+        <AccountHeader title="输入邀请码"/>
         <div className="content">
           <label>
             <input
               className="input-main"
               type="text"
-              placeholder="请输入X-PLAN 邮箱/手机号"
+              placeholder="请输入X-PLAN 邀请码"
               value={code}
               onChange={e => this.onInputChange(e, 'code')}
             />

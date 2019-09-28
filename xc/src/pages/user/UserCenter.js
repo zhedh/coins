@@ -1,7 +1,6 @@
 import React, {Component, PureComponent} from 'react'
 import {inject, observer} from 'mobx-react'
 import {Modal} from 'antd-mobile'
-import {SWITCH} from '../../config'
 import {FaRegQuestionCircle} from 'react-icons/fa'
 import Header from '../../components/common/Header'
 import {hideChatButton} from '../../utils/common'
@@ -13,13 +12,7 @@ class ListItem extends PureComponent {
     return (
       <div
         className="list-item"
-        onClick={() => {
-          if (onHandle) {
-            onHandle()
-          } else {
-            window.location.href = url
-          }
-        }}
+        onClick={() => onHandle ? onHandle() : window.location.href = url}
       >
         <img className="icon" src={icon} alt=""/>
         <span>{name}</span>
@@ -54,9 +47,7 @@ class UserCenter extends Component {
 
   createIframe = () => {
     let script = document.createElement('script')
-
     script.type = 'text/javascript'
-    // script.async = true
     script.defer = true
     script.id = 'ze-snippet'
     script.src =
@@ -106,8 +97,8 @@ class UserCenter extends Component {
     const {history, userStore, personStore} = this.props
     const {userInfo} = personStore
     const {showFModal} = this.state
-    const hideAuthButton =
-      userInfo.authentication === 1 || userInfo.authentication === 2
+    // const hideAuthButton =
+    //   userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
       <div id="user-center">
@@ -129,14 +120,14 @@ class UserCenter extends Component {
                 <li>{userInfo.email || userInfo.phoneNo}</li>
                 <li>{this.getAuthLabel(userInfo.authentication)}</li>
               </ul>
-              {!hideAuthButton && (
-                <button
-                  className={'auth-btn'}
-                  onClick={() => history.push('/verified-country')}
-                >
-                  实名认证
-                </button>
-              )}
+              {/*{!hideAuthButton && (*/}
+              {/*<button*/}
+              {/*className={'auth-btn'}*/}
+              {/*onClick={() => history.push('/verified-country')}*/}
+              {/*>*/}
+              {/*实名认证*/}
+              {/*</button>*/}
+              {/*)}*/}
             </div>
           ) : (
             <h1 onClick={() => history.push('/login')}>
@@ -167,18 +158,11 @@ class UserCenter extends Component {
             name="公告列表"
             url="/notices"
           />
-          <ListItem
-            icon={require('../../assets/images/account.svg')}
-            name="账户安全"
-            url={userStore.isOnline ? '/account' : '/login'}
-          />
-          {SWITCH.PROJECT !== 'XC' && (
-            <ListItem
-              icon={require('../../assets/images/kefu.png')}
-              name="联系客服"
-              url={'/contact-us'}
-            />
-          )}
+          {/*<ListItem*/}
+          {/*icon={require('../../assets/images/account.svg')}*/}
+          {/*name="账户安全"*/}
+          {/*url={userStore.isOnline ? '/account' : '/login'}*/}
+          {/*/>*/}
         </section>
         {userStore.isOnline && (
           <section className={`list-content list-second`}>

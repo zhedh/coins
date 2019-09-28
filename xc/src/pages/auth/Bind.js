@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
 import { Button, Toast } from 'antd-mobile'
-import { TOAST_DURATION } from '../../utils/constants'
-import { isEmail, isMobile, isPassword } from '../../utils/reg'
 import AccountHeader from '../../components/partial/AccountHeader'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'

@@ -1,6 +1,5 @@
 import UserStore from './user'
 import PersonStore from './person'
-import AuthStore from './auth'
 import WalletStore from './wallet'
 import CertificationStore from './certification'
 import NoticeStore from './notice'
@@ -8,7 +7,6 @@ import ProductStore from './product'
 
 class Stores {
   constructor() {
-    this.authStore = new AuthStore()
     this.userStore = new UserStore()
     this.personStore = new PersonStore()
     this.walletStore = new WalletStore()

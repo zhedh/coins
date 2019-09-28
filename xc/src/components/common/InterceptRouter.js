@@ -9,7 +9,7 @@ import {hideChatButton} from "../../utils/common";
 class InterceptRouter extends Component {
   componentWillMount() {
     const {userStore} = this.props
-    userStore.setUserStatus()
+    userStore.getUserStatus()
   }
 
   componentDidMount() {

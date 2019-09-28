@@ -1,13 +1,14 @@
-import { observable, action, computed } from 'mobx'
+import {observable, action, computed} from 'mobx'
 import Cookies from 'js-cookie'
 import UserApi from '../api/user'
 import AuthApi from '../api/auth'
-import { isMobile } from '../utils/reg'
+import {isMobile} from '../utils/reg'
 
 class UserStore {
   @observable token
   @observable openid
   @observable payPassword
+  @observable lastTime
 
   @computed
   get isOnline() {
@@ -21,12 +22,29 @@ class UserStore {
 
   // ---auth -----
   @action
+  setInfoKey(infoKey) {
+    Cookies.set('INFO_KEY', infoKey)
+  }
+
+  @action
+  getInfoKey() {
+    return Cookies.get('INFO_KEY')
+  }
+
+  @action
+  userAuth(options) {
+    return AuthApi.userAuth(options)
+  }
+
+  @action
   newUserLogin(options) {
     return AuthApi.newUserLogin(options).then(res => {
       if (res.status === 200) {
-        this.openid = res.data.open_id
+        this.openid = res.data.openId
         this.token = res.data.token
-        this.payPassword = res.data.pay_password
+        this.payPassword = res.data.payPassword
+        this.lastTime = res.data.lastTime
+        this.setUserCookie(res.data)
       }
       return res
     })
@@ -50,13 +68,15 @@ class UserStore {
       return res
     })
   }
+
   // ---auth -----
 
   @action
-  setUserStatus() {
+  getUserStatus() {
     this.token = Cookies.get('TOKEN')
     this.openid = Cookies.get('OPENID')
     this.payPassword = Cookies.get('PAY_PASSWORD')
+    this.lastTime = Cookies.get('LAST_TIME')
   }
 
   @action
@@ -64,7 +84,8 @@ class UserStore {
     Cookies.set('OPENID', data.openId)
     Cookies.set('TOKEN', data.token)
     Cookies.set('PAY_PASSWORD', data.payPassword)
-    this.setUserStatus()
+    Cookies.set('LAST_TIME', data.lastTime)
+    this.getUserStatus()
   }
 
   @action
@@ -112,25 +133,25 @@ class UserStore {
   // 用 account 替代 phone 或者 email
   @action
   getCode(options, params) {
-    const { account } = options
+    const {account} = options
     return isMobile(account)
       ? UserApi.sendSmsCode(
-          {
-            imgcode: options.captcha,
-            prefix: options.prefix ? options.prefix : '86',
-            phone: account,
-            type: options.type
-          },
-          params
-        )
+        {
+          imgcode: options.captcha,
+          prefix: options.prefix ? options.prefix : '86',
+          phone: account,
+          type: options.type
+        },
+        params
+      )
       : UserApi.sendMailCode(
-          {
-            imgcode: options.captcha,
-            email: account,
-            type: options.type
-          },
-          params
-        )
+        {
+          imgcode: options.captcha,
+          email: account,
+          type: options.type
+        },
+        params
+      )
   }
 }
 
