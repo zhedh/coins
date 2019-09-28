@@ -125,29 +125,41 @@ const DepositResult = Loadable({
   loader: () => import('./pages/deposit/DepositResult'),
   loading: Loading
 })
+const Auth = Loadable({
+  loader: () => import('./pages/auth/Auth'),
+  loading: Loading
+})
+const Bind = Loadable({
+  loader: () => import('./pages/auth/Bind'),
+  loading: Loading
+})
+const InviteCode = Loadable({
+  loader: () => import('./pages/auth/InviteCode'),
+  loading: Loading
+})
 
 export default [
   // 主页
-  {path: '/', name: 'Home', component: Home},
-  {path: '/home', name: 'Home', component: Home},
+  { path: '/', name: 'Home', component: Home },
+  { path: '/home', name: 'Home', component: Home },
   {
     path: '/home/inviter-friend',
     name: 'InviterFriend',
     component: InviterFriend
   },
-  {path: '/home/generalize', name: 'Generalize', component: Generalize},
+  { path: '/home/generalize', name: 'Generalize', component: Generalize },
   {
     path: '/home/generalize/:id',
     name: 'GeneralizeDetail',
     component: GeneralizeDetail
   },
-  {path: '/home/bargain', name: 'Bargain', component: Bargain},
+  { path: '/home/bargain', name: 'Bargain', component: Bargain },
   {
     path: '/home/bargain/record',
     name: 'BargainRecord',
     component: BargainRecord
   },
-  {path: '/home/rule', name: 'Rule', component: Rule},
+  { path: '/home/rule', name: 'Rule', component: Rule },
   {
     path: '/home/deposit-history',
     name: 'DepositHistory',
@@ -155,11 +167,11 @@ export default [
   },
 
   // 钱包
-  {path: '/wallet', name: 'Wallet', component: Wallet},
-  {path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt},
-  {path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin},
-  {path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw},
-  {path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge},
+  { path: '/wallet', name: 'Wallet', component: Wallet },
+  { path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt },
+  { path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin },
+  { path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw },
+  { path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge },
   {
     path: '/wallet/withdraw-record/:type',
     name: 'WithdrawRecord',
@@ -200,9 +212,26 @@ export default [
     component: VerifiedResult
   },
 
+  // 授权登录
+  {
+    path: '/authorization',
+    name: 'Auth',
+    component: Auth
+  },
+  {
+    path: '/bind',
+    name: 'Bind',
+    component: Bind
+  },
+  {
+    path: '/invite-code',
+    name: 'InviteCode',
+    component: InviteCode
+  },
+
   // X PLAN
-  {path: '/deposit', name: 'Deposit', component: Deposit},
-  {path: '/deposit/result', name: 'DepositResult', component: DepositResult},
+  { path: '/deposit', name: 'Deposit', component: Deposit },
+  { path: '/deposit/result', name: 'DepositResult', component: DepositResult },
 
   // 404
 

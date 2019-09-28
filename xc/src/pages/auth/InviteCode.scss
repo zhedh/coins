@@ -1,0 +1,63 @@
+@import '../../styles/_common';
+
+#inviteCode {
+  position: relative;
+  box-sizing: border-box;
+  height: 100vh;
+
+  .content {
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    label {
+      position: relative;
+      width: 100%;
+      display: inline-block;
+      margin-top: 3rem;
+
+      .input-main {
+        width: 100%;
+        outline: none;
+        padding: 10px 0;
+        font-size: 1.3rem;
+        @include clearButton;
+        border-bottom: 1px solid $black-border-bottom;
+
+        &:focus {
+          border-bottom: 2px solid $primary-color;
+        }
+
+        &::placeholder {
+          color: $black-font-primary;
+          font-weight: 500;
+        }
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 2.2rem;
+        height: 1.3rem;
+      }
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-assistant + 0.1;
+
+      a {
+        display: inline-block;
+        padding: 10px 0;
+        color: $black-font-primary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .btn-box {
+    padding: 5rem 20px;
+  }
+}
