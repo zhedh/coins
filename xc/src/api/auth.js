@@ -38,8 +38,8 @@ class AuthApi {
    * @required phonePrefix string 手机国际码(当输入的账号为手机号时)
    *
    **/
-  static createOrder(options = {}) {
-    return http.post('/order/createorder', options)
+  static oldUserLogin(options = {}) {
+    return http.post('/user/oldUserLogin', options)
   }
 }
 

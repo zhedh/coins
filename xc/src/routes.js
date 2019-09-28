@@ -137,10 +137,14 @@ const InviteCode = Loadable({
   loader: () => import('./pages/auth/InviteCode'),
   loading: Loading
 })
+const ZbxLogin = Loadable({
+  loader: () => import('./pages/auth/ZbxLogin'),
+  loading: Loading
+})
 
 export default [
   // 主页
-  { path: '/', name: 'Home', component: Home },
+  { path: '/', name: 'Auth', component: Auth },
   { path: '/home', name: 'Home', component: Home },
   {
     path: '/home/inviter-friend',
@@ -180,7 +184,7 @@ export default [
 
   // 登陆注册
   { path: '/login', name: 'Login', component: Login },
-  { path: '/register', name: 'Register', component: Register },
+  // { path: '/register', name: 'Register', component: Register },
   { path: '/password/:type', name: 'Password', component: Password },
 
   // 个人中心
@@ -227,6 +231,11 @@ export default [
     path: '/invite-code',
     name: 'InviteCode',
     component: InviteCode
+  },
+  {
+    path: '/zbx-login',
+    name: 'ZbxLogin',
+    component: ZbxLogin
   },
 
   // X PLAN

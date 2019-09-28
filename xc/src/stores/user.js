@@ -1,12 +1,13 @@
-import {observable, action, computed} from 'mobx'
-import Cookies from "js-cookie"
-import UserApi from "../api/user"
-import {isMobile} from "../utils/reg"
+import { observable, action, computed } from 'mobx'
+import Cookies from 'js-cookie'
+import UserApi from '../api/user'
+import AuthApi from '../api/auth'
+import { isMobile } from '../utils/reg'
 
 class UserStore {
-  @observable token;
-  @observable openid;
-  @observable payPassword;
+  @observable token
+  @observable openid
+  @observable payPassword
 
   @computed
   get isOnline() {
@@ -17,6 +18,39 @@ class UserStore {
   get hasPayPassword() {
     return Number(this.payPassword) === 1
   }
+
+  // ---auth -----
+  @action
+  newUserLogin(options) {
+    return AuthApi.newUserLogin(options).then(res => {
+      if (res.status === 200) {
+        this.openid = res.data.open_id
+        this.token = res.data.token
+        this.payPassword = res.data.pay_password
+      }
+      return res
+    })
+  }
+
+  @action
+  oldUserLogin(options) {
+    return AuthApi.oldUserLogin(options).then(res => {
+      if (res.status === -1) {
+        window.location.href = '/authorization?tab=1'
+        return
+      }
+
+      if (res.status === 200) {
+        window.location.href = '/home'
+
+        this.openid = res.data.open_id
+        this.token = res.data.token
+        this.payPassword = res.data.pay_password
+      }
+      return res
+    })
+  }
+  // ---auth -----
 
   @action
   setUserStatus() {
@@ -78,19 +112,25 @@ class UserStore {
   // 用 account 替代 phone 或者 email
   @action
   getCode(options, params) {
-    const {account} = options
-    return isMobile(account) ?
-      UserApi.sendSmsCode({
-        imgcode: options.captcha,
-        prefix: options.prefix ? options.prefix : '86',
-        phone: account,
-        type: options.type
-      }, params) :
-      UserApi.sendMailCode({
-        imgcode: options.captcha,
-        email: account,
-        type: options.type
-      }, params)
+    const { account } = options
+    return isMobile(account)
+      ? UserApi.sendSmsCode(
+          {
+            imgcode: options.captcha,
+            prefix: options.prefix ? options.prefix : '86',
+            phone: account,
+            type: options.type
+          },
+          params
+        )
+      : UserApi.sendMailCode(
+          {
+            imgcode: options.captcha,
+            email: account,
+            type: options.type
+          },
+          params
+        )
   }
 }
 

@@ -13,7 +13,7 @@
 
 export const SWITCH = {
   PROJECT: 'XC',
-  ONLINE: true
+  ONLINE: false
 }
 
 const COIN = {
@@ -24,7 +24,7 @@ const COIN = {
     DEV: {
       API_BASE_URL: 'http://47.75.138.157/api'
     }
-  },
+  }
 }
 
 const CURRENT_PROJECT = COIN[SWITCH.PROJECT]

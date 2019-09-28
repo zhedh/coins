@@ -1,11 +1,10 @@
 @import '../../styles/_common';
 
-#auth {
+#zbx-Login {
   .main-content {
     width: 100%;
     box-sizing: border-box;
     padding: 60px 20px;
-    // text-align: center;
 
     .banner {
       width: 201px;
@@ -27,27 +26,6 @@
 
       &.zbx {
         margin-top: 80px;
-      }
-
-      img {
-        width: 18px;
-        height: 20px;
-        padding-right: 3%;
-      }
-
-      span {
-        display: block;
-        line-height: 1.7;
-
-        &:first-child {
-          color: #e8713a;
-          font-size: 18px;
-        }
-
-        &:last-child {
-          color: rgba(37, 41, 46, 0.5);
-          font-size: 15px;
-        }
       }
 
       p {

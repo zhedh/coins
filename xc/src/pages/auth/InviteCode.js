@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button, Toast } from 'antd-mobile'
-import { TOAST_DURATION } from '../../utils/constants'
-import { isEmail, isMobile, isPassword } from '../../utils/reg'
 import AccountHeader from '../../components/partial/AccountHeader'
 import './InviteCode.scss'
 
+@inject('authStore')
+@inject('userStore')
+@observer
 class InviteCode extends Component {
   state = {
     code: ''
@@ -18,6 +19,16 @@ class InviteCode extends Component {
 
   onSubmit = () => {
     const { code } = this.state
+    const { history, userStore, authStore } = this.props
+    const { infoKey } = authStore
+
+    userStore
+      .newUserLogin({ info_key: infoKey, recommend_code: code })
+      .then(() => {
+        Toast.success('授权成功', 0.9, () => {
+          history.push('/home')
+        })
+      })
   }
 
   render() {

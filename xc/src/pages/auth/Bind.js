@@ -12,6 +12,7 @@ class Bind extends Component {
   state = {
     account: '',
     password: '',
+    phonePrefix: '86',
     type: 'password'
   }
 
@@ -25,17 +26,21 @@ class Bind extends Component {
   }
 
   onSubmit = () => {
-    const { account, password } = this.state
-
-    if (!isEmail(account) && !isMobile(account)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
-      return
-    }
-
-    if (!isPassword(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
-      return
-    }
+    const { history, userStore } = this.props
+    const { infoKey } = userStore
+    const { account, password, phonePrefix } = this.state
+    userStore
+      .newUserLogin({
+        info_key: infoKey,
+        user_name: account,
+        password,
+        phone_prefix: phonePrefix
+      })
+      .then(() => {
+        Toast.success('绑定成功', 0.9, () => {
+          history.push('/home')
+        })
+      })
   }
 
   render() {
