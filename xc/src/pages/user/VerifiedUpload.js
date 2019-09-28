@@ -5,12 +5,12 @@ import {AUTH} from '../../assets/static'
 import Header from '../../components/common/Header'
 import './VerifiedUpload.scss'
 
-@inject('authStore')
+@inject('CertificationStore')
 @observer
 class VerifiedUpload extends Component {
   onSubmit = () => {
-    const {history, authStore} = this.props
-    authStore.submitAuthAudit().then(res => {
+    const {history, CertificationStore} = this.props
+    CertificationStore.submitAuthAudit().then(res => {
       if (res.status !== 1) {
         Toast.info(res.msg)
         return
@@ -20,8 +20,8 @@ class VerifiedUpload extends Component {
   }
 
   render() {
-    const {authStore} = this.props
-    const {cardFront, cardBack, cardHold} = authStore.photo
+    const {CertificationStore} = this.props
+    const {cardFront, cardBack, cardHold} = CertificationStore.photo
     const canSubmit = cardFront && cardBack && cardHold
 
     return (
@@ -48,7 +48,7 @@ class VerifiedUpload extends Component {
             type="file"
             className="upload-photo"
             accept="image/*"
-            onChange={e => authStore.changePhotoItem(e, 'cardFront')}
+            onChange={e => CertificationStore.changePhotoItem(e, 'cardFront')}
           />
         </div>
         <div className="upload-content">
@@ -61,7 +61,7 @@ class VerifiedUpload extends Component {
             type="file"
             className="upload-photo"
             accept="image/*"
-            onChange={e => authStore.changePhotoItem(e, 'cardBack')}
+            onChange={e => CertificationStore.changePhotoItem(e, 'cardBack')}
           />
         </div>
         <div className="upload-content">
@@ -74,7 +74,7 @@ class VerifiedUpload extends Component {
             type="file"
             className="upload-photo"
             accept="image/*"
-            onChange={e => authStore.changePhotoItem(e, 'cardHold')}
+            onChange={e => CertificationStore.changePhotoItem(e, 'cardHold')}
           />
         </div>
         <Button

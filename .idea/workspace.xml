@@ -2,75 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/xc/src/api/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/xc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/xc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/api/other.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/api/other.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/api/person.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/api/person.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/kefu.png" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/assets/images/kefu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-card-back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-card-front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-card-hold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-driving.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-fail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-id-card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-passport.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/auth-wait.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/generalize-banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/generalize-user-one.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/generalize-user-two.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/home-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/icon-deposit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/icon-home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/icon-wallet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/mmt/no-data.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-card-back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-card-front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-card-hold.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-driving.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-fail.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-id-card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-id-card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-passport.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-success.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/auth-wait.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/generalize-banner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/generalize-user-one.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/generalize-user-two.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/home-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/icon-deposit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/icon-home.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/icon-wallet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/images/nttc/no-data.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/assets/static/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/mmt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/nttc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/assets/static/xc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/components/common/InterceptRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/common/InterceptRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/DepositUnlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/DepositUnlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/models/deposit-item.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/deposit/DepositResult.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/deposit/DepositResult.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/home/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/home/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/home/Rule.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/home/Rule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/user/VerifiedCountry.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/user/VerifiedCountry.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc/src/pages/user/VerifiedIdentity.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/user/VerifiedIdentity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/wallet/Withdraw.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/wallet/Withdraw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/stores/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/stores/wallet.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/wallet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/styles/_variable-mmt.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/styles/_variable-nttc.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/styles/_variable-xc.scss" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/styles/_variable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/styles/mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/styles/mixin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/utils/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/utils/reg.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/reg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/user/VerifiedUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/user/VerifiedUpload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/stores/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/certification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/stores/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/stores/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -98,7 +36,7 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="150" />
+          <entry key="js" value="155" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
           <entry key="md" value="2" />
@@ -111,7 +49,7 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="150" />
+          <entry key="JavaScript" value="155" />
           <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="13" />
@@ -122,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1" />
-          <entry key="js" value="6197" />
+          <entry key="js" value="6275" />
           <entry key="scss" value="307" />
           <entry key="txt" value="70" />
         </counts>
@@ -130,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="6197" />
+          <entry key="JavaScript" value="6275" />
           <entry key="PLAIN_TEXT" value="70" />
           <entry key="SCSS" value="307" />
         </counts>
@@ -195,15 +133,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xc/src/pages/user/UserCenter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2570">
-              <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+            <state relative-caret-position="224">
+              <caret line="210" column="16" lean-forward="true" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
               <folding>
+                <element signature="e#1869#2066#0" expanded="true" />
                 <element signature="e#1877#1931#0" expanded="true" />
                 <element signature="e#1939#2060#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/api/auth.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/stores/certification.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xc/src/stores/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/api/wallet.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/api/product.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="4" lean-forward="true" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -212,9 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>REGISTER</find>
-      <find>REGISTER_SUCCESS</find>
-      <find>prefix</find>
       <find>SET_PASSWORD</find>
       <find>保存</find>
       <find>VERIFY_CODE</find>
@@ -242,9 +225,13 @@
       <find>上传成功</find>
       <find>UPLOAD_SUCCESS</find>
       <find>SWITCH</find>
+      <find>CertificationStore</find>
+      <find>authStore</find>
+      <find>AuthStore</find>
     </findStrings>
     <replaceStrings>
       <replace>COMMON_ASSET</replace>
+      <replace>CertificationStore</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/mmt/src</dir>
@@ -258,9 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mmt/src/App.js" />
-        <option value="$PROJECT_DIR$/mmt/src/components/common/Captcha.js" />
-        <option value="$PROJECT_DIR$/mmt/src/pages/login/Register.scss" />
         <option value="$PROJECT_DIR$/mmt/src/pages/login/Register.js" />
         <option value="$PROJECT_DIR$/mmt/src/components/partial/VerifiedCode.js" />
         <option value="$PROJECT_DIR$/mmt/src/components/partial/VeritifiedPwd.js" />
@@ -309,6 +293,9 @@
         <option value="$PROJECT_DIR$/xc/src/pages/home/Rule.js" />
         <option value="$PROJECT_DIR$/xc/src/assets/static/index.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" />
+        <option value="$PROJECT_DIR$/xc/src/api/auth.js" />
+        <option value="$PROJECT_DIR$/xc/src/stores/auth.js" />
+        <option value="$PROJECT_DIR$/xc/src/stores/index.js" />
       </list>
     </option>
   </component>
@@ -329,7 +316,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="553" />
+    <option name="x" value="661" />
     <option name="y" value="128" />
     <option name="width" value="965" />
     <option name="height" value="922" />
@@ -357,6 +344,35 @@
               <item name="coins" type="462c0819:PsiDirectoryNode" />
               <item name="xc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="stores" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -420,7 +436,7 @@
       <workItem from="1569503322586" duration="522000" />
       <workItem from="1569503915534" duration="342000" />
       <workItem from="1569509685821" duration="1276000" />
-      <workItem from="1569597051627" duration="2183000" />
+      <workItem from="1569597051627" duration="4859000" />
     </task>
     <task id="LOCAL-00001" summary="[mmt] add locale">
       <created>1569204056104</created>
@@ -506,16 +522,24 @@
       <option name="project" value="LOCAL" />
       <updated>1569597206825</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[xc] first commit">
+      <created>1569601362367</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1569601362367</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65751000" />
+    <option name="totallyTimeSpent" value="68427000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="553" y="128" width="965" height="922" extended-state="0" />
+    <frame x="661" y="128" width="965" height="922" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2595339" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2595339" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -527,7 +551,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49788135" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49258474" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49258474" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50741524" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -576,37 +600,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="[xc] first commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/deposit/Deposit.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/DepositBuy.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="76" column="3" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/DepositUnlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3476">
-          <caret line="172" column="18" lean-forward="true" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/pages/deposit/DepositResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="902">
-          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/components/partial/DepositBuy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mmt/src/components/common/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -967,11 +960,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/pages/user/UserCenter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2570">
-          <caret line="79" column="6" selection-start-line="79" selection-start-column="6" selection-end-line="79" selection-end-column="6" />
+        <state relative-caret-position="224">
+          <caret line="210" column="16" lean-forward="true" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
           <folding>
+            <element signature="e#1869#2066#0" expanded="true" />
             <element signature="e#1877#1931#0" expanded="true" />
             <element signature="e#1939#2060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/api/wallet.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/api/product.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="4" lean-forward="true" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/api/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/stores/certification.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/stores/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
