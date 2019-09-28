@@ -4,7 +4,7 @@ import {COUNTRIES_LIST} from '../utils/constants'
 import PersonApi from '../api/person'
 import {compressorImg} from "../utils/file"
 
-class AuthStore {
+class CertificationStore {
   @observable authInfo = {
     country: COUNTRIES_LIST[0],
     cardType: '', // 身份证
@@ -108,4 +108,4 @@ class AuthStore {
   }
 }
 
-export default AuthStore
+export default CertificationStore

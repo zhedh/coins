@@ -5,19 +5,19 @@ import Header from '../../components/common/Header'
 import './VerifiedCountry.scss'
 
 
-@inject('authStore')
+@inject('CertificationStore')
 @observer
 class VerifiedCountry extends Component {
 
   selectCountry = () => {
-    const {history, authStore} = this.props
-    const {country} = authStore.authInfo
+    const {history, CertificationStore} = this.props
+    const {country} = CertificationStore.authInfo
     history.push('/verified-identity/' + country)
   }
 
   render() {
-    const {authStore} = this.props
-    const {country} = authStore.authInfo
+    const {CertificationStore} = this.props
+    const {country} = CertificationStore.authInfo
     const selectedCountry = country
 
     return (
@@ -32,7 +32,7 @@ class VerifiedCountry extends Component {
           {COUNTRIES_LIST.map((country, key) => (
             <li
               key={key.toString()}
-              onClick={() => authStore.changeInfoItem(country, 'country')}>
+              onClick={() => CertificationStore.changeInfoItem(country, 'country')}>
               <span>{country}</span>
               {selectedCountry === country && <img
                 src={require('../../assets/images/select-country.png')}

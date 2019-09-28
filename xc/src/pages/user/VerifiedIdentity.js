@@ -24,7 +24,7 @@ const typeList = [
   }
 ]
 
-@inject('authStore')
+@inject('CertificationStore')
 @observer
 class VerifiedIdentity extends Component {
   state = {
@@ -38,23 +38,23 @@ class VerifiedIdentity extends Component {
   }
 
   componentDidMount() {
-    const {authStore, match} = this.props
+    const {CertificationStore, match} = this.props
     const {country} = match.params
     if (country) {
       this.setState({isChina: country === COUNTRIES_LIST[0]})
-      authStore.changeInfoItem(country, 'country')
+      CertificationStore.changeInfoItem(country, 'country')
     }
   }
 
   canSubmit = () => {
-    const {authStore} = this.props
+    const {CertificationStore} = this.props
     const {
       country,
       cardType,
       firstName,
       lastName,
       cardId
-    } = authStore.authInfo
+    } = CertificationStore.authInfo
     const {isChina} = this.state
     return isChina
       ? firstName && cardId
@@ -62,13 +62,13 @@ class VerifiedIdentity extends Component {
   }
 
   onSubmit = () => {
-    const {history, authStore} = this.props
-    const {cardId} = authStore.authInfo
+    const {history, CertificationStore} = this.props
+    const {cardId} = CertificationStore.authInfo
     if (cardId.length < 7 && cardId.length <= 18) {
       Toast.info('请输入7-18位证件号码', TOAST_DURATION)
       return
     }
-    authStore.submitAuthentication().then(res => {
+    CertificationStore.submitAuthentication().then(res => {
       if (res.status !== 1) {
         Toast.info(res.msg, TOAST_DURATION)
         return
@@ -78,8 +78,8 @@ class VerifiedIdentity extends Component {
   }
 
   render() {
-    const {authStore} = this.props
-    const {cardType, firstName, lastName, cardId} = authStore.authInfo
+    const {CertificationStore} = this.props
+    const {cardType, firstName, lastName, cardId} = CertificationStore.authInfo
     const {isChina} = this.state
 
     return (
@@ -99,7 +99,7 @@ class VerifiedIdentity extends Component {
                 placeholder="您的姓名"
                 value={firstName}
                 onChange={e =>
-                  authStore.changeInfoItem(e.target.value, 'firstName')
+                  CertificationStore.changeInfoItem(e.target.value, 'firstName')
                 }
               />
               <input
@@ -107,8 +107,8 @@ class VerifiedIdentity extends Component {
                 placeholder="身份证号"
                 value={cardId}
                 onChange={e => {
-                  authStore.changeInfoItem('身份证', 'cardType')
-                  authStore.changeInfoItem(e.target.value, 'cardId')
+                  CertificationStore.changeInfoItem('身份证', 'cardType')
+                  CertificationStore.changeInfoItem(e.target.value, 'cardId')
                 }}
               />
             </div>
@@ -121,7 +121,7 @@ class VerifiedIdentity extends Component {
                     key={type.name}
                     className={cardType === type.name ? 'active' : ''}
                     onClick={() =>
-                      authStore.changeInfoItem(type.name, 'cardType')
+                      CertificationStore.changeInfoItem(type.name, 'cardType')
                     }
                   >
                     <img
@@ -140,7 +140,7 @@ class VerifiedIdentity extends Component {
                   placeholder="姓"
                   value={firstName}
                   onChange={e =>
-                    authStore.changeInfoItem(e.target.value, 'firstName')
+                    CertificationStore.changeInfoItem(e.target.value, 'firstName')
                   }
                 />
                 <input
@@ -149,7 +149,7 @@ class VerifiedIdentity extends Component {
                   placeholder="名"
                   value={lastName}
                   onChange={e =>
-                    authStore.changeInfoItem(e.target.value, 'lastName')
+                    CertificationStore.changeInfoItem(e.target.value, 'lastName')
                   }
                 />
                 <input
@@ -158,7 +158,7 @@ class VerifiedIdentity extends Component {
                   placeholder="证件号"
                   value={cardId}
                   onChange={e =>
-                    authStore.changeInfoItem(e.target.value, 'cardId')
+                    CertificationStore.changeInfoItem(e.target.value, 'cardId')
                   }
                 />
               </div>
