@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 import {CONFIG} from '../config'
 import {optionsToHump, optionsToLine} from '../utils/common'
 import {Toast} from "antd-mobile"
-import {TOAST_DURATION} from "../utils/constants"
+// import {TOAST_DURATION} from "../utils/constants"
 
 const requestToast = Toast
 const axiosConfig = {
@@ -67,7 +67,8 @@ instance.interceptors.response.use(response => {
     Cookies.remove('OPENID')
     Cookies.remove('TOKEN')
     Cookies.remove('PAY_PASSWORD')
-    Toast.info('请先登录', TOAST_DURATION, () => window.location.href = '/login')
+    Cookies.remove('LAST_TIME')
+    // Toast.info('请先登录', TOAST_DURATION, () => window.location.href = '/login')
     return res
   }
 

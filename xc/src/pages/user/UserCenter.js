@@ -141,7 +141,7 @@ class UserCenter extends Component {
           <div className="list-tip">
             {userInfo.isF ? (
               <span className="active">
-                F用户生效中，{userInfo.isFTime}失效
+                活跃用户生效中，{userInfo.isFTime}失效
               </span>
             ) : (
               <span> 非F用户，暂不可享推广奖励</span>
@@ -190,7 +190,7 @@ class UserCenter extends Component {
               padding: '10px'
             }}
           >
-            当您参与计划成功后，将获得F用户的标示，F用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，f用户的有效期为3个交易日（包含成为当天）。
+            当您参与计划成功后，将获得活跃用户的标示，活跃用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，活跃用户的有效期为3个交易日（包含成为当天）。
           </div>
         </Modal>
       </div>

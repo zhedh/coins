@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import {Button, Toast} from 'antd-mobile'
 import AccountHeader from '../../components/partial/AccountHeader'
+import {TOAST_DURATION} from "../../utils/constants"
 import './InviteCode.scss'
 
 @inject('userStore')
@@ -20,7 +21,7 @@ class InviteCode extends Component {
     const {code} = this.state
     const {history, userStore} = this.props
     const infoKey = userStore.getInfoKey()
-    console.log(infoKey)
+
     if (!infoKey) {
       Toast.fail('授权失效，请返回重试')
       return
@@ -33,7 +34,7 @@ class InviteCode extends Component {
       })
       .then(res => {
         if (res.status === 200) {
-          Toast.success('授权成功', 1, () => {
+          Toast.success('授权成功', TOAST_DURATION, () => {
             history.push('/deposit')
           })
           return

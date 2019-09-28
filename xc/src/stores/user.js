@@ -40,10 +40,6 @@ class UserStore {
   newUserLogin(options) {
     return AuthApi.newUserLogin(options).then(res => {
       if (res.status === 200) {
-        this.openid = res.data.openId
-        this.token = res.data.token
-        this.payPassword = res.data.payPassword
-        this.lastTime = res.data.lastTime
         this.setUserCookie(res.data)
       }
       return res
@@ -53,22 +49,12 @@ class UserStore {
   @action
   oldUserLogin(options) {
     return AuthApi.oldUserLogin(options).then(res => {
-      if (res.status === -1) {
-        window.location.href = '/authorization?tab=1'
-        return
-      }
-
       if (res.status === 200) {
-        window.location.href = '/home'
-
-        this.openid = res.data.open_id
-        this.token = res.data.token
-        this.payPassword = res.data.pay_password
+        this.setUserCookie(res.data)
       }
       return res
     })
   }
-
   // ---auth -----
 
   @action

@@ -28,7 +28,7 @@ class Index extends Component {
         userStore.setInfoKey(infoKey)
         return
       }
-      // history.push('/zbx-login')
+      history.push('/zbx-login')
     })
   }
 
