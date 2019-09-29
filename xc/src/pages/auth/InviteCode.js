@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Button, Toast} from 'antd-mobile'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Button, Toast } from 'antd-mobile'
 import AccountHeader from '../../components/partial/AccountHeader'
-import {TOAST_DURATION} from "../../utils/constants"
+import { TOAST_DURATION } from '../../utils/constants'
 import './InviteCode.scss'
 
 @inject('userStore')
@@ -13,19 +13,19 @@ class InviteCode extends Component {
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
+    const { value } = e.target
+    this.setState({ [key]: value })
   }
 
   onSubmit = () => {
-    const {code} = this.state
-    const {history, userStore} = this.props
+    const { code } = this.state
+    const { history, userStore } = this.props
     const infoKey = userStore.getInfoKey()
 
-    if (!infoKey) {
-      Toast.fail('授权失效，请返回重试')
-      return
-    }
+    // if (!infoKey) {
+    //   Toast.fail('授权失效，请返回重试')
+    //   return
+    // }
 
     userStore
       .newUserLogin({
@@ -37,19 +37,21 @@ class InviteCode extends Component {
           Toast.success('授权成功', TOAST_DURATION, () => {
             history.push('/deposit')
           })
-          return
+        } else {
+          Toast.info(res.msg, TOAST_DURATION, () => {
+            history.push('/ZbxLogin')
+          })
         }
-        Toast.info(res.msg)
       })
   }
 
   render() {
-    const {code} = this.state
+    const { code } = this.state
     const canSubmit = code === ''
 
     return (
       <div id="inviteCode">
-        <AccountHeader title="输入邀请码"/>
+        <AccountHeader title="输入邀请码" />
         <div className="content">
           <label>
             <input

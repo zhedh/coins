@@ -1,12 +1,12 @@
-import React, {Component} from "react"
-import {inject, observer} from "mobx-react"
-import {Button, Toast} from "antd-mobile"
-import AccountHeader from "../../components/partial/AccountHeader"
-import openPwdImg from "../../assets/images/open-pwd.png"
-import closePwdImg from "../../assets/images/close-pwd.png"
-import {isEmail, isMobile, isPassword} from "../../utils/reg"
-import {TOAST_DURATION} from "../../utils/constants"
-import "./Bind.scss"
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Button, Toast } from 'antd-mobile'
+import AccountHeader from '../../components/partial/AccountHeader'
+import openPwdImg from '../../assets/images/open-pwd.png'
+import closePwdImg from '../../assets/images/close-pwd.png'
+import { isEmail, isMobile, isPassword } from '../../utils/reg'
+import { TOAST_DURATION } from '../../utils/constants'
+import './Bind.scss'
 
 @inject('userStore')
 @observer
@@ -19,23 +19,23 @@ class Bind extends Component {
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
+    const { value } = e.target
+    this.setState({ [key]: value })
   }
 
   onSetType = currentType => {
-    this.setState({type: currentType === 'text' ? 'password' : 'text'})
+    this.setState({ type: currentType === 'text' ? 'password' : 'text' })
   }
 
   onSubmit = () => {
-    const {history, userStore} = this.props
+    const { history, userStore } = this.props
     const infoKey = userStore.getInfoKey()
-    const {account, password, phonePrefix} = this.state
+    const { account, password, phonePrefix } = this.state
 
-    if (!infoKey) {
-      Toast.fail('授权失效，请返回重试')
-      return
-    }
+    // if (!infoKey) {
+    //   Toast.fail('授权失效，请返回重试')
+    //   return
+    // }
 
     if (!isEmail(account) && !isMobile(account)) {
       Toast.info('账号输入错误', TOAST_DURATION)
@@ -52,7 +52,7 @@ class Bind extends Component {
         infoKey,
         userName: account,
         password,
-        phonePrefix: isMobile(account) ? phonePrefix : null,
+        phonePrefix: isMobile(account) ? phonePrefix : null
       })
       .then(res => {
         if (res.status === 200) {
@@ -60,18 +60,21 @@ class Bind extends Component {
             history.push('/deposit')
           })
           return
+        } else {
+          Toast.info(res.msg, TOAST_DURATION, () => {
+            history.push('/ZbxLogin')
+          })
         }
-        Toast.info(res.msg)
       })
   }
 
   render() {
-    const {account, password, type} = this.state
+    const { account, password, type } = this.state
     const canSubmit = account === '' || password === ''
 
     return (
       <div id="bind">
-        <AccountHeader title="账号绑定"/>
+        <AccountHeader title="账号绑定" />
         <div className="content">
           <label>
             <input
