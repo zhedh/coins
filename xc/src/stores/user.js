@@ -33,7 +33,12 @@ class UserStore {
 
   @action
   userAuth(options) {
-    return AuthApi.userAuth(options)
+    return AuthApi.userAuth(options).then(res => {
+      if (res.status === 200) {
+        this.setUserCookie(res.data)
+      }
+      return res
+    })
   }
 
   @action
@@ -55,6 +60,7 @@ class UserStore {
       return res
     })
   }
+
   // ---auth -----
 
   @action
