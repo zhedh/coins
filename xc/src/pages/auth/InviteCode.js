@@ -37,6 +37,10 @@ class InviteCode extends Component {
           Toast.success('授权成功', TOAST_DURATION, () => {
             history.push('/deposit')
           })
+        } else if (res.status === -120) {
+          Toast.info(res.msg, TOAST_DURATION, () => {
+            history.push('/404')
+          })
         } else {
           Toast.info(res.msg, TOAST_DURATION, () => {
             history.push('/ZbxLogin')
