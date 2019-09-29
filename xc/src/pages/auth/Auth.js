@@ -16,7 +16,7 @@ class Index extends Component {
   // 获取rsa和签名,
   sendUserAuth = () => {
     const {userStore, history} = this.props
-    const info = getQueryParam('rsa')
+    const info = getQueryParam('info')
     const signature = getQueryParam('signature')
     userStore.userAuth({info, signature}).then(res => {
       if (res.status === 200) {
