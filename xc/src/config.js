@@ -19,10 +19,12 @@ export const SWITCH = {
 const COIN = {
   XC: {
     PROD: {
-      API_BASE_URL: 'https://api.zbxcoin.com/api'
+      API_BASE_URL: 'https://api.zbxcoin.com/api',
+      XC_AUTH_URL:'https://test.zbx.one/xplan_authorization',
     },
     DEV: {
-      API_BASE_URL: 'http://47.75.138.157/api'
+      API_BASE_URL: 'http://47.75.138.157/api',
+      XC_AUTH_URL:'https://test.zbx.one/xplan_authorization',
     }
   }
 }

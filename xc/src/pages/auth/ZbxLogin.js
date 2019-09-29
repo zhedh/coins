@@ -3,11 +3,12 @@ import {observer} from 'mobx-react'
 import Header from '../../components/common/Header'
 import AuthBanner from '../../assets/images/xc/auth-advantage.png'
 import './ZbxLogin.scss'
+import {CONFIG} from "../../config";
 
 @observer
 class Index extends Component {
   onZbxLogin = () => {
-    console.log('获取用户信息')
+    window.location.href = CONFIG.XC_AUTH_URL
   }
 
   render() {
