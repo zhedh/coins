@@ -14,10 +14,10 @@ class InterceptRouter extends Component {
 
   componentDidMount() {
     const {history, location} = this.props
-    if (location.pathname === '/') {
-      history.push('/home')
-      // history.push('/login')
-    }
+    // if (location.pathname === '/') {
+    //   history.push('/home')
+    //   // history.push('/login')
+    // }
     if (location.pathname !== '/user-center') {
       hideChatButton();
     }
