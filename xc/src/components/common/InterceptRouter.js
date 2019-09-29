@@ -1,25 +1,25 @@
-import {Component} from "react"
-import {withRouter} from "react-router"
-import {inject, observer} from "mobx-react"
-import {hideChatButton} from "../../utils/common";
+import { Component } from 'react'
+import { withRouter } from 'react-router'
+import { inject, observer } from 'mobx-react'
+import { hideChatButton } from '../../utils/common'
 
 @inject('userStore')
 @inject('productStore')
 @observer
 class InterceptRouter extends Component {
   componentWillMount() {
-    const {userStore} = this.props
+    const { userStore } = this.props
     userStore.getUserStatus()
   }
 
   componentDidMount() {
-    const {history, location} = this.props
+    const { location } = this.props
     // if (location.pathname === '/') {
     //   history.push('/home')
     //   // history.push('/login')
     // }
     if (location.pathname !== '/user-center') {
-      hideChatButton();
+      hideChatButton()
     }
   }
 
