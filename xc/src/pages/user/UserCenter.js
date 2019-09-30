@@ -1,20 +1,20 @@
-import React, {Component, PureComponent} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Modal} from 'antd-mobile'
-import {FaRegQuestionCircle} from 'react-icons/fa'
+import React, { Component, PureComponent } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Modal } from 'antd-mobile'
+import { FaRegQuestionCircle } from 'react-icons/fa'
 import Header from '../../components/common/Header'
-import {hideChatButton} from '../../utils/common'
+import { hideChatButton } from '../../utils/common'
 import './UserCenter.scss'
 
 class ListItem extends PureComponent {
   render() {
-    const {icon, name, url, onHandle} = this.props
+    const { icon, name, url, onHandle } = this.props
     return (
       <div
         className="list-item"
-        onClick={() => onHandle ? onHandle() : window.location.href = url}
+        onClick={() => (onHandle ? onHandle() : (window.location.href = url))}
       >
-        <img className="icon" src={icon} alt=""/>
+        <img className="icon" src={icon} alt="" />
         <span>{name}</span>
         <img
           className="arrow"
@@ -30,10 +30,10 @@ class ListItem extends PureComponent {
 @inject('personStore')
 @observer
 class UserCenter extends Component {
-  state = {isOnline: true, showFModal: false}
+  state = { isOnline: true, showFModal: false }
 
   componentDidMount() {
-    const {personStore, userStore} = this.props
+    const { personStore, userStore } = this.props
     this.createIframe()
 
     if (userStore.isOnline) {
@@ -56,12 +56,12 @@ class UserCenter extends Component {
   }
 
   onBack = () => {
-    const {history} = this.props
+    const { history } = this.props
     history.push('/home')
   }
 
   logout = () => {
-    const {history, userStore} = this.props
+    const { history, userStore } = this.props
     // 调取退出登录接口
     Modal.alert('是否退出登录？', '', [
       {
@@ -94,9 +94,9 @@ class UserCenter extends Component {
   }
 
   render() {
-    const {history, userStore, personStore} = this.props
-    const {userInfo} = personStore
-    const {showFModal} = this.state
+    const { history, userStore, personStore } = this.props
+    const { userInfo } = personStore
+    const { showFModal } = this.state
     // const hideAuthButton =
     //   userInfo.authentication === 1 || userInfo.authentication === 2
 
@@ -118,7 +118,8 @@ class UserCenter extends Component {
               />
               <ul>
                 <li>{userInfo.email || userInfo.phoneNo}</li>
-                <li>{this.getAuthLabel(userInfo.authentication)}</li>
+                <li>{userInfo.bindAccount}</li>
+                {/* <li>{this.getAuthLabel(userInfo.authentication)}</li> */}
               </ul>
               {/*{!hideAuthButton && (*/}
               {/*<button*/}
@@ -148,7 +149,7 @@ class UserCenter extends Component {
             )}
             &nbsp;
             <FaRegQuestionCircle
-              onClick={() => this.setState({showFModal: true})}
+              onClick={() => this.setState({ showFModal: true })}
             />
           </div>
         </section>
@@ -181,7 +182,7 @@ class UserCenter extends Component {
           maskClosable
           transparent
           title="F用户说明"
-          onClose={() => this.setState({showFModal: false})}
+          onClose={() => this.setState({ showFModal: false })}
         >
           <div
             style={{
