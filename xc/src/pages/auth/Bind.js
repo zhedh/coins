@@ -61,9 +61,10 @@ class Bind extends Component {
           })
           return
         } else {
-          Toast.info(res.msg, TOAST_DURATION, () => {
-            history.push('/zbx-login')
-          })
+          Toast.info(res.msg, TOAST_DURATION)
+          // Toast.info(res.msg, TOAST_DURATION, () => {
+          //   history.push('/zbx-login')
+          // })
         }
       })
   }

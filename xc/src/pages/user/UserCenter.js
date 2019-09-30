@@ -118,7 +118,7 @@ class UserCenter extends Component {
               />
               <ul>
                 <li>{userInfo.email || userInfo.phoneNo}</li>
-                <li>{userInfo.bindAccount}</li>
+                <li>{userInfo.authUserid}</li>
                 {/* <li>{this.getAuthLabel(userInfo.authentication)}</li> */}
               </ul>
               {/*{!hideAuthButton && (*/}

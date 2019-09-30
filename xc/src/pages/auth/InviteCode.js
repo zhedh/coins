@@ -38,9 +38,8 @@ class InviteCode extends Component {
             history.push('/deposit')
           })
         } else {
-          Toast.info(res.msg, TOAST_DURATION, () => {
-            history.push('/zbx-login')
-          })
+          Toast.info(res.msg, TOAST_DURATION)
+          //  () => { history.push('/zbx-login')}
         }
       })
   }
