@@ -70,10 +70,10 @@ const Login = Loadable({
 //   loader: () => import('./pages/login/Register'),
 //   loading: Loading
 // })
-const Password = Loadable({
-  loader: () => import('./pages/login/Password'),
-  loading: Loading
-})
+// const Password = Loadable({
+//   loader: () => import('./pages/login/Password'),
+//   loading: Loading
+// })
 
 const UserCenter = Loadable({
   loader: () => import('./pages/user/UserCenter'),
@@ -183,9 +183,9 @@ export default [
   },
 
   // 登陆注册
-  {path: '/login', name: 'Login', component: Login},
+  // {path: '/login', name: 'Login', component: Login},
   // { path: '/register', name: 'Register', component: Register },
-  {path: '/password/:type', name: 'Password', component: Password},
+  // {path: '/password/:type', name: 'Password', component: Password},
 
   // 个人中心
   {path: '/user-center', name: 'UserCenter', component: UserCenter},

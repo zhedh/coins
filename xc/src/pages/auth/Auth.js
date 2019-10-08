@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import {getQueryParam} from '../../utils/common'
 import Header from '../../components/common/Header'
+import Loading from "../../components/common/Loading"
 import AuthBanner from '../../assets/images/xc/auth-advantage.png'
 import AuthArrow from '../../assets/images/xc/auth-arrow.png'
 import './Auth.scss'
@@ -9,6 +10,10 @@ import './Auth.scss'
 @inject('userStore')
 @observer
 class Index extends Component {
+  state = {
+    show: false
+  }
+
   componentDidMount() {
     this.sendUserAuth()
   }
@@ -26,6 +31,7 @@ class Index extends Component {
       if (res.status === 201) {
         const {infoKey} = res.data
         userStore.setInfoKey(infoKey)
+        this.setState({show: true})
         return
       }
       history.push('/zbx-login')
@@ -43,28 +49,34 @@ class Index extends Component {
   }
 
   render() {
+    const {show} = this.state
     return (
       <div id="auth">
-        <Header bgWhite isFixed isShadow title="选择授权方式"/>
-        <div className="main-content">
-          <img className="banner" src={AuthBanner} alt=""/>
+        {show ?
+          <div>
+            <Header bgWhite isFixed isShadow title="选择授权方式"/>
+            <div className="main-content">
+              <img className="banner" src={AuthBanner} alt=""/>
 
-          <div className="line" onClick={this.newUserAuth}>
-            <div>
-              <span>我是新用户</span>
-              <span>使用当前zbx账号直接授权登录</span>
-            </div>
-            <img src={AuthArrow} alt=""/>
-          </div>
+              <div className="line" onClick={this.newUserAuth}>
+                <div>
+                  <span>我是新用户</span>
+                  <span>使用当前zbx账号直接授权登录</span>
+                </div>
+                <img src={AuthArrow} alt=""/>
+              </div>
 
-          <div className="line" onClick={this.hadAuth}>
-            <div>
-              <span>已有账号绑定</span>
-              <span>登录已有账号,与当前ZBX账号绑定</span>
+              <div className="line" onClick={this.hadAuth}>
+                <div>
+                  <span>已有账号绑定</span>
+                  <span>登录已有账号,与当前ZBX账号绑定</span>
+                </div>
+                <img src={AuthArrow} alt=""/>
+              </div>
             </div>
-            <img src={AuthArrow} alt=""/>
-          </div>
-        </div>
+          </div> :
+          <Loading/>
+        }
       </div>
     )
   }
