@@ -104,8 +104,8 @@ class UserCenter extends Component {
     const { userInfo } = personStore
     const { locale, USER_CENTER } = localeStore.language || {}
     const { showFModal, showLocaleModal } = this.state
-    const hideAuthButton =
-      userInfo.authentication === 1 || userInfo.authentication === 2
+    // const hideAuthButton =
+    //   userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
       <div id="user-center">
@@ -125,16 +125,16 @@ class UserCenter extends Component {
               />
               <ul>
                 <li>{userInfo.email || userInfo.phoneNo}</li>
-                <li>{this.getAuthLabel(userInfo.authentication)}</li>
+                {/*<li>{this.getAuthLabel(userInfo.authentication)}</li>*/}
               </ul>
-              {!hideAuthButton && (
-                <button
-                  className={'auth-btn'}
-                  onClick={() => history.push('/verified-country')}
-                >
-                  {USER_CENTER.IDENTITIY_VERIFICATION}
-                </button>
-              )}
+              {/*{!hideAuthButton && (*/}
+              {/*<button*/}
+              {/*className={'auth-btn'}*/}
+              {/*onClick={() => history.push('/verified-country')}*/}
+              {/*>*/}
+              {/*{USER_CENTER.IDENTITIY_VERIFICATION}*/}
+              {/*</button>*/}
+              {/*)}*/}
             </div>
           ) : (
             <h1 onClick={() => history.push('/login')}>
