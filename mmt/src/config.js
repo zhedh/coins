@@ -8,11 +8,7 @@
  * ONLINE bool 线上版本
  * */
 
-// export const SWITCH = {
-//   PROJECT: 'MMT',
-// }
-
-const ONLINE = false
+const ONLINE = true
 
 const CONFIG = {
   PROD: {
