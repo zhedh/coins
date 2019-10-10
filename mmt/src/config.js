@@ -8,7 +8,7 @@
  * ONLINE bool 线上版本
  * */
 
-const ONLINE = true
+const ONLINE = false
 
 const CONFIG = {
   PROD: {
