@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button, Toast } from 'antd-mobile'
-import AccountHeader from '../../components/partial/AccountHeader'
+import Header from '../../components/common/Header'
 import { TOAST_DURATION } from '../../utils/constants'
 import './InviteCode.scss'
 
@@ -50,7 +50,8 @@ class InviteCode extends Component {
 
     return (
       <div id="inviteCode">
-        <AccountHeader title="输入邀请码" />
+        <Header title="邀请码" />
+        {/* <AccountHeader title="输入邀请码" /> */}
         <div className="content">
           <label>
             <input

@@ -8,9 +8,14 @@
     display: block;
   }
 
+  h2 {
+    font-size: 1.3rem;
+    margin: 5rem 2.2rem 0;
+  }
+
   .gears {
     @include clearList;
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 0 10px;
 
     display: flex;
@@ -29,9 +34,9 @@
         align-items: center;
         box-sizing: border-box;
         height: 7.4rem;
-        border: 2px solid $text-sub-color;
+        border: 2px solid #e7e7e8;
         border-radius: 5px;
-        color: $text-sub-color;
+        color: #e7e7e8;
 
         .price {
           font-size: $font-title;
@@ -48,9 +53,23 @@
         border-color: $primary-color;
 
         .box {
+          position: relative;
           border-color: $primary-color;
-          color: $text-color;
+          color: $primary-color;
           font-weight: bold;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            min-height: 4rem;
+            background-image: url('../../assets/images/new/select-deposit.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
         }
       }
     }
@@ -93,9 +112,9 @@
 
   .btn {
     @include clearButton;
-    margin: 0 20px 20px;
+    margin: 0 27% 20px;
     height: 5rem;
-    border-radius: 2.5rem;
+    border-radius: 0.7rem;
     color: #fff;
     background-color: $primary-color;
     font-size: 1.5rem;

@@ -1,29 +1,37 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { FOOTER } from '../../assets/static'
-import FindSvg from '../../assets/images/common/icon-home.svg'
-import DepositSvg from '../../assets/images/common/icon-deposit.svg'
-import WalletSvg from '../../assets/images/common/icon-wallet.svg'
+import HomeSvg from '../../assets/images/new/icon-home.png'
+import PlanActive from '../../assets/images/new/icon-plan.png'
+import WalletSvg from '../../assets/images/new/icon-wallet.png'
+import UserSvg from '../../assets/images/new/icon-user.png'
+
 import './Footer.scss'
 
 const TABS = [
   {
     pathname: '/home',
     label: '首页',
-    image: FindSvg,
+    image: HomeSvg,
     imagePre: FOOTER.ICON_HOME
   },
   {
     pathname: '/deposit',
     label: FOOTER.LABEL_DEPOSIT,
-    image: DepositSvg,
-    imagePre: FOOTER.ICON_DEPOSIT
+    image: PlanActive,
+    imagePre: FOOTER.ICON_PLAN
   },
   {
     pathname: '/wallet',
     label: '钱包',
     image: WalletSvg,
     imagePre: FOOTER.ICON_WALLET
+  },
+  {
+    pathname: '/user-center',
+    label: '我的',
+    image: UserSvg,
+    imagePre: FOOTER.ICON_USER
   }
 ]
 
@@ -33,7 +41,9 @@ const PATHS = [
   '/deposit',
   '/deposit/',
   '/wallet',
-  '/wallet/'
+  '/wallet/',
+  '/user-center',
+  '/user-center/'
 ]
 
 class Footer extends Component {
@@ -61,7 +71,7 @@ class Footer extends Component {
                 }
                 alt={tab.label}
               />
-              {tab.label}
+              {/* {tab.label} */}
             </li>
           ))}
         </ul>

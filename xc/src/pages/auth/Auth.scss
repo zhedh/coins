@@ -25,6 +25,10 @@
       margin-top: 20px;
       border-radius: 3px;
 
+      &.active {
+        border-color: #dd6b37;
+      }
+
       &.zbx {
         margin-top: 80px;
       }

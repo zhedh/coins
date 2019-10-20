@@ -13,10 +13,12 @@
     padding: 0 20px;
 
     &.content-detail {
+      text-align: left;
       line-height: 1.5;
 
       h1 {
-        margin-bottom: -1px;
+        margin: 0 0 -1px;
+        // margin-bottom: -1px;
       }
 
       a {
@@ -80,7 +82,7 @@
   }
 
   .primary-button {
-    margin: 50px 20px 20px;
+    margin: 50px 27% 20px;
   }
 
   .confirm-wrapper {

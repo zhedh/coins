@@ -1,6 +1,8 @@
 import React, { Component, PureComponent } from 'react'
 import { inject, observer } from 'mobx-react'
+import userIcon from '../../assets/images/new/user.png'
 import { Modal } from 'antd-mobile'
+import { Link } from 'react-router-dom'
 import { FaRegQuestionCircle } from 'react-icons/fa'
 import Header from '../../components/common/Header'
 import { hideChatButton } from '../../utils/common'
@@ -104,10 +106,48 @@ class UserCenter extends Component {
       <div id="user-center">
         <Header
           title="个人中心"
-          isShadow={true}
-          bgWhite
+          bgPrimary
+          hideIcon
           onHandle={() => this.onBack()}
         />
+        <section className="banner">
+          <img src={userIcon} alt="" />
+          <p>测试账号@qq.com</p>
+          <Link to="/verified-country">未实名认证</Link>
+          <div className="list-tip">
+            {userInfo.isF ? (
+              <span className="active">
+                活跃用户生效中，{userInfo.isFTime}失效
+              </span>
+            ) : (
+              <span> 非F用户，暂不可享推广奖励</span>
+            )}
+            &nbsp;
+            <FaRegQuestionCircle
+              onClick={() => this.setState({ showFModal: true })}
+            />
+          </div>
+        </section>
+        <section className="list">
+          <ul>
+            <li>
+              <img src="" alt="" />
+              公告列表
+            </li>
+            <li>
+              <img src="" alt="" />
+              公告列表
+            </li>
+            <li>
+              <img src="" alt="" />
+              公告列表
+            </li>
+            <li>
+              <img src="" alt="" />
+              公告列表
+            </li>
+          </ul>
+        </section>
         <section className={`list-content list-first`}>
           {userStore.isOnline ? (
             <div className="list-item">

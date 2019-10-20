@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Header from '../../components/common/Header'
-import {Toast} from 'antd-mobile'
-import {OtherApi} from '../../api'
-import {HOME} from "../../assets/static";
+import { Toast } from 'antd-mobile'
+import { OtherApi } from '../../api'
+import { HOME } from '../../assets/static'
 import './Rule.scss'
 
 class Rule extends Component {
@@ -20,16 +20,16 @@ class Rule extends Component {
         Toast.info(res.msg)
         return
       }
-      this.setState({content: res.data[0].content})
+      this.setState({ content: res.data[0].content })
     })
   }
 
   render() {
-    const {content} = this.state
+    const { content } = this.state
     return (
       <div id="rule">
-        <Header title={HOME.RULE_TITLE} isFixed isShadow bgWhite/>
-        <div dangerouslySetInnerHTML={{__html: content}}/>
+        <Header title={HOME.RULE_TITLE} isFixed isShadow bgPrimary />
+        <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     )
   }

@@ -5,15 +5,21 @@ export const COMMON = {
 }
 
 export const FOOTER = {
-  ICON_HOME: require('../images/xc/icon-home.svg'),
-  ICON_DEPOSIT: require('../images/xc/icon-deposit.svg'),
-  ICON_WALLET: require('../images/xc/icon-wallet.svg'),
+  ICON_HOME: require('../images/new/icon-home-active.png'),
+  ICON_WALLET: require('../images/new/icon-wallet-active.png'),
+  ICON_USER: require('../images/new/icon-user-active.png'),
+  ICON_PLAN: require('../images/new/icon-plan-active.png'),
+
+  // ICON_HOME: require('../images/xc/icon-home.svg'),
+  // ICON_DEPOSIT: require('../images/xc/icon-deposit.svg'),
+  // ICON_WALLET: require('../images/xc/icon-wallet.svg'),
+  // ICON_MINE: require('../images/xc/icon-mine.svg'),
   LABEL_DEPOSIT: 'X PLAN'
 }
 
 export const HOME = {
   TITLE: 'X PLAN',
-  IMG_BG: require('../images/xc/home-bg.png'),
+  IMG_BG: require('../images/new/home-banner.png'),
   GENERALIZE_BG: require('../images/xc/generalize-banner.jpg'),
   GENERALIZE_LEVEL: ['无', '普通', '初级', '中级', '高级', '超级'],
   GENERALIZE_USER_ONE_ICON: require('../images/xc/generalize-user-one.png'),
@@ -32,9 +38,10 @@ export const AUTH = {
   IMG_ID_CARD: require('../images/xc/auth-id-card.svg'),
   IMG_PASSPORT: require('../images/xc/auth-passport.svg'),
   IMG_DRIVING: require('../images/xc/auth-driving.svg'),
-  IMG_WAIT: require('../images/xc/auth-wait.png'),
-  IMG_SUCCESS: require('../images/xc/auth-success.png'),
-  IMG_FAIL: require('../images/xc/auth-fail.png'),
+  // IMG_WAIT: require('../images/xc/auth-wait.png'),
+  IMG_WAIT: require('../images/new/auth-wait.png'),
+  IMG_SUCCESS: require('../images/new/auth-success.png'),
+  IMG_FAIL: require('../images/new/auth-fail.png'),
   UPLOAD_WRITE: 'X PLAN'
 }
 

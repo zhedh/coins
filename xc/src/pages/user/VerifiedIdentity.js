@@ -1,9 +1,9 @@
-import React, {Component, Fragment} from 'react'
-import {Button, Toast} from 'antd-mobile'
-import {inject, observer} from 'mobx-react'
-import {AUTH} from '../../assets/static'
+import React, { Component, Fragment } from 'react'
+import { Button, Toast } from 'antd-mobile'
+import { inject, observer } from 'mobx-react'
+import { AUTH } from '../../assets/static'
 import Header from '../../components/common/Header'
-import {COUNTRIES_LIST, TOAST_DURATION} from '../../utils/constants'
+import { COUNTRIES_LIST, TOAST_DURATION } from '../../utils/constants'
 import './VerifiedIdentity.scss'
 
 const typeList = [
@@ -38,16 +38,16 @@ class VerifiedIdentity extends Component {
   }
 
   componentDidMount() {
-    const {CertificationStore, match} = this.props
-    const {country} = match.params
+    const { CertificationStore, match } = this.props
+    const { country } = match.params
     if (country) {
-      this.setState({isChina: country === COUNTRIES_LIST[0]})
+      this.setState({ isChina: country === COUNTRIES_LIST[0] })
       CertificationStore.changeInfoItem(country, 'country')
     }
   }
 
   canSubmit = () => {
-    const {CertificationStore} = this.props
+    const { CertificationStore } = this.props
     const {
       country,
       cardType,
@@ -55,15 +55,15 @@ class VerifiedIdentity extends Component {
       lastName,
       cardId
     } = CertificationStore.authInfo
-    const {isChina} = this.state
+    const { isChina } = this.state
     return isChina
       ? firstName && cardId
       : country && cardType && firstName && lastName && cardId
   }
 
   onSubmit = () => {
-    const {history, CertificationStore} = this.props
-    const {cardId} = CertificationStore.authInfo
+    const { history, CertificationStore } = this.props
+    const { cardId } = CertificationStore.authInfo
     if (cardId.length < 7 && cardId.length <= 18) {
       Toast.info('请输入7-18位证件号码', TOAST_DURATION)
       return
@@ -78,17 +78,23 @@ class VerifiedIdentity extends Component {
   }
 
   render() {
-    const {CertificationStore} = this.props
-    const {cardType, firstName, lastName, cardId} = CertificationStore.authInfo
-    const {isChina} = this.state
+    const { CertificationStore } = this.props
+    const {
+      cardType,
+      firstName,
+      lastName,
+      cardId
+    } = CertificationStore.authInfo
+    const { isChina } = this.state
 
     return (
       <div id="verified-identity">
-        <Header/>
+        <Header bgPrimary />
         <div className="identity-top">
-          <img src={require('../../assets/images/identity.png')} alt=""/>
           <h2>填写信息</h2>
           <p>确认所填信息与证件一致</p>
+          {!isChina && <label>您可以选择一下验证方式</label>}
+          {/* <img src={require('../../assets/images/identity.png')} alt="" /> */}
         </div>
         <div className="identity-bottom">
           {isChina ? (
@@ -114,7 +120,6 @@ class VerifiedIdentity extends Component {
             </div>
           ) : (
             <Fragment>
-              <label>您可以选择一下验证方式</label>
               <ul className="identity-bottom__type">
                 {typeList.map(type => (
                   <li
@@ -128,7 +133,7 @@ class VerifiedIdentity extends Component {
                       src={cardType === type.name ? type.active : type.icon}
                       alt=""
                     />
-                    <br/>
+                    <br />
                     <small>{type.name}</small>
                   </li>
                 ))}
@@ -140,7 +145,10 @@ class VerifiedIdentity extends Component {
                   placeholder="姓"
                   value={firstName}
                   onChange={e =>
-                    CertificationStore.changeInfoItem(e.target.value, 'firstName')
+                    CertificationStore.changeInfoItem(
+                      e.target.value,
+                      'firstName'
+                    )
                   }
                 />
                 <input
@@ -149,7 +157,10 @@ class VerifiedIdentity extends Component {
                   placeholder="名"
                   value={lastName}
                   onChange={e =>
-                    CertificationStore.changeInfoItem(e.target.value, 'lastName')
+                    CertificationStore.changeInfoItem(
+                      e.target.value,
+                      'lastName'
+                    )
                   }
                 />
                 <input
@@ -167,9 +178,12 @@ class VerifiedIdentity extends Component {
         </div>
         <Button
           activeClassName="active"
-          className="primary-button"
+          className={`primary-button ${
+            !this.canSubmit() ? 'btn-disabled' : ''
+          }`}
           disabled={!this.canSubmit()}
-          onClick={this.onSubmit}>
+          onClick={this.onSubmit}
+        >
           下一步
         </Button>
       </div>

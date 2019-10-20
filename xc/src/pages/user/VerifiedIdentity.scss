@@ -1,40 +1,51 @@
 @import '../../styles/_common';
 
 #verified-identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  #common-header {
+    background: none;
+  }
+
   @include clearFix;
   .identity-top {
+    width: 100%;
     text-align: center;
-    margin-top: -30px;
+    margin-top: -25%;
     line-height: 1.2;
+    color: #fff;
 
-    img {
-      width: 6.4rem;
-      margin-bottom: 6px;
+    min-height: 20rem;
+    box-sizing: border-box;
+    padding: 30% 10% 15%;
+    background-image: url('../../assets/images/new/home-banner.png');
+    background-size: cover;
+    background-position: center;
+
+    label {
+      display: block;
+      margin-top: 7%;
+      font-size: $font-assistant;
     }
 
     h2 {
       @include clearBack;
       font-size: $font-title-l;
-      color: #35393e;
     }
 
     p {
       @include clearBack;
       margin-top: 13px;
-      color: $text-sub-color;
       font-weight: bold;
     }
   }
 
   .identity-bottom {
-    padding: 3rem 6rem;
+    padding: 3rem 5rem;
     text-align: center;
-
-    label {
-      display: block;
-      color: #CCCCCC;
-      font-size: $font-assistant;
-    }
 
     .identity-bottom__type {
       @include clearList;

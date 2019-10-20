@@ -8,6 +8,7 @@
   .content {
     box-sizing: border-box;
     padding: 0 20px;
+    margin-top: 30%;
 
     label {
       position: relative;
@@ -58,6 +59,10 @@
   }
 
   .btn-box {
-    padding: 5rem 20px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
   }
 }

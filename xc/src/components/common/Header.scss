@@ -26,12 +26,18 @@
     background: white;
   }
 
+  &.bg-Primary {
+    position: fixed;
+    color: #fff;
+    @include background-gradient(#e8713a, #ff905c);
+  }
+
   img {
     height: 1.5rem;
     padding: 6px;
     margin-left: -6px;
 
-    &.hidden{
+    &.hidden {
       visibility: hidden;
     }
   }

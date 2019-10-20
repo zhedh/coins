@@ -1,14 +1,14 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import {withRouter} from 'react-router'
-import {inject, observer} from 'mobx-react'
-import {Button, Toast} from 'antd-mobile'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
+import { inject, observer } from 'mobx-react'
+import { Button, Toast } from 'antd-mobile'
 import Header from '../common/Header'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
-import {formatCoinPrice} from '../../utils/format'
-import {COIN_POINT_LENGTH} from '../../utils/constants'
-import {DEPOSIT} from '../../assets/static'
+import { formatCoinPrice } from '../../utils/format'
+import { COIN_POINT_LENGTH } from '../../utils/constants'
+import { DEPOSIT } from '../../assets/static'
 import './DepositBuy.scss'
 
 @inject('productStore')
@@ -24,16 +24,16 @@ class DepositBuy extends Component {
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
+    const { value } = e.target
+    this.setState({ [key]: value })
   }
 
   onSetType = currentType => {
-    this.setState({pwdType: currentType === 'text' ? 'password' : 'text'})
+    this.setState({ pwdType: currentType === 'text' ? 'password' : 'text' })
   }
 
   onDeposit = gearNum => {
-    const {userStore} = this.props
+    const { userStore } = this.props
     // if (!personStore.isAuth) {
     //   Toast.info('请进行实名认证')
     //   return
@@ -42,15 +42,15 @@ class DepositBuy extends Component {
       Toast.info('请设置交易密码')
       return
     }
-    if (gearNum) this.setState({showConfirm: true})
+    if (gearNum) this.setState({ showConfirm: true })
   }
 
   onSubmit = () => {
-    const {history, userStore, productStore} = this.props
-    const {payPassword} = this.state
-    this.setState({isSubmit: true})
+    const { history, userStore, productStore } = this.props
+    const { payPassword } = this.state
+    this.setState({ isSubmit: true })
     userStore
-      .getPayToken({payPassword})
+      .getPayToken({ payPassword })
       .then(res => {
         if (res.status !== 1) {
           Toast.info(res.msg)
@@ -60,11 +60,11 @@ class DepositBuy extends Component {
       })
       .then(payToken => {
         if (!payToken) {
-          this.setState({isSubmit: false})
+          this.setState({ isSubmit: false })
           return
         }
         productStore.createDepositOrder(payToken).then(res => {
-          this.setState({isSubmit: false})
+          this.setState({ isSubmit: false })
           if (res.status !== 1) {
             Toast.info(res.msg)
             return
@@ -74,34 +74,36 @@ class DepositBuy extends Component {
       })
       .catch(err => {
         console.log(err)
-        this.setState({isSubmit: false})
+        this.setState({ isSubmit: false })
       })
   }
 
   render() {
-    const {show, productStore, userStore} = this.props
-    const {showConfirm, payPassword, pwdType, isSubmit} = this.state
-    const {productDetail, gears, gearNum} = productStore
+    const { show, productStore, userStore } = this.props
+    const { showConfirm, payPassword, pwdType, isSubmit } = this.state
+    const { productDetail, gears, gearNum } = productStore
     const hasGears = gears && gears.length > 0
 
     return (
       <div className={`deposit-buy ${show ? 'show' : ''}`}>
+        <h2>数量选择</h2>
+
         <ul className="gears">
           {hasGears &&
-          gears.map(gear => (
-            <li
-              key={gear.num}
-              className={gearNum === gear.num ? 'active' : ''}
-              onClick={() => productStore.changeGearNum(gear.num)}
-            >
-              <div className="box">
-                <div className="price">
-                  {gear.num}
-                  <small>{productDetail.productName}</small>
+            gears.map(gear => (
+              <li
+                key={gear.num}
+                className={gearNum === gear.num ? 'active' : ''}
+                onClick={() => productStore.changeGearNum(gear.num)}
+              >
+                <div className="box">
+                  <div className="price">
+                    {gear.num}
+                    <small>{productDetail.productName}</small>
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
+              </li>
+            ))}
         </ul>
         <div className="fee">
           {gearNum && (
@@ -141,7 +143,7 @@ class DepositBuy extends Component {
               isShadow
               title="确认支付"
               icon={require('../../assets/images/close.png')}
-              onHandle={() => this.setState({showConfirm: false})}
+              onHandle={() => this.setState({ showConfirm: false })}
             />
             <div className="content">
               <p className="deposit-price">

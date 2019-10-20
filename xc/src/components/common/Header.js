@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import {withRouter} from 'react-router-dom'
+import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import './Header.scss'
 
 class Header extends Component {
   onBack = () => {
-    const {history, onHandle} = this.props
+    const { history, onHandle } = this.props
 
     if (onHandle) {
       onHandle()
@@ -21,18 +21,26 @@ class Header extends Component {
       isFixed,
       bgWhite,
       icon,
-      hideIcon
+      hideIcon,
+      bgPrimary
     } = this.props
     let classNames = ''
     classNames += isShadow ? 'shadow ' : ''
     classNames += isFixed ? 'fixed ' : ''
     classNames += bgWhite ? 'bg-White' : ''
+    classNames += bgPrimary ? 'bg-Primary' : ''
+
+    const iconSrc = icon
+      ? icon
+      : bgPrimary
+      ? require('../../assets/images/arrow-left-1.png')
+      : require('../../assets/images/arrow-left.png')
 
     return (
       <header id="common-header" className={classNames}>
         <img
-          className={hideIcon ? 'hidden': ''}
-          src={icon ? icon : require('../../assets/images/arrow-left.png')}
+          className={hideIcon ? 'hidden' : ''}
+          src={iconSrc}
           alt="返回"
           onClick={this.onBack}
         />

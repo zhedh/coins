@@ -1,21 +1,20 @@
-import React, {Component} from 'react'
-import {inject, observer} from "mobx-react"
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
 import Header from '../../components/common/Header'
-import {formatTime} from "../../utils/format";
-import NoData from "../../components/common/NoData";
+import { formatTime } from '../../utils/format'
+import NoData from '../../components/common/NoData'
 import './Notices.scss'
 
 @inject('noticeStore')
 @observer
 class Notices extends Component {
-
   componentDidMount() {
-    const {noticeStore} = this.props
+    const { noticeStore } = this.props
     noticeStore.getNotices()
   }
 
   render() {
-    const {history, noticeStore} = this.props
+    const { history, noticeStore } = this.props
 
     return (
       <div id="notices">
@@ -23,7 +22,7 @@ class Notices extends Component {
           title="公告列表"
           isShadow
           isFixed
-          bgWhite
+          bgPrimary
           onHandle={() => history.push('/user-center')}
         />
         <section>
@@ -40,7 +39,7 @@ class Notices extends Component {
               </ul>
             ))
           ) : (
-            <NoData msg="暂无数据"/>
+            <NoData msg="暂无数据" />
           )}
         </section>
       </div>

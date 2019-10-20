@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button, Toast } from 'antd-mobile'
-import AccountHeader from '../../components/partial/AccountHeader'
+import Header from '../../components/common/Header'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import { isEmail, isMobile, isPassword } from '../../utils/reg'
@@ -75,7 +75,8 @@ class Bind extends Component {
 
     return (
       <div id="bind">
-        <AccountHeader title="账号绑定" />
+        <Header title="账号绑定" />
+        {/* <AccountHeader title="账号绑定" /> */}
         <div className="content">
           <label>
             <input
@@ -109,7 +110,7 @@ class Bind extends Component {
             disabled={canSubmit}
             onClick={this.onSubmit}
           >
-            确认
+            确认绑定
           </Button>
         </div>
       </div>

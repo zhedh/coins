@@ -1,16 +1,16 @@
 @import '../../styles/_common';
 
 #deposit {
-  header > div {
-    .drawer-text {
-      position: absolute;
-      left: 15%;
-      top: 28%;
-      font-size: $font-title;
-      font-weight: 500;
-      color: $text-color;
-    }
-  }
+  // header > div {
+  //   .drawer-text {
+  //     position: absolute;
+  //     left: 15%;
+  //     top: 28%;
+  //     font-size: $font-title;
+  //     font-weight: 500;
+  //     color: $text-color;
+  //   }
+  // }
 
   .modal-btn {
     position: absolute;
@@ -41,24 +41,22 @@
     section.select-bar {
       width: 70%;
       margin: 3rem auto;
-      background: $assistant-color;
-      border-radius: 20px;
-      color: #fff;
+      background: #ececec;
+      // color: #fff;
       padding: 0;
+      box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.13);
 
       .segmented-control {
         .am-segment-item {
           border: none;
           background: rgba(232, 113, 58, 0.5);
-          color: #fff;
-          border-radius: 20px;
+          color: #000;
           padding: 12px 0;
           font-size: $font-context - 0.1;
         }
 
         .am-segment-item-selected {
-          border-radius: 20px;
-          background: $primary-color!important;
+          background: $primary-color !important;
         }
       }
     }
@@ -102,6 +100,7 @@
         }
 
         &.active {
+          color: $primary-color;
           background: rgba(232, 113, 58, 0.3);
         }
       }
