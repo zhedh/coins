@@ -1,6 +1,11 @@
 import React, { Component, PureComponent } from 'react'
 import { inject, observer } from 'mobx-react'
 import userIcon from '../../assets/images/new/user.png'
+import userNotice from '../../assets/images/new/user-notice.png'
+import userKefu from '../../assets/images/new/user-kefu.png'
+import userSafe from '../../assets/images/new/user-safe.png'
+import userInvite from '../../assets/images/new/user-invite.png'
+import userLogout from '../../assets/images/new/user-logout.png'
 import { Modal } from 'antd-mobile'
 import { Link } from 'react-router-dom'
 import { FaRegQuestionCircle } from 'react-icons/fa'
@@ -128,23 +133,31 @@ class UserCenter extends Component {
             />
           </div>
         </section>
-        <section className="list">
+        <section className="icon-list">
           <ul>
             <li>
-              <img src="" alt="" />
+              <img src={userNotice} alt="" />
+              <br />
               公告列表
             </li>
             <li>
-              <img src="" alt="" />
-              公告列表
+              <img src={userSafe} alt="" />
+              <br />
+              账户安全
             </li>
             <li>
-              <img src="" alt="" />
-              公告列表
+              <img src={userInvite} alt="" />
+              <br /> 邀请好友
+            </li>
+            <li onClick={() => history.push('/chat')}>
+              <img src={userKefu} alt="" />
+              <br />
+              联系客服
             </li>
             <li>
-              <img src="" alt="" />
-              公告列表
+              <img src={userLogout} alt="" />
+              <br />
+              退出登录
             </li>
           </ul>
         </section>
