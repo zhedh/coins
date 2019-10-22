@@ -152,7 +152,7 @@ export default {
     GENERATION_REFERRALS: '代推荐',
     MEMBERS: '用户',
     REFERRING_DATE: '推广时间',
-    GENERALIZE_LEVELS: ['无', '一级', '二级', '三级', '四级', '超级']
+    GENERALIZE_LEVELS: ['无','普通', '初级', '中级', '高级', '超级']
   },
   AUTH: {
     INPUT_MSG: '填写信息',
@@ -290,13 +290,14 @@ export default {
       '充值MMT后将自动根据MMT/MUSDT的时时汇率自动折合成MUSDT，折合时间根据MMT到账时间为准。',
     RECHARGE_MSG_TWO: [
       '转入是自动的，',
-      '转账需要整个ETH网络进行确认，您的',
+      '转账需要整个',
+      '网络进行确认，您的',
       '会自动充值到您的账户中。'
     ],
     RECHARGE_MSG_THREE:
       '此地址是您唯一且独自使用的转入地址，您可以同进进行多次充值。',
     RECHARGE_MSG_FOUR:
-      '本地址禁止充值除MUSDT之外的其它资产，任何其它资产充值将不可找回。',
+      ['本地址禁止充值除','之外的其它资产，任何其它资产充值将不可找回。'],
 
     DEPOSIT_USDT: 'USDT充值',
     USDT_MSG_ONE:

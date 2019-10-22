@@ -37,11 +37,11 @@ class Recharge extends Component {
       <div id="recharge">
         <Header title={`${type} ${WALLET.DEPOSIT}`} isFixed isShadow bgWhite/>
         <section className="section-main">
-          <div className="group qr-code__group">
-            <QrCodeBox key={address} codeMsg={address}/>
-            <br/>
-            <span>{WALLET.SAVE_QR_CODE}</span>
-          </div>
+          {/*<div className="group qr-code__group">*/}
+          {/*<QrCodeBox key={address} codeMsg={address}/>*/}
+          {/*<br/>*/}
+          {/*<span>{WALLET.SAVE_QR_CODE}</span>*/}
+          {/*</div>*/}
           <div className="group address">
             <p>{address}</p>
             <CopyToClipboard
@@ -61,12 +61,15 @@ class Recharge extends Component {
           )}
           <p>
             • {WALLET.RECHARGE_MSG_TWO[0]} {type}
-            {WALLET.RECHARGE_MSG_TWO[1]} {type}
+            {WALLET.RECHARGE_MSG_TWO[1]}
+            {type === 'USDT' ? 'BTC' : 'ETC'}
             {WALLET.RECHARGE_MSG_TWO[2]}
+            {type}
+            {WALLET.RECHARGE_MSG_TWO[3]}
           </p>
           <p> • {WALLET.RECHARGE_MSG_THREE}</p>
           <p>
-            • {WALLET.RECHARGE_MSG_FOUR[0]} {type}{WALLET.RECHARGE_MSG_FOUR[1]}
+            • {WALLET.RECHARGE_MSG_FOUR[0]} {type} {WALLET.RECHARGE_MSG_FOUR[1]}
           </p>
         </section>
       </div>

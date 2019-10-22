@@ -308,7 +308,7 @@ export default {
       'MMT deposit will be converted into MUSDT based on the real time rate of MMT/MUSDT, and the conversion time is based on the MMT deposit time.',
     RECHARGE_MSG_TWO: [
       'Deposit is automatic. ',
-      ' transfer requires confirmation of Ethereum network. Your ',
+      ' transfer requires confirmation of BTC network. Your ',
       ' will automatically deposit to your account.'
     ],
     RECHARGE_MSG_THREE:

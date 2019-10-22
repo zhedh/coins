@@ -1,14 +1,14 @@
-import React, { Component, PureComponent } from 'react'
-import { inject, observer } from 'mobx-react'
-import { Modal } from 'antd-mobile'
-import { FaRegQuestionCircle } from 'react-icons/fa'
+import React, {Component, PureComponent} from 'react'
+import {inject, observer} from 'mobx-react'
+import {Modal} from 'antd-mobile'
+import {FaRegQuestionCircle} from 'react-icons/fa'
 import Header from '../../components/common/Header'
-import { hideChatButton } from '../../utils/common'
+import {hideChatButton} from '../../utils/common'
 import './UserCenter.scss'
 
 class ListItem extends PureComponent {
   render() {
-    const { icon, name, url, onHandle } = this.props
+    const {icon, name, url, onHandle} = this.props
     return (
       <div
         className="list-item"
@@ -16,7 +16,7 @@ class ListItem extends PureComponent {
           onHandle ? onHandle() : (window.location.href = url)
         }}
       >
-        <img className="icon" src={icon} alt="" />
+        <img className="icon" src={icon} alt=""/>
         <span>{name}</span>
         <img
           className="arrow"
@@ -40,7 +40,7 @@ class UserCenter extends Component {
   }
 
   componentDidMount() {
-    const { personStore, userStore } = this.props
+    const {personStore, userStore} = this.props
 
     if (userStore.isOnline) {
       personStore.getUserInfo()
@@ -52,19 +52,19 @@ class UserCenter extends Component {
   }
 
   onBack = () => {
-    const { history } = this.props
+    const {history} = this.props
     history.push('/home')
   }
 
   onChangeLocale = locale => {
-    const { localeStore } = this.props
+    const {localeStore} = this.props
     localeStore.changeLocale(locale)
-    this.setState({ showLocaleModal: false })
+    this.setState({showLocaleModal: false})
   }
 
   logout = () => {
-    const { history, userStore, localeStore } = this.props
-    const { TOAST, COMMON } = localeStore.language || {}
+    const {history, userStore, localeStore} = this.props
+    const {TOAST, COMMON} = localeStore.language || {}
 
     // 调取退出登录接口
     Modal.alert(TOAST.IS_SIGN_OUT, '', [
@@ -83,8 +83,8 @@ class UserCenter extends Component {
   }
 
   getAuthLabel = status => {
-    const { localeStore } = this.props
-    const { TOAST } = localeStore.language || {}
+    const {localeStore} = this.props
+    const {TOAST} = localeStore.language || {}
     switch (status) {
       case 0:
         return TOAST.UNVERIFIED
@@ -100,10 +100,10 @@ class UserCenter extends Component {
   }
 
   render() {
-    const { history, userStore, personStore, localeStore } = this.props
-    const { userInfo } = personStore
-    const { locale, USER_CENTER } = localeStore.language || {}
-    const { showFModal, showLocaleModal } = this.state
+    const {history, userStore, personStore, localeStore} = this.props
+    const {userInfo} = personStore
+    const {locale, USER_CENTER} = localeStore.language || {}
+    const {showFModal, showLocaleModal} = this.state
     const hideAuthButton =
       userInfo.authentication === 1 || userInfo.authentication === 2
 
@@ -157,7 +157,7 @@ class UserCenter extends Component {
             )}
             &nbsp;
             <FaRegQuestionCircle
-              onClick={() => this.setState({ showFModal: true })}
+              onClick={() => this.setState({showFModal: true})}
             />
           </div>
         </section>
@@ -180,7 +180,7 @@ class UserCenter extends Component {
           <ListItem
             icon={require('../../assets/images/locale.png')}
             name={USER_CENTER.CHANGE_LANG}
-            onHandle={() => this.setState({ showLocaleModal: true })}
+            onHandle={() => this.setState({showLocaleModal: true})}
           />
         </section>
         {userStore.isOnline && (
@@ -200,7 +200,7 @@ class UserCenter extends Component {
           maskClosable
           transparent
           title={USER_CENTER.F_MEMBER_INTRODUCTION}
-          onClose={() => this.setState({ showFModal: false })}
+          onClose={() => this.setState({showFModal: false})}
         >
           <div
             style={{
