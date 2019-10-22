@@ -97,8 +97,8 @@ class UserCenter extends Component {
     const {history, userStore, personStore} = this.props
     const {userInfo} = personStore
     const {showFModal} = this.state
-    // const hideAuthButton =
-    //   userInfo.authentication === 1 || userInfo.authentication === 2
+    const hideAuthButton =
+      userInfo.authentication === 1 || userInfo.authentication === 2
 
     return (
       <div id="user-center">
@@ -118,16 +118,18 @@ class UserCenter extends Component {
               />
               <ul>
                 <li>{userInfo.email || userInfo.phoneNo}</li>
-                {userInfo.authUserid !== 0 && <li>ZBX系统ID: {userInfo.authUserid}</li>}
+                <li>{this.getAuthLabel(userInfo.authentication)}</li>
+
+                {/*{userInfo.authUserid !== 0 && <li>ZBX系统ID: {userInfo.authUserid}</li>}*/}
               </ul>
-              {/*{!hideAuthButton && (*/}
-              {/*<button*/}
-              {/*className={'auth-btn'}*/}
-              {/*onClick={() => history.push('/verified-country')}*/}
-              {/*>*/}
-              {/*实名认证*/}
-              {/*</button>*/}
-              {/*)}*/}
+              {!hideAuthButton && (
+                <button
+                  className={'auth-btn'}
+                  onClick={() => history.push('/verified-country')}
+                >
+                  实名认证
+                </button>
+              )}
             </div>
           ) : (
             <h1 onClick={() => history.push('/login')}>
@@ -158,11 +160,11 @@ class UserCenter extends Component {
             name="公告列表"
             url="/notices"
           />
-          {/*<ListItem*/}
-          {/*icon={require('../../assets/images/account.svg')}*/}
-          {/*name="账户安全"*/}
-          {/*url={userStore.isOnline ? '/account' : '/login'}*/}
-          {/*/>*/}
+          <ListItem
+            icon={require('../../assets/images/account.svg')}
+            name="账户安全"
+            url={userStore.isOnline ? '/account' : '/login'}
+          />
         </section>
         {userStore.isOnline && (
           <section className={`list-content list-second`}>

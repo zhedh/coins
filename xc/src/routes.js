@@ -66,14 +66,14 @@ const Login = Loadable({
   loader: () => import('./pages/login/Login'),
   loading: Loading
 })
-// const Register = Loadable({
-//   loader: () => import('./pages/login/Register'),
-//   loading: Loading
-// })
-// const Password = Loadable({
-//   loader: () => import('./pages/login/Password'),
-//   loading: Loading
-// })
+const Register = Loadable({
+  loader: () => import('./pages/login/Register'),
+  loading: Loading
+})
+const Password = Loadable({
+  loader: () => import('./pages/login/Password'),
+  loading: Loading
+})
 
 const UserCenter = Loadable({
   loader: () => import('./pages/user/UserCenter'),
@@ -125,26 +125,26 @@ const DepositResult = Loadable({
   loader: () => import('./pages/deposit/DepositResult'),
   loading: Loading
 })
-const Auth = Loadable({
-  loader: () => import('./pages/auth/Auth'),
-  loading: Loading
-})
-const Bind = Loadable({
-  loader: () => import('./pages/auth/Bind'),
-  loading: Loading
-})
-const InviteCode = Loadable({
-  loader: () => import('./pages/auth/InviteCode'),
-  loading: Loading
-})
-const ZbxLogin = Loadable({
-  loader: () => import('./pages/auth/ZbxLogin'),
-  loading: Loading
-})
+// const Auth = Loadable({
+//   loader: () => import('./pages/auth/Auth'),
+//   loading: Loading
+// })
+// const Bind = Loadable({
+//   loader: () => import('./pages/auth/Bind'),
+//   loading: Loading
+// })
+// const InviteCode = Loadable({
+//   loader: () => import('./pages/auth/InviteCode'),
+//   loading: Loading
+// })
+// const ZbxLogin = Loadable({
+//   loader: () => import('./pages/auth/ZbxLogin'),
+//   loading: Loading
+// })
 
 export default [
   // 主页
-  {path: '/', name: 'Auth', component: Auth},
+  {path: '/', name: 'Login', component: Login},
   {path: '/home', name: 'Home', component: Home},
   {
     path: '/home/inviter-friend',
@@ -183,9 +183,9 @@ export default [
   },
 
   // 登陆注册
-  // {path: '/login', name: 'Login', component: Login},
-  // { path: '/register', name: 'Register', component: Register },
-  // {path: '/password/:type', name: 'Password', component: Password},
+  {path: '/login', name: 'Login', component: Login},
+  {path: '/register', name: 'Register', component: Register},
+  {path: '/password/:type', name: 'Password', component: Password},
 
   // 个人中心
   {path: '/user-center', name: 'UserCenter', component: UserCenter},
@@ -217,26 +217,26 @@ export default [
   },
 
   // 授权登录
-  {
-    path: '/authorization',
-    name: 'Auth',
-    component: Auth
-  },
-  {
-    path: '/bind',
-    name: 'Bind',
-    component: Bind
-  },
-  {
-    path: '/invite-code',
-    name: 'InviteCode',
-    component: InviteCode
-  },
-  {
-    path: '/zbx-login',
-    name: 'ZbxLogin',
-    component: ZbxLogin
-  },
+  // {
+  //   path: '/authorization',
+  //   name: 'Auth',
+  //   component: Auth
+  // },
+  // {
+  //   path: '/bind',
+  //   name: 'Bind',
+  //   component: Bind
+  // },
+  // {
+  //   path: '/invite-code',
+  //   name: 'InviteCode',
+  //   component: InviteCode
+  // },
+  // {
+  //   path: '/zbx-login',
+  //   name: 'ZbxLogin',
+  //   component: ZbxLogin
+  // },
 
   // X PLAN
   {path: '/deposit', name: 'Deposit', component: Deposit},

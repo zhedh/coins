@@ -33,11 +33,11 @@ class Recharge extends Component {
       <div id="recharge">
         <Header title={`${type}充值`} isFixed isShadow bgWhite/>
         <section className="section-main">
-          <div className="group qr-code__group">
-            <QrCodeBox key={address} codeMsg={address}/>
-            <br/>
-            <span>点击或长按二维码保存图片</span>
-          </div>
+          {/*<div className="group qr-code__group">*/}
+          {/*<QrCodeBox key={address} codeMsg={address}/>*/}
+          {/*<br/>*/}
+          {/*<span>点击或长按二维码保存图片</span>*/}
+          {/*</div>*/}
           <div className="group address">
             <p>{address}</p>
             <CopyToClipboard
