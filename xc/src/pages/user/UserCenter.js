@@ -1,5 +1,6 @@
 import React, {Component, PureComponent} from 'react'
 import {inject, observer} from 'mobx-react'
+import {Link} from 'react-router-dom'
 import {Modal} from 'antd-mobile'
 import {FaRegQuestionCircle} from 'react-icons/fa'
 import Header from '../../components/common/Header'
@@ -109,7 +110,7 @@ class UserCenter extends Component {
           onHandle={() => this.onBack()}
         />
         <section className="banner">
-          <img src={userIcon} alt="" />
+          {/*<img src={userIcon} alt="" />*/}
           <p>测试账号@qq.com</p>
           <Link to="/verified-country">未实名认证</Link>
           <div className="list-tip">

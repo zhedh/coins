@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
-import Header from '../../components/common/Header'
+// import Header from '../../components/common/Header'
+import SimpleHeader from '../../components/common/SimpleHeader'
+
 import WalletCard from '../../components/partial/WalletCard'
 import walletToLoginImg from '../../assets/images/wallet-to-login.png'
 import walletZbsImg from '../../assets/images/wallet-zbs.png'
@@ -104,8 +106,8 @@ class Index extends Component {
 
     return (
       <div id="wallet">
-        <Header hideIcon title="钱包" isFixed isShadow />
-        {!userStore.isOnline ? <CardList cards={cards} /> : <ToLogin />}
+        <SimpleHeader title="钱包" isFixed/>
+        {userStore.isOnline() ? <CardList cards={cards} /> : <ToLogin />}
       </div>
     )
   }

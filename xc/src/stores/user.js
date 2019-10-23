@@ -11,57 +11,14 @@ class UserStore {
   @observable lastTime
 
   @computed
-  get isOnline() {
-    return !!(this.token && this.openid)
-  }
-
-  @computed
   get hasPayPassword() {
     return Number(this.payPassword) === 1
   }
 
-  // ---auth -----
   @action
-  setInfoKey(infoKey) {
-    Cookies.set('INFO_KEY', infoKey)
+  isOnline() {
+    return !!(Cookies.get('TOKEN') && Cookies.get('OPENID'))
   }
-
-  @action
-  getInfoKey() {
-    return Cookies.get('INFO_KEY')
-  }
-
-  @action
-  userAuth(options) {
-    return AuthApi.userAuth(options).then(res => {
-      if (res.status === 200) {
-        this.setUserCookie(res.data)
-      }
-      return res
-    })
-  }
-
-  @action
-  newUserLogin(options) {
-    return AuthApi.newUserLogin(options).then(res => {
-      if (res.status === 200) {
-        this.setUserCookie(res.data)
-      }
-      return res
-    })
-  }
-
-  @action
-  oldUserLogin(options) {
-    return AuthApi.oldUserLogin(options).then(res => {
-      if (res.status === 200) {
-        this.setUserCookie(res.data)
-      }
-      return res
-    })
-  }
-
-  // ---auth -----
 
   @action
   getUserStatus() {
@@ -145,6 +102,49 @@ class UserStore {
         params
       )
   }
+
+  // ---auth start-----
+  @action
+  setInfoKey(infoKey) {
+    Cookies.set('INFO_KEY', infoKey)
+  }
+
+  @action
+  getInfoKey() {
+    return Cookies.get('INFO_KEY')
+  }
+
+  @action
+  userAuth(options) {
+    return AuthApi.userAuth(options).then(res => {
+      if (res.status === 200) {
+        this.setUserCookie(res.data)
+      }
+      return res
+    })
+  }
+
+  @action
+  newUserLogin(options) {
+    return AuthApi.newUserLogin(options).then(res => {
+      if (res.status === 200) {
+        this.setUserCookie(res.data)
+      }
+      return res
+    })
+  }
+
+  @action
+  oldUserLogin(options) {
+    return AuthApi.oldUserLogin(options).then(res => {
+      if (res.status === 200) {
+        this.setUserCookie(res.data)
+      }
+      return res
+    })
+  }
+
+  // ---auth end-----
 }
 
 export default UserStore

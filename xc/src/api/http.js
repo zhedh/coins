@@ -4,7 +4,6 @@ import Cookies from 'js-cookie'
 import {CONFIG} from '../config'
 import {optionsToHump, optionsToLine} from '../utils/common'
 import {Toast} from "antd-mobile"
-// import {TOAST_DURATION} from "../utils/constants"
 
 const requestToast = Toast
 const axiosConfig = {
