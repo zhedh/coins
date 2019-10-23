@@ -17,7 +17,7 @@
     width: 100%;
     height: 19.5rem;
     //background: $primary-color;
-    color: $white;
+    // color: $white;
     background-size: cover;
     background-position: center;
 
@@ -83,6 +83,7 @@
       align-items: center;
       margin-top: 5%;
       line-height: 1.5;
+      font-weight: 600;
 
       b {
         font-size: 3.2rem;
@@ -284,7 +285,7 @@
 
       &.take-apart {
         color: #fff;
-        @include background-gradient(#ff905c, #e8713a);
+        @include background-gradient(#e8713a, #ff905c);
       }
     }
   }

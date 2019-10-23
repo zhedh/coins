@@ -188,11 +188,12 @@ export default [
   {path: '/password/:type', name: 'Password', component: Password},
 
   // 个人中心
-  {path: '/user-center', name: 'UserCenter', component: UserCenter},
-  {path: '/notices', name: 'Notices', component: Notices},
-  {path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail},
-  {path: '/account', name: 'AccountSafe', component: AccountSafe},
-  {path: '/contact-us', name: 'ContactUs', component: ContactUs},
+  { path: '/user-center', name: 'UserCenter', component: UserCenter },
+  { path: '/notices', name: 'Notices', component: Notices },
+  { path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail },
+  { path: '/account', name: 'AccountSafe', component: AccountSafe },
+  { path: '/contact-us', name: 'ContactUs', component: ContactUs },
+  { path: '/chat', name: 'Chat', component: Chat },
 
   // 实名认证
   {
@@ -239,8 +240,8 @@ export default [
   // },
 
   // X PLAN
-  {path: '/deposit', name: 'Deposit', component: Deposit},
-  {path: '/deposit/result', name: 'DepositResult', component: DepositResult},
+  { path: '/deposit', name: 'Deposit', component: Deposit },
+  { path: '/deposit/result', name: 'DepositResult', component: DepositResult },
 
   // 404
   {

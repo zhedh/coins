@@ -16,7 +16,7 @@
     min-height: 6rem;
     box-sizing: border-box;
     padding: 5.5rem 0;
-    background: url('../../assets/images/new/home-banner.png') center;
+    background: url('../../assets/images/new/user-banner.png') center;
     background-size: cover;
     text-align: center;
     color: #fff;
@@ -39,6 +39,37 @@
 
       .active {
         color: #df4c17;
+      }
+    }
+  }
+
+  .icon-list > ul {
+    @include clearBack;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    background: #fff;
+
+    li {
+      width: 33%;
+      height: 100px;
+      text-align: center;
+      @include clearList;
+      color: #ff8851;
+      font-size: 14px;
+
+      &:last-child {
+        img {
+          margin-top: 8px;
+          height: 40px;
+        }
+      }
+
+      img {
+        height: 48px;
+        margin-bottom: 10px;
       }
     }
   }

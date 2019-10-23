@@ -1,21 +1,27 @@
-import React, {Component, PureComponent} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Link} from 'react-router-dom'
-import {Modal} from 'antd-mobile'
-import {FaRegQuestionCircle} from 'react-icons/fa'
+import React, { Component, PureComponent } from 'react'
+import { inject, observer } from 'mobx-react'
+import userIcon from '../../assets/images/new/user.png'
+import userNotice from '../../assets/images/new/user-notice.png'
+import userKefu from '../../assets/images/new/user-kefu.png'
+import userSafe from '../../assets/images/new/user-safe.png'
+import userInvite from '../../assets/images/new/user-invite.png'
+import userLogout from '../../assets/images/new/user-logout.png'
+import { Modal } from 'antd-mobile'
+import { Link } from 'react-router-dom'
+import { FaRegQuestionCircle } from 'react-icons/fa'
 import Header from '../../components/common/Header'
-import {hideChatButton} from '../../utils/common'
+import { hideChatButton } from '../../utils/common'
 import './UserCenter.scss'
 
 class ListItem extends PureComponent {
   render() {
-    const {icon, name, url, onHandle} = this.props
+    const { icon, name, url, onHandle } = this.props
     return (
       <div
         className="list-item"
         onClick={() => (onHandle ? onHandle() : (window.location.href = url))}
       >
-        <img className="icon" src={icon} alt=""/>
+        <img className="icon" src={icon} alt="" />
         <span>{name}</span>
         <img
           className="arrow"
@@ -95,9 +101,9 @@ class UserCenter extends Component {
   }
 
   render() {
-    const {history, userStore, personStore} = this.props
-    const {userInfo} = personStore
-    const {showFModal} = this.state
+    const { history, userStore, personStore } = this.props
+    const { userInfo } = personStore
+    const { showFModal } = this.state
     const hideAuthButton =
       userInfo.authentication === 1 || userInfo.authentication === 2
 
@@ -110,7 +116,7 @@ class UserCenter extends Component {
           onHandle={() => this.onBack()}
         />
         <section className="banner">
-          {/*<img src={userIcon} alt="" />*/}
+          <img src={userIcon} alt="" />
           <p>测试账号@qq.com</p>
           <Link to="/verified-country">未实名认证</Link>
           <div className="list-tip">
@@ -127,23 +133,31 @@ class UserCenter extends Component {
             />
           </div>
         </section>
-        <section className="list">
+        <section className="icon-list">
           <ul>
             <li>
-              <img src="" alt="" />
+              <img src={userNotice} alt="" />
+              <br />
               公告列表
             </li>
             <li>
-              <img src="" alt="" />
-              公告列表
+              <img src={userSafe} alt="" />
+              <br />
+              账户安全
             </li>
             <li>
-              <img src="" alt="" />
-              公告列表
+              <img src={userInvite} alt="" />
+              <br /> 邀请好友
+            </li>
+            <li onClick={() => history.push('/chat')}>
+              <img src={userKefu} alt="" />
+              <br />
+              联系客服
             </li>
             <li>
-              <img src="" alt="" />
-              公告列表
+              <img src={userLogout} alt="" />
+              <br />
+              退出登录
             </li>
           </ul>
         </section>
