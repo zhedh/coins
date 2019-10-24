@@ -5,7 +5,6 @@ import { DEPOSIT } from '../../assets/static'
 import Header from '../../components/common/Header'
 import DepositBuy from '../../components/partial/DepositBuy'
 import DepositUnlock from '../../components/partial/DepositUnlock'
-import leftDrawerIcon from '../../assets/images/new/left-drawer.png'
 import './Deposit.scss'
 
 @inject('personStore')
@@ -14,7 +13,7 @@ import './Deposit.scss'
 class Deposit extends Component {
   state = {
     showDrawer: false,
-    ensureToUnlock: false,
+    // ensureToUnlock: false,
     selectTabIndex: 0
   }
 
@@ -35,27 +34,27 @@ class Deposit extends Component {
     this.setState({ ensureToPay: false, ensureToUnlock: false })
   }
 
-  onDepositBuy = () => {
-    this.setState({ ensureToPay: true })
-  }
+  // onDepositBuy = () => {
+  //   this.setState({ ensureToPay: true })
+  // }
 
-  onUnlockLimit = () => {
-    this.setState({ ensureToUnlock: true })
-  }
+  // onUnlockLimit = () => {
+  //   this.setState({ ensureToUnlock: true })
+  // }
 
   onSegmentedChange = e => {
     const { selectedSegmentIndex } = e.nativeEvent
     this.setState({ selectTabIndex: selectedSegmentIndex })
   }
 
-  onDeposit = () => {
-    const { selectTabIndex } = this.state
-    if (selectTabIndex === 0) {
-      this.onDepositBuy()
-    } else {
-      this.onUnlockLimit()
-    }
-  }
+  // onDeposit = () => {
+  //   const { selectTabIndex } = this.state
+  //   if (selectTabIndex === 0) {
+  //     this.onDepositBuy()
+  //   } else {
+  //     this.onUnlockLimit()
+  //   }
+  // }
 
   selectProduct = id => {
     const { productStore } = this.props
@@ -74,7 +73,7 @@ class Deposit extends Component {
         <header className="sidebar-header">
           <span>{DEPOSIT.SIDEBAR_TITLE}</span>
           <img
-            src={leftDrawerIcon}
+            src={DEPOSIT.DRAWER_MENU_ICON}
             alt="抽屉"
             onClick={() => this.setState({ showDrawer: false })}
           />
@@ -109,7 +108,7 @@ class Deposit extends Component {
               bgPrimary
               title={DEPOSIT.TITLE}
               onHandle={() => this.setState({ showDrawer: true })}
-              icon={leftDrawerIcon}
+              icon={DEPOSIT.DRAWER_MENU_ICON}
             />
             <section className="select-bar">
               <SegmentedControl
@@ -121,11 +120,11 @@ class Deposit extends Component {
             </section>
             <DepositBuy
               show={selectTabIndex === 0}
-              onDeposit={this.onDepositBuy}
+              // onDeposit={this.onDepositBuy}
             />
             <DepositUnlock
               show={selectTabIndex === 1}
-              onDeposit={this.onUnlockLimit}
+              // onDeposit={this.onUnlockLimit}
             />
           </main>
         </Drawer>

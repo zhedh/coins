@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
-import { withRouter } from 'react-router'
-import { Link } from 'react-router-dom'
-import { Button, Toast } from 'antd-mobile'
+import React, {Component} from 'react'
+import {inject, observer} from 'mobx-react'
+import {withRouter} from 'react-router'
+import {Link} from 'react-router-dom'
+import {Button, Toast} from 'antd-mobile'
 import Header from '../common/Header'
-import { formatCoinPrice, formatSpecialOffer } from '../../utils/format'
+import {formatCoinPrice, formatSpecialOffer} from '../../utils/format'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
-import { USDT_POINT_LENGTH } from '../../utils/constants'
+import {USDT_POINT_LENGTH} from '../../utils/constants'
 import './DepositUnlock.scss'
 
 @inject('productStore')
@@ -22,30 +22,24 @@ class DepositUnlock extends Component {
   }
 
   onInputChange = (e, key) => {
-    const { value } = e.target
-    this.setState({ [key]: value })
+    const {value} = e.target
+    this.setState({[key]: value})
   }
 
   onSetType = currentType => {
-    this.setState({ pwdType: currentType === 'text' ? 'password' : 'text' })
+    this.setState({pwdType: currentType === 'text' ? 'password' : 'text'})
   }
 
-  onDeposit = amount => {
-    this.setState({ showConfirm: true })
-    // const reg = /^[0-9]*[1-9][0-9]*$/
-    // if (!reg.test(amount)) {
-    //   Toast.info('认购数量需为正整数')
-    //   return
-    // }
-    // if (amount) this.setState({showConfirm: true})
+  onDeposit = () => {
+    this.setState({showConfirm: true})
   }
 
   onSubmit = () => {
-    const { history, userStore, productStore } = this.props
-    const { payPassword } = this.state
-    this.setState({ isSubmit: true })
+    const {history, userStore, productStore} = this.props
+    const {payPassword} = this.state
+    this.setState({isSubmit: true})
     userStore
-      .getPayToken({ payPassword })
+      .getPayToken({payPassword})
       .then(res => {
         if (res.status !== 1) {
           Toast.info(res.msg)
@@ -55,30 +49,30 @@ class DepositUnlock extends Component {
       })
       .then(payToken => {
         if (!payToken) {
-          this.setState({ isSubmit: false })
+          this.setState({isSubmit: false})
           return
         }
         productStore.createSpecialOrder(payToken).then(res => {
-          this.setState({ isSubmit: false })
+          this.setState({isSubmit: false})
           if (res.status !== 1) {
             Toast.info(res.msg)
             return
           }
-          history.push({ pathname: '/deposit/result', state: 'unLock' })
+          history.push({pathname: '/deposit/result', state: 'unLock'})
         })
       })
       .catch(err => {
         console.log(err)
-        this.setState({ isSubmit: false })
+        this.setState({isSubmit: false})
       })
   }
 
   render() {
-    const { showConfirm, payPassword, pwdType, isSubmit } = this.state
-    const { show, productStore } = this.props
+    const {showConfirm, payPassword, pwdType, isSubmit} = this.state
+    const {show, productStore} = this.props
     const {
       productDetail,
-      unLockAmount
+      // unLockAmount
       // totalAmount,
     } = productStore
     const {
@@ -107,21 +101,11 @@ class DepositUnlock extends Component {
             {/*<input*/}
             {/*type="text"*/}
             {/*placeholder="输入解锁数量"*/}
-            {/*value={unLockAmount}*/}
-            {/*onChange={e => onAmountChange(e)}*/}
+            {/*value={userSpecial}*/}
+            {/*readOnly*/}
+            {/*onChange={e => productStore.onAmountChange(e.target.value)}*/}
             {/*/>*/}
-            {/*<span*/}
-            {/*className="all"*/}
-            {/*onClick={() => productStore.addAllUnLockAmount()}>*/}
-            {/*全部*/}
-            {/*</span>*/}
-            <input
-              type="text"
-              placeholder="输入解锁数量"
-              value={userSpecial}
-              readOnly
-              onChange={e => productStore.onAmountChange(e.target.value)}
-            />
+            <b>{userSpecial}</b>
           </label>
           <label>
             <small>
@@ -141,7 +125,7 @@ class DepositUnlock extends Component {
           className="primary-button"
           activeClassName="active"
           disabled={!userSpecial}
-          onClick={() => this.onDeposit(unLockAmount)}
+          onClick={this.onDeposit}
         >
           认购
         </Button>
@@ -153,7 +137,7 @@ class DepositUnlock extends Component {
               isShadow
               title="确认支付"
               icon={require('../../assets/images/close.png')}
-              onHandle={() => this.setState({ showConfirm: false })}
+              onHandle={() => this.setState({showConfirm: false})}
             />
             <div className="content">
               <p className="deposit-price">

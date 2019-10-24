@@ -1,15 +1,14 @@
-import React, { Component, Fragment } from 'react'
-import { Link } from 'react-router-dom'
-import { observer, inject } from 'mobx-react'
-import { Carousel, WingBlank, Button } from 'antd-mobile'
-import { FiChevronRight, FiHelpCircle } from 'react-icons/fi'
-import { IoIosMegaphone, IoIosHelpCircle } from 'react-icons/io'
-import { formatDate, formatSpecialOffer } from '../../utils/format'
-import BuyCornor from '../../assets/images/new/buy-cornor.png'
-import { COMMON, HOME } from '../../assets/static'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+import {observer, inject} from 'mobx-react'
+import {Carousel, WingBlank, Button, Toast} from 'antd-mobile'
+import {IoIosMegaphone, IoIosHelpCircle} from 'react-icons/io'
+import {formatDate, formatSpecialOffer} from '../../utils/format'
+import {COMMON, HOME} from '../../assets/static'
 import Dialog from '../../components/common/Dialog'
-import Header from '../../components/common/Header'
+import SimpleHeader from '../../components/common/SimpleHeader'
 import NoData from '../../components/common/NoData'
+import OtherApi from "../../api/other"
 import './Index.scss'
 
 @inject('userStore')
@@ -18,15 +17,30 @@ import './Index.scss'
 @inject('productStore')
 @observer
 class Index extends Component {
+  state = {
+    mySpread: {}
+  }
+
   componentDidMount() {
-    const { userStore, personStore, noticeStore, productStore } = this.props
+    const {userStore, personStore, noticeStore, productStore} = this.props
     noticeStore.getNotices()
-    if (userStore.isOnline) {
+    if (userStore.isOnline()) {
       personStore.getSpecial()
       productStore.getProducts().then(productId => {
-        personStore.getDepositRecords({ productId, status: 0 })
+        personStore.getDepositRecords({productId, status: 0})
       })
+      this.getMySpread()
     }
+  }
+
+  getMySpread = () => {
+    OtherApi.getMySpread().then(res => {
+      if (res.status !== 1) {
+        Toast.info(res.msg)
+        return
+      }
+      this.setState({mySpread: res.data})
+    })
   }
 
   render() {
@@ -37,9 +51,10 @@ class Index extends Component {
       noticeStore,
       productStore
     } = this.props
-    const { notices } = noticeStore
-    const { depositRecords } = personStore
-    const { currentProduct } = productStore
+    const {notices} = noticeStore
+    const {depositRecords} = personStore
+    const {currentProduct} = productStore
+    const {mySpread = {}} = this.state
     const hasRecords =
       userStore.isOnline && depositRecords && depositRecords.length > 0
 
@@ -47,54 +62,23 @@ class Index extends Component {
       <div id="home">
         <section
           className="section-banner"
-          style={{ backgroundImage: `url(${HOME.IMG_BG})` }}
+          style={{backgroundImage: `url(${HOME.IMG_BG})`}}
         >
-          <Header hideIcon title={HOME.TITLE} />
+          <SimpleHeader color="#393838" bgColor="transparent" title={HOME.TITLE}/>
           <div className="special">
             <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
             <small>可用特价额度</small>
           </div>
-          <div className="right-corner">
-            <img src={BuyCornor} alt="" />
+          <Link className="subscribe" to="/deposit">
+            <img src={HOME.SUBSCRIBE_ICON} alt=""/>
             认购
-          </div>
-          {/* <ul style={{ display: 'none' }} className="tabs">
-            <li
-              onClick={() =>
-                history.push(userStore.isOnline ? '/home/bargain' : '/login')
-              }
-            >
-              <div className="text">
-                {userStore.isOnline ? (
-                  <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
-                ) : (
-                  <span>登录查看</span>
-                )}
-                <br />
-                <small>可用特价额度</small>
-              </div>
-              <FiChevronRight className="icon" />
-            </li>
-            <li
-              onClick={() =>
-                history.push(
-                  userStore.isOnline ? '/home/inviter-friend' : '/login'
-                )
-              }
-            >
-              <div className="text inviter-award">
-                <GoMailRead className="icon" />
-                邀请奖励
-              </div>
-              <FiChevronRight className="icon" />
-            </li>
-          </ul> */}
+          </Link>
           <div
             className="notice-carousel"
             onClick={() => (notices.length ? history.push('/notices') : '')}
           >
             <label>
-              <IoIosMegaphone className="megaphone" />
+              <IoIosMegaphone className="megaphone"/>
               公告：
             </label>
             {notices.length ? (
@@ -128,19 +112,18 @@ class Index extends Component {
         <section className="section-main">
           <div className="f-account">
             <div className="number">
-              <span>24人</span>
+              <span>{mySpread.recommendAllCount || 0}人</span>
               <small>当前团队F用户数</small>
             </div>
-            <button>查看团队详情</button>
+            <Link to="/home/generalize">
+              查看团队详情
+            </Link>
           </div>
           <div className="steps">
-            {/*<Link to={userStore.isOnline ? '/home/deposit-history' : '/login'}>*/}
-            {/*参与计划中*/}
-            {/*</Link>*/}
             <span>X PLAN</span>
             <Link to="/home/rule">
               规则介绍
-              <IoIosHelpCircle className="icon" />
+              <IoIosHelpCircle className="icon"/>
             </Link>
           </div>
           {hasRecords ? (
@@ -149,25 +132,28 @@ class Index extends Component {
                 <li key={key}>
                   <div className="aside">
                     返还日期
-                    <time>{formatDate(record.unlockTime)}</time>
+                    <small>{formatDate(record.unlockTime)}</small>
                   </div>
                   <div className="main">
                     <small>
                       {formatDate(record.addTime)}
-                      &nbsp;{record.remark}
+                      {/*&nbsp;{record.remark}*/}
                     </small>
-                    {Number(record.amount).toFixed(0)}{' '}
-                    {currentProduct.productName}
+                    <span>
+                      <b>{Number(record.amount).toFixed(0)}{' '}</b>
+                      {currentProduct.productName}
+                    </span>
                   </div>
                 </li>
               ))}
             </ul>
           ) : (
             <div className="no-data-wrapper">
-              <NoData img={COMMON.NO_DATA_IMG} msg="每天存一笔，天天有钱赚！" />
+              <NoData img={COMMON.NO_DATA_IMG} msg="每天存一笔，天天有钱赚！"/>
               <Button
                 activeClassName="active"
                 className="primary-button take-apart"
+                onClick={() => history.push('/deposit')}
               >
                 参与计划
               </Button>

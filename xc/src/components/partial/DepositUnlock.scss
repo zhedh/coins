@@ -50,22 +50,30 @@
         font-size: $font-assistant + 0.1;
         margin-top: 13px;
 
-        input {
-          @include clearInput;
+        b {
+          display: block;
           width: 100%;
           padding: 10px 0;
           border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          text-align: left;
         }
-        span {
-          display: inline-block;
 
-          &.all {
-            position: absolute;
-            right: 0;
-            top: 40%;
-            width: 10%;
-          }
-        }
+        //input {
+        //  @include clearInput;
+        //  width: 100%;
+        //  padding: 10px 0;
+        //  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        //}
+        //span {
+        //  display: inline-block;
+        //
+        //  &.all {
+        //    position: absolute;
+        //    right: 0;
+        //    top: 40%;
+        //    width: 10%;
+        //  }
+        //}
 
         small {
           color: $text-sub-color;

@@ -25,7 +25,7 @@
     li {
       box-sizing: border-box;
       width: 33.33%;
-      padding: 0 9px 20px;
+      padding: 0 8px 20px;
 
       .box {
         display: flex;
@@ -33,8 +33,8 @@
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        height: 7.4rem;
-        border: 2px solid #e7e7e8;
+        height: 5rem;
+        border: 1px solid #e7e7e8;
         border-radius: 5px;
         color: #e7e7e8;
 
@@ -65,10 +65,9 @@
             top: -3px;
             left: -3px;
             display: inline-block;
-            width: 100%;
-            min-height: 4rem;
-            background-image: url('../../assets/images/new/select-deposit.png');
-            background-repeat: no-repeat;
+            width: 7.4rem;
+            height: 2.6rem;
+            background: url('../../assets/images/new/select-deposit.png') no-repeat;
             background-size: contain;
           }
         }
@@ -85,9 +84,16 @@
     p {
       display: flex;
       justify-content: space-between;
+      padding: 5px 0;
       font-weight: 500;
-      font-size: $font-title-s;
+      font-size: $font-title;
       color: #000;
+      border-bottom: 1px solid $border-color;
+
+      span {
+        color: $text-sub-color;
+        font-size: 1.2rem;
+      }
     }
 
     small {
@@ -97,12 +103,13 @@
   }
 
   aside {
-    text-align: center;
-    font-size: $font-assistant;
     margin-bottom: 5rem;
+    padding: 0 20px;
+    font-size: $font-assistant;
 
     p {
-      color: #db3f3e;
+      text-align: right;
+      color: $text-sub-color;
 
       a {
         color: #2564c1;

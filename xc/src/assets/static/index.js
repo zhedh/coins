@@ -20,6 +20,7 @@ export const FOOTER = {
 export const HOME = {
   TITLE: 'X PLAN',
   IMG_BG: require('../images/new/home-banner.png'),
+  SUBSCRIBE_ICON: require('../images/new/buy-cornor.png'),
   GENERALIZE_BG: require('../images/xc/generalize-banner.jpg'),
   GENERALIZE_LEVEL: ['无', '普通', '初级', '中级', '高级', '超级'],
   GENERALIZE_USER_ONE_ICON: require('../images/xc/generalize-user-one.png'),
@@ -46,6 +47,7 @@ export const AUTH = {
 }
 
 export const DEPOSIT = {
+  DRAWER_MENU_ICON: require('../images/new/left-drawer.png'),
   COIN_NAME: '参与节点',
   TITLE: 'X PLAN',
   TABS: ['X PLAN', '特价额度'],
