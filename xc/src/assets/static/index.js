@@ -21,11 +21,13 @@ export const HOME = {
   TITLE: 'X PLAN',
   IMG_BG: require('../images/new/home-banner.png'),
   SUBSCRIBE_ICON: require('../images/new/buy-cornor.png'),
-  GENERALIZE_BG: require('../images/xc/generalize-banner.jpg'),
+  GENERALIZE_BG: require('../images/2.0/generalize_bg.png'),
   GENERALIZE_LEVEL: ['无', '普通', '初级', '中级', '高级', '超级'],
-  GENERALIZE_USER_ONE_ICON: require('../images/xc/generalize-user-one.png'),
-  GENERALIZE_USER_TWO_ICON: require('../images/xc/generalize-user-two.png'),
-  RULE_TITLE: 'X PLAN交易流程'
+  GENERALIZE_USER_ONE_ICON: require('../images/2.0/generalize-user-one.png'),
+  GENERALIZE_USER_TWO_ICON: require('../images/2.0/generalize-user-two.png'),
+  RULE_TITLE: 'X PLAN交易流程',
+  INVITER_FRIEND_BG: require('../images/2.0/inviter_friend_bg.png'),
+
 }
 
 export const BARGAIN = {

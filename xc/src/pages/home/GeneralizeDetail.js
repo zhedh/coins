@@ -5,7 +5,10 @@ import {chineseCapital} from "../../utils/common"
 import {formatTime} from "../../utils/format"
 import Header from "../../components/common/Header"
 import NoData from "../../components/common/NoData"
+import GroupLabel from "../../components/common/GroupLabel"
+import {formatCoinPrice} from "../../utils/format"
 import './GeneralizeDetail.scss'
+
 
 class GeneralizeDetail extends Component {
   state = {
@@ -38,19 +41,34 @@ class GeneralizeDetail extends Component {
 
     return (
       <div id="generalize-detail">
-        <Header title={title} isShadow isFixed/>
+        <Header title={title} isShadow bgPrimary isFixed/>
+        <GroupLabel title="注:以下数据只代表前一天结算后的数据,旗下业绩包含本人"/>
         {hasUsers ?
           <ul>
-            <li>
-              <span>用户</span>
-              <time>推广时间</time>
-            </li>
             {users.map(user =>
-              <li key={user.regTime}>
-                <span>{user.phoneNo || user.email}</span>
-                <time>{formatTime(user.regTime)}</time>
-              </li>)
-            }
+              <li>
+                <p>
+                  <label>用户名称</label>
+                  <span>{user.phoneNo || user.email}</span>
+                </p>
+                <p>
+                  <label>推广时间</label>
+                  <span>{formatTime(user.regTime)}</span>
+                </p>
+                <p>
+                  <label>活跃成员</label>
+                  <span>{user.followUserActiveCount}</span>
+                </p>
+                <p>
+                  <label>有效成员</label>
+                  <span></span>
+                </p>
+                <p>
+                  <label>旗下业绩</label>
+                  <span>{formatCoinPrice(user.followUserOrderingCount)}</span>
+                </p>
+              </li>
+            )}
           </ul> : <NoData msg="暂无数据"/>
         }
       </div>

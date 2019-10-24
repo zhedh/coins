@@ -5,25 +5,36 @@
   line-height: 1.6;
 
   .section-text {
-    padding: 3.4rem 2rem;
-    text-align: center;
+    height: 8.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: $font-title;
 
     span {
       display: inline-block;
-      margin-top: 0.8rem;
       font-size: $font-context;
-      color: $assistant-color;
+      color: #2A76DD;
     }
   }
 
-  .section-qr {
-    margin: 0 2rem;
-    padding: 3rem 0;
-    border-top: 1px solid $border-color;
+  .section-main {
+    padding: 1rem 0;
     text-align: center;
 
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    min-height: 50rem;
+
     .qr-code__box {
+      display: inline-block;
+      padding: 1.4rem;
+      border-radius: 5px;
+      border: 1px solid $primary-color;
+      background: $white;
+      font-size: 0;
+
       .qr-code {
         display: none;
         width: 10.8rem;
@@ -42,40 +53,46 @@
       }
     }
 
+    .qr-wrap aside {
+      margin-top: 1.5rem;
+      font-size: $font-title-s;
+      font-weight: bold;
+    }
+
     p {
       display: inline-flex;
       flex-direction: row;
       align-items: center;
 
-      margin-top: 4rem;
+      margin-top: 7rem;
       padding: 8px 15px;
       line-height: 1.2;
-      background: rgba(247, 247, 247, 1);
       font-size: $font-context;
-      color: $text-sub-color;
+      font-weight: bold;
 
       .icon {
         margin-left: 5px;
         font-size: 20px;
-        color: $assistant-color;
+        //color: $assistant-color;
       }
     }
-  }
 
-  .section-link {
-    padding: 4rem 2rem;
+    .link {
+      margin-top: 5rem;
+      padding: 20px;
 
-    a {
-      display: block;
-      height: 50px;
-      width: 100%;
-      border-radius: 25px;
-      background: $primary-color;
-      line-height: 50px;
-      text-align: center;
-      text-decoration: none;
-      color: $white;
-      font-size: $font-context;
+      a {
+        display: block;
+        height: 50px;
+        width: 100%;
+        border-radius: 7px;
+        background: $primary-color;
+        line-height: 50px;
+        text-align: center;
+        text-decoration: none;
+        color: $white;
+        font-size: $font-title-s;
+      }
     }
   }
 }

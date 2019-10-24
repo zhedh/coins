@@ -7,6 +7,7 @@ import {CopyToClipboard} from 'react-copy-to-clipboard'
 import {MdContentCopy} from 'react-icons/md'
 import Header from '../../components/common/Header'
 import {TOAST_DURATION} from "../../utils/constants"
+import {HOME} from "../../assets/static"
 import './InviterFriend.scss'
 
 class QrCodeBox extends Component {
@@ -32,8 +33,6 @@ class QrCodeBox extends Component {
         />
         <br/>
         <img src={codeUrl} alt=""/>
-        <br/>
-        <span>点击或长按二维码保存图片</span>
       </div>
     );
   }
@@ -60,29 +59,24 @@ class InviterFriend extends Component {
 
     return (
       <div id="inviter-friend">
-        <Header
-          title="邀请好友"
-          isShadow={true}
-          isFixed={true}
-          bgWhite
-          onHandle={() => {
-            history.push('/home');
-          }}
-        />
+        <Header title="邀请好友" isShadow bgPrimary isFixed/>
         <section className="section-text">
           {userInfo.recommendCode}
-          <br/>
           <CopyToClipboard
             text={userInfo.recommendCode}
             onCopy={() => Toast.info('复制成功')}>
             <span>复制邀请码</span>
           </CopyToClipboard>
         </section>
-        <section className="section-qr">
-          <QrCodeBox
-            key={userInfo.recommendCode}
-            inviterUrl={inviterUrl}
-          />
+        <section className="section-main" style={{backgroundImage: `url(${HOME.INVITER_FRIEND_BG})`}}>
+          <div className="qr-wrap">
+            <QrCodeBox
+              key={userInfo.recommendCode}
+              inviterUrl={inviterUrl}
+            />
+            <aside>点击或长按二维码保存图片</aside>
+          </div>
+
           <p>
             {inviterUrl}
             <CopyToClipboard
@@ -91,9 +85,9 @@ class InviterFriend extends Component {
               <MdContentCopy className="icon"/>
             </CopyToClipboard>
           </p>
-        </section>
-        <section className="section-link">
-          <Link to="/home/generalize">查看推广</Link>
+          <div className="link">
+            <Link  to="/home/generalize">查看推广</Link>
+          </div>
         </section>
       </div>
     );
