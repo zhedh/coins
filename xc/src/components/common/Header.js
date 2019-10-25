@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
 import './Header.scss'
 
 class Header extends Component {
   onBack = () => {
-    const { history, onHandle } = this.props
+    const {history, onHandle} = this.props
 
     if (onHandle) {
       onHandle()
@@ -33,8 +33,8 @@ class Header extends Component {
     const iconSrc = icon
       ? icon
       : bgPrimary
-      ? require('../../assets/images/arrow-left-1.png')
-      : require('../../assets/images/arrow-left.png')
+        ? require('../../assets/images/arrow-left-1.png')
+        : require('../../assets/images/arrow-left.png')
 
     return (
       <header id="common-header" className={classNames}>

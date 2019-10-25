@@ -56,12 +56,8 @@ class GeneralizeDetail extends Component {
                   <span>{formatTime(user.regTime)}</span>
                 </p>
                 <p>
-                  <label>活跃成员</label>
-                  <span>{user.followUserActiveCount}</span>
-                </p>
-                <p>
                   <label>有效成员</label>
-                  <span></span>
+                  <span>{user.followUserActiveCount}</span>
                 </p>
                 <p>
                   <label>旗下业绩</label>

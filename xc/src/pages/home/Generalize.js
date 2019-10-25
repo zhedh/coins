@@ -66,16 +66,16 @@ class Generalize extends Component {
                 <img src={arrowRight} alt=""/>
               </aside>
             </li>
-            <li onClick={() => this.toDetail(2)}>
-              <p>
-                <img src={HOME.GENERALIZE_USER_TWO_ICON} alt=""/>
-                二代推荐人数
-              </p>
-              <aside>
-                {mySpread.recommendCount2}
-                <img src={arrowRight} alt=""/>
-              </aside>
-            </li>
+            {/*<li onClick={() => this.toDetail(2)}>*/}
+            {/*<p>*/}
+            {/*<img src={HOME.GENERALIZE_USER_TWO_ICON} alt=""/>*/}
+            {/*二代推荐人数*/}
+            {/*</p>*/}
+            {/*<aside>*/}
+            {/*{mySpread.recommendCount2}*/}
+            {/*<img src={arrowRight} alt=""/>*/}
+            {/*</aside>*/}
+            {/*</li>*/}
           </ul>
           <GroupLabel title="推荐团队"/>
           <ul className="team">
@@ -93,10 +93,10 @@ class Generalize extends Component {
               <span>{mySpread.rebate}</span>
               <small>返还比例</small>
             </li>
-            <li>
-              <span>{0}</span>
-              <small>活跃成员</small>
-            </li>
+            {/*<li>*/}
+            {/*<span>{0}</span>*/}
+            {/*<small>活跃成员</small>*/}
+            {/*</li>*/}
           </ul>
         </section>
       </div>

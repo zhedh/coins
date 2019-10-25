@@ -22,7 +22,7 @@ class BargainRecord extends Component {
 
     return (
       <div id="bargain-record">
-        <Header title="特价额度记录" isFixed isShadow bgWhite/>
+        <Header title="特价额度记录" isFixed isShadow bgPrimary/>
         <ul>
           {
             specialRecords.map(record =>

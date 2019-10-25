@@ -69,7 +69,7 @@ class Index extends Component {
             <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
             <small>可用特价额度</small>
           </div>
-          <Link className="subscribe" to="/deposit">
+          <Link className="subscribe" to="/home/bargain">
             <img src={HOME.SUBSCRIBE_ICON} alt=""/>
             认购
           </Link>

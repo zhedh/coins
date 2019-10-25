@@ -27,7 +27,6 @@ export const HOME = {
   GENERALIZE_USER_TWO_ICON: require('../images/2.0/generalize-user-two.png'),
   RULE_TITLE: 'X PLAN交易流程',
   INVITER_FRIEND_BG: require('../images/2.0/inviter_friend_bg.png'),
-
 }
 
 export const BARGAIN = {
