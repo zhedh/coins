@@ -37,10 +37,14 @@ const DepositHistory = Loadable({
   loading: Loading
 })
 
-const Wallet = Loadable({
-  loader: () => import('./pages/wallet/Index'),
+const WalletHome = Loadable({
+  loader: () => import('./pages/wallet/Home'),
   loading: Loading
 })
+// const Wallet = Loadable({
+//   loader: () => import('./pages/wallet/Index'),
+//   loading: Loading
+// })
 const WalletUsdt = Loadable({
   loader: () => import('./pages/wallet/WalletUsdt'),
   loading: Loading
@@ -148,26 +152,26 @@ const DepositResult = Loadable({
 
 export default [
   // 主页
-  {path: '/', name: 'Login', component: Login},
-  {path: '/home', name: 'Home', component: Home},
+  { path: '/', name: 'Login', component: Login },
+  { path: '/home', name: 'Home', component: Home },
   {
     path: '/home/inviter-friend',
     name: 'InviterFriend',
     component: InviterFriend
   },
-  {path: '/home/generalize', name: 'Generalize', component: Generalize},
+  { path: '/home/generalize', name: 'Generalize', component: Generalize },
   {
     path: '/home/generalize/:id',
     name: 'GeneralizeDetail',
     component: GeneralizeDetail
   },
-  {path: '/home/bargain', name: 'Bargain', component: Bargain},
+  { path: '/home/bargain', name: 'Bargain', component: Bargain },
   {
     path: '/home/bargain/record',
     name: 'BargainRecord',
     component: BargainRecord
   },
-  {path: '/home/rule', name: 'Rule', component: Rule},
+  { path: '/home/rule', name: 'Rule', component: Rule },
   {
     path: '/home/deposit-history',
     name: 'DepositHistory',
@@ -175,11 +179,12 @@ export default [
   },
 
   // 钱包
-  {path: '/wallet', name: 'Wallet', component: Wallet},
-  {path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt},
-  {path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin},
-  {path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw},
-  {path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge},
+  // { path: '/wallet', name: 'Wallet', component: Wallet },
+  { path: '/wallet', name: 'WalletHome', component: WalletHome },
+  { path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt },
+  { path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin },
+  { path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw },
+  { path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge },
   {
     path: '/wallet/withdraw-record/:type',
     name: 'WithdrawRecord',
@@ -187,17 +192,17 @@ export default [
   },
 
   // 登陆注册
-  {path: '/login', name: 'Login', component: Login},
-  {path: '/register', name: 'Register', component: Register},
-  {path: '/password/:type', name: 'Password', component: Password},
+  { path: '/login', name: 'Login', component: Login },
+  { path: '/register', name: 'Register', component: Register },
+  { path: '/password/:type', name: 'Password', component: Password },
 
   // 个人中心
-  {path: '/user-center', name: 'UserCenter', component: UserCenter},
-  {path: '/notices', name: 'Notices', component: Notices},
-  {path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail},
-  {path: '/account', name: 'AccountSafe', component: AccountSafe},
-  {path: '/contact-us', name: 'ContactUs', component: ContactUs},
-  {path: '/chat', name: 'Chat', component: Chat},
+  { path: '/user-center', name: 'UserCenter', component: UserCenter },
+  { path: '/notices', name: 'Notices', component: Notices },
+  { path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail },
+  { path: '/account', name: 'AccountSafe', component: AccountSafe },
+  { path: '/contact-us', name: 'ContactUs', component: ContactUs },
+  { path: '/chat', name: 'Chat', component: Chat },
 
   // 实名认证
   {
@@ -244,8 +249,8 @@ export default [
   // },
 
   // X PLAN
-  {path: '/deposit', name: 'Deposit', component: Deposit},
-  {path: '/deposit/result', name: 'DepositResult', component: DepositResult},
+  { path: '/deposit', name: 'Deposit', component: Deposit },
+  { path: '/deposit/result', name: 'DepositResult', component: DepositResult },
 
   // 404
   {

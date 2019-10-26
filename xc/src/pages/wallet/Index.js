@@ -103,10 +103,10 @@ class Index extends Component {
   render() {
     const { userStore } = this.props
     const { cards } = this.state
-
+    console.log(cards)
     return (
       <div id="wallet">
-        <SimpleHeader title="钱包" isFixed/>
+        <SimpleHeader title="钱包" isFixed />
         {userStore.isOnline() ? <CardList cards={cards} /> : <ToLogin />}
       </div>
     )
