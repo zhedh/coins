@@ -3,11 +3,9 @@ import {inject, observer} from 'mobx-react'
 import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
 import {Button, Toast} from 'antd-mobile'
-import Header from '../common/Header'
 import {formatCoinPrice, formatSpecialOffer} from '../../utils/format'
-import openPwdImg from '../../assets/images/open-pwd.png'
-import closePwdImg from '../../assets/images/close-pwd.png'
 import {USDT_POINT_LENGTH} from '../../utils/constants'
+import {COMMON} from "../../assets/static"
 import './DepositUnlock.scss'
 
 @inject('productStore')
@@ -15,10 +13,10 @@ import './DepositUnlock.scss'
 @observer
 class DepositUnlock extends Component {
   state = {
-    showConfirm: false,
+    showConfirm: true,
     payPassword: '',
     pwdType: 'password',
-    isSubmit: false
+    isSubmit: false // 禁止多次提交
   }
 
   onInputChange = (e, key) => {
@@ -72,8 +70,6 @@ class DepositUnlock extends Component {
     const {show, productStore} = this.props
     const {
       productDetail,
-      // unLockAmount
-      // totalAmount,
     } = productStore
     const {
       productName,
@@ -86,34 +82,35 @@ class DepositUnlock extends Component {
     return (
       <div className={`deposit-unlock ${show ? 'show' : ''}`}>
         <section className="content-detail">
-          <span>
-            可解锁{productName}特价额度<Link to="/home/bargain">查看详情</Link>
-          </span>
+          <p>
+            当前可认购特价额度&nbsp;
+            <Link to="/home/bargain">查看详情</Link>
+          </p>
 
           <h1>{userSpecial}</h1>
         </section>
         <section className="content-charge">
+          {/*<p>*/}
+          {/*{productName || '--'}/USDT特价:*/}
+          {/*{formatSpecialOffer(specialOffer)}*/}
+          {/*</p>*/}
           <p>
-            {productName || '--'}/USDT特价:
-            {formatSpecialOffer(specialOffer)}
-          </p>
-          <label>
-            {/*<input*/}
-            {/*type="text"*/}
-            {/*placeholder="输入解锁数量"*/}
-            {/*value={userSpecial}*/}
-            {/*readOnly*/}
-            {/*onChange={e => productStore.onAmountChange(e.target.value)}*/}
-            {/*/>*/}
+            <span>赠送特价额度</span>
             <b>{userSpecial}</b>
-          </label>
-          <label>
+          </p>
+          <aside>
+            <small>
+              {productName}当前特价：{formatSpecialOffer(specialOffer)} USDT（数据来源ZBX交易所）
+            </small>
+            <small>
+              手续费费率：
+              {serviceCharge * 100}%
+            </small>
             <small>
               USDT 余额：
               {formatCoinPrice(userBalance, USDT_POINT_LENGTH)}
             </small>
-            <small>手续费费率：{serviceCharge * 100}%</small>
-          </label>
+          </aside>
           <h3>
             <span>交易额（USDT）</span>
             <span>
@@ -133,33 +130,35 @@ class DepositUnlock extends Component {
         {/*解锁弹窗*/}
         <div className={`confirm-wrapper ${showConfirm ? 'show' : ''}`}>
           <div className="content-box">
-            <Header
-              isShadow
-              title="确认支付"
-              icon={require('../../assets/images/close.png')}
-              onHandle={() => this.setState({showConfirm: false})}
-            />
+            <h2>
+              确认支付
+              <img
+                src={COMMON.CLOSE_ICON}
+                alt=""
+                onClick={() => this.setState({showConfirm: false})}
+              />
+            </h2>
             <div className="content">
-              <p className="deposit-price">
-                <span>支付总额（USDT）</span>
-                <span>
-                  {formatCoinPrice(
-                    specialOffer * userSpecial,
-                    USDT_POINT_LENGTH
-                  )}
-                </span>
-              </p>
-              <p className="service-charge">
-                <span>手续费{serviceCharge * 100}%</span>
-                <span>
-                  {formatCoinPrice(specialOffer * userSpecial * serviceCharge)}
-                </span>
-              </p>
-              <p>
-                <span>可用</span>
-                <span>{formatCoinPrice(userBalance, USDT_POINT_LENGTH)}</span>
-              </p>
-              <p className="service-charge">*扣款时依照最新的兑价为准</p>
+              <ul className="groups">
+                <li className="group">
+                  <p className="title">
+                    <span>支付总额（USDT）</span>
+                    <span>{formatCoinPrice(specialOffer * userSpecial, USDT_POINT_LENGTH)}</span>
+                  </p>
+                  <p>
+                    <span>手续费{serviceCharge * 100}%</span>
+                    <span>{formatCoinPrice(specialOffer * userSpecial * serviceCharge)}</span>
+                  </p>
+                </li>
+                <li className="group">
+                  <p className="title">
+                    <span>可用</span>
+                    <span>{formatCoinPrice(userBalance, USDT_POINT_LENGTH)}</span>
+                  </p>
+                  <p>*扣款时依照最新的兑价为准</p>
+                </li>
+              </ul>
+
               <div className="input-box">
                 <input
                   type={pwdType}
@@ -168,7 +167,7 @@ class DepositUnlock extends Component {
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />
                 <img
-                  src={pwdType === 'text' ? openPwdImg : closePwdImg}
+                  src={pwdType === 'text' ? COMMON.OPEN_PWD_ICON : COMMON.CLOSE_PWD_ICON}
                   alt="eyes"
                   onClick={() => this.onSetType(pwdType)}
                 />
