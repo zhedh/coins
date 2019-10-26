@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
-import { Drawer, SegmentedControl } from 'antd-mobile'
-import { DEPOSIT } from '../../assets/static'
+import React, {Component} from 'react'
+import {inject, observer} from 'mobx-react'
+import {Drawer, SegmentedControl} from 'antd-mobile'
+import {DEPOSIT} from '../../assets/static'
 import Header from '../../components/common/Header'
 import DepositBuy from '../../components/partial/DepositBuy'
 import DepositUnlock from '../../components/partial/DepositUnlock'
@@ -13,14 +13,13 @@ import './Deposit.scss'
 class Deposit extends Component {
   state = {
     showDrawer: false,
-    // ensureToUnlock: false,
-    selectTabIndex: 0
+    selectTabIndex: 1
   }
 
   componentDidMount() {
-    const { productStore, personStore, location } = this.props
-    const selectTabIndex = location.state || 0
-    this.setState({ selectTabIndex })
+    const {productStore, personStore, location} = this.props
+    const selectTabIndex = location.state || this.state.selectTabIndex
+    this.setState({selectTabIndex})
     personStore.getUserInfo()
     personStore.getSpecial()
     productStore.getProducts().then(productId => {
@@ -30,43 +29,22 @@ class Deposit extends Component {
     })
   }
 
-  onClose = () => {
-    this.setState({ ensureToPay: false, ensureToUnlock: false })
-  }
-
-  // onDepositBuy = () => {
-  //   this.setState({ ensureToPay: true })
-  // }
-
-  // onUnlockLimit = () => {
-  //   this.setState({ ensureToUnlock: true })
-  // }
-
   onSegmentedChange = e => {
-    const { selectedSegmentIndex } = e.nativeEvent
-    this.setState({ selectTabIndex: selectedSegmentIndex })
+    const {selectedSegmentIndex} = e.nativeEvent
+    this.setState({selectTabIndex: selectedSegmentIndex})
   }
-
-  // onDeposit = () => {
-  //   const { selectTabIndex } = this.state
-  //   if (selectTabIndex === 0) {
-  //     this.onDepositBuy()
-  //   } else {
-  //     this.onUnlockLimit()
-  //   }
-  // }
 
   selectProduct = id => {
-    const { productStore } = this.props
-    this.setState({ showDrawer: false }, () => {
+    const {productStore} = this.props
+    this.setState({showDrawer: false}, () => {
       productStore.changeProduct(id, true)
     })
   }
 
   render() {
-    const { productStore } = this.props
-    const { products, productDetail } = productStore
-    const { showDrawer, selectTabIndex } = this.state
+    const {productStore} = this.props
+    const {products, productDetail} = productStore
+    const {showDrawer, selectTabIndex} = this.state
 
     const sidebar = (
       <div className="sidebar">
@@ -75,7 +53,7 @@ class Deposit extends Component {
           <img
             src={DEPOSIT.DRAWER_MENU_ICON}
             alt="抽屉"
-            onClick={() => this.setState({ showDrawer: false })}
+            onClick={() => this.setState({showDrawer: false})}
           />
         </header>
         <ul>
@@ -99,7 +77,7 @@ class Deposit extends Component {
           className="am-drawer"
           sidebar={sidebar}
           open={showDrawer}
-          onOpenChange={() => this.setState({ showDrawer: !showDrawer })}
+          onOpenChange={() => this.setState({showDrawer: !showDrawer})}
         >
           <main>
             <Header
@@ -107,7 +85,7 @@ class Deposit extends Component {
               isShadow
               bgPrimary
               title={DEPOSIT.TITLE}
-              onHandle={() => this.setState({ showDrawer: true })}
+              onHandle={() => this.setState({showDrawer: true})}
               icon={DEPOSIT.DRAWER_MENU_ICON}
             />
             <section className="select-bar">
@@ -118,14 +96,8 @@ class Deposit extends Component {
                 onChange={this.onSegmentedChange}
               />
             </section>
-            <DepositBuy
-              show={selectTabIndex === 0}
-              // onDeposit={this.onDepositBuy}
-            />
-            <DepositUnlock
-              show={selectTabIndex === 1}
-              // onDeposit={this.onUnlockLimit}
-            />
+            <DepositBuy show={selectTabIndex === 0}/>
+            <DepositUnlock show={selectTabIndex === 1}/>
           </main>
         </Drawer>
       </div>

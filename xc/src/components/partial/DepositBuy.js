@@ -3,12 +3,7 @@ import {Link} from 'react-router-dom'
 import {withRouter} from 'react-router'
 import {inject, observer} from 'mobx-react'
 import {Button, Toast} from 'antd-mobile'
-import Header from '../common/Header'
-import openPwdImg from '../../assets/images/open-pwd.png'
-import closePwdImg from '../../assets/images/close-pwd.png'
-import {formatCoinPrice} from '../../utils/format'
-import {COIN_POINT_LENGTH} from '../../utils/constants'
-import {DEPOSIT} from '../../assets/static'
+import {COMMON} from '../../assets/static'
 import './DepositBuy.scss'
 
 @inject('productStore')
@@ -136,47 +131,44 @@ class DepositBuy extends Component {
           参与计划
         </Button>
 
-        {/*参与计划弹窗*/}
+        {/*输入交易密码弹窗*/}
         <div className={`confirm-wrapper ${showConfirm ? 'show' : ''}`}>
           <div className="content-box">
-            <Header
-              isShadow
-              title="确认支付"
-              icon={require('../../assets/images/close.png')}
-              onHandle={() => this.setState({showConfirm: false})}
-            />
+            <h2>
+              请输入交易密码
+              <img
+                src={COMMON.CLOSE_ICON}
+                alt=""
+                onClick={() => this.setState({showConfirm: false})}
+              />
+            </h2>
             <div className="content">
-              <p className="deposit-price">
-                <span>{DEPOSIT.COIN_NAME}</span>
-                <span>{gearNum || '--'}</span>
-              </p>
-              <p className="service-charge">
-                <span>手续费{productDetail.serviceCharge * 100}%</span>
-                <span>
-                  {formatCoinPrice(gearNum * productDetail.serviceCharge)}
-                </span>
-              </p>
-              <p>
-                <span>可用</span>
-                <span>
-                  {formatCoinPrice(
-                    productDetail.userWarehouse,
-                    COIN_POINT_LENGTH
-                  )}
-                </span>
-              </p>
+              {/*先隐藏可用数量*/}
+
+              {/*<p>*/}
+              {/*<span>可用</span>*/}
+              {/*<span>*/}
+              {/*{formatCoinPrice(*/}
+              {/*productDetail.userWarehouse,*/}
+              {/*COIN_POINT_LENGTH*/}
+              {/*)}*/}
+              {/*</span>*/}
+              {/*</p>*/}
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder="支付密码"
+                  placeholder="交易密码"
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />
                 <img
-                  src={pwdType === 'text' ? openPwdImg : closePwdImg}
+                  src={pwdType === 'text' ? COMMON.OPEN_PWD_ICON : COMMON.CLOSE_PWD_ICON}
                   alt="eyes"
                   onClick={() => this.onSetType(pwdType)}
                 />
+              </div>
+              <div className="link">
+                <Link to="/password/repay">忘记交易密码</Link>
               </div>
             </div>
             <Button

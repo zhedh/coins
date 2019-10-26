@@ -1,7 +1,10 @@
 export const COMMON = {
   COIN_NAME: 'XC',
   COIN_TITLE: 'X PLAN',
-  NO_DATA_IMG: require('../images/xc/no-data.png')
+  NO_DATA_IMG: require('../images/xc/no-data.png'),
+  CLOSE_ICON: require('../images/close.png'),
+  CLOSE_PWD_ICON: require('../images/close-pwd.png'),
+  OPEN_PWD_ICON: require('../images/open-pwd.png'),
 }
 
 export const FOOTER = {

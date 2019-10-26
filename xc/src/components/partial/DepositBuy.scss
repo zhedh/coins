@@ -154,7 +154,27 @@
       left: 0;
       width: 100%;
       background: $white;
+      padding-top: 20px;
       padding-bottom: 40px;
+
+      h2 {
+        @include clearBack;
+        position: relative;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        font-size: $font-title;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          bottom: 0;
+          margin: auto;
+          padding: 5px;
+          width: 14px;
+        }
+      }
 
       .content {
         box-sizing: border-box;
@@ -183,22 +203,23 @@
           position: relative;
           width: 100%;
           display: inline-block;
-          margin-top: 3rem;
+          margin-top: 1rem;
 
           input {
+            @include clearButton;
             width: 100%;
             padding: 10px 0;
             font-size: 1.3rem;
-            @include clearButton;
+            font-weight: bold;
             border-bottom: 1px solid $black-border-bottom;
 
             &:focus {
-              border-bottom: 2px solid $primary-color;
+              border-bottom: 2px solid #000052;
             }
 
             &::placeholder {
               color: $black-font-primary;
-              font-weight: 500;
+              font-weight: bold;
             }
           }
 
@@ -209,6 +230,20 @@
             right: 0;
             width: 2.2rem;
             height: 1.3rem;
+          }
+        }
+
+        .link {
+          margin-bottom: 20px;
+          padding: 10px 0;
+          text-align: right;
+
+          a {
+            display: inline-block;
+            font-weight: bold;
+            padding: 3px 0;
+            font-size: $font-assistant;
+            color: rgba(53, 57, 62, 1);
           }
         }
       }
