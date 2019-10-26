@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {inject, observer} from "mobx-react"
 import Header from "../../components/common/Header"
-import {formatTime} from "../../utils/format"
+import {formatTime, formatCoinPrice} from "../../utils/format"
 import NoData from "../../components/common/NoData"
 import './BargainRecord.scss'
 
@@ -27,13 +27,15 @@ class BargainRecord extends Component {
           {
             specialRecords.map(record =>
               <li key={record.id}>
-                <time>{formatTime(record.addTime)}</time>
-                <p>
-                  <span>{record.remark}</span>
-                  <span>{record.amount}</span>
-                </p>
-              </li>)
-          }
+                <label>
+                  {record.remark}
+                  <time>{formatTime(record.addTime)}</time>
+                </label>
+                <span className={`count ${record.amount > 0 ? 'add' : 'minus'}`}>
+                  {formatCoinPrice(record.amount)}
+                </span>
+              </li>
+            )}
           {specialRecords.length <= 0 && <NoData msg="暂无数据"/>}
         </ul>
       </div>

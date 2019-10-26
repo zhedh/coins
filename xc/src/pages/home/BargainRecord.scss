@@ -4,25 +4,41 @@
   box-sizing: border-box;
   min-height: 100vh;
   padding-top: $header-height;
-  background: rgba(247, 247, 247, 1);
-
-  header {
-    background: $white;
-  }
+  background: #E1E5EE;
 
   ul {
     @include clearList;
+    margin-top: 15px;
+    padding: 0 20px;
+    background: $white;
 
     li {
-      margin-top: 15px;
-      background: $white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 15px 0 10px;
+      border-bottom: 1px solid $background-color;
 
-      time {
-        height: 3.6rem;
-        padding: 0 15px;
-        line-height: 3.6rem;
-        font-size: $font-assistant;
-        color: $text-sub-color;
+      label {
+        display: block;
+
+        time {
+          display: block;
+          margin-top: 5px;
+          font-size: $font-assistant;
+          color: $text-sub-color;
+        }
+      }
+
+      .count {
+        &.add {
+          color: $primary-color;
+        }
+
+        &.minus {
+          color: #477CEE;
+        }
       }
 
       p {

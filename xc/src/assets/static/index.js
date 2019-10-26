@@ -1,7 +1,10 @@
 export const COMMON = {
   COIN_NAME: 'XC',
   COIN_TITLE: 'X PLAN',
-  NO_DATA_IMG: require('../images/xc/no-data.png')
+  NO_DATA_IMG: require('../images/xc/no-data.png'),
+  CLOSE_ICON: require('../images/close.png'),
+  CLOSE_PWD_ICON: require('../images/close-pwd.png'),
+  OPEN_PWD_ICON: require('../images/open-pwd.png'),
 }
 
 export const FOOTER = {
@@ -9,11 +12,6 @@ export const FOOTER = {
   ICON_WALLET: require('../images/new/icon-wallet-active.png'),
   ICON_USER: require('../images/new/icon-user-active.png'),
   ICON_PLAN: require('../images/new/icon-plan-active.png'),
-
-  // ICON_HOME: require('../images/xc/icon-home.svg'),
-  // ICON_DEPOSIT: require('../images/xc/icon-deposit.svg'),
-  // ICON_WALLET: require('../images/xc/icon-wallet.svg'),
-  // ICON_MINE: require('../images/xc/icon-mine.svg'),
   LABEL_DEPOSIT: 'X PLAN'
 }
 
@@ -40,7 +38,6 @@ export const AUTH = {
   IMG_ID_CARD: require('../images/xc/auth-id-card.svg'),
   IMG_PASSPORT: require('../images/xc/auth-passport.svg'),
   IMG_DRIVING: require('../images/xc/auth-driving.svg'),
-  // IMG_WAIT: require('../images/xc/auth-wait.png'),
   IMG_WAIT: require('../images/new/auth-wait.png'),
   IMG_SUCCESS: require('../images/new/auth-success.png'),
   IMG_FAIL: require('../images/new/auth-fail.png'),
@@ -56,5 +53,12 @@ export const DEPOSIT = {
 }
 
 export const USER = {
-  CUSTOMERS: []
+  CUSTOMERS: [],
+  USER_ICON: require('../images/new/user.png'),
+  USER_NOTICE: require('../images/new/user-notice.png'),
+  USER_CUSTOMER: require('../images/new/user-kefu.png'),
+  USER_SAFE: require('../images/new/user-safe.png'),
+  USER_INVITE: require('../images/new/user-invite.png'),
+  USER_LOGOUT: require('../images/new/user-logout.png'),
+  CONTACT_US_IMG: require('../images/new/chat.png'),
 }

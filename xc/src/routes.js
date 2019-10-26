@@ -83,10 +83,6 @@ const UserCenter = Loadable({
   loader: () => import('./pages/user/UserCenter'),
   loading: Loading
 })
-const Chat = Loadable({
-  loader: () => import('./pages/user/Chat'),
-  loading: Loading
-})
 const Notices = Loadable({
   loader: () => import('./pages/notice/Notices'),
   loading: Loading

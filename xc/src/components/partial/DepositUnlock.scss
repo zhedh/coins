@@ -16,68 +16,48 @@
       text-align: left;
       line-height: 1.5;
 
+      p {
+        margin: 10px 0;
+        font-weight: bold;
+
+        a {
+          color: $primary-color;
+          text-decoration: underline;
+        }
+      }
+
       h1 {
-        margin: 0 0 -1px;
-        // margin-bottom: -1px;
-      }
-
-      a {
-        color: #2564c1;
-        text-decoration: underline;
-        font-size: $font-assistant + 0.1;
-      }
-
-      span {
-        color: $text-sub-color;
-        font-size: $font-assistant + 0.1;
+        margin: 10px 0;
+        font-size: 40px;
       }
     }
 
     &.content-charge {
-      margin-top: 35px;
 
       p {
-        text-align: left;
-        color: #db3f3e;
-        font-weight: 500;
-        font-size: $font-context + 0.1;
-      }
-
-      label {
-        position: relative;
         display: flex;
         justify-content: space-between;
-        font-size: $font-assistant + 0.1;
-        margin-top: 13px;
+        margin-bottom: 5px;
+        padding: 5px 0;
+        font-weight: 500;
+        font-size: $font-title;
+        color: #000;
+        border-bottom: 1px solid $border-color;
 
-        b {
-          display: block;
-          width: 100%;
-          padding: 10px 0;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-          text-align: left;
+        span {
+          color: $text-sub-color;
+          font-size: 1.2rem;
         }
+      }
 
-        //input {
-        //  @include clearInput;
-        //  width: 100%;
-        //  padding: 10px 0;
-        //  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        //}
-        //span {
-        //  display: inline-block;
-        //
-        //  &.all {
-        //    position: absolute;
-        //    right: 0;
-        //    top: 40%;
-        //    width: 10%;
-        //  }
-        //}
+      aside {
+        text-align: right;
+        font-size: $font-assistant;
+        color: $text-sub-color;
 
         small {
-          color: $text-sub-color;
-          font-size: $font-assistant;
+          padding: 5px 0;
+          display: block;
         }
       }
 
@@ -85,12 +65,13 @@
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
+        font-weight: normal;
       }
     }
   }
 
   .primary-button {
-    margin: 50px 27% 20px;
+    margin: 6rem 27% 20px;
   }
 
   .confirm-wrapper {
@@ -116,26 +97,55 @@
       background: $white;
       padding-bottom: 40px;
 
+      h2 {
+        @include clearBack;
+        position: relative;
+        height: 36px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(236, 236, 236, 1);
+        line-height: 36px;
+        text-align: center;
+        font-size: $font-title;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          bottom: 0;
+          margin: auto;
+          padding: 5px;
+          width: 14px;
+        }
+      }
+
       .content {
         box-sizing: border-box;
-        padding: 15px 20px 30px;
+        padding: 0 20px 30px;
 
-        p {
-          @include clearBack;
-          display: flex;
-          justify-content: space-between;
-          padding: 10px 0;
-          font-size: $font-assistant;
-          font-weight: 600;
+        .groups {
+          @include clearList;
 
-          &.deposit-price {
-            padding: 6px 0;
-            font-size: $font-title-s;
+          li {
+            padding: 10px 0;
+            border-bottom: 1px solid $border-color;
           }
 
-          &.service-charge {
-            padding: 5px 0;
+          p {
+            @include clearBack;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: $font-assistant;
             color: $text-sub-color;
+
+            &.title {
+              font-size: $font-context;
+              color: $text-color;
+            }
+          }
+
+          li:last-child {
+            border-bottom: none;
           }
         }
 
@@ -143,18 +153,15 @@
           position: relative;
           width: 100%;
           display: inline-block;
-          margin-top: 3rem;
+          margin-top: 1rem;
+          margin-bottom: 3rem;
 
           input {
             width: 100%;
             padding: 10px 0;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             @include clearButton;
-            border-bottom: 1px solid $black-border-bottom;
-
-            &:focus {
-              border-bottom: 2px solid $primary-color;
-            }
+            border-bottom: 2px solid #000052;
 
             &::placeholder {
               color: $black-font-primary;

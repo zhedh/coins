@@ -29,7 +29,7 @@ class Bargain extends Component {
           <img
             src={arrowLeft}
             alt="返回"
-            onClick={() => history.push('/home')}
+            onClick={() => history.goBack()}
           />
           <span>特价奖励详情</span>
           <aside onClick={() => history.push('/home/bargain/record')}>
