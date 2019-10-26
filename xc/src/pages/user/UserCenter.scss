@@ -4,46 +4,62 @@
   @include clearFix;
   box-sizing: border-box;
   min-height: 100vh;
-  background-color: $background-gray;
-
-  #common-header {
-    background: none;
-  }
+  background-color: $white;
 
   .banner {
     position: relative;
     width: 100%;
-    min-height: 6rem;
+    height: 23rem;
     box-sizing: border-box;
-    padding: 5.5rem 0;
     background: url('../../assets/images/new/user-banner.png') center;
     background-size: cover;
     text-align: center;
     color: #fff;
 
-    a {
-      color: #fff;
+    .user-box {
+      margin-top: 1rem;
+
+      img {
+        width: 6.8rem;
+      }
+
+      p {
+        @include clearBack;
+        padding: 10px 0;
+        font-size: $font-title-s;
+      }
+
+      .tags {
+        span {
+          display: inline-block;
+          margin: 0 5px;
+          height: 2.4rem;
+          padding: 0 10px;
+          line-height: 2.4rem;
+          border: 1px solid $white;
+          border-radius: 1.2rem;
+          text-align: center;
+          opacity: 0.6;
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
     }
 
-    img {
-      width: 5rem;
-    }
-
-    .list-tip {
+    .tip {
       position: absolute;
       left: 1rem;
       bottom: 0.1rem;
-      margin-top: 40px;
+      display: flex;
+      align-items: center;
       margin-bottom: 10px;
       font-size: $font-assistant + 0.1;
-
-      .active {
-        color: #df4c17;
-      }
     }
   }
 
-  .icon-list > ul {
+  .menu-list > ul {
     @include clearBack;
     display: flex;
     flex-wrap: wrap;
@@ -53,133 +69,38 @@
     background: #fff;
 
     li {
-      width: 33%;
-      height: 100px;
-      text-align: center;
       @include clearList;
+      width: 33.333%;
+      height: 100px;
+      padding-bottom: 20px;
+      text-align: center;
       color: #ff8851;
       font-size: 14px;
-
-      &:last-child {
-        img {
-          margin-top: 8px;
-          height: 40px;
-        }
-      }
 
       img {
         height: 48px;
         margin-bottom: 10px;
       }
-    }
-  }
 
-  .list-content {
-    box-sizing: border-box;
-    background-color: #fff;
-    padding: 7px 24px;
-    margin-bottom: 1.4rem;
-
-    h1 {
-      margin: 25px 0 60px;
-      font-weight: 400;
-      img {
-        margin-left: 10px;
-        width: 1rem;
-        transform: rotate(180deg);
-      }
-    }
-
-    .list-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 15px 0;
-
-      .icon {
-        width: 2.2rem;
-        margin-right: 20px;
-      }
-
-      .arrow {
-        height: 1.4rem;
-      }
-    }
-
-    .list-tip {
-      margin-top: 40px;
-      margin-bottom: 10px;
-      color: $text-sub-color;
-      font-size: $font-assistant + 0.1;
-
-      .active {
-        color: #df4c17;
-      }
-    }
-
-    &.list-first {
-      flex-direction: column;
-
-      .list-item {
-        .header-logo {
-          width: 6rem;
-        }
-
-        .auth-btn {
-          @include clearButton;
-          width: 8.5rem;
-          color: $white;
-          border-radius: 5px;
-          box-sizing: border-box;
-          padding: 7px 10px;
-          @include background-gradient($primary-color-gradient, $primary-color);
-        }
-
-        ul {
-          flex-grow: 1;
-          @include clearList;
-          margin-left: 1.7rem;
-
-          li {
-            &:first-child {
-              font-weight: 500;
-              font-size: $font-title-s;
-              color: #262a2f;
-            }
-
-            &:last-child {
-              font-size: $font-assistant + 0.1;
-              margin-top: 0.8rem;
-              color: $text-sub-color;
-            }
-          }
-        }
-      }
-
-      .list-tip {
-        svg {
-          vertical-align: top;
-        }
-      }
-    }
-
-    &.list-second {
-      .list-item {
-        span {
-          flex-grow: 1;
-        }
+      &:last-child img {
+        margin: 4px 0 14px;
+        height: 40px;
       }
     }
   }
 }
 
 .f-modal {
+
   :global {
+    .am-modal-content {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
     .am-modal-title {
       font-size: 1.7rem;
     }
+
     p {
       @include clearBack;
       text-align: justify;
@@ -188,6 +109,3 @@
   }
 }
 
-.meshim_widget_components_mobileChatButton_ButtonBar .button_text {
-  background: red !important;
-}

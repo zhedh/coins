@@ -79,10 +79,6 @@ const UserCenter = Loadable({
   loader: () => import('./pages/user/UserCenter'),
   loading: Loading
 })
-const Chat = Loadable({
-  loader: () => import('./pages/user/Chat'),
-  loading: Loading
-})
 const Notices = Loadable({
   loader: () => import('./pages/notice/Notices'),
   loading: Loading
@@ -197,7 +193,6 @@ export default [
   {path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail},
   {path: '/account', name: 'AccountSafe', component: AccountSafe},
   {path: '/contact-us', name: 'ContactUs', component: ContactUs},
-  {path: '/chat', name: 'Chat', component: Chat},
 
   // 实名认证
   {

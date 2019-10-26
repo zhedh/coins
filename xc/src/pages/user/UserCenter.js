@@ -1,65 +1,23 @@
-import React, { Component, PureComponent } from 'react'
-import { inject, observer } from 'mobx-react'
-import userIcon from '../../assets/images/new/user.png'
-import userNotice from '../../assets/images/new/user-notice.png'
-import userKefu from '../../assets/images/new/user-kefu.png'
-import userSafe from '../../assets/images/new/user-safe.png'
-import userInvite from '../../assets/images/new/user-invite.png'
-import userLogout from '../../assets/images/new/user-logout.png'
-import { Modal } from 'antd-mobile'
-import { Link } from 'react-router-dom'
-import { FaRegQuestionCircle } from 'react-icons/fa'
-import Header from '../../components/common/Header'
-import { hideChatButton } from '../../utils/common'
+import React, {Component} from 'react'
+import {inject, observer} from 'mobx-react'
+import {USER} from '../../assets/static'
+import {Modal} from 'antd-mobile'
+import {FaRegQuestionCircle} from 'react-icons/fa'
+import SimpleHeader from '../../components/common/SimpleHeader'
 import './UserCenter.scss'
-
-class ListItem extends PureComponent {
-  render() {
-    const { icon, name, url, onHandle } = this.props
-    return (
-      <div
-        className="list-item"
-        onClick={() => (onHandle ? onHandle() : (window.location.href = url))}
-      >
-        <img className="icon" src={icon} alt="" />
-        <span>{name}</span>
-        <img
-          className="arrow"
-          src={require('../../assets/images/arrow-right.png')}
-          alt=""
-        />
-      </div>
-    )
-  }
-}
 
 @inject('userStore')
 @inject('personStore')
 @observer
 class UserCenter extends Component {
-  state = {isOnline: true, showFModal: false}
+  state = {showFModal: false}
 
   componentDidMount() {
     const {personStore, userStore} = this.props
-    this.createIframe()
 
-    if (userStore.isOnline) {
+    if (userStore.isOnline()) {
       personStore.getUserInfo()
     }
-  }
-
-  componentWillUnmount() {
-    hideChatButton()
-  }
-
-  createIframe = () => {
-    let script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.defer = true
-    script.id = 'ze-snippet'
-    script.src =
-      'https://static.zdassets.com/ekr/snippet.js?key=3abd36b7-3c9c-408f-ab7e-0b54e85bd08c'
-    document.body.appendChild(script)
   }
 
   onBack = () => {
@@ -85,150 +43,62 @@ class UserCenter extends Component {
     ])
   }
 
-  getAuthLabel = status => {
-    switch (status) {
-      case 0:
-        return '未实名认证'
-      case 1:
-        return '等待审核'
-      case 2:
-        return '已实名认证'
-      case 3:
-        return '认证失败'
-      default:
-        return ''
-    }
-  }
-
   render() {
-    const { history, userStore, personStore } = this.props
-    const { userInfo } = personStore
-    const { showFModal } = this.state
-    const hideAuthButton =
-      userInfo.authentication === 1 || userInfo.authentication === 2
+    const {history, personStore} = this.props
+    const {userInfo} = personStore
+    const {showFModal} = this.state
 
     return (
       <div id="user-center">
-        <Header
-          title="个人中心"
-          bgPrimary
-          hideIcon
-          onHandle={() => this.onBack()}
-        />
         <section className="banner">
-          <img src={userIcon} alt="" />
-          <p>测试账号@qq.com</p>
-          <Link to="/verified-country">未实名认证</Link>
-          <div className="list-tip">
-            {userInfo.isF ? (
-              <span className="active">
-                活跃用户生效中，{userInfo.isFTime}失效
-              </span>
-            ) : (
-              <span> 非F用户，暂不可享推广奖励</span>
-            )}
-            &nbsp;
-            <FaRegQuestionCircle
-              onClick={() => this.setState({ showFModal: true })}
-            />
+          <SimpleHeader
+            title="个人中心"
+            bgColor="transparent"
+            onHandle={() => this.onBack()}
+          />
+          <div className="user-box">
+            <img src={USER.USER_ICON} alt=""/>
+            <p>{userInfo.email || userInfo.phoneNo}</p>
+            <div className="tags">
+              <span className={userInfo.isF ? 'active' : ''}>活跃</span>
+              <span className={userInfo.isActive ? 'active' : ''}>有效</span>
+            </div>
+          </div>
+          <div className="tip" onClick={() => this.setState({showFModal: true})}>
+            用户标示说明&nbsp;
+            <FaRegQuestionCircle/>
           </div>
         </section>
-        <section className="icon-list">
+        <section className="menu-list">
           <ul>
-            <li>
-              <img src={userNotice} alt="" />
-              <br />
+            <li onClick={() => history.push('/notices')}>
+              <img src={USER.USER_NOTICE} alt=""/>
+              <br/>
               公告列表
             </li>
-            <li>
-              <img src={userSafe} alt="" />
-              <br />
+            <li onClick={() => history.push('/account')}>
+              <img src={USER.USER_SAFE} alt=""/>
+              <br/>
               账户安全
             </li>
-            <li>
-              <img src={userInvite} alt="" />
-              <br /> 邀请好友
+            <li onClick={() => history.push('/home/inviter-friend')}>
+              <img src={USER.USER_INVITE} alt=""/>
+              <br/>
+              邀请好友
             </li>
-            <li onClick={() => history.push('/chat')}>
-              <img src={userKefu} alt="" />
-              <br />
+            <li onClick={() => history.push('/contact-us')}>
+              <img src={USER.USER_CUSTOMER} alt=""/>
+              <br/>
               联系客服
             </li>
-            <li>
-              <img src={userLogout} alt="" />
-              <br />
+            <li onClick={this.logout}>
+              <img src={USER.USER_LOGOUT} alt=""/>
+              <br/>
               退出登录
             </li>
           </ul>
         </section>
-        <section className={`list-content list-first`}>
-          {userStore.isOnline ? (
-            <div className="list-item">
-              <img
-                className="header-logo"
-                src={require('../../assets/images/user-header.png')}
-                alt=""
-              />
-              <ul>
-                <li>{userInfo.email || userInfo.phoneNo}</li>
-                <li>{this.getAuthLabel(userInfo.authentication)}</li>
 
-                {/*{userInfo.authUserid !== 0 && <li>ZBX系统ID: {userInfo.authUserid}</li>}*/}
-              </ul>
-              {!hideAuthButton && (
-                <button
-                  className={'auth-btn'}
-                  onClick={() => history.push('/verified-country')}
-                >
-                  实名认证
-                </button>
-              )}
-            </div>
-          ) : (
-            <h1 onClick={() => history.push('/login')}>
-              您好，请登录
-              <img
-                src={require('../../assets/images/arrow-left.png')}
-                alt="返回"
-              />
-            </h1>
-          )}
-          <div className="list-tip">
-            {userInfo.isF ? (
-              <span className="active">
-                活跃用户生效中，{userInfo.isFTime}失效
-              </span>
-            ) : (
-              <span> 非F用户，暂不可享推广奖励</span>
-            )}
-            &nbsp;
-            <FaRegQuestionCircle
-              onClick={() => this.setState({showFModal: true})}
-            />
-          </div>
-        </section>
-        <section className={`list-content list-second`}>
-          <ListItem
-            icon={require('../../assets/images/notice.svg')}
-            name="公告列表"
-            url="/notices"
-          />
-          <ListItem
-            icon={require('../../assets/images/account.svg')}
-            name="账户安全"
-            url={userStore.isOnline ? '/account' : '/login'}
-          />
-        </section>
-        {userStore.isOnline && (
-          <section className={`list-content list-second`}>
-            <ListItem
-              icon={require('../../assets/images/logout.svg')}
-              name="退出登录"
-              url="/login"
-              onHandle={this.logout}
-            />
-          </section>
-        )}
         <Modal
           visible={showFModal}
           className="f-modal"
@@ -242,10 +112,11 @@ class UserCenter extends Component {
             style={{
               fontSize: '1.5rem',
               textAlign: 'justify',
-              padding: '10px'
+              paddingBottom: '10px'
             }}
           >
-            当您参与计划成功后，将获得活跃用户的标示，活跃用户标示代表着您能够享受参与奖、代数奖、团队奖等相关奖励，活跃用户的有效期为3个交易日（包含成为当天）。
+            <p>活跃用户：当您参与计划成功后可变成活跃用户，活跃用户有效为三个交易日。</p>
+            <p> 有效用户：在参与计划中有排单即为有效用户，没有参与计划中排单则不为有效用户。</p>
           </div>
         </Modal>
       </div>

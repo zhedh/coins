@@ -2,38 +2,21 @@
 
 #contact-us {
   min-height: 100vh;
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
 
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.8rem;
-    margin-top: 1rem;
-    color: $text-color;
-    text-decoration: none;
+  .chat-wrapper {
+    margin-top: 20%;
+    text-align: center;
 
-    .arrow {
-      height: 1.4rem;
+    img {
+      width: 60%;
     }
-  }
 
-  ul {
-    @include clearList;
-    box-sizing: border-box;
-    padding: 20px;
-
-    li {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid $border-color;
-      line-height: 1.6;
-
-      label {
-        color: #666;
-      }
+    p {
+      line-height: 1.5;
+      padding: 0 15%;
     }
   }
 }
+
