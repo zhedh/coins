@@ -20,16 +20,12 @@ export function formatDateTime(timestamp) {
 export function formatCoinPrice(price, length = COIN_POINT_LENGTH) {
   if (!price) return '--'
   return downFixed(price, length)
-  // price = Number(price).toFixed(length)
-  // return parseFloat(price)
 }
 
 // 币种价格与数量位数格式化
 export function formatWalletPrice(price, length = COIN_POINT_LENGTH) {
   if (!price) return 0
   return downFixed(price, length)
-  // price = Number(price).toFixed(length)
-  // return parseFloat(price)
 }
 
 // 特价额度数量保留2位

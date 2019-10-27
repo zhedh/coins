@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {inject, observer} from "mobx-react"
 import arrowLeft from '../../assets/images/arrow-left.png'
-import {BARGAIN} from '../../assets/static'
 import './Bargain.scss'
 import {formatSpecialOffer} from "../../utils/format";
 
@@ -39,7 +38,7 @@ class Bargain extends Component {
         <section className="section-banner">
           <div className="banner">
             <div className="info">
-              <span>{BARGAIN.BANNER_LABEL}{formatSpecialOffer(allUsableSpecial)}</span>
+              <span>特价XC奖励额度：{formatSpecialOffer(allUsableSpecial)}</span>
               <br/>
               <small>上次结算时间：{lastClearTime}</small>
             </div>

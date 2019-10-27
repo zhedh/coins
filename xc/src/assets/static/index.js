@@ -27,10 +27,6 @@ export const HOME = {
   INVITER_FRIEND_BG: require('../images/2.0/inviter_friend_bg.png'),
 }
 
-export const BARGAIN = {
-  BANNER_LABEL: '特价XC奖励额度：'
-}
-
 export const AUTH = {
   IMG_BACK: require('../images/xc/auth-card-back.png'),
   IMG_FRONT: require('../images/xc/auth-card-front.png'),
@@ -61,4 +57,11 @@ export const USER = {
   USER_INVITE: require('../images/new/user-invite.png'),
   USER_LOGOUT: require('../images/new/user-logout.png'),
   CONTACT_US_IMG: require('../images/new/chat.png'),
+}
+
+export const WALLET = {
+  RECHARGE_ICON: require('../images/new/recharge.svg'),
+  WITHDRAW_ICON: require('../images/new/withdraw.svg'),
+  WALLET_USDT_IMG: require('../images/new/wallet-usdt.png'),
+  WALLET_XC_IMG: require('../images/new/wallet-xc.png'),
 }

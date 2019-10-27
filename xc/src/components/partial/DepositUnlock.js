@@ -13,7 +13,7 @@ import './DepositUnlock.scss'
 @observer
 class DepositUnlock extends Component {
   state = {
-    showConfirm: true,
+    showConfirm: false,
     payPassword: '',
     pwdType: 'password',
     isSubmit: false // 禁止多次提交

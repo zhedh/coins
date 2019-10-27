@@ -1,12 +1,10 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import Slider from 'react-slick'
-import walletUsdt from '../../assets/images/new/wallet-usdt.png'
-import walletXc from '../../assets/images/new/wallet-xc.png'
 import './Slider.scss'
 
 class Index extends Component {
   render() {
-    const { cards, onCheck } = this.props
+    const {cards, onCheck} = this.props
     const settings = {
       className: 'center',
       centerMode: true,
@@ -21,10 +19,10 @@ class Index extends Component {
     return (
       <div className="slider-wrapper">
         <Slider {...settings}>
-          {cards.map((card, key) => (
-            <div key={key.toString()} className="slider-card">
+          {cards.map(card => (
+            <div key={card.name} className="slider-card">
               <h3>{card.name}</h3>
-              <img src={card.cardImg} alt="" />
+              <img src={card.bgImg} alt=""/>
             </div>
           ))}
         </Slider>

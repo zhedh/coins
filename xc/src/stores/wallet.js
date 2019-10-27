@@ -27,6 +27,7 @@ class WalletStore {
     })
   }
 
+  // 等待删除
   @action
   getUsdtStream(options) {
     return WalletApi.getUsdtStream(options).then(res => {
@@ -35,6 +36,7 @@ class WalletStore {
     })
   }
 
+  // 等待删除
   @action
   getCoinStream(options) {
     return WalletApi.getCoinStream(options).then(res => {

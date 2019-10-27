@@ -37,14 +37,10 @@ const DepositHistory = Loadable({
   loading: Loading
 })
 
-const WalletHome = Loadable({
-  loader: () => import('./pages/wallet/Home'),
+const Wallet = Loadable({
+  loader: () => import('./pages/wallet/Index'),
   loading: Loading
 })
-// const Wallet = Loadable({
-//   loader: () => import('./pages/wallet/Index'),
-//   loading: Loading
-// })
 const WalletUsdt = Loadable({
   loader: () => import('./pages/wallet/WalletUsdt'),
   loading: Loading
@@ -175,8 +171,7 @@ export default [
   },
 
   // 钱包
-  // { path: '/wallet', name: 'Wallet', component: Wallet },
-  { path: '/wallet', name: 'WalletHome', component: WalletHome },
+  { path: '/wallet', name: 'Wallet', component: Wallet },
   { path: '/wallet/usdt', name: 'WalletUsdt', component: WalletUsdt },
   { path: '/wallet/coin/:id', name: 'WalletCoin', component: WalletCoin },
   { path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw },
@@ -198,7 +193,6 @@ export default [
   { path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail },
   { path: '/account', name: 'AccountSafe', component: AccountSafe },
   { path: '/contact-us', name: 'ContactUs', component: ContactUs },
-  { path: '/chat', name: 'Chat', component: Chat },
 
   // 实名认证
   {
