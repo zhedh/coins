@@ -3,7 +3,7 @@ import {inject, observer} from "mobx-react"
 import {CopyToClipboard} from "react-copy-to-clipboard"
 import {Toast} from "antd-mobile"
 import Header from "../../components/common/Header"
-import QrCodeBox from "../../components/partial/QrCodeBox"
+// import QrCodeBox from "../../components/partial/QrCodeBox"
 import "./Recharge.scss"
 
 @inject('walletStore')
@@ -31,7 +31,7 @@ class Recharge extends Component {
 
     return (
       <div id="recharge">
-        <Header title={`${type}充值`} isFixed isShadow bgWhite/>
+        <Header title={`${type}充值`} isFixed isShadow bgPrimary/>
         <section className="section-main">
           {/*<div className="group qr-code__group">*/}
           {/*<QrCodeBox key={address} codeMsg={address}/>*/}
@@ -45,6 +45,8 @@ class Recharge extends Component {
               onCopy={() => Toast.info('复制成功')}>
               <span>复制地址</span>
             </CopyToClipboard>
+            <br/>
+            {type === 'USDT' && <aside>请注意,此为OMNI 的USDT 的地址</aside>}
           </div>
         </section>
         <section className="section-aside">

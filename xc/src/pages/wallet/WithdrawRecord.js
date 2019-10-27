@@ -58,7 +58,7 @@ class WithdrawRecord extends Component {
 
     return (
       <div id="withdraw-record">
-        <Header title="提币记录" isFixed isShadow/>
+        <Header title="提币记录" bgPrimary isFixed isShadow/>
         <ul>
           {records.map(record =>
             <li key={record.id}>

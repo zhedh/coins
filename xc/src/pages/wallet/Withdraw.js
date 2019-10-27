@@ -8,7 +8,7 @@ import {formatCoinPrice} from "../../utils/format"
 import {getImagePath} from "../../utils/file"
 import Header from "../../components/common/Header"
 import scanIcon from '../../assets/images/scan.svg'
-import recordIcon from '../../assets/images/record.png'
+// import recordIcon from '../../assets/images/record.png'
 import Captcha from "../../components/common/Captcha"
 import './Withdraw.scss'
 
@@ -204,13 +204,16 @@ class Withdraw extends Component {
 
     return (
       <div id="withdraw">
-        <Header title={type + '提币'} bgWhite isFixed isShadow>
-          <img
-            className="record-icon"
-            src={recordIcon}
-            alt="提现记录"
-            onClick={() => history.push('/wallet/withdraw-record/' + type)}
-          />
+        <Header title={type + '提币'} bgPrimary isFixed isShadow>
+          {/*<img*/}
+          {/*className="record-icon"*/}
+          {/*src={recordIcon}*/}
+          {/*alt="提现记录"*/}
+          {/*onClick={() => history.push('/wallet/withdraw-record/' + type)}*/}
+          {/*/>*/}
+          <span onClick={() => history.push('/wallet/withdraw-record/' + type)}>
+            提币记录
+          </span>
         </Header>
         <section className="section-form">
           <div className="row">

@@ -4,8 +4,8 @@ import Header from "../../components/common/Header"
 import walletUsdtImg from "../../assets/images/wallet-usdt.png"
 import WalletCard from "../../components/partial/WalletCard"
 import {formatCoinPrice, formatTime} from "../../utils/format"
+import {USDT_POINT_LENGTH} from "../../utils/constants"
 import './WalletUsdt.scss'
-import {USDT_POINT_LENGTH} from "../../utils/constants";
 
 const USDT_CARD = {
   bgImg: walletUsdtImg,

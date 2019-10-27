@@ -8788,6 +8788,11 @@ react-icons@^3.7.0:
   dependencies:
     camelcase "^5.0.0"
 
+react-infinite-scroll-component@^4.5.3:
+  version "4.5.3"
+  resolved "https://registry.npm.taobao.org/react-infinite-scroll-component/download/react-infinite-scroll-component-4.5.3.tgz#008c2ec358628b490117ffc4aa6ce6982b26f8be"
+  integrity sha1-AIwuw1hii0kBF//EqmzmmCsm+L4=
+
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.11.0"
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.11.0.tgz?cache=0&sync_timestamp=1571779492725&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.11.0.tgz#b85dfecd48ad1ce469ff558a882ca8e8313928fa"

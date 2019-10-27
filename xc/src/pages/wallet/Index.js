@@ -7,8 +7,9 @@ import {formatCoinPrice, formatWalletPrice, formatTime} from '../../utils/format
 import {COMMON, WALLET} from '../../assets/static'
 import GroupLabel from "../../components/common/GroupLabel"
 import WalletApi from "../../api/wallet"
-import NoData from "../../components/common/NoData"
+// import NoData from "../../components/common/NoData"
 import './Index.scss'
+import InfiniteScroll from 'react-infinite-scroll-component'
 
 const USDT_CARD = {
   bgImg: WALLET.WALLET_USDT_IMG,
@@ -34,6 +35,9 @@ class Index extends Component {
   state = {
     cards: [],
     currentCardIndex: 0,
+    hasMore: true,
+    page: 1,
+    pageSize: 30,
     records: []
   }
 
@@ -43,7 +47,6 @@ class Index extends Component {
 
   getProductCards = async () => {
     const {personStore, walletStore} = this.props
-    const {currentCardIndex} = this.state
     await personStore.getUserInfo()
     await walletStore.getWallets()
     const {userInfo} = personStore
@@ -65,18 +68,17 @@ class Index extends Component {
       productId: wallet.productId,
     }))
     cards.push(...walletCards)
-    this.setState({cards}, () => {
-      currentCardIndex === 0 ?
-        this.getUsdtStream() :
-        this.getCoinStream(cards[currentCardIndex].productId)
-    })
+    this.setState({cards}, () => this.getRecords())
   }
 
   getUsdtStream = () => {
-    WalletApi.getUsdtStream().then(res => {
+    const {page, pageSize, records} = this.state
+    WalletApi.getUsdtStream({page, row: pageSize}).then(res => {
       if (res.status === 1) {
-        const records = res.data.sort((a, b) => b.addTime - a.addTime)
-        this.setState({records})
+        const arr = res.data.sort((a, b) => b.addTime - a.addTime)
+        const hasMore = arr.length === pageSize
+        records.push(...arr)
+        this.setState({records, hasMore, pageSize: hasMore ? pageSize + 1 : 1})
         return
       }
       Toast.info(res.msg)
@@ -87,7 +89,7 @@ class Index extends Component {
     WalletApi.getCoinStream({productId: id, status: 1}).then(res => {
       if (res.status === 1) {
         const records = res.data.sort((a, b) => b.addTime - a.addTime)
-        this.setState({records})
+        this.setState({records, hasMore: false})
         return
       }
       Toast.info(res.msg)
@@ -96,16 +98,24 @@ class Index extends Component {
 
   onCheckWallet = index => {
     const {cards} = this.state
-    this.setState({currentCardIndex: index}, () => {
+    this.setState({currentCardIndex: index, records: [], pageSize: 1}, () => {
       index === 0 ?
         this.getUsdtStream() :
         this.getCoinStream(cards[index].productId)
     })
   }
 
+  getRecords = () => {
+    const {currentCardIndex, cards} = this.state
+    if (cards.length <= 0) return
+    currentCardIndex === 0 ?
+      this.getUsdtStream() :
+      this.getCoinStream(cards[currentCardIndex].productId)
+  }
+
   render() {
     const {history} = this.props
-    const {cards, currentCardIndex, records} = this.state
+    const {cards, currentCardIndex, hasMore, records} = this.state
     const currentCard =
       cards.find((_, index) => currentCardIndex === index) || {}
 
@@ -137,21 +147,43 @@ class Index extends Component {
 
         <section className="record-list">
           <GroupLabel title="记录"/>
-          <ul className="records">
-            {
-              records.map(record =>
-                <li key={record.id}>
-                  <label>
-                    {record.remark}
-                    <time>{formatTime(record.addTime)}</time>
-                  </label>
-                  <span className={`count ${record.amount > 0 ? 'add' : 'minus'}`}>
-                  {formatCoinPrice(record.amount)}
-                </span>
-                </li>
-              )}
-            {records.length <= 0 && <NoData msg="暂无数据"/>}
-          </ul>
+
+          <InfiniteScroll
+            dataLength={records.length} //This is important field to render the next data
+            next={this.getRecords}
+            hasMore={hasMore}
+            loader={<p className="loading">加载中...</p>}
+            endMessage={
+              <p style={{textAlign: 'center', color: '#ccc'}}>
+                {records.length <= 0 ? '暂无数据' : '已经到底了！'}
+              </p>
+            }
+            // below props only if you need pull down functionality
+            // refreshFunction={this.refresh}
+            // pullDownToRefresh
+            // pullDownToRefreshContent={
+            //   <h3 style={{textAlign: 'center'}}>&#8595; Pull down to refresh</h3>
+            // }
+            // releaseToRefreshContent={
+            //   <h3 style={{textAlign: 'center'}}>&#8593; Release to refresh</h3>
+            // }
+          >
+            <ul className="records">
+              {
+                records.map((record, key) =>
+                  <li key={key}>
+                    <label>
+                      {record.remark}
+                      <time>{formatTime(record.addTime)}</time>
+                    </label>
+                    <span className={`count ${record.amount > 0 ? 'add' : 'minus'}`}>
+                    {formatCoinPrice(record.amount)}
+                  </span>
+                  </li>
+                )}
+            </ul>
+          </InfiniteScroll>
+          {/*{records.length <= 0 && <NoData msg="暂无数据"/>}*/}
         </section>
       </div>
     )

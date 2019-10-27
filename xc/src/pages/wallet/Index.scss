@@ -56,6 +56,12 @@
 
     &.record-list {
 
+      .loading {
+        padding: 0 20px;
+        text-align: center;
+        color: $text-sub-color;
+      }
+
       .records {
         @include clearList;
         margin-top: 15px;

@@ -9,10 +9,6 @@ $text-sub-color: #5A5A5A;
   padding-top: $header-height;
   font-weight: 600;
 
-  header {
-    background: $white;
-  }
-
   ul {
     @include clearList;
     padding: 0 40px;
@@ -36,8 +32,9 @@ $text-sub-color: #5A5A5A;
         }
 
         span {
-          @include overflow(1);
+          //@include overflow(1);
           display: inline-block;
+          word-break: break-word;
 
           &.succeed {
             color: $succeed-color;
