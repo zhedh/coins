@@ -69,7 +69,7 @@ class Index extends Component {
             <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
             <small>可用特价额度</small>
           </div>
-          <Link className="subscribe" to="/home/bargain">
+          <Link className="subscribe" to={{pathname: '/deposit', state: 1}}>
             <img src={HOME.SUBSCRIBE_ICON} alt=""/>
             认购
           </Link>
@@ -112,8 +112,8 @@ class Index extends Component {
         <section className="section-main">
           <div className="f-account">
             <div className="number">
-              <span>{mySpread.recommendAllCount || 0}人</span>
-              <small>当前团队F用户数</small>
+              <span>{mySpread.followUserActiveCount || 0}人</span>
+              <small>当前团队有效用户数</small>
             </div>
             <Link to="/home/generalize">
               查看团队详情

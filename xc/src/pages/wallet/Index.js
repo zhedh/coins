@@ -8,8 +8,8 @@ import {COMMON, WALLET} from '../../assets/static'
 import GroupLabel from "../../components/common/GroupLabel"
 import WalletApi from "../../api/wallet"
 // import NoData from "../../components/common/NoData"
-import './Index.scss'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import './Index.scss'
 
 const USDT_CARD = {
   bgImg: WALLET.WALLET_USDT_IMG,
@@ -42,6 +42,12 @@ class Index extends Component {
   }
 
   componentDidMount() {
+    const {userStore, history} = this.props
+    if (!userStore.isOnline()) {
+      history.push('/login')
+      return
+    }
+
     this.getProductCards().then()
   }
 

@@ -65,6 +65,7 @@
       }
 
       .item {
+        width: 20rem;
         height: 36px;
         line-height: 36px;
         @include overflow(1);

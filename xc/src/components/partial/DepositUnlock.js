@@ -84,7 +84,7 @@ class DepositUnlock extends Component {
         <section className="content-detail">
           <p>
             当前可认购特价额度&nbsp;
-            <Link to="/home/bargain">查看详情</Link>
+            <Link to="/home/bargain/record">查看详情</Link>
           </p>
 
           <h1>{userSpecial}</h1>
