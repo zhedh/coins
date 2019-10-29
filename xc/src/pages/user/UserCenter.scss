@@ -43,6 +43,53 @@
 
           &.active {
             opacity: 1;
+
+            &.positive {
+              &::before {
+                content: '';
+                width: 12px;
+                min-height: 17px;
+                background: url('../../assets/images/new/positive-active.png')
+                  center;
+                background-size: cover;
+              }
+            }
+            &.valid {
+              &::before {
+                content: '';
+                width: 12px;
+                min-height: 17px;
+                background: url('../../assets/images/new/valid-active.png')
+                  center;
+                background-size: cover;
+              }
+            }
+          }
+
+          &.positive {
+            &::before {
+              content: '';
+              margin-right: 5px;
+              display: inline-block;
+              width: 12px;
+              min-height: 17px;
+              vertical-align: -2px;
+              background: url('../../assets/images/new/positive.png') center;
+              background-size: cover;
+            }
+          }
+
+          &.valid {
+            &::before {
+              content: '';
+              margin-right: 5px;
+              display: inline-block;
+              width: 12px;
+              min-height: 17px;
+              vertical-align: -2px;
+              background: url('../../assets/images/new/valid.png') center;
+              background-size: cover;
+            }
           }
         }
       }
@@ -91,7 +138,6 @@
 }
 
 .f-modal {
-
   :global {
     .am-modal-content {
       background: rgba(255, 255, 255, 0.9);
@@ -108,4 +154,3 @@
     }
   }
 }
-
