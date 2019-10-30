@@ -200,7 +200,7 @@ class Withdraw extends Component {
 
     const displayServiceCharge = newServiceCharge === 0 ? 0 : (newServiceCharge || serviceCharge)
     const canSubmit = walletTo && amount && code
-    const realAmount = amount ? (Number(amount) - Number(displayServiceCharge)) : '--'
+    const realAmount = amount ? (Number(amount) - Number(amount) * Number(displayServiceCharge)) : '--'
 
     return (
       <div id="withdraw">
@@ -249,7 +249,7 @@ class Withdraw extends Component {
                 onChange={(e) => this.onInputChange(e, 'amount')}
               />
             </div>
-            <small>手续费：{displayServiceCharge}{type}</small>
+            <small>手续费：{displayServiceCharge * amount || 0}{type}</small>
           </div>
           <div className="row">
             <label>图形验证码</label>

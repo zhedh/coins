@@ -46,6 +46,7 @@
       position: absolute;
       bottom: 0;
       padding: 0 5px 0 64px;
+      width: 20rem;
       font-size: $font-context;
 
       label {
@@ -65,7 +66,6 @@
       }
 
       .item {
-        width: 20rem;
         height: 36px;
         line-height: 36px;
         @include overflow(1);

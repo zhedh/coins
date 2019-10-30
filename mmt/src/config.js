@@ -15,7 +15,8 @@ const CONFIG = {
     API_BASE_URL: 'https://mmt-api.mastermix.io/api'
   },
   DEV: {
-    API_BASE_URL: 'http://47.75.138.157:8090/api'
+    // API_BASE_URL: 'http://47.75.138.157:8090/api',
+    API_BASE_URL: 'http://47.75.196.141:8090/api'
   }
 }
 

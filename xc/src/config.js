@@ -23,7 +23,8 @@ const COIN = {
       XC_AUTH_URL:'https://test.zbx.one/xplan_authorization',
     },
     DEV: {
-      API_BASE_URL: 'http://47.75.138.157/api',
+      // API_BASE_URL: 'http://47.75.138.157/api',
+      API_BASE_URL: 'http://47.75.196.141/api',
       XC_AUTH_URL:'https://test.zbx.one/xplan_authorization',
     }
   }
