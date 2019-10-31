@@ -22,15 +22,18 @@ class Index extends Component {
   }
 
   componentDidMount() {
-    const {userStore, personStore, noticeStore, productStore} = this.props
-    noticeStore.getNotices()
-    if (userStore.isOnline()) {
-      personStore.getSpecial()
-      productStore.getProducts().then(productId => {
-        personStore.getDepositRecords({productId, status: 0})
-      })
-      this.getMySpread()
+    const {userStore, personStore, noticeStore, productStore, history} = this.props
+
+    if (!userStore.isOnline()) {
+      Toast.info('请先登录', 2, () => history.push('/login'))
+      return
     }
+    noticeStore.getNotices()
+    personStore.getSpecial()
+    productStore.getProducts().then(productId => {
+      personStore.getDepositRecords({productId, status: 0})
+    })
+    this.getMySpread()
   }
 
   getMySpread = () => {

@@ -42,7 +42,7 @@ class GeneralizeDetail extends Component {
     return (
       <div id="generalize-detail">
         <Header title={title} isShadow bgPrimary isFixed/>
-        <GroupLabel title="注:以下数据只代表前一天结算后的数据,旗下业绩包含本人"/>
+        <GroupLabel style={{fontSize: '1.1rem'}} title="注：以下数据只代表前一天结算后的数据，旗下业绩不包含其本人"/>
         {hasUsers ?
           <ul>
             {users.map(user =>

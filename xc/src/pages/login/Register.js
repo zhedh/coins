@@ -10,30 +10,30 @@ import AccountHeader from '../../components/partial/AccountHeader'
 import Captcha from '../../components/common/Captcha'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
-import registerSuccessImg from '../../assets/images/register-success.png'
+// import registerSuccessImg from '../../assets/images/register-success.png'
 import './Register.scss'
 
-class RegisterSuccess extends Component {
-
-  render() {
-    const {history} = this.props
-
-    return (
-      <div className="register-success">
-        <AccountHeader title="注册成功！"/>
-        <main>
-          <img src={registerSuccessImg} alt=""/>
-          <p className="text">恭喜您，注册成功 !</p>
-        </main>
-        <Button
-          className="primary-button"
-          onClick={() => history.push('/deposit')}>
-          立即开启
-        </Button>
-      </div>
-    )
-  }
-}
+// class RegisterSuccess extends Component {
+//
+//   render() {
+//     const {history} = this.props
+//
+//     return (
+//       <div className="register-success">
+//         <AccountHeader title="注册成功！"/>
+//         <main>
+//           <img src={registerSuccessImg} alt=""/>
+//           <p className="text">恭喜您，注册成功 !</p>
+//         </main>
+//         <Button
+//           className="primary-button"
+//           onClick={() => history.push('/deposit')}>
+//           立即开启
+//         </Button>
+//       </div>
+//     )
+//   }
+// }
 
 @inject('userStore')
 @observer
@@ -54,7 +54,7 @@ class Register extends Component {
     captchaKey: +new Date(),
     count: COUNT_DOWN,
     isGetSms: true,
-    showSuccess: false,
+    // showSuccess: false,
     showBtn: true,
     isSubmit: false
   }
@@ -145,7 +145,7 @@ class Register extends Component {
   }
 
   onSubmit = () => {
-    const {userStore} = this.props
+    const {userStore, history} = this.props
     const {
       account,
       code,
@@ -182,7 +182,8 @@ class Register extends Component {
         return
       }
       Cookies.remove('PRODUCT_ID')
-      Toast.success('注册成功', TOAST_DURATION, () => this.setState({showSuccess: true}))
+      // Toast.success('注册成功', TOAST_DURATION, () => this.setState({showSuccess: true}))
+      Toast.success('注册成功', TOAST_DURATION, () => history.push('/deposit'))
     })
   }
 
@@ -200,7 +201,7 @@ class Register extends Component {
       imgSrc,
       count,
       isGetSms,
-      showSuccess,
+      // showSuccess,
       showBtn,
       isSubmit
     } = this.state
@@ -289,7 +290,7 @@ class Register extends Component {
           onClick={this.onSubmit}>
           立即注册
         </Button>}
-        {showSuccess && <RegisterSuccess history={this.props.history}/>}
+        {/*{showSuccess && <RegisterSuccess history={this.props.history}/>}*/}
       </div>
     )
   }

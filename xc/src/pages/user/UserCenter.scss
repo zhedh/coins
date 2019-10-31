@@ -17,7 +17,7 @@
     color: #fff;
 
     .user-box {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
 
       img {
         width: 6.8rem;
@@ -30,10 +30,15 @@
       }
 
       .tags {
+        display: flex;
+        justify-content: center;
+
         span {
-          display: inline-block;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
           margin: 0 5px;
-          height: 2.4rem;
+          height: 2.6rem;
           padding: 0 10px;
           line-height: 2.4rem;
           border: 1px solid $white;
@@ -41,55 +46,19 @@
           text-align: center;
           opacity: 0.6;
 
+          &.positive img {
+            margin-top: -2px;
+            margin-right: 8px;
+            width: 1.2rem;
+          }
+
+          &.valid img {
+            margin-right: 8px;
+            width: 1.5rem;
+          }
+
           &.active {
             opacity: 1;
-
-            &.positive {
-              &::before {
-                content: '';
-                width: 12px;
-                min-height: 17px;
-                background: url('../../assets/images/new/positive-active.png')
-                  center;
-                background-size: cover;
-              }
-            }
-            &.valid {
-              &::before {
-                content: '';
-                width: 12px;
-                min-height: 17px;
-                background: url('../../assets/images/new/valid-active.png')
-                  center;
-                background-size: cover;
-              }
-            }
-          }
-
-          &.positive {
-            &::before {
-              content: '';
-              margin-right: 5px;
-              display: inline-block;
-              width: 12px;
-              min-height: 17px;
-              vertical-align: -2px;
-              background: url('../../assets/images/new/positive.png') center;
-              background-size: cover;
-            }
-          }
-
-          &.valid {
-            &::before {
-              content: '';
-              margin-right: 5px;
-              display: inline-block;
-              width: 12px;
-              min-height: 17px;
-              vertical-align: -2px;
-              background: url('../../assets/images/new/valid.png') center;
-              background-size: cover;
-            }
           }
         }
       }
@@ -98,11 +67,18 @@
     .tip {
       position: absolute;
       left: 1rem;
+      right: 1rem;
       bottom: 0.1rem;
       display: flex;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 10px;
       font-size: $font-assistant + 0.1;
+
+      span {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 

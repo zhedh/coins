@@ -54,4 +54,12 @@
       }
     }
   }
+
+  .footer {
+    @include clearBack;
+    padding: 15px;
+    text-align: center;
+    color: #ccc;
+    font-size: $font-assistant;
+  }
 }

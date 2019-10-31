@@ -41,7 +41,7 @@ class DepositBuy extends Component {
   }
 
   onSubmit = () => {
-    const {history, userStore, productStore} = this.props
+    const {userStore, productStore} = this.props
     const {payPassword} = this.state
     this.setState({isSubmit: true})
     userStore
@@ -64,7 +64,8 @@ class DepositBuy extends Component {
             Toast.info(res.msg)
             return
           }
-          history.push('/deposit/result')
+          Toast.success('恭喜您，参与成功', 2)
+          // history.push('/deposit/result')
         })
       })
       .catch(err => {

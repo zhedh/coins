@@ -33,7 +33,7 @@ class DepositUnlock extends Component {
   }
 
   onSubmit = () => {
-    const {history, userStore, productStore} = this.props
+    const {userStore, productStore} = this.props
     const {payPassword} = this.state
     this.setState({isSubmit: true})
     userStore
@@ -56,7 +56,8 @@ class DepositUnlock extends Component {
             Toast.info(res.msg)
             return
           }
-          history.push({pathname: '/deposit/result', state: 'unLock'})
+          Toast.success('恭喜您，认购成功', 2)
+          // history.push({pathname: '/deposit/result', state: 'unLock'})
         })
       })
       .catch(err => {
@@ -100,7 +101,7 @@ class DepositUnlock extends Component {
           </p>
           <aside>
             <small>
-              {productName}当前特价：{formatSpecialOffer(specialOffer)} USDT（数据来源ZBX交易所）
+              {productName}当前特价：{formatSpecialOffer(specialOffer)} USDT
             </small>
             <small>
               手续费费率：

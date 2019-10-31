@@ -57,6 +57,10 @@ export const USER = {
   USER_INVITE: require('../images/new/user-invite.png'),
   USER_LOGOUT: require('../images/new/user-logout.png'),
   CONTACT_US_IMG: require('../images/new/chat.png'),
+  POSITIVE_PRE_ICON: require('../images/new/positive-active.png'),
+  VALID_PRE_ICON: require('../images/new/valid-active.png'),
+  POSITIVE_ICON: require('../images/new/positive.png'),
+  VALID_ICON: require('../images/new/valid.png'),
 }
 
 export const WALLET = {

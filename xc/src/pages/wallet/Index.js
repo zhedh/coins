@@ -44,7 +44,7 @@ class Index extends Component {
   componentDidMount() {
     const {userStore, history} = this.props
     if (!userStore.isOnline()) {
-      history.push('/login')
+      Toast.info('请先登录', 2, () => history.push('/login'))
       return
     }
 
@@ -131,12 +131,15 @@ class Index extends Component {
         <section className="banner">
           <Slider cards={cards} onCheck={index => this.onCheckWallet(index)}/>
           <div className="account">
-            <span>账户总资产</span>
-            <span>
+            <label>账户总资产</label>
+            <p>
               {formatWalletPrice(currentCard.asset)}
               &nbsp;
               <small>{currentCard.name}</small>
-            </span>
+            </p>
+            {currentCard.name !== 'USDT' && <b>
+              冻结中：{currentCard.locked || 0}
+            </b>}
           </div>
 
           <ul className="btn-handle">

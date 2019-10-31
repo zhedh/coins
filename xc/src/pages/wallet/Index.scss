@@ -10,25 +10,30 @@
   section {
     &.banner {
       .account {
-        margin: 20px;
-        border-bottom: 1px solid #ececec;
+        margin: 20px 20px 10px;
 
-        span {
-          display: block;
+        label {
           line-height: 1.6;
           font-weight: 600;
+          font-size: $font-context;
+        }
 
-          &:first-child {
+        p {
+          @include clearBack;
+          padding: 0 0 5px;
+          line-height: 1.6;
+          border-bottom: 1px solid #ececec;
+          font-weight: 600;
+          font-size: $font-title-xl;
+
+          small {
             font-size: $font-context;
           }
+        }
 
-          &:last-child {
-            font-size: $font-title-xl;
-
-            small {
-              font-size: $font-context;
-            }
-          }
+        b {
+          display: block;
+          padding: 10px 0;
         }
       }
 

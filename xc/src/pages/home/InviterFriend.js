@@ -68,8 +68,10 @@ class InviterFriend extends Component {
             <span>复制邀请码</span>
           </CopyToClipboard>
         </section>
-        <section className="section-main"
-                 style={{backgroundImage: `url(${HOME.INVITER_FRIEND_BG})`}}>
+        <section
+          className="section-main"
+          style={{backgroundImage: `url(${HOME.INVITER_FRIEND_BG})`}}
+        >
           <div className="qr-wrap">
             <QrCodeBox
               key={userInfo.recommendCode}

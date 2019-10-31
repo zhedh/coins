@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
-import {Drawer, SegmentedControl} from 'antd-mobile'
+import {Drawer, SegmentedControl, Toast} from 'antd-mobile'
 import {DEPOSIT} from '../../assets/static'
 import Header from '../../components/common/Header'
 import DepositBuy from '../../components/partial/DepositBuy'
 import DepositUnlock from '../../components/partial/DepositUnlock'
 import './Deposit.scss'
 
+@inject('userStore')
 @inject('personStore')
 @inject('productStore')
 @observer
@@ -17,9 +18,14 @@ class Deposit extends Component {
   }
 
   componentDidMount() {
-    const {productStore, personStore, location} = this.props
+    const {userStore, productStore, personStore, location, history} = this.props
     const selectTabIndex = location.state || this.state.selectTabIndex
     this.setState({selectTabIndex})
+
+    if (!userStore.isOnline()) {
+      Toast.info('请先登录', 2, () => history.push('/login'))
+      return
+    }
     personStore.getUserInfo()
     personStore.getSpecial()
     productStore.getProducts().then(productId => {
@@ -61,7 +67,7 @@ class Deposit extends Component {
           {products.map(product => (
             <li
               key={product.id}
-              className={productDetail.id === product.id ? 'active' : ''}
+              className={productDetail.productId === product.id && 'active'}
               onClick={() => this.selectProduct(product.id)}
             >
               {product.productName}

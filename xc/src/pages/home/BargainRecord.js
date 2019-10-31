@@ -36,7 +36,7 @@ class BargainRecord extends Component {
                 </span>
               </li>
             )}
-          {specialRecords.length <= 0 && <NoData msg="暂无数据"/>}
+          {specialRecords.length <= 0 ? <NoData msg="暂无数据"/> : <p className="footer">已经到底了～</p>}
         </ul>
       </div>
     );
