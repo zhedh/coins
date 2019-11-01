@@ -4,11 +4,15 @@
   box-sizing: border-box;
   min-height: 100vh;
   padding-top: $header-height;
-  background: #E1E5EE;
+  background: $white;
+
+  .space {
+    height: 15px;
+    background: #E1E5EE;
+  }
 
   ul {
     @include clearList;
-    margin-top: 15px;
     padding: 0 20px;
     background: $white;
 
