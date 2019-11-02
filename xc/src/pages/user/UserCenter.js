@@ -119,7 +119,7 @@ class UserCenter extends Component {
           closable
           maskClosable
           transparent
-          title="F用户说明"
+          title="用户标示说明"
           onClose={() => this.setState({showFModal: false})}
         >
           <div
