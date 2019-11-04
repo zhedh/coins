@@ -80,7 +80,7 @@ class Generalize extends Component {
           <GroupLabel title="推荐团队"/>
           <ul className="team">
             <li>
-              <span>{mySpread.teamCount}</span>
+              <span>{mySpread.followUserActiveCount}</span>
               <small>有效成员</small>
             </li>
             <li>
@@ -93,10 +93,6 @@ class Generalize extends Component {
               <span>{mySpread.rebate}</span>
               <small>返还比例</small>
             </li>
-            {/*<li>*/}
-            {/*<span>{0}</span>*/}
-            {/*<small>活跃成员</small>*/}
-            {/*</li>*/}
           </ul>
         </section>
       </div>

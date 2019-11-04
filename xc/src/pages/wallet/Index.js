@@ -37,7 +37,7 @@ class Index extends Component {
     currentCardIndex: 0,
     hasMore: true,
     page: 1,
-    pageSize: 30,
+    pageSize: 3,
     records: []
   }
 
@@ -74,7 +74,7 @@ class Index extends Component {
       productId: wallet.productId,
     }))
     cards.push(...walletCards)
-    this.setState({cards}, () => this.getRecords())
+    this.setState({cards},()=>this.getRecords())
   }
 
   getUsdtStream = () => {
@@ -84,7 +84,7 @@ class Index extends Component {
         const arr = res.data.sort((a, b) => b.addTime - a.addTime)
         const hasMore = arr.length === pageSize
         records.push(...arr)
-        this.setState({records, hasMore, pageSize: hasMore ? pageSize + 1 : 1})
+        this.setState({records, hasMore, page: hasMore ? page + 1 : 1})
         return
       }
       Toast.info(res.msg)
@@ -104,7 +104,7 @@ class Index extends Component {
 
   onCheckWallet = index => {
     const {cards} = this.state
-    this.setState({currentCardIndex: index, records: [], pageSize: 1}, () => {
+    this.setState({currentCardIndex: index, records: [], page: 1}, () => {
       index === 0 ?
         this.getUsdtStream() :
         this.getCoinStream(cards[index].productId)
@@ -113,7 +113,7 @@ class Index extends Component {
 
   getRecords = () => {
     const {currentCardIndex, cards} = this.state
-    if (cards.length <= 0) return
+    // if (cards.length <= 0) return
     currentCardIndex === 0 ?
       this.getUsdtStream() :
       this.getCoinStream(cards[currentCardIndex].productId)
@@ -156,6 +156,7 @@ class Index extends Component {
 
         <section className="record-list">
           <GroupLabel title="记录"/>
+
 
           <InfiniteScroll
             dataLength={records.length} //This is important field to render the next data

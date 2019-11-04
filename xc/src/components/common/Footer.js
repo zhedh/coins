@@ -1,10 +1,6 @@
-import React, { Component } from 'react'
-import { withRouter } from 'react-router'
-import { FOOTER } from '../../assets/static'
-import HomeSvg from '../../assets/images/new/icon-home.png'
-import PlanActive from '../../assets/images/new/icon-plan.png'
-import WalletSvg from '../../assets/images/new/icon-wallet.png'
-import UserSvg from '../../assets/images/new/icon-user.png'
+import React, {Component} from 'react'
+import {withRouter} from 'react-router'
+import {FOOTER} from '../../assets/static'
 
 import './Footer.scss'
 
@@ -12,26 +8,26 @@ const TABS = [
   {
     pathname: '/home',
     label: '首页',
-    image: HomeSvg,
-    imagePre: FOOTER.ICON_HOME
+    image: FOOTER.ICON_HOME,
+    imagePre: FOOTER.ICON_HOME_PRE
   },
   {
     pathname: '/deposit',
     label: FOOTER.LABEL_DEPOSIT,
-    image: PlanActive,
-    imagePre: FOOTER.ICON_PLAN
+    image: FOOTER.ICON_PLAN,
+    imagePre: FOOTER.ICON_PLAN_PRE
   },
   {
     pathname: '/wallet',
     label: '钱包',
-    image: WalletSvg,
-    imagePre: FOOTER.ICON_WALLET
+    image: FOOTER.ICON_WALLET,
+    imagePre: FOOTER.ICON_WALLET_PRE
   },
   {
     pathname: '/user-center',
     label: '我的',
-    image: UserSvg,
-    imagePre: FOOTER.ICON_USER
+    image: FOOTER.ICON_USER,
+    imagePre: FOOTER.ICON_USER_PRE
   }
 ]
 
@@ -48,12 +44,12 @@ const PATHS = [
 
 class Footer extends Component {
   handleChange = pathname => {
-    const { history } = this.props
+    const {history} = this.props
     history.push(pathname)
   }
 
   render() {
-    const { location } = this.props
+    const {location} = this.props
     const show = PATHS.includes(location.pathname)
 
     return show ? (

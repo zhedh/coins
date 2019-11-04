@@ -67,7 +67,7 @@ class Deposit extends Component {
           {products.map(product => (
             <li
               key={product.id}
-              className={productDetail.productId === product.id && 'active'}
+              className={productDetail.productId === product.id ? 'active' : ''}
               onClick={() => this.selectProduct(product.id)}
             >
               {product.productName}

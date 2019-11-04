@@ -65,12 +65,13 @@ class DepositBuy extends Component {
             return
           }
           Toast.success('恭喜您，参与成功', 2)
+          this.setState({showConfirm: false})
           // history.push('/deposit/result')
         })
       })
       .catch(err => {
         console.log(err)
-        this.setState({isSubmit: false})
+        this.setState({isSubmit: false, showConfirm: false})
       })
   }
 
