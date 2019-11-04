@@ -51,7 +51,8 @@ class UserCenter extends Component {
     script.defer = true
     script.id = 'ze-snippet'
     script.src =
-      'https://static.zdassets.com/ekr/snippet.js?key=3abd36b7-3c9c-408f-ab7e-0b54e85bd08c'
+      // 'https://static.zdassets.com/ekr/snippet.js?key=3abd36b7-3c9c-408f-ab7e-0b54e85bd08c'
+      'https://static.zdassets.com/ekr/snippet.js?key=bf6b0047-ef50-4074-81eb-6632427bb4ef'
     document.body.appendChild(script)
   }
 

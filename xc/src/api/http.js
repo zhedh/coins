@@ -61,7 +61,6 @@ instance.interceptors.response.use(response => {
     clearTimeout(timer)
   }
 
-
   // 用户请求需要登录的接口，跳转登录页
   if (res.status === -101) {
     Cookies.remove('OPENID')
@@ -81,10 +80,12 @@ instance.interceptors.response.use(response => {
     }
     res.data = optionsToHump(res.data);
   }
+
   return res;
 }, error => {
   console.log(error)
   Toast.fail('网络错误，请重试')
+  return Promise.reject({status: -100, msg: "接口无返回值"})
 });
 
 export default instance;

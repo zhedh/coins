@@ -7,7 +7,7 @@ import routes from './routes'
 import stores from './stores'
 import NoMatch from './pages/exception/404'
 import {SWITCH} from './config'
-
+// import VConsole from 'vconsole'
 import './App.scss'
 
 const LoadableFooter = Loadable({
@@ -16,6 +16,7 @@ const LoadableFooter = Loadable({
     return ''
   }
 })
+// new VConsole();
 
 class App extends Component {
 
