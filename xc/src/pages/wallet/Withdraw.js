@@ -250,7 +250,7 @@ class Withdraw extends Component {
                 onChange={(e) => this.onInputChange(e, 'amount')}
               />
             </div>
-            <small>手续费：{displayServiceCharge || 0}%</small>
+            <small>手续费：{(displayServiceCharge || 0) ** 100}%</small>
           </div>
           <div className="row">
             <label>图形验证码</label>
@@ -298,7 +298,7 @@ class Withdraw extends Component {
           <p> •
             当前，每人每日最高可提现 {dayMax} {type}，
             单笔转出限额为{amountMin} - {amountMax} {type}，
-            手续费 {displayServiceCharge}%。
+            手续费 {displayServiceCharge * 100}%。
           </p>
           <p> • 为了保障资金安全，我们会对提币进行人工审核，请耐心等待。</p>
         </section>

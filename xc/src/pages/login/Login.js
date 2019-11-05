@@ -17,6 +17,7 @@ class Login extends Component {
     account: '',
     password: '',
     type: 'password',
+    isSubmit: true
   }
 
   componentWillUnmount() {
@@ -46,12 +47,15 @@ class Login extends Component {
       return
     }
 
+    this.setState({isSubmit: false})
+
     // 登录接口，成功后前往首页
     userStore.login({
       phonePrefix: isMobile(account) ? '86' : null,
       userName: account,
       password
     }).then(res => {
+      this.setState({isSubmit: true})
       if (res.status !== 1) {
         Toast.info(res.msg, TOAST_DURATION)
         return
@@ -59,12 +63,12 @@ class Login extends Component {
       Cookies.remove('PRODUCT_ID')
       Toast.success('登录成功', TOAST_DURATION)
       this.timer = setTimeout(() => history.push('/deposit'), TOAST_DURATION * 1000)
-    })
+    }).catch(() => this.setState({isSubmit: true}))
   }
 
   render() {
-    const {account, password, type} = this.state
-    const canSubmit = account === '' || password === ''
+    const {account, password, type, isSubmit} = this.state
+    const unSubmit = account === '' || password === '' || !isSubmit
 
     return (
       <div id="login">
@@ -103,12 +107,11 @@ class Login extends Component {
           <Button
             activeClassName="active"
             className="primary-button"
-            disabled={canSubmit}
+            disabled={unSubmit}
             onClick={this.onSubmit}>
             确认
           </Button>
         </div>
-
       </div>
     )
   }

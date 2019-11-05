@@ -58,6 +58,7 @@ class DepositUnlock extends Component {
           }
           Toast.success('恭喜您，认购成功', 2)
           this.setState({showConfirm: false})
+          window.location.reload()
           // history.push({pathname: '/deposit/result', state: 'unLock'})
         })
       })

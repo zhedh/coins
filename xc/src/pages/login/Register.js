@@ -10,30 +10,7 @@ import AccountHeader from '../../components/partial/AccountHeader'
 import Captcha from '../../components/common/Captcha'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
-// import registerSuccessImg from '../../assets/images/register-success.png'
 import './Register.scss'
-
-// class RegisterSuccess extends Component {
-//
-//   render() {
-//     const {history} = this.props
-//
-//     return (
-//       <div className="register-success">
-//         <AccountHeader title="注册成功！"/>
-//         <main>
-//           <img src={registerSuccessImg} alt=""/>
-//           <p className="text">恭喜您，注册成功 !</p>
-//         </main>
-//         <Button
-//           className="primary-button"
-//           onClick={() => history.push('/deposit')}>
-//           立即开启
-//         </Button>
-//       </div>
-//     )
-//   }
-// }
 
 @inject('userStore')
 @observer
@@ -56,7 +33,7 @@ class Register extends Component {
     isGetSms: true,
     // showSuccess: false,
     showBtn: true,
-    isSubmit: false
+    isSubmit: true
   }
 
   componentDidMount() {
@@ -166,7 +143,7 @@ class Register extends Component {
       Toast.info('两次密码不一致', TOAST_DURATION)
       return
     }
-    this.setState({isSubmit: true})
+    this.setState({isSubmit: false})
 
     userStore.register({
       phonePrefix: isMobile(account) ? '86' : null,
@@ -176,7 +153,7 @@ class Register extends Component {
       passwordConfirm,
       recommendCode
     }).then(res => {
-      this.setState({isSubmit: false})
+      this.setState({isSubmit: true})
       if (res.status !== 1) {
         Toast.info(res.msg, TOAST_DURATION)
         return
@@ -184,7 +161,7 @@ class Register extends Component {
       Cookies.remove('PRODUCT_ID')
       // Toast.success('注册成功', TOAST_DURATION, () => this.setState({showSuccess: true}))
       Toast.success('注册成功', TOAST_DURATION, () => history.push('/deposit'))
-    })
+    }).catch(() => this.setState({isSubmit: true}))
   }
 
   render() {
@@ -286,7 +263,7 @@ class Register extends Component {
         {showBtn && <Button
           activeClassName="active"
           className="primary-button"
-          disabled={!this.canSubmit() || isSubmit}
+          disabled={!this.canSubmit() || !isSubmit}
           onClick={this.onSubmit}>
           立即注册
         </Button>}
