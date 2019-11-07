@@ -26,7 +26,7 @@ class Register extends Component {
     showCaptchaPng: false,
     pwType: 'password',
     pwConfirmType: 'password',
-    imgSrc: 'http://47.75.138.157/api/captchapng/png',
+    imgSrc: '',
     captcha: '',
     captchaKey: +new Date(),
     count: COUNT_DOWN,

@@ -22,7 +22,7 @@ class Withdraw extends Component {
     amount: '',
     walletTo: '',
     type: '',
-    imgSrc: 'http://47.75.138.157/api/captchapng/png',
+    imgSrc: '',
     captcha: '',
     captchaKey: +new Date(),
     count: COUNT_DOWN,
@@ -195,11 +195,11 @@ class Withdraw extends Component {
       amountMin,
       amountMax,
       balance,
-      serviceCharge
+      serviceChargeIn,
+      serviceChargeOut
     } = walletStore.withdrawInfo || {}
-    console.log(serviceCharge)
 
-    const displayServiceCharge = newServiceCharge === 0 ? 0 : (newServiceCharge || serviceCharge)
+    const displayServiceCharge = newServiceCharge === 0 ? 0 : (newServiceCharge || serviceChargeOut)
     const canSubmit = walletTo && amount && code
     const realAmount = amount ? (Number(amount) - Number(amount) * Number(displayServiceCharge)) : '--'
 
@@ -250,7 +250,7 @@ class Withdraw extends Component {
                 onChange={(e) => this.onInputChange(e, 'amount')}
               />
             </div>
-            <small>手续费：{(displayServiceCharge || 0) ** 100}%</small>
+            <small>手续费：{(displayServiceCharge || 0) * 100}%</small>
           </div>
           <div className="row">
             <label>图形验证码</label>
@@ -298,7 +298,8 @@ class Withdraw extends Component {
           <p> •
             当前，每人每日最高可提现 {dayMax} {type}，
             单笔转出限额为{amountMin} - {amountMax} {type}，
-            手续费 {displayServiceCharge * 100}%。
+            提币手续费 {(serviceChargeOut || 0) * 100}%。
+            转账手续费 {(serviceChargeIn || 0) * 100}%。
           </p>
           <p> • 为了保障资金安全，我们会对提币进行人工审核，请耐心等待。</p>
         </section>
