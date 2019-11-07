@@ -61,7 +61,7 @@ class Withdraw extends Component {
   onAmountChange = (e) => {
     const {value} = e.target
     const reg = /^\d+(\.)?\d{0,4}?$/
-    if (!reg.test(e.target.value)) {
+    if (value && !reg.test(e.target.value)) {
       return
     }
     this.setState({amount: value})
@@ -283,7 +283,7 @@ class Withdraw extends Component {
           <div className="row">
             <label>
               <span>到账数量</span>
-              <span>{realAmount}</span>
+              <span>{formatCoinPrice(realAmount, type === 'USDT' ? USDT_POINT_LENGTH : COIN_POINT_LENGTH)}</span>
             </label>
           </div>
           <div className="btn-box">

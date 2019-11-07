@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import {USER} from '../../assets/static'
 import {Modal, Toast} from 'antd-mobile'
-import {FaRegQuestionCircle} from 'react-icons/fa'
 import SimpleHeader from '../../components/common/SimpleHeader'
 import './UserCenter.scss'
 
