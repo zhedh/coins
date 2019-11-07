@@ -58,6 +58,15 @@ class Withdraw extends Component {
     this.setState({[key]: value})
   }
 
+  onAmountChange = (e) => {
+    const {value} = e.target
+    const reg = /^\d+(\.)?\d{0,4}?$/
+    if (!reg.test(e.target.value)) {
+      return
+    }
+    this.setState({amount: value})
+  }
+
   onAddressBlur = (e) => {
     const {value} = e.target
     const {type} = this.state
@@ -206,12 +215,6 @@ class Withdraw extends Component {
     return (
       <div id="withdraw">
         <Header title={type + '提币'} bgPrimary isFixed isShadow>
-          {/*<img*/}
-          {/*className="record-icon"*/}
-          {/*src={recordIcon}*/}
-          {/*alt="提现记录"*/}
-          {/*onClick={() => history.push('/wallet/withdraw-record/' + type)}*/}
-          {/*/>*/}
           <span onClick={() => history.push('/wallet/withdraw-record/' + type)}>
             提币记录
           </span>
@@ -247,7 +250,7 @@ class Withdraw extends Component {
                 type="text"
                 placeholder={'最小提币量' + amountMin}
                 value={amount}
-                onChange={(e) => this.onInputChange(e, 'amount')}
+                onChange={this.onAmountChange}
               />
             </div>
             <small>手续费：{(displayServiceCharge || 0) * 100}%</small>
