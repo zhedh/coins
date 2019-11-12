@@ -22,7 +22,8 @@ class ContactUs extends Component {
     // script.defer = true
     script.id = 'ze-snippet'
     script.src =
-      'https://static.zdassets.com/ekr/snippet.js?key=bf6b0047-ef50-4074-81eb-6632427bb4ef'
+      'https://static.zdassets.com/ekr/snippet.js?key=1975a6f5-96b0-4b28-82c3-a4b866f40f3c'
+    // 'https://static.zdassets.com/ekr/snippet.js?key=bf6b0047-ef50-4074-81eb-6632427bb4ef'
     // 'https://static.zdassets.com/ekr/snippet.js?key=3abd36b7-3c9c-408f-ab7e-0b54e85bd08c'
     document.body.appendChild(script)
   }
@@ -44,7 +45,7 @@ class ContactUs extends Component {
           </p>
         </div>
         <div className="arrow-box">
-          <img  src={USER.CONTACT_US_ARROW} alt=""/>
+          <img src={USER.CONTACT_US_ARROW} alt=""/>
         </div>
       </div>
     )
