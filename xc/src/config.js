@@ -7,7 +7,7 @@
 /**
  * @description 开关配置，打包前修改配置
  *
- * PROJECT String 项目名（XC|NTTC）
+ * PROJECT String 项目名
  * ONLINE bool 线上版本
  * */
 
