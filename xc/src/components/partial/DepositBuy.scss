@@ -154,16 +154,16 @@
       left: 0;
       width: 100%;
       background: $white;
-      padding-top: 20px;
       padding-bottom: 40px;
 
       h2 {
         @include clearBack;
         position: relative;
-        height: 36px;
-        line-height: 36px;
+        height: 50px;
+        line-height: 50px;
         text-align: center;
         font-size: $font-title;
+        border-bottom: 1px solid $border-color;
 
         img {
           position: absolute;
@@ -188,12 +188,12 @@
           font-size: $font-assistant;
           font-weight: 600;
 
-          &.deposit-price {
+          &.strong{
             padding: 6px 0;
             font-size: $font-title-s;
           }
 
-          &.service-charge {
+          &.assistant {
             padding: 5px 0;
             color: $text-sub-color;
           }

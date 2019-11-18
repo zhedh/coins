@@ -65,6 +65,13 @@ class UserCenter extends Component {
                 className={`positive ${userInfo.isF && 'active'}`}
                 onClick={() => this.setState({showFModal: true})}
               >
+                <img src={userInfo.isGold !== 0 ? USER.POSITIVE_PRE_ICON : USER.POSITIVE_ICON} alt=""/>
+                黄金会员
+              </span>
+              <span
+                className={`positive ${userInfo.isF && 'active'}`}
+                onClick={() => this.setState({showFModal: true})}
+              >
                 <img src={userInfo.isF ? USER.POSITIVE_PRE_ICON : USER.POSITIVE_ICON} alt=""/>
                 活跃
               </span>

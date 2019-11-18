@@ -41,7 +41,7 @@ class ContactUs extends Component {
             <br/>
             即可开始与客服的沟通
             <br/>
-            若未出现联系客服,请耐心等待1~2秒
+            若未出现联系客服,请耐心等待3~5秒
           </p>
         </div>
         <div className="arrow-box">

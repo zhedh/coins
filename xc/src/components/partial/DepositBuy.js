@@ -5,6 +5,7 @@ import {inject, observer} from 'mobx-react'
 import {Button, Toast} from 'antd-mobile'
 import {COMMON} from '../../assets/static'
 import './DepositBuy.scss'
+import {formatCoinPrice} from "../../utils/format";
 
 @inject('productStore')
 @inject('userStore')
@@ -29,10 +30,6 @@ class DepositBuy extends Component {
 
   onDeposit = gearNum => {
     const {userStore} = this.props
-    // if (!personStore.isAuth) {
-    //   Toast.info('请进行实名认证')
-    //   return
-    // }
     if (!userStore.hasPayPassword) {
       Toast.info('请设置交易密码')
       return
@@ -64,9 +61,8 @@ class DepositBuy extends Component {
             Toast.info(res.msg)
             return
           }
-          Toast.success('恭喜您，参与成功', 2)
+          Toast.success('恭喜您，参与成功', 2, () => window.location.reload())
           this.setState({showConfirm: false})
-          window.location.reload()
         })
       })
       .catch(err => {
@@ -103,21 +99,13 @@ class DepositBuy extends Component {
           ))}
         </ul>
         <div className="fee">
-          {/*{gearNum && (*/}
           <p>
             <span>赠送特价额度</span>
             <b>{gearNum ? (gearNum / 10).toFixed(0) : 0}</b>
           </p>
-          {/*)}*/}
           <small>手续费费率：{(productDetail.serviceCharge || 0) * 100}%</small>
         </div>
         <aside>
-          {/*{!personStore.isAuth && (*/}
-          {/*<p>*/}
-          {/**您暂未通过实名认证，无法参与计划*/}
-          {/*<Link to="/verified-country">去认证</Link>*/}
-          {/*</p>*/}
-          {/*)}*/}
           {!userStore.hasPayPassword && (
             <p>
               *您暂未设置交易密码，无法参与
@@ -137,7 +125,7 @@ class DepositBuy extends Component {
         <div className={`confirm-wrapper ${showConfirm ? 'show' : ''}`}>
           <div className="content-box">
             <h2>
-              请输入交易密码
+              确认支付
               <img
                 src={COMMON.CLOSE_ICON}
                 alt=""
@@ -145,17 +133,23 @@ class DepositBuy extends Component {
               />
             </h2>
             <div className="content">
-              {/*先隐藏可用数量*/}
-
-              {/*<p>*/}
-              {/*<span>可用</span>*/}
-              {/*<span>*/}
-              {/*{formatCoinPrice(*/}
-              {/*productDetail.userWarehouse,*/}
-              {/*COIN_POINT_LENGTH*/}
-              {/*)}*/}
-              {/*</span>*/}
-              {/*</p>*/}
+              <p className="strong">
+                <span>参与 X PLAN</span>
+                <span>{gearNum || '--'}</span>
+              </p>
+              <p className="assistant">
+                <span>手续费{(productDetail.serviceCharge || 0) * 100}%</span>
+                <span>
+                  {formatCoinPrice(gearNum * productDetail.serviceCharge)}
+                </span>
+              </p>
+              <br/>
+              <p className="strong">
+                <span>可用</span>
+                <span>
+                  {formatCoinPrice(productDetail.userWarehouse)}
+                </span>
+              </p>
               <div className="input-box">
                 <input
                   type={pwdType}
