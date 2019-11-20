@@ -30,13 +30,11 @@ class GeneralizeDetail extends Component {
 
   getSpreadList = () => {
     const {page, row, type, users} = this.state
-    // console.log({page, row, type})
     OtherApi.getSpreadList({
       type,
       page,
       row
     }).then(res => {
-      // console.log(res)
       if (res.status !== 1) {
         Toast.info(res.msg)
         this.setState({hasMore: false})

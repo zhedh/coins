@@ -62,9 +62,11 @@ export const USER = {
   USER_LOGOUT: require('../images/2.1/user-logout.png'),
   CONTACT_US_IMG: require('../images/2.1/contact-us.png'),
   POSITIVE_PRE_ICON: require('../images/2.1/positive-active.png'),
-  VALID_PRE_ICON: require('../images/2.1/valid-active.png'),
   POSITIVE_ICON: require('../images/2.1/positive.png'),
+  VALID_PRE_ICON: require('../images/2.1/valid-active.png'),
   VALID_ICON: require('../images/2.1/valid.png'),
+  GOLD_PRE_ICON: require('../images/2.1/gold-active.png'),
+  GOLD_ICON: require('../images/2.1/gold.png'),
   CONTACT_US_ARROW: require('../images/2.1/contact-us-arrow.png'),
 }
 

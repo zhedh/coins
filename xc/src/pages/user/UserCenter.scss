@@ -97,19 +97,27 @@
 }
 
 .f-modal {
-  :global {
-    .am-modal-content {
-      background: rgba(255, 255, 255, 0.9);
+  .antd-modal {
+    font-size: 1.5rem;
+    text-align: justify;
+
+    .primary-color {
+      display: block;
+      color: $primary-color;
     }
 
-    .am-modal-title {
-      font-size: 1.7rem;
-    }
+    .btn-box {
+      padding: 10px;
+      text-align: center;
 
-    p {
-      @include clearBack;
-      text-align: justify;
-      font-size: 1.5rem;
+      button {
+        padding: 10px 20px;
+        border: none;
+        background: $primary-color;
+        border-radius: 5px;
+        color: $white;
+      }
     }
   }
 }
+

@@ -7,7 +7,6 @@ import {formatCoinPrice, formatWalletPrice, formatTime} from '../../utils/format
 import {COMMON, WALLET} from '../../assets/static'
 import GroupLabel from "../../components/common/GroupLabel"
 import WalletApi from "../../api/wallet"
-// import NoData from "../../components/common/NoData"
 import InfiniteScroll from 'react-infinite-scroll-component'
 import './Index.scss'
 
@@ -74,7 +73,7 @@ class Index extends Component {
       productId: wallet.productId,
     }))
     cards.push(...walletCards)
-    this.setState({cards},()=>this.getRecords())
+    this.setState({cards}, () => this.getRecords())
   }
 
   getUsdtStream = () => {
@@ -137,9 +136,13 @@ class Index extends Component {
               &nbsp;
               <small>{currentCard.name}</small>
             </p>
-            {currentCard.name !== 'USDT' && <b>
-              冻结中：{currentCard.locked || 0}
-            </b>}
+            {
+              currentCard.name !== 'USDT' &&
+              <aside>
+                <b>冻结中：{currentCard.locked || 0}</b>
+                <b onClick={()=>history.push('/wallet/plan-flow')}>计划池流水：{currentCard.planpool || 0} >></b>
+              </aside>
+            }
           </div>
 
           <ul className="btn-handle">
@@ -156,8 +159,6 @@ class Index extends Component {
 
         <section className="record-list">
           <GroupLabel title="记录"/>
-
-
           <InfiniteScroll
             dataLength={records.length} //This is important field to render the next data
             next={this.getRecords}
@@ -168,15 +169,6 @@ class Index extends Component {
                 {records.length <= 0 ? '暂无数据' : '已经到底了！'}
               </p>
             }
-            // below props only if you need pull down functionality
-            // refreshFunction={this.refresh}
-            // pullDownToRefresh
-            // pullDownToRefreshContent={
-            //   <h3 style={{textAlign: 'center'}}>&#8595; Pull down to refresh</h3>
-            // }
-            // releaseToRefreshContent={
-            //   <h3 style={{textAlign: 'center'}}>&#8593; Release to refresh</h3>
-            // }
           >
             <ul className="records">
               {
@@ -193,7 +185,6 @@ class Index extends Component {
                 )}
             </ul>
           </InfiniteScroll>
-          {/*{records.length <= 0 && <NoData msg="暂无数据"/>}*/}
         </section>
       </div>
     )

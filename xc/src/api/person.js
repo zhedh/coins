@@ -165,20 +165,12 @@ class PersonApi {
   }
 
   /**
-   * 购买会员
+   * 成为黄金会员
    *
-   * @required payToken string 支付TOKEN
-   * month number 购买月数，缺省为1个月
+   * @required productId string 产品ID
    **/
-  static buyVip(options = {}) {
-    return http.post('/user/buyvip', options)
-  }
-
-  /**
-   * 会员信息
-   **/
-  static getVipInfo(options = {}) {
-    return http.post('/user/vipinfo', options)
+  static joinGoldClub(options = {}) {
+    return http.post('/user/toBecomeGoldUser', options)
   }
 }
 
