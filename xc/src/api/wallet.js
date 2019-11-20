@@ -89,6 +89,15 @@ class WalletApi {
   static getWalletAddress(options = {}) {
     return http.post('/newpay/mywallet', options)
   }
+
+  /**
+   * 获取计划池流水
+   *
+   * @required productId string 产品ID
+   **/
+  static getPlanPool(options = {}) {
+    return http.post('/userassets/myplanpoollist', options)
+  }
 }
 
 export default WalletApi

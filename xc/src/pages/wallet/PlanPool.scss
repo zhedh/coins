@@ -37,19 +37,4 @@
       }
     }
   }
-
-  .no-data {
-    padding: 12rem 20px;
-    text-align: center;
-
-    img {
-      width: 99px;
-    }
-
-    p {
-      @include clearBack;
-      padding-top: 5px;
-      color: $text-sub-color;
-    }
-  }
 }

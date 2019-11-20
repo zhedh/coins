@@ -171,7 +171,7 @@ export default [
   { path: '/wallet', name: 'Wallet', component: Wallet },
   { path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw },
   { path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge },
-  { path: '/planning-pool', name: 'PlanPool', component: PlanPool },
+  { path: '/wallet/plan-pool/:id', name: 'PlanPool', component: PlanPool },
   {
     path: '/wallet/withdraw-record/:type',
     name: 'WithdrawRecord',

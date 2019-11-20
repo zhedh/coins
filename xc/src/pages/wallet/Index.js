@@ -140,7 +140,8 @@ class Index extends Component {
               currentCard.name !== 'USDT' &&
               <aside>
                 <b>冻结中：{currentCard.locked || 0}</b>
-                <b onClick={()=>history.push('/wallet/plan-flow')}>计划池流水：{currentCard.planpool || 0} >></b>
+                <b
+                  onClick={() => history.push(`/wallet/plan-pool/${currentCard.productId}`)}>计划池流水：{currentCard.planpool || 0} >></b>
               </aside>
             }
           </div>
