@@ -61,13 +61,13 @@ class UserCenter extends Component {
             <img src={USER.USER_ICON} alt=""/>
             <p>{userInfo.email || userInfo.phoneNo}</p>
             <div className="tags">
-              <span
-                className={`positive ${userInfo.isF && 'active'}`}
-                onClick={() => this.setState({showFModal: true})}
-              >
-                <img src={userInfo.isGold !== 0 ? USER.POSITIVE_PRE_ICON : USER.POSITIVE_ICON} alt=""/>
-                黄金会员
-              </span>
+              {/*<span*/}
+                {/*className={`positive ${userInfo.isF && 'active'}`}*/}
+                {/*onClick={() => this.setState({showFModal: true})}*/}
+              {/*>*/}
+                {/*<img src={userInfo.isGold !== 0 ? USER.POSITIVE_PRE_ICON : USER.POSITIVE_ICON} alt=""/>*/}
+                {/*黄金会员*/}
+              {/*</span>*/}
               <span
                 className={`positive ${userInfo.isF && 'active'}`}
                 onClick={() => this.setState({showFModal: true})}

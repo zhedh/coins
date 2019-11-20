@@ -29,7 +29,7 @@ class Password extends Component {
     if (!typeOption) {
       history.push('/404')
     }
-    if (userStore.isOnline) {
+    if (userStore.isOnline()) {
       personStore.getUserInfo().then(() => {
         const userName = personStore.userName
         this.setState({typeOption, userName})
@@ -37,21 +37,11 @@ class Password extends Component {
       return
     }
     this.setState({typeOption})
-    // this.clearState()
   }
 
   componentWillUnmount() {
     clearInterval(this.timer)
   }
-
-  // clearState = () => {
-  //   this.setState({
-  //     userName: '',
-  //     code: '',
-  //     password: '',
-  //     passwordConfirm: ''
-  //   })
-  // }
 
   onBack = () => {
     const {history} = this.props

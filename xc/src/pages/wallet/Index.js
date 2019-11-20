@@ -37,7 +37,7 @@ class Index extends Component {
     currentCardIndex: 0,
     hasMore: true,
     page: 1,
-    pageSize: 3,
+    pageSize: 10,
     records: []
   }
 
