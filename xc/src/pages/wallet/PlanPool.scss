@@ -1,0 +1,55 @@
+@import '../../styles/_common';
+
+#planPool {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  background-color: #fff;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: center;
+    @include clearList;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f7f7f7;
+    padding: 1rem 2.8rem;
+    font-size: $font-assistant;
+
+    span.amount {
+      color: #ff8147;
+      font-size: $font-title-s;
+    }
+
+    li {
+      line-height: 1.5;
+
+      &:first-child {
+        font-weight: 500;
+        color: $text-color;
+      }
+
+      &:last-child {
+        margin-top: 0.6rem;
+        color: #989c9f;
+      }
+    }
+  }
+
+  .no-data {
+    padding: 12rem 20px;
+    text-align: center;
+
+    img {
+      width: 99px;
+    }
+
+    p {
+      @include clearBack;
+      padding-top: 5px;
+      color: $text-sub-color;
+    }
+  }
+}

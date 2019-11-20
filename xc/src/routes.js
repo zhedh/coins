@@ -117,6 +117,11 @@ const DepositResult = Loadable({
   loader: () => import('./pages/deposit/DepositResult'),
   loading: Loading
 })
+
+const PlanPool = Loadable({
+  loader: () => import('./pages/wallet/PlanPool'),
+  loading: Loading
+})
 // const Auth = Loadable({
 //   loader: () => import('./pages/auth/Auth'),
 //   loading: Loading
@@ -166,6 +171,7 @@ export default [
   { path: '/wallet', name: 'Wallet', component: Wallet },
   { path: '/wallet/withdraw/:type', name: 'Withdraw', component: Withdraw },
   { path: '/wallet/recharge/:type', name: 'Recharge', component: Recharge },
+  { path: '/planning-pool', name: 'PlanPool', component: PlanPool },
   {
     path: '/wallet/withdraw-record/:type',
     name: 'WithdrawRecord',
