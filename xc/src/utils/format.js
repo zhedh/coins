@@ -11,11 +11,6 @@ export function formatTime(timestamp) {
   return dayjs(timestamp * 1000).format('YYYY.MM.DD HH:mm')
 }
 
-export function formatTimeOne(timestamp) {
-  if (!timestamp) return ''
-  return dayjs(timestamp * 1000).format('YYYY-MM-DD HH:mm:ss')
-}
-
 export function formatDateTime(timestamp) {
   if (!timestamp) return ''
   return dayjs(timestamp * 1000).format('YYYY.MM.DD HH:mm:ss')
