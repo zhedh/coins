@@ -1,14 +1,14 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import {observer, inject} from 'mobx-react'
-import {Carousel, WingBlank, Button, Toast} from 'antd-mobile'
-import {IoIosMegaphone, IoIosHelpCircle} from 'react-icons/io'
-import {formatDate, formatSpecialOffer} from '../../utils/format'
-import {COMMON, HOME} from '../../assets/static'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { observer, inject } from 'mobx-react'
+import { Carousel, WingBlank, Button, Toast } from 'antd-mobile'
+import { IoIosMegaphone, IoIosHelpCircle } from 'react-icons/io'
+import { formatDate, formatSpecialOffer } from '../../utils/format'
+import { COMMON, HOME } from '../../assets/static'
 import Dialog from '../../components/common/Dialog'
 import SimpleHeader from '../../components/common/SimpleHeader'
 import NoData from '../../components/common/NoData'
-import OtherApi from "../../api/other"
+import OtherApi from '../../api/other'
 import './Index.scss'
 
 @inject('userStore')
@@ -22,7 +22,13 @@ class Index extends Component {
   }
 
   componentDidMount() {
-    const {userStore, personStore, noticeStore, productStore, history} = this.props
+    const {
+      userStore,
+      personStore,
+      noticeStore,
+      productStore,
+      history
+    } = this.props
 
     if (!userStore.isOnline()) {
       Toast.info('请先登录', 2, () => history.push('/login'))
@@ -31,7 +37,7 @@ class Index extends Component {
     noticeStore.getNotices()
     personStore.getSpecial()
     productStore.getProducts().then(productId => {
-      personStore.getDepositRecords({productId, status: 0})
+      personStore.getDepositRecords({ productId, status: 0 })
     })
     this.getMySpread()
   }
@@ -42,7 +48,7 @@ class Index extends Component {
         Toast.info(res.msg)
         return
       }
-      this.setState({mySpread: res.data})
+      this.setState({ mySpread: res.data })
     })
   }
 
@@ -54,26 +60,30 @@ class Index extends Component {
       noticeStore,
       productStore
     } = this.props
-    const {notices} = noticeStore
-    const {depositRecords} = personStore
-    const {currentProduct} = productStore
-    const {mySpread = {}} = this.state
+    const { notices } = noticeStore
+    const { depositRecords } = personStore
+    const { currentProduct } = productStore
+    const { mySpread = {} } = this.state
     const hasRecords =
-      userStore.isOnline && depositRecords && depositRecords.length > 0
+      userStore.isOnline() && depositRecords && depositRecords.length > 0
 
     return (
       <div id="home">
         <section
           className="section-banner"
-          style={{backgroundImage: `url(${HOME.IMG_BG})`}}
+          style={{ backgroundImage: `url(${HOME.IMG_BG})` }}
         >
-          <SimpleHeader color="#393838" bgColor="transparent" title={HOME.TITLE}/>
+          <SimpleHeader
+            color="#393838"
+            bgColor="transparent"
+            title={HOME.TITLE}
+          />
           <div className="special">
             <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
             <small>可用特价额度</small>
           </div>
-          <Link className="subscribe" to={{pathname: '/deposit', state: 1}}>
-            <img src={HOME.SUBSCRIBE_ICON} alt=""/>
+          <Link className="subscribe" to={{ pathname: '/deposit', state: 1 }}>
+            <img src={HOME.SUBSCRIBE_ICON} alt="" />
             认购
           </Link>
           <div
@@ -81,7 +91,7 @@ class Index extends Component {
             onClick={() => (notices.length ? history.push('/notices') : '')}
           >
             <label>
-              <IoIosMegaphone className="megaphone"/>
+              <IoIosMegaphone className="megaphone" />
               公告：
             </label>
             {notices.length ? (
@@ -118,15 +128,13 @@ class Index extends Component {
               <span>{mySpread.followUserActiveCount || 0}人</span>
               <small>当前团队有效用户数</small>
             </div>
-            <Link to="/home/generalize">
-              查看团队详情
-            </Link>
+            <Link to="/home/generalize">查看团队详情</Link>
           </div>
           <div className="steps">
             <span>X PLAN</span>
             <Link to="/home/rule">
               规则介绍
-              <IoIosHelpCircle className="icon"/>
+              <IoIosHelpCircle className="icon" />
             </Link>
           </div>
           {hasRecords ? (
@@ -143,7 +151,7 @@ class Index extends Component {
                       {/*&nbsp;{record.remark}*/}
                     </small>
                     <span>
-                      <b>{Number(record.amount).toFixed(0)}{' '}</b>
+                      <b>{Number(record.amount).toFixed(0)} </b>
                       {currentProduct.productName}
                     </span>
                   </div>
@@ -152,7 +160,7 @@ class Index extends Component {
             </ul>
           ) : (
             <div className="no-data-wrapper">
-              <NoData img={COMMON.NO_DATA_IMG} msg="每天存一笔，天天有钱赚！"/>
+              <NoData img={COMMON.NO_DATA_IMG} msg="每天存一笔，天天有钱赚！" />
               <Button
                 activeClassName="active"
                 className="primary-button take-apart"
