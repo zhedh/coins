@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {inject, observer} from 'mobx-react'
-import {Toast} from 'antd-mobile'
-import {isEmail, isMobile} from "../../utils/reg"
-import {REG, PASSWORD_TYPES, TOAST_DURATION} from '../../utils/constants'
-import {UserApi} from '../../api'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Toast } from 'antd-mobile'
+import { isEmail, isMobile } from '../../utils/reg'
+import { REG, PASSWORD_TYPES, TOAST_DURATION } from '../../utils/constants'
+import { UserApi } from '../../api'
 import VerifiedCode from '../../components/partial/VerifiedCode'
 import VerifiedPwd from '../../components/partial/VeritifiedPwd'
 import './Password.scss'
@@ -23,20 +23,20 @@ class Password extends Component {
   }
 
   componentDidMount() {
-    const {match, history, userStore, personStore} = this.props
-    const {type} = match.params
+    const { match, history, userStore, personStore } = this.props
+    const { type } = match.params
     const typeOption = PASSWORD_TYPES.find(item => item.type === type)
     if (!typeOption) {
       history.push('/404')
     }
-    if (userStore.isOnline) {
+    if (userStore.isOnline()) {
       personStore.getUserInfo().then(() => {
         const userName = personStore.userName
-        this.setState({typeOption, userName})
+        this.setState({ typeOption, userName })
       })
       return
     }
-    this.setState({typeOption})
+    this.setState({ typeOption })
     // this.clearState()
   }
 
@@ -54,21 +54,21 @@ class Password extends Component {
   // }
 
   onBack = () => {
-    const {history} = this.props
-    const {typeOption} = this.state
+    const { history } = this.props
+    const { typeOption } = this.state
     history.push(typeOption.type !== 'find' ? '/account' : '/login')
     // this.clearState()
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
+    const { value } = e.target
+    this.setState({ [key]: value })
   }
 
-  onStepChange = step => this.setState({step})
+  onStepChange = step => this.setState({ step })
 
   onNext = () => {
-    const {userName, code, typeOption} = this.state
+    const { userName, code, typeOption } = this.state
     if (!isEmail(userName) && !isMobile(userName)) {
       Toast.info('账号输入错误', TOAST_DURATION)
       return
@@ -92,7 +92,7 @@ class Password extends Component {
       type: typeOption.codeType
     }).then(res => {
       if (res.status === 1) {
-        this.setState({verifyToken: res.data.verifyToken})
+        this.setState({ verifyToken: res.data.verifyToken })
         this.onStepChange(2)
         return
       }
@@ -156,7 +156,7 @@ class Password extends Component {
           return
         }
 
-        const {history, userStore} = this.props
+        const { history, userStore } = this.props
         const msg = typeOption.type === 'pay' ? '设置成功' : '重置成功'
         userStore.changePayPasswordStatus(1)
         Toast.info(msg, TOAST_DURATION, () => history.goBack())
@@ -169,7 +169,7 @@ class Password extends Component {
       Toast.info(res && res.msg, TOAST_DURATION)
       return
     }
-    const {userStore, history} = this.props
+    const { userStore, history } = this.props
     userStore.logout()
     Toast.info(msg, TOAST_DURATION, () => history.push(`/login`))
   }
