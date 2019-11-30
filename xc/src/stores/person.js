@@ -62,13 +62,6 @@ class PersonStore {
   }
 
   @action
-  getSpecialRecords(options) {
-    return PersonApi.getSpecialRecords(options).then(res => {
-      if (res.status === 1) this.specialRecords = res.data
-    })
-  }
-
-  @action
   getDepositRecords(options) {
     return PersonApi.getDepositRecords(options).then(res => {
       if (res.status === 1) this.depositRecords = res.data
