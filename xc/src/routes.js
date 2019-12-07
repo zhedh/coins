@@ -103,6 +103,10 @@ const VerifiedResult = Loadable({
   loader: () => import('./pages/user/VerifiedResult'),
   loading: Loading
 })
+const Termination = Loadable({
+  loader: () => import('./pages/user/Termination'),
+  loading: Loading
+})
 
 const NoMatch = Loadable({
   loader: () => import('./pages/exception/404'),
@@ -183,6 +187,7 @@ export default [
   { path: '/notice/:id', name: 'NoticeDetail', component: NoticeDetail },
   { path: '/account', name: 'AccountSafe', component: AccountSafe },
   { path: '/contact-us', name: 'ContactUs', component: ContactUs },
+  { path: '/termination', name: 'Termination', component: Termination },
 
   // 实名认证
   {

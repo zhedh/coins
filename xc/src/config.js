@@ -13,7 +13,7 @@
 
 export const SWITCH = {
   PROJECT: 'XC',
-  ONLINE: true
+  ONLINE: false
 }
 
 const COIN = {

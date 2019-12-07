@@ -60,6 +60,7 @@ export const USER = {
   USER_SAFE: require('../images/2.1/user-safe.png'),
   USER_INVITE: require('../images/2.1/user-invite.png'),
   USER_LOGOUT: require('../images/2.1/user-logout.png'),
+  USER_TERMINATION: require('../images/2.1/user-termination.png'),
   CONTACT_US_IMG: require('../images/2.1/contact-us.png'),
   POSITIVE_PRE_ICON: require('../images/2.1/positive-active.png'),
   VALID_PRE_ICON: require('../images/2.1/valid-active.png'),

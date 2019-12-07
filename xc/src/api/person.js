@@ -153,15 +153,26 @@ class PersonApi {
    **/
   static serviceCharge(options = {}) {
     return http.post('/user/walletforaddress', options)
+  }
 
-    // {
-    //   "status":1,
-    //   "msg":"操作成功",
-    //   "data":{
-    //   "type":1, // 1为站内，2为站外
-    //     "service_charge":0
-    // }
-    // }
+  /**
+   * 解除合约初始化
+   *
+   * @required type string 币种类型USDT|XC
+   * @required walletTo string 要转账到的地址
+   **/
+  static terminationInit(options = {}) {
+    return http.post('/user/terminationini', options)
+  }
+
+  /**
+   * 解除合约提交
+   *
+   * @required type string 币种类型USDT|XC
+   * @required walletTo string 要转账到的地址
+   **/
+  static termination(options = {}) {
+    return http.post('/user/termination', options)
   }
 
   /**
