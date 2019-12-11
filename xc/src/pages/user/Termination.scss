@@ -37,6 +37,32 @@
             color: $text-sub-color;
           }
         }
+
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+
+          display: flex;
+          align-items: center;
+          padding: 0;
+          border: none;
+          background: transparent;
+          font-size: 1.3rem;
+          font-family: $font-regular;
+          font-weight: 600;
+
+          img {
+            margin-right: 5px;
+            width: 15px;
+          }
+
+          &.count-down {
+            color: #ccc;
+          }
+        }
       }
 
       small {
@@ -53,6 +79,7 @@
       small {
         display: block;
         margin-bottom: 10px;
+
       }
 
       button {
