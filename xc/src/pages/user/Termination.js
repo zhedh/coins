@@ -105,7 +105,7 @@ class Termination extends React.Component {
     userStore.getCode({
       captcha,
       account: userName,
-      type: 'withdraw'
+      type: 'termination'
     }, {key: captchaKey}).then(res => {
       if (res.status !== 1) {
         Toast.info(res.msg);
@@ -238,7 +238,7 @@ class Termination extends React.Component {
           5、解除合约地址如果是站外将收取手续费2%，如是站内将免除转账手续费。
           <br/>
           <span style={{color: '#e22020'}}>
-            6、请用户仔细核对收款地址,因链上转账不可逆，如因地址错误造成的损失,该损失由用户承担。
+            6、请用户仔细核对收款地址,因链上转账不可逆，如因地址错误造成的损失，该损失由用户承担。
           </span>
         </section>
         <Modal

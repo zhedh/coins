@@ -4,7 +4,7 @@ import {withRouter} from 'react-router'
 import {Link} from 'react-router-dom'
 import {Button, Toast} from 'antd-mobile'
 import {formatCoinPrice, formatSpecialOffer} from '../../utils/format'
-import {USDT_POINT_LENGTH} from '../../utils/constants'
+import {COIN_POINT_LENGTH} from '../../utils/constants'
 import {COMMON} from "../../assets/static"
 import './DepositUnlock.scss'
 
@@ -92,31 +92,27 @@ class DepositUnlock extends Component {
           <h1>{userSpecial}</h1>
         </section>
         <section className="content-charge">
-          {/*<p>*/}
-          {/*{productName || '--'}/USDT特价:*/}
-          {/*{formatSpecialOffer(specialOffer)}*/}
-          {/*</p>*/}
           <p>
             <span>赠送特价额度</span>
             <b>{userSpecial}</b>
           </p>
           <aside>
             <small>
-              {productName}当前特价：{formatSpecialOffer(specialOffer)} USDT
+              {productName}当前特价：{formatSpecialOffer(specialOffer)} {productName}
             </small>
             <small>
               手续费费率：
               {serviceCharge * 100}%
             </small>
             <small>
-              USDT 余额：
-              {formatCoinPrice(userBalance, USDT_POINT_LENGTH)}
+              {productName} 余额：
+              {formatCoinPrice(userBalance, COIN_POINT_LENGTH)}
             </small>
           </aside>
           <h3>
             <span>交易额（USDT）</span>
             <span>
-              {formatCoinPrice(specialOffer * userSpecial, USDT_POINT_LENGTH)}
+              {formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}
             </span>
           </h3>
         </section>
@@ -144,8 +140,8 @@ class DepositUnlock extends Component {
               <ul className="groups">
                 <li className="group">
                   <p className="title">
-                    <span>支付总额（USDT）</span>
-                    <span>{formatCoinPrice(specialOffer * userSpecial, USDT_POINT_LENGTH)}</span>
+                    <span>支付总额（{productName}）</span>
+                    <span>{formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}</span>
                   </p>
                   <p>
                     <span>手续费{serviceCharge * 100}%</span>
@@ -155,7 +151,7 @@ class DepositUnlock extends Component {
                 <li className="group">
                   <p className="title">
                     <span>可用</span>
-                    <span>{formatCoinPrice(userBalance, USDT_POINT_LENGTH)}</span>
+                    <span>{formatCoinPrice(userBalance, COIN_POINT_LENGTH)}</span>
                   </p>
                   <p>*扣款时依照最新的兑价为准</p>
                 </li>
