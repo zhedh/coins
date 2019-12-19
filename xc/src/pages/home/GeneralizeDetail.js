@@ -3,7 +3,7 @@ import {Toast} from "antd-mobile"
 import InfiniteScroll from 'react-infinite-scroll-component'
 import OtherApi from "../../api/other"
 import {chineseCapital} from "../../utils/common"
-import {formatTime} from "../../utils/format"
+import {cryptoAccountDisplay, formatTime} from "../../utils/format"
 import Header from "../../components/common/Header"
 import NoData from "../../components/common/NoData"
 import GroupLabel from "../../components/common/GroupLabel"
@@ -14,7 +14,17 @@ import './GeneralizeDetail.scss'
 class GeneralizeDetail extends Component {
   state = {
     title: '一代推荐',
-    users: [],
+    users: [{
+      phoneNo: 18368095040,
+      regTime: +new Date() / 1000
+    }, {
+      phoneNo: '2@qq.com',
+      regTime: +new Date() / 1000
+    }, {
+      phoneNo: '2ererjekj43@qq.com',
+      regTime: +new Date() / 1000
+    }],
+
     hasMore: true,
     page: 1,
     row: 10,
@@ -65,7 +75,7 @@ class GeneralizeDetail extends Component {
           loader={<p style={{textAlign: 'center', color: '#ccc'}}>加载中...</p>}
           endMessage={
             <div style={{textAlign: 'center', color: '#ccc'}}>
-              {users.length <= 0 ? <NoData msg="暂无数据"/> : '已经到底了！'}
+              {users.length <= 0 ? <NoData msg="暂无数据"/> : <p>已经到底了！</p>}
             </div>
           }
         >
@@ -74,7 +84,7 @@ class GeneralizeDetail extends Component {
               <li key={key}>
                 <p>
                   <label>用户名称</label>
-                  <span>{user.phoneNo || user.email}</span>
+                  <span>{cryptoAccountDisplay(user.phoneNo || user.email)}</span>
                 </p>
                 <p>
                   <label>推广时间</label>

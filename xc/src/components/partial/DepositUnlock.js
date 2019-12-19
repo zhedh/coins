@@ -78,7 +78,7 @@ class DepositUnlock extends Component {
       serviceCharge,
       specialOffer,
       userSpecial,
-      userBalance
+      userWarehouse,
     } = productDetail
 
     return (
@@ -98,7 +98,7 @@ class DepositUnlock extends Component {
           </p>
           <aside>
             <small>
-              {productName}当前特价：{formatSpecialOffer(specialOffer)} {productName}
+              {productName}当前特价：{formatSpecialOffer(specialOffer)}
             </small>
             <small>
               手续费费率：
@@ -106,11 +106,11 @@ class DepositUnlock extends Component {
             </small>
             <small>
               {productName} 余额：
-              {formatCoinPrice(userBalance, COIN_POINT_LENGTH)}
+              {formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}
             </small>
           </aside>
           <h3>
-            <span>交易额（USDT）</span>
+            <span>交易额（XC）</span>
             <span>
               {formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}
             </span>
@@ -151,7 +151,7 @@ class DepositUnlock extends Component {
                 <li className="group">
                   <p className="title">
                     <span>可用</span>
-                    <span>{formatCoinPrice(userBalance, COIN_POINT_LENGTH)}</span>
+                    <span>{formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}</span>
                   </p>
                   <p>*扣款时依照最新的兑价为准</p>
                 </li>

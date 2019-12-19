@@ -31,7 +31,6 @@ class Register extends Component {
     captchaKey: +new Date(),
     count: COUNT_DOWN,
     isGetSms: true,
-    // showSuccess: false,
     showBtn: true,
     isSubmit: true
   }
@@ -98,7 +97,7 @@ class Register extends Component {
     }
 
     if (!captcha || captcha.length !== 4) {
-      Toast.info('请输入4位验证码', TOAST_DURATION)
+      Toast.info('请输入4图形验证码', TOAST_DURATION)
       return
     }
 
@@ -209,7 +208,7 @@ class Register extends Component {
             <input
               className="input-main"
               type="text"
-              maxLength={4}
+              maxLength={6}
               placeholder="验证码"
               value={code}
               onChange={e => this.onInputChange(e, 'code')}
@@ -267,7 +266,6 @@ class Register extends Component {
           onClick={this.onSubmit}>
           立即注册
         </Button>}
-        {/*{showSuccess && <RegisterSuccess history={this.props.history}/>}*/}
       </div>
     )
   }

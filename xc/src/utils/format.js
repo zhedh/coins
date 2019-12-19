@@ -36,6 +36,13 @@ export function formatSpecialOffer(price) {
   // return parseFloat(price)
 }
 
+// 账号加*显示
+export function cryptoAccountDisplay(account) {
+  account = account.toString();
+  return account.slice(0, 3) + '****' + account.slice(7)
+  // return account ? account.replace(account.slice(3, 7), '****') : account;
+}
+
 function downFixed(num, fix) {
   // num为原数字，fix是保留的小数位数
   let result = '0'

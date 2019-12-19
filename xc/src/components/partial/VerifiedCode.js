@@ -149,7 +149,7 @@ class VerifiedCode extends Component {
     }
 
     if (!captcha || captcha.length !== 4) {
-      Toast.info('请输入4位验证码', TOAST_DURATION)
+      Toast.info('请输入4位图形验证码', TOAST_DURATION)
       return
     }
 
@@ -196,7 +196,7 @@ class VerifiedCode extends Component {
             <input
               className="input-main"
               type="text"
-              maxLength={4}
+              maxLength={6}
               placeholder="验证码"
               value={code}
               onChange={e => onInputChange(e, 'code')}

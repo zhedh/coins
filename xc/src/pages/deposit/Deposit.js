@@ -14,7 +14,7 @@ import './Deposit.scss'
 class Deposit extends Component {
   state = {
     showDrawer: false,
-    selectTabIndex: 1
+    selectTabIndex: 0
   }
 
   componentDidMount() {
