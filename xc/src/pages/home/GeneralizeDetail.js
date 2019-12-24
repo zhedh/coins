@@ -14,17 +14,7 @@ import './GeneralizeDetail.scss'
 class GeneralizeDetail extends Component {
   state = {
     title: '一代推荐',
-    users: [{
-      phoneNo: 18368095040,
-      regTime: +new Date() / 1000
-    }, {
-      phoneNo: '2@qq.com',
-      regTime: +new Date() / 1000
-    }, {
-      phoneNo: '2ererjekj43@qq.com',
-      regTime: +new Date() / 1000
-    }],
-
+    users: [],
     hasMore: true,
     page: 1,
     row: 10,

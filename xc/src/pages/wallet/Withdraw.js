@@ -205,7 +205,8 @@ class Withdraw extends Component {
       amountMax,
       balance,
       serviceChargeIn,
-      serviceChargeOut
+      serviceChargeOut,
+      canCashBalance
     } = walletStore.withdrawInfo || {}
 
     const displayServiceCharge = newServiceCharge === 0 ? 0 : (newServiceCharge || serviceChargeOut)
@@ -222,8 +223,13 @@ class Withdraw extends Component {
         <section className="section-form">
           <div className="row">
             <span className="balance">
-              可用：{formatCoinPrice(balance, type === 'USDT' ? USDT_POINT_LENGTH : COIN_POINT_LENGTH)}
+              账户可用（包含可提）：{formatCoinPrice(balance, type === 'USDT' ? USDT_POINT_LENGTH : COIN_POINT_LENGTH)}
             </span>
+            {
+              type === 'XC' && <span className="balance">
+                账户可提：{formatCoinPrice(canCashBalance, COIN_POINT_LENGTH)}
+              </span>
+            }
           </div>
           <div className="row">
             <label>提币地址</label>

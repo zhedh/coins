@@ -117,11 +117,11 @@ class UserCenter extends Component {
               <br/>
               联系客服
             </li>
-            <li onClick={() => history.push('/termination')}>
-              <img src={USER.USER_TERMINATION} alt=""/>
-              <br/>
-              解除合约
-            </li>
+            {/*<li onClick={() => history.push('/termination')}>*/}
+              {/*<img src={USER.USER_TERMINATION} alt=""/>*/}
+              {/*<br/>*/}
+              {/*解除合约*/}
+            {/*</li>*/}
             <li onClick={this.logout}>
               <img src={USER.USER_LOGOUT} alt=""/>
               <br/>
