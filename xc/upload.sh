@@ -4,8 +4,8 @@ cd deploy/zmfund-front
 git remote -v
 git checkout $1
 git pull
-rm -r deploy/zmfund-front/static
-find . -type f -not \( -name '.git' -or -name '*.git' \) -delete
+rm -r static
+ls | grep -v -E ".git|.gitignore" | xargs rm -rf
 
 cd ../../
 yarn build
