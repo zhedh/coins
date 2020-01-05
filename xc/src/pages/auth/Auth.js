@@ -69,7 +69,7 @@ class Index extends Component {
               <div className="line" onClick={this.hadAuth}>
                 <div>
                   <span>已有账号绑定</span>
-                  <span>登录已有账号,与当前ZBX账号绑定</span>
+                  <span>登录已有账号，与当前ZBX账号绑定</span>
                 </div>
                 <img src={AuthArrow} alt=""/>
               </div>

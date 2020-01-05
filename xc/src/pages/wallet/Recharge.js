@@ -46,7 +46,7 @@ class Recharge extends Component {
               <span>复制地址</span>
             </CopyToClipboard>
             <br/>
-            {type === 'USDT' && <aside>请注意,此为OMNI 的USDT 的地址</aside>}
+            {type === 'USDT' && <aside>请注意，此为 OMNI 的 USDT 的地址</aside>}
           </div>
         </section>
         <section className="section-aside">

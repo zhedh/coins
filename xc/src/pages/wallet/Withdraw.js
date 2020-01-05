@@ -223,7 +223,7 @@ class Withdraw extends Component {
         <section className="section-form">
           <div className="row">
             <span className="balance">
-              账户可用（包含可提）：{formatCoinPrice(balance, type === 'USDT' ? USDT_POINT_LENGTH : COIN_POINT_LENGTH)}
+              账户可用{type === 'XC' ? '（包含可提）' : ''}：{formatCoinPrice(balance, type === 'USDT' ? USDT_POINT_LENGTH : COIN_POINT_LENGTH)}
             </span>
             {
               type === 'XC' && <span className="balance">
