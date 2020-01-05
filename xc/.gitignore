@@ -23,5 +23,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# deploy
+/deploy/zmfund-front
+
 
 ssh://www@47.75.138.157/data/git/zmfund-front.git
