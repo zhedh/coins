@@ -1,28 +1,35 @@
-import { observable, action, computed } from 'mobx'
+import {observable, action, computed} from 'mobx'
 import languages from '../locales'
 
 class LocaleStore {
-  @observable locale = 'zh_CN'
+  @observable lang = 'zh-cn';
+  @observable languages = [
+    {
+      label: '中文',
+      value: 'zh-cn',
+    }, {
+      label: 'English',
+      value: 'en-us',
+    }, {
+      label: '한국어',
+      value: 'ko-kr',
+    },
+  ];
 
   @computed
   get language() {
     return languages[this.locale] || languages.zh_CN
   }
 
-  @computed
-  get isCn() {
-    return this.locale === 'zh_CN'
+  @action
+  switchLang(lang) {
+    this.lang = lang;
+    localStorage.setItem('LANG', lang);
   }
 
   @action
-  changeLocale(locale) {
-    this.locale = locale
-    localStorage.setItem('LOCALE', locale)
-  }
-
-  @action
-  getLocale() {
-    this.locale = localStorage.getItem('LOCALE') || 'zh_CN'
+  getLang() {
+    this.lang = localStorage.getItem('LANG') || 'zh-cn';
   }
 }
 

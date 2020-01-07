@@ -23,11 +23,14 @@ let requestCount = 0
 
 // 添加请求拦截器
 instance.interceptors.request.use(config => {
+  const lang = localStorage.getItem('LANG');
+  config.headers['LANG'] = lang || 'zh-cn';
+
   if (config.data && config.data.noLogin) {
     delete config.data.noLogin
   } else {
-    config.data = config.data ? config.data : {}
-    config.data.openId = Cookies.get('OPENID')
+    config.data = config.data ? config.data : {};
+    config.data.openId = Cookies.get('OPENID');
     config.data.token = Cookies.get('TOKEN')
   }
   requestCount++

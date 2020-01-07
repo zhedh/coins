@@ -59,6 +59,7 @@ export const USER = {
   USER_CUSTOMER: require('../images/2.1/user-kefu.png'),
   USER_SAFE: require('../images/2.1/user-safe.png'),
   USER_INVITE: require('../images/2.1/user-invite.png'),
+  USER_LANG: require('../images/2.1/user-lang.png'),
   USER_LOGOUT: require('../images/2.1/user-logout.png'),
   USER_TERMINATION: require('../images/2.1/user-termination.png'),
   CONTACT_US_IMG: require('../images/2.1/contact-us.png'),
@@ -67,6 +68,7 @@ export const USER = {
   POSITIVE_ICON: require('../images/2.1/positive.png'),
   VALID_ICON: require('../images/2.1/valid.png'),
   CONTACT_US_ARROW: require('../images/2.1/contact-us-arrow.png'),
+  ICON_LANG_SELECTED: require('../images/user/icon-selected.png'),
 }
 
 export const WALLET = {

@@ -1,0 +1,33 @@
+@import '../../styles/_common';
+
+#lang-switch {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  background-color: #E1E5EE;
+
+  .list {
+    @include clearList;
+    margin-top: 2rem;
+    padding: 0 17.5px;
+    background: $white;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 1px solid $border-color;
+
+    span {
+      font-size: $font-title-s;
+      font-weight: bold;
+    }
+
+    img {
+      width: 20px;
+    }
+  }
+}
