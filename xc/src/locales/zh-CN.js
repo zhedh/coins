@@ -3,12 +3,13 @@ export default {
     LOGIN: '登录',
     ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
     PASSWORD_PLACEHOLDER: '密码',
+    FORGET_PASSWORD: '忘记密码?',
     REGISTER: '注册',
     PASSWORD: '密码',
     CONFIRM: '确认',
     ACCOUNT_ERR: '账号输入错误',
     PASSWORD_ERR: '密码最少8位，字母加数字',
-    LOGIN_SUCCESS: '登录成功',
+    LOGIN_SUCCESS: '登录成功'
   },
 
   PASSWORD: {
@@ -53,7 +54,7 @@ export default {
     PASSWORD: '密码',
     INPUT_PASSWORD_AGAIN: '再次输入密码',
     INVITER_CODE: '邀请码',
-    SUBMIT_LABEL: '立即注册',
+    SUBMIT_LABEL: '立即注册'
   },
 
   HOME: {
@@ -70,7 +71,7 @@ export default {
     JOIN_EVERYDAY: '每天参与，天天有的赚！',
     ATTEND_PLAN: '参与计划',
     WARM_REMINDER: '温馨提示',
-    DEPOSIT_BEFORE_AUTH: '参与计划需先进行身份认证',
+    DEPOSIT_BEFORE_AUTH: '参与计划需先进行身份认证'
   },
 
   BARGAIN: {
@@ -81,14 +82,14 @@ export default {
     SUBSCRIB: '认购',
     LAST_REWARDING: '上次结算奖励额度',
     REWARDING_NOTICE:
-      '当前得到的奖励额度，有效期为俩个交易日，若俩个交易日结算前未使用，则奖励额度失效，请尽快认购。',
+      '当前得到的奖励额度，有效期为俩个交易日，若俩个交易日结算前未使用，则奖励额度失效，请尽快认购。'
   },
 
   BARGAIN_RECORD: {
     PROMOTION_RECORD: '特价额度记录',
     LOADING: '加载中...',
     NO_RECORD: '暂无数据',
-    TO_LOWER_THE: '已经到底了~',
+    TO_LOWER_THE: '已经到底了~'
   },
 
   GENERALIZE: {
@@ -101,7 +102,7 @@ export default {
     REFERRING_TEAM: '推荐团队',
     ACTIVE_MEMBER: '有效成员',
     NODE_LEVEL: '节点等级',
-    REBATE_PROPORTION: '返还比例',
+    REBATE_PROPORTION: '返还比例'
   },
 
   GENERALIZE_RECORD: {
@@ -112,28 +113,29 @@ export default {
     USER_ACCOUNT: '用户名称',
     REFERRING_DATE: '推广时间',
     EFFECTIVE_MEMBERS: '有效成员',
-    PERFORMANCE: '旗下业绩',
+    PERFORMANCE: '旗下业绩'
   },
 
   INVITER_FRIEND: {
     PLEASE_LOGIN_FIRST: '请先登录',
     INVITER_FRIEND: '邀请好友',
     COPY_SUCCESS: '复制成功',
+    COPY_INVITE_NUM: '复制邀请码',
     CLICK_SAVE_IMG: '点击或长按二维码保存图片',
-    CHECK_REFERRING_DETAILS: '查看推广',
+    CHECK_REFERRING_DETAILS: '查看推广'
   },
 
   RULE: {
-    TITLE: 'X PLAN交易流程',
+    TITLE: 'X PLAN交易流程'
   },
 
   NOTICE_LIST: {
-    TITLE: '公告列表',
+    TITLE: '公告列表'
   },
 
   NOTICE_DETAIL: {
     TITLE: '公告详情',
-    NO_RECORD: '暂无数据',
+    NO_RECORD: '暂无数据'
   },
 
   AUTH_MAIN: {
@@ -152,19 +154,19 @@ export default {
     ACCOUNT_BIND: '账号绑定',
     INPUT_EMAIL_OR_PHONE: '请输入X-PLAN 邮箱/手机号',
     PASSWORD: '密码',
-    CONFIRM_BIND: '确认绑定',
+    CONFIRM_BIND: '确认绑定'
   },
 
   AUTH_CODE: {
     AUTH_SUCCESS: '授权成功',
     CODE: '邀请码',
     INPUT_CODE: '请输入X-PLAN 邀请码',
-    CONFIRM: '确认',
+    CONFIRM: '确认'
   },
 
   AUTH_LOGIN: {
     SELECT_AUTH_WAY: '选择授权方式',
-    AUTH_LOGIN: 'ZBX授权登录',
+    AUTH_LOGIN: 'ZBX授权登录'
   },
 
   DEPOSIT: {
@@ -200,33 +202,34 @@ export default {
     CONFIRM_PAY: '确认支付',
     TOTAL_PAYMENT: '支付总额',
     AMOUNT_TO_DEDUCT: '扣款时依照最新的总价为准',
-    PAY_PWD: '支付密码',
+    PAY_PWD: '支付密码'
   },
 
   DEPOSIT_RESULT: {
     PAY_SUCCESS: '支付成功！',
-    DESC: '当日得到的奖励额度，有效期至次日结算时间，如次日结算时还未使用，则奖励额度失效，请尽快使用。',
+    DESC:
+      '当日得到的奖励额度，有效期至次日结算时间，如次日结算时还未使用，则奖励额度失效，请尽快使用。',
     FINISH: '完成',
-    UNLOCK: '解锁',
+    UNLOCK: '解锁'
   },
 
   EXCEPTION: {
     UN_PAGE_TO_JUMP: '页面不存在，正在跳转首页',
     PAGE_NO_FOUND: '页面找不到了',
-    BACK_PREV_PAGE: '返回上一页',
+    BACK_PREV_PAGE: '返回上一页'
   },
 
   ACCOUNT_SAFE: {
     SAFETY_CENTER: '安全中心',
     RESET_LOGIN_PWD: '重置登录密码',
     RESET_PAY_PWD: '重置交易密码',
-    SET_PAY_PWD: '设置交易密码',
+    SET_PAY_PWD: '设置交易密码'
   },
 
   CONTACT_US: {
     CLICK_TO_CONTACT: '点击右下角的联系客服',
     AT_ONCE_CONTACT: '即可开始与客服的沟通',
-    WAIT_FOR_IMG_SHOW: '若未出现联系客服,请耐心等待3~5秒',
+    WAIT_FOR_IMG_SHOW: '若未出现联系客服,请耐心等待3~5秒'
   },
 
   TERMINATION: {
@@ -247,15 +250,21 @@ export default {
     GET_CODE: '获取验证码',
     TO_ACCOUNT_COUNT: '实际到账数量',
     TERMINATION_EXPLAIN: '解除合约相关说明',
-    EXPLAIN_1: '1、提交解除合约前，请将USDT 和XC 账户可用资产全部转移，以免合约解除造成不必要的损失。',
-    EXPLAIN_2: '2、一旦提交了解除合约，用户将停止参与计划并无法登陆，系统将禁用当前账号。',
-    EXPLAIN_3: '3、系统将核算每个用户，每单的投入的成本，如用户收益没有达到所投入的成本，解除合约后，平台将补足剩余成本部分到用户提交地址；如收益达到或超出所投入的成本，用户解除合约则会扣除剩余收益部分，将参与计划成本部分按50%返还到用户提交的地址中。',
-    EXPLAIN_4: '4、用户如果在首次参与计划15天以内选择解除合约，平台将额外每单扣除30xc作为合约违约金。',
-    EXPLAIN_5: '5、解除合约地址如果是站外将收取手续费2%，如是站内将免除转账手续费。',
-    EXPLAIN_6: '6、请用户仔细核对收款地址，因链上转账不可逆，如因地址错误造成的损失，该损失由用户承担。',
+    EXPLAIN_1:
+      '1、提交解除合约前，请将USDT 和XC 账户可用资产全部转移，以免合约解除造成不必要的损失。',
+    EXPLAIN_2:
+      '2、一旦提交了解除合约，用户将停止参与计划并无法登陆，系统将禁用当前账号。',
+    EXPLAIN_3:
+      '3、系统将核算每个用户，每单的投入的成本，如用户收益没有达到所投入的成本，解除合约后，平台将补足剩余成本部分到用户提交地址；如收益达到或超出所投入的成本，用户解除合约则会扣除剩余收益部分，将参与计划成本部分按50%返还到用户提交的地址中。',
+    EXPLAIN_4:
+      '4、用户如果在首次参与计划15天以内选择解除合约，平台将额外每单扣除30xc作为合约违约金。',
+    EXPLAIN_5:
+      '5、解除合约地址如果是站外将收取手续费2%，如是站内将免除转账手续费。',
+    EXPLAIN_6:
+      '6、请用户仔细核对收款地址，因链上转账不可逆，如因地址错误造成的损失，该损失由用户承担。',
     TERMINATION_HINT: '一旦提交解除合约，将会停用该账号，无法登录，请确认。',
     CANCEL: '取消',
-    CONFIRM: '确认',
+    CONFIRM: '确认'
   },
 
   USER_CENTER: {
@@ -273,16 +282,18 @@ export default {
     TERMINATION: '解除合约',
     LOGOUT: '退出登录',
     ACTIVE_EXPLAIN: '活跃用户说明',
-    ACTIVE_REMARK: '活跃用户：当您参与计划成功后可变成活跃用户，活跃用户有效为三个交易日。',
+    ACTIVE_REMARK:
+      '活跃用户：当您参与计划成功后可变成活跃用户，活跃用户有效为三个交易日。',
     ACTIVE_OUT_TIME: '当前您的活跃用户到期时间',
     EFFECTIVE_EXPLAIN: '用户标示说明',
-    EFFECTIVE_REMARK: '有效用户：在参与计划中有排单即为有效用户，没有参与计划中排单则不为有效用户。',
-    EFFECTIVE_OUT_TIME: '当前您的有效用户到期时间',
+    EFFECTIVE_REMARK:
+      '有效用户：在参与计划中有排单即为有效用户，没有参与计划中排单则不为有效用户。',
+    EFFECTIVE_OUT_TIME: '当前您的有效用户到期时间'
   },
 
   COUNTRY_SELECT: {
     SELECT_COUNTRY: '选择国家',
-    NEXT_STEP: '下一步',
+    NEXT_STEP: '下一步'
   },
 
   IDENTITY_VERIFY: {
@@ -296,7 +307,7 @@ export default {
     FAMILY_NAME: '姓',
     LAST_NAME: '名',
     CARD_NUMBER: '证件号',
-    NEXT_STEP: '下一步',
+    NEXT_STEP: '下一步'
   },
 
   VERIFY_RESULT: {
@@ -307,7 +318,7 @@ export default {
     ID_AND_PASSPORT_FRONT: '身份证/护照正面照',
     ID_AND_PASSPORT_BACK: '身份证/护照反面照',
     ID_AND_PASSPORT_HOLD: '手持身份证/护照照片',
-    SUBMIT_VERIFY: '提交审核',
+    SUBMIT_VERIFY: '提交审核'
   },
 
   MY_WALLET: {
@@ -320,7 +331,7 @@ export default {
     RECORD: '记录',
     LOADING: '加载中...',
     NO_RECORD: '暂无数据',
-    TO_LOWER_THE: '已经到底了~',
+    TO_LOWER_THE: '已经到底了~'
   },
 
   RECHARGE: {
@@ -329,9 +340,11 @@ export default {
     COPY_ADDRESS: '复制地址',
     ADDRESS_HINT: '请注意，此为 OMNI 的 USDT 的地址',
     RECHARGE_EXPLAIN: '转入说明',
-    EXPLAIN_1: '转入是自动的，XC 转账需要整个 XC 网络进行确认，您的 XC 会自动充值到您的账户中。',
+    EXPLAIN_1:
+      '转入是自动的，XC 转账需要整个 XC 网络进行确认，您的 XC 会自动充值到您的账户中。',
     EXPLAIN_2: '此地址是你唯一且独自使用的转入地址，你可以同时进行多次充值。',
-    EXPLAIN_3: '本地址禁止充值除 XC 之外的其它资产，任何其它资产充值将不可找回。',
+    EXPLAIN_3:
+      '本地址禁止充值除 XC 之外的其它资产，任何其它资产充值将不可找回。'
   },
 
   WITHDRAW: {
@@ -365,7 +378,7 @@ export default {
     REMARK_2: '单笔转出限额为',
     REMARK_3: '提币手续费',
     REMARK_4: '转账手续费',
-    REMARK_5: '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。',
+    REMARK_5: '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。'
   },
 
   WITHDRAW_record: {
@@ -379,7 +392,7 @@ export default {
     AMOUNT: '数量',
     ORDER_NUMBER: '编号',
     STATUS: '状态'
-  },
+  }
 
   // ASIDE: {
   //   GRAPH_CODE: '图形验证码',
