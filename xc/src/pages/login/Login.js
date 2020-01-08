@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 import {Link} from 'react-router-dom'
 import {TOAST_DURATION} from '../../utils/constants'
 import {isEmail, isMobile, isPassword} from "../../utils/reg"
-import AccountHeader from "../../components/partial/AccountHeader"
+import AccountLangHeader from "../../components/partial/AccountLangHeader";
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import './Login.scss'
@@ -72,7 +72,8 @@ class Login extends Component {
 
     return (
       <div id="login">
-        <AccountHeader title="登录"/>
+        <AccountLangHeader/>
+        <h1>登录</h1>
         <div className="content">
           <label>
             <input

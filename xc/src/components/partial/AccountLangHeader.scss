@@ -1,0 +1,32 @@
+@import '../../styles/mixin';
+
+.account-lang__header {
+  box-sizing: border-box;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    padding: 15px 30px 15px 8px;
+    width: 8px;
+    height: 14px;
+  }
+
+  ul {
+    @include clearList;
+
+    li {
+      display: inline-block;
+      font-size: $font-title-s;
+      font-weight: bold;
+      color: $primary-color;
+
+      &:last-child b {
+        display: none;
+      }
+    }
+  }
+}

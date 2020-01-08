@@ -11,6 +11,7 @@ import Captcha from '../../components/common/Captcha'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
 import './Register.scss'
+import AccountLangHeader from "../../components/partial/AccountLangHeader";
 
 @inject('userStore')
 @observer
@@ -184,7 +185,9 @@ class Register extends Component {
 
     return (
       <div id="register">
-        <AccountHeader title="注册" onHandle={() => history.push('/login')}/>
+        <AccountLangHeader onBack={() => history.push('/login')}/>
+        <h1>注册</h1>
+        {/*<AccountHeader title="注册" onHandle={() => history.push('/login')}/>*/}
         <div className="main-content">
           <label>
             <input
