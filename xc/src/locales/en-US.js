@@ -1,354 +1,427 @@
 export default {
-  COMMON: {
-    SWITCH_LANG: '中文',
-    LOGIN: 'Sign In',
-    ACCOUNT_PLACEHOLDER: 'E-mail/ Mobile Phone',
-    PASSWORD_PLACEHOLDER: 'Password',
-    REGISTER: 'Sign Up',
-    PASSWORD: 'Password',
-    CONFIRM: 'Confirm',
-    GRAPH_CODE: 'Graph verification Code',
-    VERIFY_CODE: 'Verification Code',
-    GET_VERIFY_CODE: 'Receive verification code',
-    PASSWORD_CONFIRM_PLACEHOLDER: 'Re-enter password',
-    INVITER_CODE: 'Invitation Code',
-    NEXT_STEP: 'Next Step',
-    SET: 'Set',
-    RESET: 'Reset',
-    NO_DATA: 'No data',
-    NO_ANNOUN: 'No announcement',
-    LOGIN_TO_VIEW: 'Sign in to view',
-
-    // footer
-    HOMEPAGE: 'Home',
-    NODE: 'Node',
-    WALLET: 'Wallet'
-  },
-
-  TOAST: {
-    ACCOUNT_ERR: "Account doesn't exist!",
-    PASSWORD_ERR:
-      'Password is at least 8 digits, consisting of letters and numbers.',
-    LOGIN_SUCCESS: 'Login successfully!',
-    CODE_ERR: 'Verification code is wrong.',
-    PASSWORD_CONFIRM_ERR: 'Password is not the same.',
-    PASSWORD_HAS_RESET: 'Password has been reset, please sign in again.',
-    PASSWORD_RESET_TO_LOGIN: 'Reset sucessfully, please sign in again.',
-    SET_SUCCESS: 'Setting modified successfully!',
-    RESET_SUCCESS: 'Reset successfully!',
-
-    PLEASE_WAIT: 'Please wait for a while…',
-    PLEASE_LOGIN_FIRST: 'Please sign in first.',
-    LOADING: 'Loading',
-    PLEASE_VERIFY_IDENTITY: 'Please verify your identity.',
-    PLEASE_SET_TRADE_PWD: 'Please set the trade password.',
-    SCAN_FAILED: 'Scan failed.',
-    EMAIL_UN_REGISTER: 'The e-mail is not registered yet.',
-    PHONE_UN_REGISTER: 'The phone number is not registered yet.',
-    PLEASE_INPUT_CONFIRM_ACCOUNT:
-      'Please fill in the correct e-mail or phone number.',
-    PLEASE_INPUT_4_CODE: 'Please enter the 4-digit verification code.',
-    PAGE_NOT_AND_TO_HOME: "Page doesn't exist, returning to homepage…",
-    COPIED: 'Copied.',
-    PLEASE_INPUT_CARD_NUMBER: 'Please enter 7-18 digits document number.',
-    PLEASE_INPUT_ADDRESS: 'Please fill in the withdrawal address.',
-    PLEASE_INPUT_AMOUNT: 'Please fill in the withdrawal amount.',
-    ADRESS_ERROR: 'Incorrect address format',
-    LESS_MIN_AMOUNT: 'Less than minimum withdrawal amount.',
-    MORE_MIN_AMOUNT: 'Exceed withdrawal maximum limit.',
-    INSUFFICIENT_ACCOUNT: 'Insufficient funds.',
-    WITHDRAW_SUCCESS:
-      'Withdrawal successfully, returning to withdrawal record.',
-    UPLOAD_SUCCESS: 'Upload successfully.',
-    CANCEL_SIGN_OUT: 'Cancel',
-    IS_SIGN_OUT: 'Confirm to sign out?',
-    UNVERIFIED: 'Unverified',
-    VERIFYING: 'Verifying',
-    VERIFIED: 'Verified',
-    HAS_REAL_NAME_AUTH: 'Verified',
-    VERIFY_FAILED: 'Verification failed',
-    IDENTIFY_FAILED: 'Identification failure',
-    ID_CARD: 'ID Card',
-    PASSPORT: 'Passport',
-    DRIVING_LICENSE: 'Driving License',
-    FAILED: 'Failed',
-    UN_LOGIN_NOT_DO: "You haven't signed in, cannot operate.\n",
-    TO_LOGIN: 'Go to sign in.',
-    REVIEWING: 'Reviewing',
-    PROCESSING: 'Processing',
-    COMPLETED: 'Completed',
-    REJECTED: 'Rejected'
-  },
-
   LOGIN: {
-    FORGOT_PASSWORD: 'Forgot password?'
+    LOGIN: '登录',
+    ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
+    PASSWORD_PLACEHOLDER: '密码',
+    FORGET_PASSWORD: '忘记密码?',
+    REGISTER: '注册',
+    PASSWORD: '密码',
+    CONFIRM: '确认',
+    ACCOUNT_ERR: '账号输入错误',
+    PASSWORD_ERR: '密码最少8位，字母加数字',
+    LOGIN_SUCCESS: '登录成功'
   },
-  REGISTER: {
-    SUBMIT_LABEL: 'Singup immediately',
-    REGISTER_SUCCESS: 'Register successfully!',
-    HAPPY_REGISTER_SUCCESS: 'Congratulations, register successfully.',
-    OPEN_FIRST: 'Back to Account'
-  },
+
   PASSWORD: {
-    FIND_PASSWORD: 'Find password',
-    SET_PASSWORD: 'Set Password',
-    RESET_PASSWORD: 'Reset Password',
-    RESET_LOGIN_PASSWORD: 'Reset Signin Password',
-    SET_PAY_PASSWORD: 'Set Pay Password',
-    RESET_PAY_PASSWORD: 'Reset Pay Password',
-    PASSWORD_REMARK:
-      'The password is in 8-10 digits, pure numbers is not allowed.'
+    FIND_PASSWORD: '找回密码',
+    RESET_LOGIN_PASSWORD: '重置登录密码',
+    SET_PAY_PASSWORD: '设置交易密码',
+    RESET_PAY_PASSWORD: '重置交易密码',
+    GRAPH_CODE: '图形验证码',
+    GET_VERIFY_CODE: '获取验证码',
+    NEXT_STEP: '下一步',
+    SET_PASSWORD: '设置密码',
+    RESET_PASSWORD: '重置密码',
+    PASSWORD_REMARK: '8-20位字符，不可以是纯数字。',
+    INPUT_PASSWORD_AGAIN: '再次输入密码',
+    SET: '设置',
+    RESET: '重置',
+    EMAIL_UN_REGISTER: '该邮箱未注册',
+    PHONE_UN_REGISTER: '该手机号未注册',
+    PHONE_OR_EMAIL_ERR: '请填写正确的邮箱或者手机号',
+    INPUT_FOUR_GRAPH_CODE: '请输入4位图形验证码',
+    ACCOUNT_ERR: '账号输入错误',
+    CODE_ERR: '验证码输入错误',
+    PASSWORD_ERR: '密码最少8位，字母加数字',
+    PASSWORD_CONFIRM_ERR: '两次密码不一致',
+    PASSWORD_RESET_LOGIN_AGAIN: '密码已重置，请重新登录',
+    RESET_SUCCESS_LOGIN_AGAIN: '重置成功，请重新登录',
+    SET_SUCCESS: '设置成功',
+    RESET_SUCCESS: '重置成功'
   },
+
+  REGISTER: {
+    PHONE_OR_EMAIL_ERR: '请填写正确的邮箱或者手机号',
+    INPUT_FOUR_GRAPH_CODE: '请输入4位图形验证码',
+    ACCOUNT_ERR: '账号输入错误',
+    PASSWORD_ERR: '密码最少8位，字母加数字',
+    PASSWORD_CONFIRM_ERR: '两次密码不一致',
+    REGISTER_SUCCESS: '注册成功',
+    REGISTER: '注册',
+    ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
+    CODE: '验证码',
+    GET_VERIFY_CODE: '获取验证码',
+    PASSWORD: '密码',
+    INPUT_PASSWORD_AGAIN: '再次输入密码',
+    INVITER_CODE: '邀请码',
+    SUBMIT_LABEL: '立即注册'
+  },
+
   HOME: {
-    NOTICE: 'Notice',
-    NO_NOTICE: 'No notice!',
-    MUSDT_AVAILABLE: 'USDT Specials',
-    MUSDT_AVAILABLE_PROMOTION: 'MUSDT Available Promotion Quota',
-    AVAILABLE_PROMOTION: 'Available special amount',
-    PROMOTION: 'Special amount',
-    INVITATION_REWARDS: 'Invitation Rewards',
-    ACTIVATED: 'Activated',
-    RULES: 'Rules',
-    WARM_REMINDER: 'Warm Reminder',
-    DEPOSIT_BEFORE_AUTH:
-      'Subscribing to deposit plan requires identity verification.',
-    GOT_IT: 'Got it',
-    VERIFY_FIRST: 'Verify immediately',
-    JOIN_EVERYDAY: 'Subscribe everyday, make profits everyday!',
-    LAST_REWARDING: 'Rewarding Quota of Last Settlement',
-    REWARDING_NOTICE:
-      'The rewarding quota you get at the moment will be expired in two trading days. If it remains unused before settlements of these two trading days, it will be invalid. Please submit as soon as possible.',
-    DEPOSIT_TIP: 'Deposit everyday, make profits everyday!',
-    IDENTIFY_CONFIRM: 'Identity verification required before joining the plan',
-
-    NODE_LEVEL: 'Node Level',
-    JOIN_NODE: 'Join a node',
-    RETURN_DATE: 'Redemption Date',
-    PROMOTION_REWARDS_DETAILS: 'Details',
-    LOOK_DETAIL: 'Check the details',
-    MUSDT_PROMOTION: 'MUSDT Promotion Rewards Quota',
-    LAST_SET_DATE: 'Last Settlement Date',
-    UNLOCK: 'Unlock',
-    CURRENT_REWARDS_QUOTA: 'Current Rewards Quota',
-    DEPOSIT_REWARDS: 'Deposit Rewards',
-    REFERRING_REWARDS: 'Referring Rewards',
-    MANAGEMENT_REWARDS: 'Management Rewards',
-    TEAM_REWARDS: 'Team Rewards',
-    OPERATION_REWARDS: 'Operation Rewards',
-    REWARDS_MSG:
-      'The daily rewarding quota will expire in two trading days. The rewarding quota will be expired if it is not used before settlement of the second trading day.',
-    PROMOTION_QUOTA_RECORDS: 'Promotion Quota Records',
-    UNLOCK_QUOTA: 'Unlock Quota',
-    EXPIRED: 'Expired',
-
-    // 推广
-    INVITE_FRIENDS: 'Invite Friends',
-    COPY_INVITATION_CODE: 'Copy Invitation Code',
-    SAVE_INVITAION_QR_CODE: 'Save Invitaion QR Code',
-    CHECK_REFERRING_DETAILS: 'Check Referring Details',
-    MY_REFERRALS: 'My Referrals',
-    TOTAL_REFERRALS: 'Total Referrals',
-    REFERRING_LIST: 'Referring List',
-    FIRST_GENERATION_REFERRALS: 'First Generation Referrals',
-    SECOND_GENERATION_REFERRALS: 'Second Generation Referrals',
-    REFERRING_TEAM: 'Referring Team',
-    ACTIVE_MEMBER: 'Active Member',
-    TEAM_LEVEL: 'Team Level',
-    REBATE_PROPORTION: 'Rebate Proportion',
-    GENERATION_REFERRALS: ' Generation Referrals',
-    MEMBERS: 'Members',
-    REFERRING_DATE: 'Referring Date',
-    GENERALIZE_LEVELS: [
-      '0 level',
-      '1 level',
-      '2 level',
-      '3 level',
-      '4 level',
-      'super level'
-    ]
+    PLEASE_LOGIN_FIRST: '请先登录',
+    X_PLAN: 'X PLAN',
+    AVAILABLE_PROMOTION: '可用特价额度',
+    SUBSCRIB: '认购',
+    NOTICE: '公告',
+    NO_NOTICE: '暂无公告',
+    EFFECTIVE_USER_COUNT: '当前团队有效用户数',
+    SEE_TEAMS_DETAIL: '查看团队详情',
+    RULES: '规则介绍',
+    RETURN_DATE: '返还日期',
+    JOIN_EVERYDAY: '每天参与，天天有的赚！',
+    ATTEND_PLAN: '参与计划',
+    WARM_REMINDER: '温馨提示',
+    DEPOSIT_BEFORE_AUTH: '参与计划需先进行身份认证'
   },
-  AUTH: {
-    INPUT_MSG: 'Fill in the Information',
-    CONFIRM_MSG_AND_CARD:
-      'Make sure the information you fill is consistent with the identity documents you provide',
-    SELECT_AUTH_WAY: 'You can select a document to verify',
-    ID_CARD: 'Identity Card',
-    PASSPORT: 'Passport',
-    DRIVING_LICENSE: 'Driving License',
-    FAMILY_NAME: 'Family name',
-    LAST_NAME: 'Last name',
-    CARD_NUMBER: 'Document Number',
-    IDENTITY_VERIFICATION: 'Identity Verification',
-    AUTH_EXPLAIN_ONE:
-      'Please make sure the photo you upload is clear and intacted in the format of jpg, jpeg, or png, which is less than 2M. The document must be within the expiry date.',
-    AUTH_EXPLAIN_TWO:
-      'Please upload the photo of you holding your verification document, and a white paper written with "MMT" and the verification date. Please make sure your face is clear, and the document is readable, or it may affect the verification.',
-    SUBMIT_VERIFY: 'Submit',
-    SUBMIT_AND_WAIT: 'Sumbitted, waiting for review…',
-    RESULT_MSG: 'Verification result will be shown at Profile',
-    VERIFICATION_FAILED: 'Verification failed!',
-    FAILED_REASON: 'Reason',
-    CONTINUE_TO_VERIFY: 'Continue to Verify',
-    CERTIFICATE_PASSED: 'Certification Passed',
-    YOUR_NAME: 'Name',
-    ID_NUMBER: 'ID Number',
-    ID_AND_PASSPORT_FRONT: 'ID card / passport front photo',
-    ID_AND_PASSPORT_BACK: 'ID card / passport back photo',
-    ID_AND_PASSPORT_HOLD: 'Handheld ID/passport photo'
+
+  BARGAIN: {
+    PROMOTION_REWARDS_DETAILS: '特价奖励详情',
+    LOOK_DETAIL: '查看明细',
+    XC_PROMOTION: '特价XC奖励额度',
+    LAST_SETTLEMENT_TIME: '上次结算时间',
+    SUBSCRIB: '认购',
+    LAST_REWARDING: '上次结算奖励额度',
+    REWARDING_NOTICE:
+      '当前得到的奖励额度，有效期为俩个交易日，若俩个交易日结算前未使用，则奖励额度失效，请尽快认购。'
+  },
+
+  BARGAIN_RECORD: {
+    PROMOTION_RECORD: '特价额度记录',
+    LOADING: '加载中...',
+    NO_RECORD: '暂无数据',
+    TO_LOWER_THE: '已经到底了~'
+  },
+
+  GENERALIZE: {
+    MY_REFERRALS: '我的推广',
+    INVITE_FRIENDS: '邀请好友',
+    TOTAL_REFERRALS: '旗下推广总人数',
+    REFERRING_LIST: '推荐列表',
+    FIRST_GENERATION_REFERRALS: '一代推荐人数',
+    SECOND_GENERATION_REFERRALS: '二代推荐人数',
+    REFERRING_TEAM: '推荐团队',
+    ACTIVE_MEMBER: '有效成员',
+    NODE_LEVEL: '节点等级',
+    REBATE_PROPORTION: '返还比例'
+  },
+
+  GENERALIZE_RECORD: {
+    REMARK: '注：以下数据只代表前一天结算后的数据，旗下业绩不包含其本人',
+    LOADING: '加载中...',
+    NO_RECORD: '暂无数据',
+    TO_LOWER_THE: '已经到底了~',
+    USER_ACCOUNT: '用户名称',
+    REFERRING_DATE: '推广时间',
+    EFFECTIVE_MEMBERS: '有效成员',
+    PERFORMANCE: '旗下业绩'
+  },
+
+  INVITER_FRIEND: {
+    PLEASE_LOGIN_FIRST: '请先登录',
+    INVITER_FRIEND: '邀请好友',
+    COPY_SUCCESS: '复制成功',
+    COPY_INVITE_NUM: '复制邀请码',
+    CLICK_SAVE_IMG: '点击或长按二维码保存图片',
+    CHECK_REFERRING_DETAILS: '查看推广'
+  },
+
+  RULE: {
+    TITLE: 'X PLAN交易流程'
+  },
+
+  NOTICE_LIST: {
+    TITLE: '公告列表'
+  },
+
+  NOTICE_DETAIL: {
+    TITLE: '公告详情',
+    NO_RECORD: '暂无数据'
+  },
+
+  AUTH_MAIN: {
+    SELECT_AUTH_WAY: '选择授权方式',
+    NEW_USER: '我是新用户',
+    DIRECT_LOGIN: '使用当前zbx账号直接授权登录',
+    ACCOUNT_BIND: '已有账号绑定',
+    SIGN_IN_BIND_ACCOUNT: '登录已有账号，与当前ZBX账号绑定'
+  },
+
+  AUTH_BIND: {
+    AUTH_FAILURE_TO_RETRY: '授权失效，请返回重试',
+    ACCOUNT_ERR: '账号输入错误',
+    PASSWORD_ERR: '密码最少8位，字母加数字',
+    AUTH_SUCCESS: '授权成功',
+    ACCOUNT_BIND: '账号绑定',
+    INPUT_EMAIL_OR_PHONE: '请输入X-PLAN 邮箱/手机号',
+    PASSWORD: '密码',
+    CONFIRM_BIND: '确认绑定'
+  },
+
+  AUTH_CODE: {
+    AUTH_SUCCESS: '授权成功',
+    CODE: '邀请码',
+    INPUT_CODE: '请输入X-PLAN 邀请码',
+    CONFIRM: '确认'
+  },
+
+  AUTH_LOGIN: {
+    SELECT_AUTH_WAY: '选择授权方式',
+    AUTH_LOGIN: 'ZBX授权登录'
   },
 
   DEPOSIT: {
-    AMOUNT_JOIN: 'Participation quantity',
-    CHOOSE_FUNDS: 'Select funds to join',
-    JOIN_PLAN: 'Join The Plan',
-    SUPER_NODE: 'Super Node',
-    JOIN_NODE: 'Join a node',
-    UNLOCK_AMOUNT: 'Unlock Amount',
-    PAY_PWD: 'Payment Password',
-    FEE: 'FEES',
-    FEES: 'Fees',
-    DEDUCTING_FUNDS: 'Based on the latest rates when deducting funds',
-    AUTH_MSG_ONE:
-      "You can't join as you haven't passed the identity verification.",
-    TO_AUTH: 'Go to Verify',
-    AUTH_MSG_TWO: "You can't join as you haven't set trade password.",
-    TO_SET: 'Go to Set',
-    JOIN_AND_GET: 'Join a node and get MUSDT promotion quota',
-    JOIN_SUPER_NODE: 'Join a Super Node',
-    AVAILABLE: 'Available',
-    PAY_SUCCESS: 'Pay Successfully!',
-    FINISH: 'Finish',
-    UNLOCK_MUSDT: 'Unlock MUSDT',
-    SELECT_SUPER_NODE: 'Select a Super Node',
-    ALL: 'All',
-    AVAILABLE_MUSDT_UNLOCK: 'Available MUSDT Promotion Quota to Unlock',
-    CHECK_DETAILS: 'Check the details',
-    SPECIAL_PRICE: 'Special Price',
-    ENTER_UNLOCK_AMOUNT: 'Enter Unlock Amount',
-    BALANCE: 'Balance',
-    TRADING_AMOUNT: 'Trading Amount',
-    UNLOCK: 'Unlock',
-    CONFIRM_PAYMENT: 'Confirm Payment',
-    TOTAL_PAYMENT: 'Total Payment',
-    AMOUNT_TO_DEDUCT: 'Amount to deduct is based on the latest total price.',
-    CONFIRM_BUY: 'Confirm Buy In',
-    PLEASE_ENTER_PAY_PASSWORD: 'Please Enter Payment Password',
-    SUBSCRIBE: 'Subscribe'
+    PLEASE_LOGIN_FIRST: '请先登录',
+    SELECT_PLAN: '选择参与计划',
+    ALL: '全部',
+    X_PLAN: 'X PLAY',
+    PROMOTION: '特价额度',
+    SET_PAY_PASSWORD: '请设置交易密码',
+    ATTEND_SUCCESS: '恭喜您，参与成功',
+    COUNT_SELECT: '数量选择',
+    GIVE_PROMOTION: '赠送特价额度',
+    FEE: '手续费',
+    FEES: '手续费费率',
+    AUTH_MSG_ONE: '您暂未通过实名认证，无法参与',
+    AUTH_MSG_TWO: '您暂未设置交易密码，无法参与',
+    TO_AUTH: '去认证',
+    TO_SET: '去设置',
+    JOIN_PLAN: '参与计划',
+    CONFIRM_PAYMENT: '确认支付',
+    JOIN_X_PLAN: '参与 X PLAN',
+    AVAILABLE: '可用',
+    PAY_PASSWORD: '交易密码',
+    FORGET_PAY_PASSWORD: '忘记交易密码',
+    CONFIRM: '确认',
+    CONGRATULATION_SUBSCRIBE_SUCCESS: '恭喜您，认购成功',
+    AVAILABLE_SUBSCRIB_PROMOTION: '当前可认购特价额度',
+    LOOK_DETAIL: '查看详情',
+    CURRENT_PROMOTION: '当前特价',
+    BALANCE: '余额',
+    TRADING_AMOUNT: '交易额',
+    SUBSCRIBE: '认购',
+    CONFIRM_PAY: '确认支付',
+    TOTAL_PAYMENT: '支付总额',
+    AMOUNT_TO_DEDUCT: '扣款时依照最新的总价为准',
+    PAY_PWD: '支付密码'
   },
+
+  DEPOSIT_RESULT: {
+    PAY_SUCCESS: '支付成功！',
+    DESC:
+      '当日得到的奖励额度，有效期至次日结算时间，如次日结算时还未使用，则奖励额度失效，请尽快使用。',
+    FINISH: '完成',
+    UNLOCK: '解锁'
+  },
+
+  EXCEPTION: {
+    UN_PAGE_TO_JUMP: '页面不存在，正在跳转首页',
+    PAGE_NO_FOUND: '页面找不到了',
+    BACK_PREV_PAGE: '返回上一页'
+  },
+
+  ACCOUNT_SAFE: {
+    SAFETY_CENTER: '安全中心',
+    RESET_LOGIN_PWD: '重置登录密码',
+    RESET_PAY_PWD: '重置交易密码',
+    SET_PAY_PWD: '设置交易密码'
+  },
+
+  CONTACT_US: {
+    CLICK_TO_CONTACT: '点击右下角的联系客服',
+    AT_ONCE_CONTACT: '即可开始与客服的沟通',
+    WAIT_FOR_IMG_SHOW: '若未出现联系客服,请耐心等待3~5秒'
+  },
+
+  TERMINATION: {
+    INPUT_GRAPH_CODE: '请填写图形验证码',
+    INPUT_WALLET_ADDRESS: '请填写钱包地址',
+    INPUT_PHONE_CODE: '请填写手机验证码',
+    INPUT_EMAIL_CODE: '请填写邮箱验证码',
+    TERMINATION_SUCCESS: '解除合约成功',
+    TERMINATION: '解除合约',
+    RECEIPT_ADDRESS: '收款地址（XC地址）',
+    INPUT_OR_PASTE_ADDRESS: '输入或长按粘贴地址',
+    TAKE_OUT_FIRST_ORDER: '首单在15天内额外扣除',
+    FEE: '手续费',
+    GRAPH_CODE: '图形验证码',
+    PHONE_CODE: '手机验证码',
+    EMAIL_CODE: '邮箱验证码',
+    INPUT_CODE: '请输入验证码',
+    GET_CODE: '获取验证码',
+    TO_ACCOUNT_COUNT: '实际到账数量',
+    TERMINATION_EXPLAIN: '解除合约相关说明',
+    EXPLAIN_1:
+      '1、提交解除合约前，请将USDT 和XC 账户可用资产全部转移，以免合约解除造成不必要的损失。',
+    EXPLAIN_2:
+      '2、一旦提交了解除合约，用户将停止参与计划并无法登陆，系统将禁用当前账号。',
+    EXPLAIN_3:
+      '3、系统将核算每个用户，每单的投入的成本，如用户收益没有达到所投入的成本，解除合约后，平台将补足剩余成本部分到用户提交地址；如收益达到或超出所投入的成本，用户解除合约则会扣除剩余收益部分，将参与计划成本部分按50%返还到用户提交的地址中。',
+    EXPLAIN_4:
+      '4、用户如果在首次参与计划15天以内选择解除合约，平台将额外每单扣除30xc作为合约违约金。',
+    EXPLAIN_5:
+      '5、解除合约地址如果是站外将收取手续费2%，如是站内将免除转账手续费。',
+    EXPLAIN_6:
+      '6、请用户仔细核对收款地址，因链上转账不可逆，如因地址错误造成的损失，该损失由用户承担。',
+    TERMINATION_HINT: '一旦提交解除合约，将会停用该账号，无法登录，请确认。',
+    CANCEL: '取消',
+    CONFIRM: '确认'
+  },
+
   USER_CENTER: {
-    USER_CENTER: 'Profile',
-    CONTACT_US: 'Contact Us',
-    UNVERIFIED: 'Unverified',
-    IDENTITIY_VERIFICATION: 'Identitiy Verification',
-    NOT_F_MEMBER: 'Not a F Member, cannot get the referring rewards.',
-    ANNOUNCEMENTS: 'Announcements',
-    ACCOUNT_SECURITY: 'Account Security',
-    CONTACT_CUSTOMER_SERVICE: 'Contact Customer Service',
-    CHANGE_LANG: 'Switch Language',
-    SIGN_OUT: 'Sign Out',
-    CHANGE_COUNTRY: 'Select Country',
-    F_MEMBER_INTRODUCTION: 'F Member Introduction',
-    F_MEMBER_ING: 'F Memberis in effect，',
-    F_MEMBER_INVALID: 'Invalid',
-    F_INFO:
-      'You will be marked as a F member after you successfully join a super node. F member marks that you can enjoy promotion rewards, referring rewards, management rewards, team rewards and others. The expiry date of a  F member mark is 48 hours.',
-    HI_TO_LOGIN: 'Hello, Sign In Here',
-    SECURITY_CENTER: 'Security Center',
-    RESET_LOGIN_PASSWORD: 'Reset Login Password',
-    SET_TRADE_PASSWORD: 'Set Trade Password'
+    PLEASE_LOGIN_FIRST: '请先登录',
+    IS_LOGOUT: '是否退出登录',
+    CANCEL: '取消',
+    CONFIRM: '确认',
+    USER_CENTER:'个人中心',
+    GOLD_MEMBER: '黄金会员',
+    ACTIVE: '活跃',
+    EFFECTIVE: '有效',
+    NOTICE_LIST: '公告列表',
+    ACCOUNT_SAFE: '账户安全',
+    INVITER_FRIEND: '邀请好友',
+    CONTACT_US: '联系客服',
+    TERMINATION: '解除合约',
+    LOGOUT: '退出登录',
+    ACTIVE_EXPLAIN: '活跃用户说明',
+    ACTIVE_REMARK:
+      '活跃用户：当您参与计划成功后可变成活跃用户，活跃用户有效为三个交易日。',
+    ACTIVE_OUT_TIME: '当前您的活跃用户到期时间',
+    EFFECTIVE_EXPLAIN: '用户标示说明',
+    EFFECTIVE_REMARK:
+      '有效用户：在参与计划中有排单即为有效用户，没有参与计划中排单则不为有效用户。',
+    EFFECTIVE_OUT_TIME: '当前您的有效用户到期时间'
   },
-  WALLET: {
-    WALLET: 'Wallet',
-    TOTAL_ASSETS: 'Total Assets',
-    WITHDRAW: 'Withdraw',
-    DEPOSIT: 'Deposit',
-    FREEZE: 'Freeze',
-    SIGNIN_TO_OPERATE: 'Signin to Operate',
-    TO_LOGIN: 'Go to Signin',
-    PROMOTION_QUOTA_UNLOCK: 'Promotion Quota Unlock',
-    SUBSCRIBING_PROMOTION_QUOTA_FREEZING:
-      'Subscribing Promotion Quota Freezing',
-    YOU_WILL_GET: 'You will Get',
-    DEPOSIT_AMOUNT: 'Deposit Amount',
-    NODE_REBATE: 'Node Rebate',
-    WITHDRAWAL_FEES: 'Withdrawal Fees',
-    NODE_FREEZING: 'Node Freezing',
-    FEES: 'Fees',
-    DEPOSIT_ESTIMATED_VALUE: 'Deposit Estimated Value',
-    ESTIMATED_VALUE: 'Estimated Value',
-    SUBSCRIBE: 'Subscribe',
-    FEES_UNLOCK_100_MUSDT: 'Fees to Unlock 100 MUSDT',
-    WITHDRAW_MUSDT: 'Withdraw MUSDT',
-    AVAILABLE: 'Available',
-    WITHDRAWAL_ADDRESS: 'Withdrawal Address',
-    PASTE_ADDRESS: 'Enter or Long Pree to Paste the Address',
-    AMOUNT: 'Amount',
-    MIN_WITHDRAWAL_AMOUNT: 'Minimum Withdrawal Amount',
-    PHONE_VERIFY_CODE: 'Mobile Verification Code',
-    EMAIL_VERIFY_CODE: 'E-mail Verification Code',
-    ENTER_VERIFY_CODE: 'Enter Verification Code',
-    GET_CODE: 'Receive verification code',
-    WARM_REMINDER: 'Warm Reminder',
-    MSG_ONE_LIST: [
-      'Currently, the maximum withdrawal amount for every account is ',
-      ' per day. Each order is limited in',
-      '-',
-      'Fees for each transaction is ',
-      '.'
-    ],
-    MSG_TWO:
-      'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
-    MSG_THREE:
-      'Please be noted that MUSDT withdrawal will be converted into MMT withdrawal based on the current rate of MMT/MUSDT.',
-    DEPOSIT_MUSDT: 'Deposit MUSDT',
-    SAVE_QR_CODE: 'Click or long press the qr code to save the picture',
-    COPY_ADDRESS: 'Copy Address',
-    DEPOSIT_NOTES: 'Deposit Notes',
-    RECHARGE_MSG_ONE:
-      'MMT deposit will be converted into MUSDT based on the real time rate of MMT/MUSDT, and the conversion time is based on the MMT deposit time.',
-    RECHARGE_MSG_TWO: [
-      'Deposit is automatic. ',
-      ' transfer requires confirmation of BTC network. Your ',
-      ' will automatically deposit to your account.'
-    ],
-    RECHARGE_MSG_THREE:
-      'This deposit address is unique and only for your use, you can make several deposits at the same time.',
-    RECHARGE_MSG_FOUR: [
-      "This address doesn't allow other assets deposit except MUSDT, any other non ",
-      ' assets deposited to this address will be lost permanently.'
-    ],
 
-    DEPOSIT_USDT: 'Deposit USDT',
-    USDT_MSG_ONE:
-      'Deposit is automatic. USDT transfer requires confirmation of USDT network. Your USDT will automatically deposit to your account.',
-    USDT_MSG_TWO:
-      'This deposit address is unique and only for your use, you can make several deposits at the same time.',
-    USDT_MSG_THREE:
-      "This address doesn't allow other assets deposit except USDT, any other non USDT assets deposited to this address will be lost permanently.",
+  COUNTRY_SELECT: {
+    SELECT_COUNTRY: '选择国家',
+    NEXT_STEP: '下一步'
+  },
 
-    WITHDRAW_USDT: 'Withdraw USDT',
-    WITHDRAW_USDT_MSG1: [
-      'Currently, the maximum withdrawal amount for every account is ',
-      'USDT per day. Each order is limited in',
-      '-',
-      ' USDT; Fees for each transaction is ',
-      ' USDT.'
-    ],
-    WITHDRAW_USDT_MSG2:
-      'To ensure your assets security, we wil review all the withdrawal requests manually, please wait patiently.',
-    WITHDRAWAL_RECORD: 'Withdrawal Record',
-    ADDRESS: 'Address',
-    DATE: 'Date',
-    ORDER_NUMBER: 'Order Number',
-    WAITING_FOR_REVIEW: 'Waiting for Review',
-    COMPLETED: 'Completed',
-    REJECTED: 'Rejected',
-    WITHDRAWING: 'Withdrawing',
-    MUSDT_AMOUNT: 'MUSDT Amount',
-    CONVERTED_PRICE: 'Converted Price',
-    CONVERTED_MMT_AMOUNT: 'Converted MMT Amount',
-    TRANSFER: 'Transfer',
-    ALL_LOADED: 'All Loaded',
-    STATUS: 'Status'
+  IDENTITY_VERIFY: {
+    ID_CARD: '身份证',
+    PASSPORT: '护照',
+    DRIVING_LICENSE: '驾照',
+    INPUT_MSG: '填写信息',
+    CONFIRM_MSG_AND_CARD: '确认所填信息与证件一致',
+    SELECT_AUTH_WAY: '您可以选择一下验证方式',
+    ID_NUMBER: '身份证号',
+    FAMILY_NAME: '姓',
+    LAST_NAME: '名',
+    CARD_NUMBER: '证件号',
+    NEXT_STEP: '下一步'
+  },
+
+  VERIFY_RESULT: {
+    AUTH_EXPLAIN_ONE:
+      '请确保照片完整，清晰可见，格式为jpg, jpeg,或png，需小于2M。证件必须 在有效期限内。',
+    AUTH_EXPLAIN_TWO:
+      '请上传手持证件照片，照片中需附一张白纸写有（“MMT"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
+    ID_AND_PASSPORT_FRONT: '身份证/护照正面照',
+    ID_AND_PASSPORT_BACK: '身份证/护照反面照',
+    ID_AND_PASSPORT_HOLD: '手持身份证/护照照片',
+    SUBMIT_VERIFY: '提交审核'
+  },
+
+  MY_WALLET: {
+    PLEASE_LOGIN_FIRST: '请先登录',
+    WALLET: '钱包',
+    TOTAL_ASSETS: '账户总资产',
+    FREEZING: '冻结中',
+    RECHARGE: '充值',
+    WITHDRAW: '提现',
+    RECORD: '记录',
+    LOADING: '加载中...',
+    NO_RECORD: '暂无数据',
+    TO_LOWER_THE: '已经到底了~'
+  },
+
+  RECHARGE: {
+    RECHARGE: '充值',
+    COPY_SUCCESS: '充值成功',
+    COPY_ADDRESS: '复制地址',
+    ADDRESS_HINT: '请注意，此为 OMNI 的 USDT 的地址',
+    RECHARGE_EXPLAIN: '转入说明',
+    EXPLAIN_1:
+      '转入是自动的，XC 转账需要整个 XC 网络进行确认，您的 XC 会自动充值到您的账户中。',
+    EXPLAIN_2: '此地址是你唯一且独自使用的转入地址，你可以同时进行多次充值。',
+    EXPLAIN_3:
+      '本地址禁止充值除 XC 之外的其它资产，任何其它资产充值将不可找回。'
+  },
+
+  WITHDRAW: {
+    DISCERN_FAILURE: '识别失败',
+    INPUT_ADDRESS: '请填写提币地址',
+    ADDRESS_ERR: '地址格式错误',
+    INPUT_COUNT: '请输入提币数量',
+    LESS_MIN_COUNT: '低于最小提币数量',
+    MORE_MAX_COUNT: '提币量超过限制',
+    ACCOUNT_NO_MORE: '账户不足',
+    withdraw_success_to_jump: '提现成功，正在跳转提币记录页',
+    WITHDRAW_COIN: '提币',
+    WITHDRAW_AMOUNT: '提币记录',
+    ACCOUNT_AVAILABLE: '账户可用（包含可提）',
+    ACCOUNT_WITHDRAW: '账户可提',
+    WITHDRAW_ADDRESS: '提币地址',
+    INPUT_OR_PASTE_ADDRESS: '输入或长按粘贴地址',
+    SCAN_CODE: '扫码',
+    AMOUNT: '数量',
+    MIN_WITHDRAWAL_AMOUNT: '最小提币量',
+    FEE: '手续费',
+    GRAPH_CODE: '请填写图形验证码',
+    PHONE_CODE: '手机验证码',
+    EMAIL_CODE: '邮箱验证码',
+    input_CODE: '请输入验证码',
+    GET_CODE: '获取验证码',
+    TO_ACCOUNT_COUNT: '实际到账数量',
+    WITHDRAW: '提现',
+    WARM_REMINDER: '友情提示',
+    REMARK_1: '当前，每人每日最高可提现',
+    REMARK_2: '单笔转出限额为',
+    REMARK_3: '提币手续费',
+    REMARK_4: '转账手续费',
+    REMARK_5: '为了保障资金安全，我们会对提币进行人工审核，请耐心等待。'
+  },
+
+  WITHDRAW_RECORD: {
+    WITHDRAWAL_RECORD: '提币记录',
+    WAITING_FOR_REVIEW: '待审核',
+    WITHDRAWING: '提币中',
+    WITHDRAW_COMPLETED: '提币成功',
+    WITHDRAW_REJECTED: '审核拒绝',
+    ADDRESS: '地址',
+    DATE: '时间',
+    AMOUNT: '数量',
+    ORDER_NUMBER: '编号',
+    STATUS: '状态'
   }
+
+  // ASIDE: {
+  //   GRAPH_CODE: '图形验证码',
+  //   VERIFY_CODE: '验证码',
+  //   GET_VERIFY_CODE: '获取验证码',
+  //   PASSWORD_CONFIRM_PLACEHOLDER: '再次输入密码',
+  //   INVITER_CODE: '邀请码',
+  //   NEXT_STEP: '下一步',
+  //   SET: '设置',
+  //   RESET: '重置',
+  //   NO_DATA: '暂无数据',
+  //   NO_ANNOUN: '暂无公告',
+  //   LOGIN_TO_VIEW: '登录查看',
+  //
+  //   // footer
+  //   HOMEPAGE: '首页',
+  //   NODE: '节点',
+  //   WALLET: '钱包'
+  // },
+
+  // AUTH: {
+  //   IDENTITY_VERIFICATION: '身份认证',
+  //   SUBMIT_AND_WAIT: '提交成功，等待审核…',
+  //   RESULT_MSG: '认证结果将会显示在个人中心',
+  //   VERIFICATION_FAILED: '认证失败！',
+  //   FAILED_REASON: '失败原因',
+  //   CONTINUE_TO_VERIFY: '重新验证',
+  //   CERTIFICATE_PASSED: '认证通过',
+  //   YOUR_NAME: '您的姓名',
+  // },
 }

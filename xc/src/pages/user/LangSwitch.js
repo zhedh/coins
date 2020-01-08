@@ -1,13 +1,20 @@
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
 import Header from "../../components/common/Header";
-import {USER} from "../../assets/static";
+import {ASSET_USER} from "../../assets/static";
 import './LangSwitch.scss'
 
 @inject('localeStore')
 @observer
 class LangSwitch extends Component {
 
+  changeLang = (lang) => {
+    const {history, localeStore} = this.props;
+    localeStore.switchLang(lang);
+    setTimeout(() => {
+      history.push('/user-center')
+    }, 500)
+  };
 
   render() {
     const {history, localeStore} = this.props;
@@ -24,9 +31,9 @@ class LangSwitch extends Component {
         <ul className="list">
           {
             languages.map(language =>
-              <li key={language.value} onClick={() => localeStore.switchLang(language.value)}>
+              <li key={language.value} onClick={() => this.changeLang(language.value)}>
                 <span>{language.label}</span>
-                {language.value === lang && <img src={USER.ICON_LANG_SELECTED} alt=""/>}
+                {language.value === lang && <img src={ASSET_USER.ICON_LANG_SELECTED} alt=""/>}
               </li>
             )
           }

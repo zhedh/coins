@@ -276,6 +276,7 @@ export default {
     IS_LOGOUT: '로그아웃 하겠습니까?',
     CANCEL: '취소',
     CONFIRM: '확인',
+    USER_CENTER:'프라이비트 센터',
     GOLD_MEMBER: '골드 회원',
     ACTIVE: '활동',
     EFFECTIVE: '유효하다',
@@ -284,6 +285,7 @@ export default {
     INVITER_FRIEND: '친구 초대',
     CONTACT_US: '상담사 연결',
     TERMINATION: '계약해지',
+    LANG_SWITCH: '언어 전환',
     LOGOUT: '로그아웃 ',
     ACTIVE_EXPLAIN: '활약 사용자 설명',
     ACTIVE_REMARK:

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import Header from '../../components/common/Header'
-import {USER} from '../../assets/static'
+import {ASSET_USER} from '../../assets/static'
 import {hideChatButton} from "../../utils/common"
 import './ContactUs.scss'
 
@@ -35,7 +35,7 @@ class ContactUs extends Component {
       <div id="contact-us">
         <Header onHandle={() => history.push('/user-center')}/>
         <div className="chat-wrapper">
-          <img src={USER.CONTACT_US_IMG} alt=""/>
+          <img src={ASSET_USER.CONTACT_US_IMG} alt=""/>
           <p>
             点击右下角的联系客服
             <br/>
@@ -45,7 +45,7 @@ class ContactUs extends Component {
           </p>
         </div>
         <div className="arrow-box">
-          <img src={USER.CONTACT_US_ARROW} alt=""/>
+          <img src={ASSET_USER.CONTACT_US_ARROW} alt=""/>
         </div>
       </div>
     )

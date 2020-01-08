@@ -52,7 +52,7 @@ export const DEPOSIT = {
   SIDEBAR_TITLE: '选择参与计划'
 }
 
-export const USER = {
+export const ASSET_USER = {
   CUSTOMERS: [],
   USER_ICON: require('../images/2.1/user.png'),
   USER_NOTICE: require('../images/2.1/user-notice.png'),
