@@ -2,14 +2,17 @@ import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import {Toast} from 'antd-mobile'
 import {isEmail, isMobile} from "../../utils/reg"
-import {REG, PASSWORD_TYPES, TOAST_DURATION} from '../../utils/constants'
+import {REG, TOAST_DURATION} from '../../utils/constants'
 import {UserApi} from '../../api'
 import VerifiedCode from '../../components/partial/VerifiedCode'
 import VerifiedPwd from '../../components/partial/VeritifiedPwd'
-import './Password.scss'
+import './Password.scss';
+
+
 
 @inject('userStore')
 @inject('personStore')
+@inject('localeStore')
 @observer
 class Password extends Component {
   state = {
@@ -23,8 +26,35 @@ class Password extends Component {
   }
 
   componentDidMount() {
-    const {match, history, userStore, personStore} = this.props
-    const {type} = match.params
+    const {match, history, userStore, personStore} = this.props;
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
+    const {type} = match.params;
+    const PASSWORD_TYPES = [
+      {
+        type: 'find',
+        title: PASSWORD.FIND_PASSWORD,
+        codeType: 'findpassword',
+        canChangeUser: true
+      },
+      {
+        type: 'reset',
+        title: PASSWORD.RESET_LOGIN_PASSWORD,
+        codeType: 'findpassword',
+        canChangeUser: false
+      },
+      {
+        type: 'pay',
+        title: PASSWORD.SET_PAY_PASSWORD,
+        codeType: 'setpaypassword',
+        canChangeUser: false
+      },
+      {
+        type: 'repay',
+        title: PASSWORD.RESET_PAY_PASSWORD,
+        codeType: 'setpaypassword',
+        canChangeUser: false
+      }
+    ];
     const typeOption = PASSWORD_TYPES.find(item => item.type === type)
     if (!typeOption) {
       history.push('/404')
@@ -33,7 +63,7 @@ class Password extends Component {
       personStore.getUserInfo().then(() => {
         const userName = personStore.userName
         this.setState({typeOption, userName})
-      })
+      });
       return
     }
     this.setState({typeOption})

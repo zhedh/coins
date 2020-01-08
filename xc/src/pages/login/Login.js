@@ -11,6 +11,7 @@ import closePwdImg from '../../assets/images/close-pwd.png'
 import './Login.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class Login extends Component {
   state = {
@@ -25,25 +26,25 @@ class Login extends Component {
   }
 
   onInputChange = (e, key) => {
-    const {value} = e.target
-    this.setState({[key]: value})
-  }
+    const {value} = e.target;
+    this.setState({[key]: value});
+  };
 
   onSetType = currentType => {
     this.setState({type: currentType === 'text' ? 'password' : 'text'})
-  }
+  };
 
   onSubmit = () => {
-    const {history, userStore} = this.props
-    const {account, password} = this.state
+    const {history, userStore, localeStore: {locale: {LOGIN}}} = this.props;
+    const {account, password} = this.state;
 
     if (!isEmail(account) && !isMobile(account)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
+      Toast.info(LOGIN.ACCOUNT_ERR, TOAST_DURATION)
       return
     }
 
     if (!isPassword(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
+      Toast.info(LOGIN.PASSWORD_ERR, TOAST_DURATION)
       return
     }
 
@@ -61,25 +62,26 @@ class Login extends Component {
         return
       }
       Cookies.remove('PRODUCT_ID')
-      Toast.success('登录成功', TOAST_DURATION)
+      Toast.success(LOGIN.LOGIN_SUCCESS, TOAST_DURATION)
       this.timer = setTimeout(() => history.push('/deposit'), TOAST_DURATION * 1000)
     }).catch(() => this.setState({isSubmit: true}))
   }
 
   render() {
-    const {account, password, type, isSubmit} = this.state
-    const unSubmit = account === '' || password === '' || !isSubmit
+    const {localeStore: {locale: {LOGIN}}} = this.props;
+    const {account, password, type, isSubmit} = this.state;
+    const unSubmit = account === '' || password === '' || !isSubmit;
 
     return (
       <div id="login">
         <AccountLangHeader/>
-        <h1>登录</h1>
+        <h1>{LOGIN.LOGIN}</h1>
         <div className="content">
           <label>
             <input
               className="input-main"
               type="text"
-              placeholder="邮箱/手机号"
+              placeholder={LOGIN.ACCOUNT_PLACEHOLDER}
               value={account}
               onChange={(e) => this.onInputChange(e, 'account')}
             />
@@ -88,7 +90,7 @@ class Login extends Component {
             <input
               className="input-main"
               type={type}
-              placeholder="密码"
+              placeholder={LOGIN.PASSWORD_PLACEHOLDER}
               value={password}
               onChange={(e) => this.onInputChange(e, 'password')}
             />
@@ -99,8 +101,8 @@ class Login extends Component {
             />
           </label>
           <p>
-            <Link to="/password/find">忘记密码？</Link>
-            <Link to="/register">注册</Link>
+            <Link to="/password/find">{LOGIN.FORGET_PASSWORD}</Link>
+            <Link to="/register">{LOGIN.REGISTER}</Link>
           </p>
         </div>
 
@@ -110,7 +112,7 @@ class Login extends Component {
             className="primary-button"
             disabled={unSubmit}
             onClick={this.onSubmit}>
-            确认
+            {LOGIN.CONFIRM}
           </Button>
         </div>
       </div>
