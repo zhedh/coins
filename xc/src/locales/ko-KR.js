@@ -190,7 +190,7 @@ export default {
     FEES: '수수료율',
     AUTH_MSG_ONE: '실명 인증을 하지 않고 계획에 참여할 수 없습니다',
     AUTH_MSG_TWO: '거래 비밀번호를 설정하지 않아 참여 할 수 없습니다.',
-    TO_AUTH: '去认证',
+    TO_AUTH: '인증하다',
     TO_SET: '설정하러 가기',
     JOIN_PLAN: '계획 참여',
     CONFIRM_PAYMENT: '결제 확인',
@@ -243,10 +243,6 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: '그래픽 인증번호를 입력해주세요.',
     INPUT_WALLET_ADDRESS: '지갑 주소를 입력해주세요.',
-    INPUT_PHONE_CODE_01: '请填写',
-    INPUT_PHONE_CODE_02: '手机',
-    INPUT_PHONE_CODE_03: '邮箱',
-    INPUT_PHONE_CODE_04: '验证码',
     INPUT_PHONE_CODE: '휴대전화 인증번호를 입력해주세요.',
     INPUT_EMAIL_CODE: '이메일 인증번호를 입력해주세요.',
     TERMINATION_SUCCESS: '계약 해지 완료',
@@ -316,12 +312,12 @@ export default {
     PASSPORT: '여권',
     DRIVING_LICENSE: '운전면허',
     INPUT_MSG: '정보 입력',
-    INPUT_REG: '请输入7-18位证件号码',
+    INPUT_REG: '7-18 자리 ID 번호를 입력하십시오',
     CONFIRM_MSG_AND_CARD: '입력한 정보가 일치하지 않습니다.',
     SELECT_AUTH_WAY: '인증 방식을 선택해 주세요.',
     ID_NUMBER: '주민등록번호',
-    ID_NUMBER_01: '身份证',
-    YOUR_NAME: '您的姓名',
+    ID_NUMBER_01: '주민등록증',
+    YOUR_NAME: '이름',
     FAMILY_NAME: '성',
     LAST_NAME: '명',
     CARD_NUMBER: '신분증명서 ID ',
@@ -329,20 +325,20 @@ export default {
   },
 
   VERIFY_RESULT: {
-    WAITING_FOR_REVIEW: '等待审核',
-    HAD_REVIEWED: '已审核',
-    REVIEWED_FAIL: '失败',
-    SUBMIT_AND_WAIT: '提交成功，等待审核…',
-    RESULT_MSG: '认证结果将会显示在个人中心',
-    VERIFICATION_FAILED: '认证失败！',
-    FAILED_REASON: '失败原因',
-    CONTINUE_TO_VERIFY: '重新验证',
-    CERTIFICATE_PASSED: '认证通过',
-    YOUR_NAME: '您的姓名'
+    WAITING_FOR_REVIEW: '심사 진행 중',
+    HAD_REVIEWED: '심사 완료',
+    REVIEWED_FAIL: '실패',
+    SUBMIT_AND_WAIT: '제출 완료하셨습니다. 심사 결과를 기다려 주세요…',
+    RESULT_MSG: '인증 결과는 마이페이지에서 확인 할 수 있습니다. ',
+    VERIFICATION_FAILED: '인증 실패!',
+    FAILED_REASON: '실패 원인',
+    CONTINUE_TO_VERIFY: '다시 인증',
+    CERTIFICATE_PASSED: '인증 성공',
+    YOUR_NAME: '이름'
   },
 
   VERIFY_UPLOAD: {
-    IDENTITY_VERIFICATION: '身份认证',
+    IDENTITY_VERIFICATION: '신원 인증',
     AUTH_EXPLAIN_ONE:
       '신분증명서 사진 해상도는 높아야 하며 jpg, jpeg 또는 png 형식으로 2M보다 작아야 하고 유효기간을 반드시 확인해야 합니다.',
     AUTH_EXPLAIN_TWO:
@@ -372,16 +368,17 @@ export default {
     COPY_ADDRESS: '주소복사',
     ADDRESS_HINT: '잠깐，해당 주소는 OMNI의 USDT 주소입니다.',
     RECHARGE_EXPLAIN: '이체 설명 ',
-    EXPLAIN_1_ONE: '转入是自动的，',
-    EXPLAIN_1_TWO: '转账需要整个',
-    EXPLAIN_1_THREE: '网络进行确认，您的',
-    EXPLAIN_1_FOUR: '会自动充值到您的账户中。',
+    EXPLAIN_1_ONE: '자동으로 이체되며',
+    EXPLAIN_1_TWO: '이체는 전체',
+    EXPLAIN_1_THREE: '네트워크로 확인해야 되며 당신의',
+    EXPLAIN_1_FOUR: '는 당신의 계좌에 자동으로 입금됩니다.',
     EXPLAIN_1:
       '자동으로 이체되며 XC 이체는 전체 XC 네트워크로 확인해야 되며 당신의 XC는 당신의 계좌에 자동으로 입금됩니다.',
     EXPLAIN_2:
       '이 주소는 별도로 사용되는 유일한 이체주소이며 여러 번 동시 입금이 가능합니다.',
-    EXPLAIN_3_ONE: '本地址禁止充值除',
-    EXPLAIN_3_TWO: '之外的其它资产，任何其它资产充值将不可找回。',
+    EXPLAIN_3_ONE: '이 주소는',
+    EXPLAIN_3_TWO:
+      '외 기타 자산 입금은 금지이며 입금한 모든 자산은 되찾을 수 없습니다.',
     EXPLAIN_3:
       '이 주소는 XC 외 기타 자산 입금은 금지이며 입금한 모든 자산은 되찾을 수 없습니다.'
   },
@@ -398,8 +395,8 @@ export default {
     WITHDRAW_COIN: '코인 출금',
     WITHDRAW_amount: '코인 출금 기록',
     ACCOUNT_AVAILABLE: '사용 가능한 계좌(출금 가능도 포함)',
-    ACCOUNT_AVAILABLE_01: '账户可用',
-    ACCOUNT_AVAILABLE_02: '（包含可提）',
+    ACCOUNT_AVAILABLE_01: '사용 가능한 계좌',
+    ACCOUNT_AVAILABLE_02: '(출금 가능도 포함)',
     ACCOUNT_WITHDRAW: '출금 가능한 계좌',
     WITHDRAW_ADDRESS: '코인 출금 주소',
     INPUT_OR_PASTE_ADDRESS: '복사한 주소를 입력 또는 길게 누르세요.',

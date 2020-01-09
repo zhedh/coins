@@ -143,13 +143,10 @@ class Termination extends React.Component {
       return
     }
     if (!code) {
-      Toast.info(
-        `${TERMINATION.INPUT_PHONE_CODE_01}${
-          isMobile(userName)
-            ? TERMINATION.INPUT_PHONE_CODE_02
-            : TERMINATION.INPUT_PHONE_CODE_03
-        }${TERMINATION.INPUT_PHONE_CODE_04}`
-      )
+      const info = isMobile(userName)
+        ? `${TERMINATION.INPUT_PHONE_CODE}`
+        : `${TERMINATION.INPUT_EMAIL_CODE}`
+      Toast.info(info)
       return
     }
     this.setState({ showConfirm: true })

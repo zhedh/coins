@@ -245,10 +245,6 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: 'Please Enter Graphic Verification Code',
     INPUT_WALLET_ADDRESS: 'Please Enter Wallet Address',
-    INPUT_PHONE_CODE_01: 'Please Enter ',
-    INPUT_PHONE_CODE_02: 'Mobile',
-    INPUT_PHONE_CODE_03: 'Email',
-    INPUT_PHONE_CODE_04: 'Verification Code',
     INPUT_PHONE_CODE: 'Please Enter Mobile Verification Code',
     INPUT_EMAIL_CODE: 'Please Enter Email Verification Code',
     TERMINATION_SUCCESS: 'Cancel Contract Successfully',

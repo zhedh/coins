@@ -240,10 +240,6 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: '请填写图形验证码',
     INPUT_WALLET_ADDRESS: '请填写钱包地址',
-    INPUT_PHONE_CODE_01: '请填写',
-    INPUT_PHONE_CODE_02: '手机',
-    INPUT_PHONE_CODE_03: '邮箱',
-    INPUT_PHONE_CODE_04: '验证码',
     INPUT_PHONE_CODE: '请填写手机验证码',
     INPUT_EMAIL_CODE: '请填写邮箱验证码',
     TERMINATION_SUCCESS: '解除合约成功',
