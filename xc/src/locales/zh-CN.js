@@ -428,6 +428,11 @@ export default {
     AMOUNT: '数量',
     ORDER_NUMBER: '编号',
     STATUS: '状态'
+  },
+
+  ASIDE: {
+    LOADING: '加载中...',
+    PLEASE_LOGIN_FIRST: '请先登录',
   }
 
   // ASIDE: {

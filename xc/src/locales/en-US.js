@@ -438,6 +438,11 @@ export default {
     AMOUNT: 'Amount',
     ORDER_NUMBER: 'Reference Number',
     STATUS: 'Status'
+  },
+
+  ASIDE: {
+    LOADING: 'Loading...',
+    PLEASE_LOGIN_FIRST: 'Please sign in first',
   }
 
   // ASIDE: {

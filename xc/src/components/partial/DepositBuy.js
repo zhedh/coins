@@ -10,6 +10,7 @@ import {formatCoinPrice} from "../../utils/format";
 @inject('productStore')
 @inject('userStore')
 @inject('personStore')
+@inject('localeStore')
 @observer
 class DepositBuy extends Component {
   state = {

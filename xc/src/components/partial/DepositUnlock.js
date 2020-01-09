@@ -10,6 +10,7 @@ import './DepositUnlock.scss'
 
 @inject('productStore')
 @inject('userStore')
+@inject('localeStore')
 @observer
 class DepositUnlock extends Component {
   state = {

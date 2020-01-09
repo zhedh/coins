@@ -434,6 +434,11 @@ export default {
     AMOUNT: '수량',
     ORDER_NUMBER: '일련번호',
     STATUS: '상태'
+  },
+
+  ASIDE: {
+    LOADING: '로딩중...',
+    PLEASE_LOGIN_FIRST: '로그인 해주세요',
   }
 
   // ASIDE: {

@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
-import { Button } from 'antd-mobile'
-import { inject } from 'mobx-react'
+import React, {Component} from 'react'
+import {Button} from 'antd-mobile'
+import {inject, observer} from 'mobx-react'
 import './404.scss'
 
 @inject('localeStore')
+@observer
 class NoMatch extends Component {
   // componentDidMount() {
   //   // const { history,localeStore: {
@@ -17,9 +18,7 @@ class NoMatch extends Component {
   render() {
     const {
       history,
-      localeStore: {
-        locale: { EXCEPTION }
-      }
+      localeStore: {locale: {EXCEPTION}}
     } = this.props
     return (
       <div className="no">
@@ -31,9 +30,7 @@ class NoMatch extends Component {
 
         <Button
           className="goBack"
-          onClick={() => {
-            history.goBack()
-          }}
+          onClick={() => history.goBack()}
         >
           {EXCEPTION.BACK_PREV_PAGE}
         </Button>
