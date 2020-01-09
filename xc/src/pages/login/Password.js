@@ -8,8 +8,6 @@ import VerifiedCode from '../../components/partial/VerifiedCode'
 import VerifiedPwd from '../../components/partial/VeritifiedPwd'
 import './Password.scss';
 
-
-
 @inject('userStore')
 @inject('personStore')
 @inject('localeStore')
@@ -55,7 +53,7 @@ class Password extends Component {
         canChangeUser: false
       }
     ];
-    const typeOption = PASSWORD_TYPES.find(item => item.type === type)
+    const typeOption = PASSWORD_TYPES.find(item => item.type === type);
     if (!typeOption) {
       history.push('/404')
     }
@@ -88,14 +86,15 @@ class Password extends Component {
   onStepChange = step => this.setState({step})
 
   onNext = () => {
-    const {userName, code, typeOption} = this.state
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
+    const {userName, code, typeOption} = this.state;
     if (!isEmail(userName) && !isMobile(userName)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
+      Toast.info(PASSWORD.ACCOUNT_ERR, TOAST_DURATION)
       return
     }
 
     if (!REG.SMSCODE.test(code)) {
-      Toast.info('验证码输入错误', TOAST_DURATION)
+      Toast.info(PASSWORD.CODE_ERR, TOAST_DURATION)
       return
     }
 
@@ -121,6 +120,7 @@ class Password extends Component {
   }
 
   onSubmit = () => {
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
     const {
       typeOption,
       userName,
@@ -128,14 +128,14 @@ class Password extends Component {
       password,
       passwordConfirm,
       verifyToken
-    } = this.state
+    } = this.state;
 
     if (!REG.PASSWORD.test(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
+      Toast.info(PASSWORD.PASSWORD_ERR, TOAST_DURATION)
       return
     }
     if (password !== passwordConfirm) {
-      Toast.info('两次密码不一致', TOAST_DURATION)
+      Toast.info(PASSWORD.PASSWORD_CONFIRM_ERR, TOAST_DURATION)
       return
     }
 
@@ -150,7 +150,7 @@ class Password extends Component {
         password,
         passwordConfirm
       }).then(res =>
-        this.updateLoginPasswordSuccess(res, '密码已重置，请重新登录')
+        this.updateLoginPasswordSuccess(res, PASSWORD.PASSWORD_RESET_LOGIN_AGAIN)
       )
     }
 
@@ -161,7 +161,7 @@ class Password extends Component {
         passwordConfirm,
         verifyToken
       }).then(res =>
-        this.updateLoginPasswordSuccess(res, '重置成功，请重新登录')
+        this.updateLoginPasswordSuccess(res, PASSWORD.RESET_SUCCESS_LOGIN_AGAIN)
       )
     }
 
@@ -177,7 +177,7 @@ class Password extends Component {
         }
 
         const {history, userStore} = this.props
-        const msg = typeOption.type === 'pay' ? '设置成功' : '重置成功'
+        const msg = typeOption.type === 'pay' ? PASSWORD.SET_SUCCESS : PASSWORD.RESET_SUCCESS;
         userStore.changePayPasswordStatus(1)
         Toast.info(msg, TOAST_DURATION, () => history.goBack())
       })

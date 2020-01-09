@@ -18,7 +18,10 @@ const LoadableFooter = Loadable({
 class App extends Component {
 
   componentDidMount() {
-    document.title = 'X PLAN'
+    const {localeStore} = stores;
+    const lang = localStorage.getItem('LANG') || 'zh-ch';
+    localeStore.switchLang(lang);
+    document.title = 'X PLAN';
   }
 
   render() {

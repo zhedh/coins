@@ -9,6 +9,7 @@ import NoData from "../../components/common/NoData"
 import './BargainRecord.scss'
 
 @inject('productStore')
+@inject('localeStore')
 @observer
 class BargainRecord extends Component {
   state = {
@@ -27,39 +28,40 @@ class BargainRecord extends Component {
   }
 
   getSpecialRecords = () => {
-    const {page, row, productId, specialRecords} = this.state
+    const {page, row, productId, specialRecords} = this.state;
 
     PersonApi.getSpecialRecords({
       productId, page, row
     }).then(res => {
       if (res.status !== 1) {
-        Toast.info(res.msg)
-        this.setState({hasMore: false})
+        Toast.info(res.msg);
+        this.setState({hasMore: false});
 
         return;
       }
-      const arr = res.data
-      const hasMore = arr.length === row
-      specialRecords.push(...arr)
+      const arr = res.data;
+      const hasMore = arr.length === row;
+      specialRecords.push(...arr);
       this.setState({specialRecords, hasMore, page: hasMore ? page + 1 : 1})
     })
-  }
+  };
 
   render() {
-    const {specialRecords, hasMore} = this.state
+    const {localeStore: {locale: {BARGAIN_RECORD}}} = this.props;
+    const {specialRecords, hasMore} = this.state;
 
     return (
       <div id="bargain-record">
-        <Header title="特价额度记录" isFixed isShadow bgPrimary/>
+        <Header title={BARGAIN_RECORD.PROMOTION_RECORD} isFixed isShadow bgPrimary/>
         <div className="space">&nbsp;</div>
         <InfiniteScroll
           dataLength={specialRecords.length}
           next={this.getSpecialRecords}
           hasMore={hasMore}
-          loader={<p style={{textAlign: 'center', color: '#ccc'}}>加载中...</p>}
+          loader={<p style={{textAlign: 'center', color: '#ccc'}}>{BARGAIN_RECORD.LOADING}</p>}
           endMessage={
             <div style={{textAlign: 'center', color: '#ccc'}}>
-              {specialRecords.length <= 0 ? <NoData msg="暂无数据"/> : <p className="footer">已经到底了～</p>}
+              {specialRecords.length <= 0 ? <NoData msg={BARGAIN_RECORD.NO_RECORD}/> : <p className="footer">{BARGAIN_RECORD.TO_LOWER_THE}</p>}
             </div>
           }
         >

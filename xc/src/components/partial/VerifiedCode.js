@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
 import {Toast, Button} from 'antd-mobile'
 import {COUNT_DOWN, REG, TOAST_DURATION} from '../../utils/constants'
+import {inject, observer} from "mobx-react";
 import Captcha from '../common/Captcha'
 import AccountHeader from './AccountHeader'
 import UserApi from '../../api/user'
 import './VerifiedCode.scss'
 
+@inject('localeStore')
+@observer
 class VerifiedCode extends Component {
   state = {
     isGetSms: true,
@@ -60,10 +63,11 @@ class VerifiedCode extends Component {
   }
 
   emailExist = async () => {
-    const {userName} = this.props
+    const {userName} = this.props;
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
     return UserApi.emailExist({email: userName}).then(res => {
       if (res.status === -2) {
-        Toast.info('该邮箱未注册')
+        Toast.info(PASSWORD.EMAIL_UN_REGISTER)
         return false
       }
       if (res.status !== 1) {
@@ -75,10 +79,11 @@ class VerifiedCode extends Component {
   }
 
   phoneExist = () => {
-    const {userName} = this.props
+    const {userName} = this.props;
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
     return UserApi.phoneExist({phoneNo: userName, phonePrefix: '86'}).then(res => {
       if (res.status === -2) {
-        Toast.info('该手机号未注册')
+        Toast.info(PASSWORD.PHONE_UN_REGISTER)
         return false
       }
       if (res.status !== 1) {
@@ -141,22 +146,24 @@ class VerifiedCode extends Component {
   }
 
   getCode = () => {
-    const {userName} = this.props
-    const {captcha} = this.state
+    const {userName} = this.props;
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
+    const {captcha} = this.state;
     if (!REG.EMAIL.test(userName) && !REG.MOBILE.test(userName)) {
-      Toast.info('请填写正确的邮箱或者手机号', TOAST_DURATION)
+      Toast.info(PASSWORD.PHONE_OR_EMAIL_ERR, TOAST_DURATION)
       return
     }
 
     if (!captcha || captcha.length !== 4) {
-      Toast.info('请输入4位图形验证码', TOAST_DURATION)
+      Toast.info(PASSWORD.INPUT_FOUR_GRAPH_CODE, TOAST_DURATION)
       return
     }
 
     REG.MOBILE.test(userName) ? this.sendSmsCode() : this.sendMailCode()
-  }
+  };
 
   render() {
+    const {localeStore: {locale: {PASSWORD}}} = this.props;
     const {
       show,
       typeOption,
@@ -166,8 +173,8 @@ class VerifiedCode extends Component {
       onNext,
       onBack
     } = this.props
-    const {isGetSms, count, captcha, imgSrc} = this.state
-    const canSubmit = userName !== '' && code !== ''
+    const {isGetSms, count, captcha, imgSrc} = this.state;
+    const canSubmit = userName !== '' && code !== '';
 
     return (
       <div className={'verified-code ' + (show ? 'show' : '')}>
@@ -177,7 +184,7 @@ class VerifiedCode extends Component {
             <input
               className="input-main"
               type="text"
-              placeholder="邮箱/手机号"
+              placeholder={PASSWORD.ACCOUNT_PLACEHOLDER}
               value={userName}
               readOnly={!typeOption.canChangeUser}
               onChange={e => onInputChange(e, 'userName')}
@@ -188,6 +195,7 @@ class VerifiedCode extends Component {
             <Captcha
               imgSrc={imgSrc}
               value={captcha}
+              placeholder={PASSWORD.GRAPH_CODE}
               onChange={e => this.onInputChange(e, 'captcha')}
               getCaptchaPng={this.getCaptchaPng}
             />
@@ -197,7 +205,7 @@ class VerifiedCode extends Component {
               className="input-main"
               type="text"
               maxLength={6}
-              placeholder="验证码"
+              placeholder={PASSWORD.CODE}
               value={code}
               onChange={e => onInputChange(e, 'code')}
             />
@@ -206,7 +214,7 @@ class VerifiedCode extends Component {
               className={`sms-code  ${!isGetSms ? `event-none` : ''}`}
               onClick={this.getCode}
             >
-              {isGetSms ? '获取验证码' : <span>{`${count}s`}</span>}
+              {isGetSms ? PASSWORD.GET_CODE : <span>{`${count}s`}</span>}
             </span>
           </label>
         </div>
@@ -216,7 +224,7 @@ class VerifiedCode extends Component {
           disabled={!canSubmit}
           onClick={onNext}
         >
-          下一步
+          {PASSWORD.NEXT_STEP}
         </Button>
       </div>
     )
