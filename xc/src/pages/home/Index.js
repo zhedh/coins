@@ -4,7 +4,7 @@ import {observer, inject} from 'mobx-react'
 import {Carousel, WingBlank, Button, Toast} from 'antd-mobile'
 import {IoIosMegaphone, IoIosHelpCircle} from 'react-icons/io'
 import {formatDate, formatSpecialOffer} from '../../utils/format'
-import {COMMON, ASSET_HOME} from '../../assets/static'
+import {ASSET_COMMON, ASSET_HOME} from '../../assets/static'
 import Dialog from '../../components/common/Dialog'
 import SimpleHeader from '../../components/common/SimpleHeader'
 import NoData from '../../components/common/NoData'
@@ -161,7 +161,7 @@ class Index extends Component {
             </ul>
           ) : (
             <div className="no-data-wrapper">
-              <NoData img={COMMON.NO_DATA_IMG} msg={HOME.JOIN_EVERYDAY}/>
+              <NoData img={ASSET_COMMON.NO_DATA_IMG} msg={HOME.JOIN_EVERYDAY}/>
               <Button
                 activeClassName="active"
                 className="primary-button take-apart"

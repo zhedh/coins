@@ -8,11 +8,12 @@ import AuthArrow from '../../assets/images/xc/auth-arrow.png'
 import './Auth.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class Index extends Component {
   state = {
     show: false
-  }
+  };
 
   componentDidMount() {
     this.sendUserAuth()
@@ -20,56 +21,55 @@ class Index extends Component {
 
   // 获取rsa和签名,
   sendUserAuth = () => {
-    const {userStore, history} = this.props
-    const info = getQueryParam('info')
-    const signature = getQueryParam('signature')
+    const {userStore, history} = this.props;
+    const info = getQueryParam('info');
+    const signature = getQueryParam('signature');
     userStore.userAuth({info, signature}).then(res => {
       if (res.status === 200) {
-        history.push('/home')
+        history.push('/home');
         return
       }
       if (res.status === 201) {
-        const {infoKey} = res.data
-        userStore.setInfoKey(infoKey)
-        this.setState({show: true})
+        const {infoKey} = res.data;
+        userStore.setInfoKey(infoKey);
+        this.setState({show: true});
         return
       }
       history.push('/zbx-login')
     })
-  }
+  };
 
   newUserAuth = () => {
-    const {history} = this.props
+    const {history} = this.props;
     history.push('/invite-code')
-  }
+  };
 
   hadAuth = () => {
-    const {history} = this.props
+    const {history} = this.props;
     history.push('/bind')
-  }
+  };
 
   render() {
-    const {show} = this.state
+    const {localeStore: {locale: {AUTH_MAIN}}} = this.props;
+    const {show} = this.state;
     return (
       <div id="auth">
         {show ?
           <div>
-            <Header bgWhite isFixed isShadow title="选择授权方式"/>
+            <Header bgWhite isFixed isShadow title={AUTH_MAIN.SELECT_AUTH_WAY}/>
             <div className="main-content">
               <img className="banner" src={AuthBanner} alt=""/>
-
               <div className="line" onClick={this.newUserAuth}>
                 <div>
-                  <span>我是新用户</span>
-                  <span>使用当前zbx账号直接授权登录</span>
+                  <span>{AUTH_MAIN.NEW_USER}</span>
+                  <span>{AUTH_MAIN.DIRECT_LOGIN}</span>
                 </div>
                 <img src={AuthArrow} alt=""/>
               </div>
-
               <div className="line" onClick={this.hadAuth}>
                 <div>
-                  <span>已有账号绑定</span>
-                  <span>登录已有账号，与当前ZBX账号绑定</span>
+                  <span>{AUTH_MAIN.ACCOUNT_BIND}</span>
+                  <span>{AUTH_MAIN.SIGN_IN_BIND_ACCOUNT}</span>
                 </div>
                 <img src={AuthArrow} alt=""/>
               </div>
@@ -82,4 +82,4 @@ class Index extends Component {
   }
 }
 
-export default Index
+export default Index;

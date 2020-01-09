@@ -9,6 +9,7 @@ import { TOAST_DURATION } from '../../utils/constants'
 import './Bind.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class Bind extends Component {
   state = {
@@ -16,10 +17,10 @@ class Bind extends Component {
     password: '',
     phonePrefix: '86',
     type: 'password'
-  }
+  };
 
   onInputChange = (e, key) => {
-    const { value } = e.target
+    const { value } = e.target;
     this.setState({ [key]: value })
   }
 
@@ -28,22 +29,23 @@ class Bind extends Component {
   }
 
   onSubmit = () => {
-    const { history, userStore } = this.props
-    const infoKey = userStore.getInfoKey()
-    const { account, password, phonePrefix } = this.state
+    const {localeStore: {locale: {AUTH_BIND}}} = this.props;
+    const { history, userStore } = this.props;
+    const infoKey = userStore.getInfoKey();
+    const { account, password, phonePrefix } = this.state;
 
     // if (!infoKey) {
-    //   Toast.fail('授权失效，请返回重试')
+    //   Toast.fail(AUTH_BIND.AUTH_FAILURE_TO_RETRY)
     //   return
     // }
 
     if (!isEmail(account) && !isMobile(account)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
+      Toast.info(AUTH_BIND.ACCOUNT_ERR, TOAST_DURATION);
       return
     }
 
     if (!isPassword(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
+      Toast.info(AUTH_BIND.PASSWORD_ERR, TOAST_DURATION);
       return
     }
 
@@ -56,10 +58,9 @@ class Bind extends Component {
       })
       .then(res => {
         if (res.status === 200) {
-          Toast.success('授权成功', TOAST_DURATION, () => {
+          Toast.success(AUTH_BIND.AUTH_SUCCESS, TOAST_DURATION, () => {
             history.push('/deposit')
           })
-          return
         } else {
           Toast.info(res.msg, TOAST_DURATION)
           // Toast.info(res.msg, TOAST_DURATION, () => {
@@ -67,22 +68,22 @@ class Bind extends Component {
           // })
         }
       })
-  }
+  };
 
   render() {
-    const { account, password, type } = this.state
-    const canSubmit = account === '' || password === ''
+    const {localeStore: {locale: {AUTH_BIND}}} = this.props;
+    const { account, password, type } = this.state;
+    const canSubmit = account === '' || password === '';
 
     return (
       <div id="bind">
-        <Header title="账号绑定" />
-        {/* <AccountHeader title="账号绑定" /> */}
+        <Header title={AUTH_BIND.ACCOUNT_BIND} />
         <div className="content">
           <label>
             <input
               className="input-main"
               type="text"
-              placeholder="请输入X-PLAN 邮箱/手机号"
+              placeholder={AUTH_BIND.INPUT_EMAIL_OR_PHONE}
               value={account}
               onChange={e => this.onInputChange(e, 'account')}
             />
@@ -91,7 +92,7 @@ class Bind extends Component {
             <input
               className="input-main"
               type={type}
-              placeholder="密码"
+              placeholder={AUTH_BIND.PASSWORD}
               value={password}
               onChange={e => this.onInputChange(e, 'password')}
             />
@@ -110,7 +111,7 @@ class Bind extends Component {
             disabled={canSubmit}
             onClick={this.onSubmit}
           >
-            确认绑定
+            {AUTH_BIND.CONFIRM_BIND}
           </Button>
         </div>
       </div>

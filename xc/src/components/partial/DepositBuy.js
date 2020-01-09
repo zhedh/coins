@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {withRouter} from 'react-router'
 import {inject, observer} from 'mobx-react'
 import {Button, Toast} from 'antd-mobile'
-import {COMMON} from '../../assets/static'
+import {ASSET_COMMON} from '../../assets/static'
 import './DepositBuy.scss'
 import {formatCoinPrice} from "../../utils/format";
 
@@ -17,69 +17,72 @@ class DepositBuy extends Component {
     payPassword: '',
     pwdType: 'password',
     isSubmit: false
-  }
+  };
 
   onInputChange = (e, key) => {
-    const {value} = e.target
+    const {value} = e.target;
     this.setState({[key]: value})
-  }
+  };
 
   onSetType = currentType => {
     this.setState({pwdType: currentType === 'text' ? 'password' : 'text'})
-  }
+  };
 
   onDeposit = gearNum => {
-    const {userStore} = this.props
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {userStore} = this.props;
     if (!userStore.hasPayPassword) {
-      Toast.info('请设置交易密码')
+      Toast.info(DEPOSIT.SET_PAY_PASSWORD);
       return
     }
     if (gearNum) this.setState({showConfirm: true})
-  }
+  };
 
   onSubmit = () => {
-    const {userStore, productStore} = this.props
-    const {payPassword} = this.state
-    this.setState({isSubmit: true})
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {userStore, productStore} = this.props;
+    const {payPassword} = this.state;
+    this.setState({isSubmit: true});
     userStore
       .getPayToken({payPassword})
       .then(res => {
         if (res.status !== 1) {
-          Toast.info(res.msg)
+          Toast.info(res.msg);
           return
         }
         return res.data.token
       })
       .then(payToken => {
         if (!payToken) {
-          this.setState({isSubmit: false})
+          this.setState({isSubmit: false});
           return
         }
         productStore.createDepositOrder(payToken).then(res => {
-          this.setState({isSubmit: false})
+          this.setState({isSubmit: false});
           if (res.status !== 1) {
-            Toast.info(res.msg)
+            Toast.info(res.msg);
             return
           }
-          Toast.success('恭喜您，参与成功', 2, () => window.location.reload())
+          Toast.success(DEPOSIT.ATTEND_SUCCESS, 2, () => window.location.reload());
           this.setState({showConfirm: false})
         })
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
         this.setState({isSubmit: false, showConfirm: false})
       })
-  }
+  };
 
   render() {
-    const {show, productStore, userStore} = this.props
-    const {showConfirm, payPassword, pwdType, isSubmit} = this.state
-    const {productDetail, gears, gearNum} = productStore
-    const hasGears = gears && gears.length > 0
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {show, productStore, userStore} = this.props;
+    const {showConfirm, payPassword, pwdType, isSubmit} = this.state;
+    const {productDetail, gears, gearNum} = productStore;
+    const hasGears = gears && gears.length > 0;
 
     return (
       <div className={`deposit-buy ${show ? 'show' : ''}`}>
-        <h2>数量选择</h2>
+        <h2>{DEPOSIT.COUNT_SELECT}</h2>
 
         <ul className="gears">
           {hasGears &&
@@ -100,16 +103,16 @@ class DepositBuy extends Component {
         </ul>
         <div className="fee">
           <p>
-            <span>赠送特价额度</span>
+            <span>{DEPOSIT.GIVE_PROMOTION}</span>
             <b>{gearNum ? (gearNum / 10).toFixed(0) : 0}</b>
           </p>
-          <small>手续费费率：{(productDetail.serviceCharge || 0) * 100}%</small>
+          <small>{DEPOSIT.FEES}：{(productDetail.serviceCharge || 0) * 100}%</small>
         </div>
         <aside>
           {!userStore.hasPayPassword && (
             <p>
-              *您暂未设置交易密码，无法参与
-              <Link to="/password/pay">去设置</Link>
+              *{DEPOSIT.AUTH_MSG_TWO}
+              <Link to="/password/pay">{DEPOSIT.TO_SET}</Link>
             </p>
           )}
         </aside>
@@ -118,34 +121,34 @@ class DepositBuy extends Component {
           activeClassName="btn-common__active"
           onClick={() => this.onDeposit(gearNum)}
         >
-          参与计划
+          {DEPOSIT.JOIN_PLAN}
         </Button>
 
         {/*输入交易密码弹窗*/}
         <div className={`confirm-wrapper ${showConfirm ? 'show' : ''}`}>
           <div className="content-box">
             <h2>
-              确认支付
+              {DEPOSIT.CONFIRM_PAYMENT}
               <img
-                src={COMMON.CLOSE_ICON}
+                src={ASSET_COMMON.CLOSE_ICON}
                 alt=""
                 onClick={() => this.setState({showConfirm: false})}
               />
             </h2>
             <div className="content">
               <p className="strong">
-                <span>参与 X PLAN</span>
+                <span>{DEPOSIT.JOIN_X_PLAN}</span>
                 <span>{gearNum || '--'}</span>
               </p>
               <p className="assistant">
-                <span>手续费{(productDetail.serviceCharge || 0) * 100}%</span>
+                <span>{DEPOSIT.FEE}{(productDetail.serviceCharge || 0) * 100}%</span>
                 <span>
                   {formatCoinPrice(gearNum * productDetail.serviceCharge)}
                 </span>
               </p>
               <br/>
               <p className="strong">
-                <span>可用</span>
+                <span>{DEPOSIT.AVAILABLE}</span>
                 <span>
                   {formatCoinPrice(productDetail.userWarehouse)}
                 </span>
@@ -153,18 +156,18 @@ class DepositBuy extends Component {
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder="交易密码"
+                  placeholder={DEPOSIT.PAY_PASSWORD}
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />
                 <img
-                  src={pwdType === 'text' ? COMMON.OPEN_PWD_ICON : COMMON.CLOSE_PWD_ICON}
+                  src={pwdType === 'text' ? ASSET_COMMON.OPEN_PWD_ICON : ASSET_COMMON.CLOSE_PWD_ICON}
                   alt="eyes"
                   onClick={() => this.onSetType(pwdType)}
                 />
               </div>
               <div className="link">
-                <Link to="/password/repay">忘记交易密码</Link>
+                <Link to="/password/repay">{DEPOSIT.FORGET_PAY_PASSWORD}</Link>
               </div>
             </div>
             <Button
@@ -173,7 +176,7 @@ class DepositBuy extends Component {
               disabled={isSubmit}
               onClick={this.onSubmit}
             >
-              确认
+              {DEPOSIT.CONFIRM}
             </Button>
           </div>
         </div>

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import {Button, Toast} from 'antd-mobile'
 import {formatCoinPrice, formatSpecialOffer} from '../../utils/format'
 import {COIN_POINT_LENGTH} from '../../utils/constants'
-import {COMMON} from "../../assets/static"
+import {ASSET_COMMON} from "../../assets/static"
 import './DepositUnlock.scss'
 
 @inject('productStore')
@@ -17,100 +17,99 @@ class DepositUnlock extends Component {
     payPassword: '',
     pwdType: 'password',
     isSubmit: false // 禁止多次提交
-  }
+  };
 
   onInputChange = (e, key) => {
-    const {value} = e.target
+    const {value} = e.target;
     this.setState({[key]: value})
-  }
+  };
 
   onSetType = currentType => {
     this.setState({pwdType: currentType === 'text' ? 'password' : 'text'})
-  }
+  };
 
   onDeposit = () => {
     this.setState({showConfirm: true})
-  }
+  };
 
   onSubmit = () => {
-    const {userStore, productStore} = this.props
-    const {payPassword} = this.state
-    this.setState({isSubmit: true})
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {userStore, productStore} = this.props;
+    const {payPassword} = this.state;
+    this.setState({isSubmit: true});
     userStore
       .getPayToken({payPassword})
       .then(res => {
         if (res.status !== 1) {
-          Toast.info(res.msg)
+          Toast.info(res.msg);
           return
         }
         return res.data.token
       })
       .then(payToken => {
         if (!payToken) {
-          this.setState({isSubmit: false})
+          this.setState({isSubmit: false});
           return
         }
         productStore.createSpecialOrder(payToken).then(res => {
-          this.setState({isSubmit: false})
+          this.setState({isSubmit: false});
           if (res.status !== 1) {
-            Toast.info(res.msg)
+            Toast.info(res.msg);
             return
           }
-          Toast.success('恭喜您，认购成功', 2, () => window.location.reload())
+          Toast.success(DEPOSIT.CONGRATULATION_SUBSCRIBE_SUCCESS, 2, () => window.location.reload());
           this.setState({showConfirm: false})
-          // history.push({pathname: '/deposit/result', state: 'unLock'})
         })
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
         this.setState({isSubmit: false, showConfirm: false})
       })
   }
 
   render() {
-    const {showConfirm, payPassword, pwdType, isSubmit} = this.state
-    const {show, productStore} = this.props
-    const {
-      productDetail,
-    } = productStore
+    const {show, productStore} = this.props;
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {showConfirm, payPassword, pwdType, isSubmit} = this.state;
+    const {productDetail,} = productStore;
     const {
       productName,
       serviceCharge,
       specialOffer,
       userSpecial,
       userWarehouse,
-    } = productDetail
+    } = productDetail;
 
     return (
       <div className={`deposit-unlock ${show ? 'show' : ''}`}>
         <section className="content-detail">
           <p>
-            当前可认购特价额度&nbsp;
-            <Link to="/home/bargain/record">查看详情</Link>
+            {DEPOSIT.AVAILABLE_SUBSCRIB_PROMOTION}&nbsp;
+            <Link to="/home/bargain/record">{DEPOSIT.LOOK_DETAIL}</Link>
           </p>
 
           <h1>{userSpecial}</h1>
         </section>
         <section className="content-charge">
           <p>
-            <span>赠送特价额度</span>
+            <span>{DEPOSIT.GIVE_PROMOTION}</span>
             <b>{userSpecial}</b>
           </p>
           <aside>
             <small>
-              {productName}当前特价：{formatSpecialOffer(specialOffer)}
+              {productName}{DEPOSIT.CURRENT_PROMOTION}：{formatSpecialOffer(specialOffer)}
             </small>
             <small>
-              手续费费率：
+              {DEPOSIT.FEES}：
               {serviceCharge * 100}%
             </small>
             <small>
-              {productName} 余额：
+              {productName} {DEPOSIT.BALANCE}：
               {formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}
             </small>
           </aside>
           <h3>
-            <span>交易额（XC）</span>
+            <span>{DEPOSIT.TRADING_AMOUNT}（XC）</span>
             <span>
               {formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}
             </span>
@@ -122,16 +121,16 @@ class DepositUnlock extends Component {
           disabled={!userSpecial}
           onClick={this.onDeposit}
         >
-          认购
+          {DEPOSIT.SUBSCRIBE}
         </Button>
 
         {/*解锁弹窗*/}
         <div className={`confirm-wrapper ${showConfirm ? 'show' : ''}`}>
           <div className="content-box">
             <h2>
-              确认支付
+              {DEPOSIT.CONFIRM_PAY}
               <img
-                src={COMMON.CLOSE_ICON}
+                src={ASSET_COMMON.CLOSE_ICON}
                 alt=""
                 onClick={() => this.setState({showConfirm: false})}
               />
@@ -140,32 +139,32 @@ class DepositUnlock extends Component {
               <ul className="groups">
                 <li className="group">
                   <p className="title">
-                    <span>支付总额（{productName}）</span>
+                    <span>{DEPOSIT.TOTAL_PAYMENT}（{productName}）</span>
                     <span>{formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}</span>
                   </p>
                   <p>
-                    <span>手续费{serviceCharge * 100}%</span>
+                    <span>{DEPOSIT.FEE}{serviceCharge * 100}%</span>
                     <span>{formatCoinPrice(specialOffer * userSpecial * serviceCharge)}</span>
                   </p>
                 </li>
                 <li className="group">
                   <p className="title">
-                    <span>可用</span>
+                    <span>{DEPOSIT.AVAILABLE}</span>
                     <span>{formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}</span>
                   </p>
-                  <p>*扣款时依照最新的兑价为准</p>
+                  <p>*{DEPOSIT.AMOUNT_TO_DEDUCT}</p>
                 </li>
               </ul>
 
               <div className="input-box">
                 <input
                   type={pwdType}
-                  placeholder="支付密码"
+                  placeholder={DEPOSIT.PAY_PWD}
                   value={payPassword}
                   onChange={e => this.onInputChange(e, 'payPassword')}
                 />
                 <img
-                  src={pwdType === 'text' ? COMMON.OPEN_PWD_ICON : COMMON.CLOSE_PWD_ICON}
+                  src={pwdType === 'text' ? ASSET_COMMON.OPEN_PWD_ICON : ASSET_COMMON.CLOSE_PWD_ICON}
                   alt="eyes"
                   onClick={() => this.onSetType(pwdType)}
                 />
@@ -177,7 +176,7 @@ class DepositUnlock extends Component {
               disabled={isSubmit}
               onClick={this.onSubmit}
             >
-              确认
+              {DEPOSIT.CONFIRM}
             </Button>
           </div>
         </div>
