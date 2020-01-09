@@ -5,6 +5,7 @@ import Header from '../../components/common/Header'
 import './VerifiedCountry.scss'
 
 @inject('CertificationStore')
+@inject('localeStore')
 @observer
 class VerifiedCountry extends Component {
   selectCountry = () => {
@@ -14,20 +15,25 @@ class VerifiedCountry extends Component {
   }
 
   render() {
-    const { CertificationStore } = this.props
+    const {
+      CertificationStore,
+      localeStore: {
+        locale: { COUNTRY_SELECT }
+      }
+    } = this.props
     const { country } = CertificationStore.authInfo
     const selectedCountry = country
 
     return (
       <div id="verified-country">
         <Header
-          title="选择国家"
+          title={COUNTRY_SELECT.SELECT_COUNTRY}
           icon={require('../../assets/images/arrow-left-1.png')}
           isFixed
           bgPrimary
         >
           <p className="next-step" onClick={() => this.selectCountry()}>
-            下一步
+            {COUNTRY_SELECT.NEXT_STEP}
           </p>
         </Header>
 

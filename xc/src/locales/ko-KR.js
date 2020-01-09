@@ -242,13 +242,17 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: '그래픽 인증번호를 입력해주세요.',
     INPUT_WALLET_ADDRESS: '지갑 주소를 입력해주세요.',
+    INPUT_PHONE_CODE_01: '请填写',
+    INPUT_PHONE_CODE_02: '手机',
+    INPUT_PHONE_CODE_03: '邮箱',
+    INPUT_PHONE_CODE_04: '验证码',
     INPUT_PHONE_CODE: '휴대전화 인증번호를 입력해주세요.',
     INPUT_EMAIL_CODE: '이메일 인증번호를 입력해주세요.',
     TERMINATION_SUCCESS: '계약 해지 완료',
     TERMINATION: '계약 해지',
     RECEIPT_ADDRESS: '입금 주소(XC주소)',
     INPUT_OR_PASTE_ADDRESS: '주소를 입력하거나 길게 눌러 붙여넣기 ',
-    TAKE_OUT_FIRST_ORDER: '첫 주문은 15일 내로 별도 공제',
+    TAKE_OUT_FIRST_ORDER: '첫 주문은 15일 내로 별도 공제：',
     FEE: '수수료',
     GRAPH_CODE: '그래픽 인증번호',
     PHONE_CODE: '휴대전화 인증번호',
@@ -311,9 +315,12 @@ export default {
     PASSPORT: '여권',
     DRIVING_LICENSE: '운전면허',
     INPUT_MSG: '정보 입력',
+    INPUT_REG: '请输入7-18位证件号码',
     CONFIRM_MSG_AND_CARD: '입력한 정보가 일치하지 않습니다.',
     SELECT_AUTH_WAY: '인증 방식을 선택해 주세요.',
     ID_NUMBER: '주민등록번호',
+    ID_NUMBER_01: '身份证',
+    YOUR_NAME: '您的姓名',
     FAMILY_NAME: '성',
     LAST_NAME: '명',
     CARD_NUMBER: '신분증명서 ID ',
@@ -321,6 +328,20 @@ export default {
   },
 
   VERIFY_RESULT: {
+    WAITING_FOR_REVIEW: '等待审核',
+    HAD_REVIEWED: '已审核',
+    REVIEWED_FAIL: '失败',
+    SUBMIT_AND_WAIT: '提交成功，等待审核…',
+    RESULT_MSG: '认证结果将会显示在个人中心',
+    VERIFICATION_FAILED: '认证失败！',
+    FAILED_REASON: '失败原因',
+    CONTINUE_TO_VERIFY: '重新验证',
+    CERTIFICATE_PASSED: '认证通过',
+    YOUR_NAME: '您的姓名'
+  },
+
+  VERIFY_UPLOAD: {
+    IDENTITY_VERIFICATION: '身份认证',
     AUTH_EXPLAIN_ONE:
       '신분증명서 사진 해상도는 높아야 하며 jpg, jpeg 또는 png 형식으로 2M보다 작아야 하고 유효기간을 반드시 확인해야 합니다.',
     AUTH_EXPLAIN_TWO:

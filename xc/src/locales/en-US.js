@@ -243,13 +243,17 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: 'Please Enter Graphic Verification Code',
     INPUT_WALLET_ADDRESS: 'Please Enter Wallet Address',
+    INPUT_PHONE_CODE_01: '请填写',
+    INPUT_PHONE_CODE_02: '手机',
+    INPUT_PHONE_CODE_03: '邮箱',
+    INPUT_PHONE_CODE_04: '验证码',
     INPUT_PHONE_CODE: 'Please Enter Mobile Verification Code',
     INPUT_EMAIL_CODE: 'Please Enter Email Verification Code',
     TERMINATION_SUCCESS: 'Cancel Contract Successfully',
     TERMINATION: 'Cancel Contract',
     RECEIPT_ADDRESS: 'Receiving Address ( XC Address)',
     INPUT_OR_PASTE_ADDRESS: 'Enter or Press the Copy/Paste Button',
-    TAKE_OUT_FIRST_ORDER: '首单在15天内额外扣除',
+    TAKE_OUT_FIRST_ORDER: '首单在15天内额外扣除：',
     FEE: 'Fee',
     GRAPH_CODE: 'Graphic Verification Code',
     PHONE_CODE: 'Mobile Verification Code',
@@ -310,11 +314,14 @@ export default {
     ID_CARD: 'ID',
     PASSPORT: 'Passport',
     DRIVING_LICENSE: 'Driving License',
-    INPUT_MSG: 'Fill In Information ',
+    INPUT_MSG: 'Fill In Information',
+    INPUT_REG: '请输入7-18位证件号码',
     CONFIRM_MSG_AND_CARD:
       'Please make sure the information you filled is the same in the ID',
     SELECT_AUTH_WAY: 'Please choose the verification methods.',
     ID_NUMBER: 'ID Number',
+    ID_NUMBER_01: 'ID',
+    YOUR_NAME: 'Your Name',
     FAMILY_NAME: 'Last Name',
     LAST_NAME: 'Fore Name',
     CARD_NUMBER: 'ID Number',
@@ -322,6 +329,20 @@ export default {
   },
 
   VERIFY_RESULT: {
+    WAITING_FOR_REVIEW: '等待审核',
+    HAD_REVIEWED: '已审核',
+    REVIEWED_FAIL: '失败',
+    SUBMIT_AND_WAIT: '提交成功，等待审核…',
+    RESULT_MSG: '认证结果将会显示在个人中心',
+    VERIFICATION_FAILED: '认证失败！',
+    FAILED_REASON: '失败原因',
+    CONTINUE_TO_VERIFY: '重新验证',
+    CERTIFICATE_PASSED: '认证通过',
+    YOUR_NAME: '您的姓名'
+  },
+
+  VERIFY_UPLOAD: {
+    IDENTITY_VERIFICATION: '身份认证',
     AUTH_EXPLAIN_ONE:
       'Make sure the photo is clear and complete, format in jpg, jpeg or png, smaller than 2 M. The certification must be within the expired date. ',
     AUTH_EXPLAIN_TWO:

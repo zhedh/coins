@@ -8,22 +8,23 @@ import './VerifiedResult.scss'
 const resultOptions = [
   {
     type: 1,
-    label: '等待审核',
+    label: this.props.localeStore.locale.VERIFY_RESULT.WAITING_FOR_REVIEW,
     image: AUTH.IMG_WAIT
   },
   {
     type: 2,
-    label: '已审核',
+    label: this.props.localeStore.locale.VERIFY_RESULT.HAD_REVIEWED,
     image: AUTH.IMG_SUCCESS
   },
   {
     type: 3,
-    label: '失败',
+    label: this.props.localeStore.locale.VERIFY_RESULT.REVIEWED_FAIL,
     image: AUTH.IMG_FAIL
   }
 ]
 
 @inject('personStore')
+@inject('localeStore')
 @observer
 class VerifiedResult extends Component {
   state = {
@@ -45,7 +46,12 @@ class VerifiedResult extends Component {
   }
 
   render() {
-    const { history } = this.props
+    const {
+      history,
+      localeStore: {
+        locale: { VERIFY_RESULT }
+      }
+    } = this.props
     const { resultOption } = this.state
     return (
       <div id="verified-result">
@@ -54,25 +60,31 @@ class VerifiedResult extends Component {
 
         {resultOption.type === 1 && (
           <div className="result-content">
-            <div className="submit-success">提交成功，等待审核…</div>
-            <div className="submit-small">认证结果将会显示在个人中心</div>
+            <div className="submit-success">
+              {VERIFY_RESULT.SUBMIT_AND_WAIT}
+            </div>
+            <div className="submit-small">{VERIFY_RESULT.RESULT_MSG}</div>
           </div>
         )}
         {resultOption.type === 2 && (
           <div className="result-content">
-            <div className="verified-success">认证通过</div>
+            <div className="verified-success">
+              {VERIFY_RESULT.CERTIFICATE_PASSED}
+            </div>
           </div>
         )}
         {resultOption.type === 3 && (
           <div className="result-content">
-            <div className="verified-fail">认证失败！</div>
+            <div className="verified-fail">
+              {VERIFY_RESULT.VERIFICATION_FAILED}
+            </div>
             <br />
             <Button
               activeClassName="btn-common__active"
               className={`btn-common btn-common__bottom`}
               onClick={() => history.push('/verified-country')}
             >
-              重新验证
+              {VERIFY_RESULT.CONTINUE_TO_VERIFY}
             </Button>
           </div>
         )}

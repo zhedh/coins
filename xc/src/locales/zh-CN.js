@@ -239,13 +239,17 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: '请填写图形验证码',
     INPUT_WALLET_ADDRESS: '请填写钱包地址',
+    INPUT_PHONE_CODE_01: '请填写',
+    INPUT_PHONE_CODE_02: '手机',
+    INPUT_PHONE_CODE_03: '邮箱',
+    INPUT_PHONE_CODE_04: '验证码',
     INPUT_PHONE_CODE: '请填写手机验证码',
     INPUT_EMAIL_CODE: '请填写邮箱验证码',
     TERMINATION_SUCCESS: '解除合约成功',
     TERMINATION: '解除合约',
     RECEIPT_ADDRESS: '收款地址（XC地址）',
     INPUT_OR_PASTE_ADDRESS: '输入或长按粘贴地址',
-    TAKE_OUT_FIRST_ORDER: '首单在15天内额外扣除',
+    TAKE_OUT_FIRST_ORDER: '首单在15天内额外扣除：',
     FEE: '手续费',
     GRAPH_CODE: '图形验证码',
     PHONE_CODE: '手机验证码',
@@ -307,20 +311,37 @@ export default {
     PASSPORT: '护照',
     DRIVING_LICENSE: '驾照',
     INPUT_MSG: '填写信息',
+    INPUT_REG: '请输入7-18位证件号码',
     CONFIRM_MSG_AND_CARD: '确认所填信息与证件一致',
-    SELECT_AUTH_WAY: '您可以选择一下验证方式',
+    SELECT_AUTH_WAY: '您可以选择以下验证方式',
     ID_NUMBER: '身份证号',
+    ID_NUMBER_01: '身份证',
+    YOUR_NAME: '您的姓名',
     FAMILY_NAME: '姓',
     LAST_NAME: '名',
     CARD_NUMBER: '证件号',
     NEXT_STEP: '下一步'
   },
 
+  VERIFY_RESULT: {
+    WAITING_FOR_REVIEW: '等待审核',
+    HAD_REVIEWED: '已审核',
+    REVIEWED_FAIL: '失败',
+    SUBMIT_AND_WAIT: '提交成功，等待审核…',
+    RESULT_MSG: '认证结果将会显示在个人中心',
+    VERIFICATION_FAILED: '认证失败！',
+    FAILED_REASON: '失败原因',
+    CONTINUE_TO_VERIFY: '重新验证',
+    CERTIFICATE_PASSED: '认证通过',
+    YOUR_NAME: '您的姓名'
+  },
+
   VERIFY_UPLOAD: {
+    IDENTITY_VERIFICATION: '身份认证',
     AUTH_EXPLAIN_ONE:
       '请确保照片完整，清晰可见，格式为jpg, jpeg,或png，需小于2M。证件必须 在有效期限内。',
     AUTH_EXPLAIN_TWO:
-      '请上传手持证件照片，照片中需附一张白纸写有（“MMT"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
+      '请上传手持证件照片，照片中需附一张白纸写有（“X PLAN"字样和当前日期），确保您的脸部清晰可见，所有证件详细信息都清晰可读，否则将影响您的审核进度。',
     ID_AND_PASSPORT_FRONT: '身份证/护照正面照',
     ID_AND_PASSPORT_BACK: '身份证/护照反面照',
     ID_AND_PASSPORT_HOLD: '手持身份证/护照照片',

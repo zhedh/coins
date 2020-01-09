@@ -1,11 +1,12 @@
-import React, {Component} from 'react'
-import {inject, observer} from 'mobx-react'
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
 import Header from '../../components/common/Header'
-import {ASSET_USER} from '../../assets/static'
-import {hideChatButton} from "../../utils/common"
+import { ASSET_USER } from '../../assets/static'
+import { hideChatButton } from '../../utils/common'
 import './ContactUs.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class ContactUs extends Component {
   componentDidMount() {
@@ -29,23 +30,28 @@ class ContactUs extends Component {
   }
 
   render() {
-    const {history} = this.props
+    const {
+      history,
+      localeStore: {
+        locale: { CONTACT_US }
+      }
+    } = this.props
 
     return (
       <div id="contact-us">
-        <Header onHandle={() => history.push('/user-center')}/>
+        <Header onHandle={() => history.push('/user-center')} />
         <div className="chat-wrapper">
-          <img src={ASSET_USER.CONTACT_US_IMG} alt=""/>
+          <img src={ASSET_USER.CONTACT_US_IMG} alt="" />
           <p>
-            点击右下角的联系客服
-            <br/>
-            即可开始与客服的沟通
-            <br/>
-            若未出现联系客服,请耐心等待3~5秒
+            {CONTACT_US.CLICK_TO_CONTACT}
+            <br />
+            {CONTACT_US.AT_ONCE_CONTACT}
+            <br />
+            {CONTACT_US.WAIT_FOR_IMG_SHOW}
           </p>
         </div>
         <div className="arrow-box">
-          <img src={ASSET_USER.CONTACT_US_ARROW} alt=""/>
+          <img src={ASSET_USER.CONTACT_US_ARROW} alt="" />
         </div>
       </div>
     )

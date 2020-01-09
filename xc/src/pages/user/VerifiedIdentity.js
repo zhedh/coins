@@ -8,23 +8,24 @@ import './VerifiedIdentity.scss'
 
 const typeList = [
   {
-    name: '身份证',
+    name: this.props.localeStore.locale.IDENTITY_VERIFY.ID_CARD,
     icon: require('../../assets/images/common/auth-id-card.svg'),
     active: AUTH.IMG_ID_CARD
   },
   {
-    name: '护照',
+    name: this.props.localeStore.locale.IDENTITY_VERIFY.PASSPORT,
     icon: require('../../assets/images/common/auth-passport.svg'),
     active: AUTH.IMG_PASSPORT
   },
   {
-    name: '驾照',
+    name: this.props.localeStore.locale.IDENTITY_VERIFY.DRIVING_LICENSE,
     icon: require('../../assets/images/common/auth-driving.svg'),
     active: AUTH.IMG_DRIVING
   }
 ]
 
 @inject('CertificationStore')
+@inject('localeStore')
 @observer
 class VerifiedIdentity extends Component {
   state = {
@@ -62,10 +63,16 @@ class VerifiedIdentity extends Component {
   }
 
   onSubmit = () => {
-    const { history, CertificationStore } = this.props
+    const {
+      history,
+      CertificationStore,
+      localeStore: {
+        locale: { IDENTITY_VERIFY }
+      }
+    } = this.props
     const { cardId } = CertificationStore.authInfo
     if (cardId.length < 7 && cardId.length <= 18) {
-      Toast.info('请输入7-18位证件号码', TOAST_DURATION)
+      Toast.info(IDENTITY_VERIFY.INPUT_REG, TOAST_DURATION)
       return
     }
     CertificationStore.submitAuthentication().then(res => {
@@ -78,7 +85,12 @@ class VerifiedIdentity extends Component {
   }
 
   render() {
-    const { CertificationStore } = this.props
+    const {
+      CertificationStore,
+      localeStore: {
+        locale: { IDENTITY_VERIFY }
+      }
+    } = this.props
     const {
       cardType,
       firstName,
@@ -91,9 +103,9 @@ class VerifiedIdentity extends Component {
       <div id="verified-identity">
         <Header bgPrimary />
         <div className="identity-top">
-          <h2>填写信息</h2>
-          <p>确认所填信息与证件一致</p>
-          {!isChina && <label>您可以选择一下验证方式</label>}
+          <h2>{IDENTITY_VERIFY.INPUT_MSG}</h2>
+          <p>{IDENTITY_VERIFY.CONFIRM_MSG_AND_CARD}</p>
+          {!isChina && <label>{IDENTITY_VERIFY.SELECT_AUTH_WAY}</label>}
           {/* <img src={require('../../assets/images/identity.png')} alt="" /> */}
         </div>
         <div className="identity-bottom">
@@ -102,7 +114,7 @@ class VerifiedIdentity extends Component {
               <input
                 type="text"
                 maxLength={70}
-                placeholder="您的姓名"
+                placeholder={IDENTITY_VERIFY.YOUR_NAME}
                 value={firstName}
                 onChange={e =>
                   CertificationStore.changeInfoItem(e.target.value, 'firstName')
@@ -110,10 +122,13 @@ class VerifiedIdentity extends Component {
               />
               <input
                 type="text"
-                placeholder="身份证号"
+                placeholder={IDENTITY_VERIFY.ID_NUMBER}
                 value={cardId}
                 onChange={e => {
-                  CertificationStore.changeInfoItem('身份证', 'cardType')
+                  CertificationStore.changeInfoItem(
+                    IDENTITY_VERIFY.ID_NUMBER_01,
+                    'cardType'
+                  )
                   CertificationStore.changeInfoItem(e.target.value, 'cardId')
                 }}
               />
@@ -142,7 +157,7 @@ class VerifiedIdentity extends Component {
                 <input
                   type="text"
                   maxLength={70}
-                  placeholder="姓"
+                  placeholder={IDENTITY_VERIFY.FAMILY_NAME}
                   value={firstName}
                   onChange={e =>
                     CertificationStore.changeInfoItem(
@@ -154,7 +169,7 @@ class VerifiedIdentity extends Component {
                 <input
                   type="text"
                   maxLength={70}
-                  placeholder="名"
+                  placeholder={IDENTITY_VERIFY.LAST_NAME}
                   value={lastName}
                   onChange={e =>
                     CertificationStore.changeInfoItem(
@@ -166,7 +181,7 @@ class VerifiedIdentity extends Component {
                 <input
                   type="text"
                   maxLength={18}
-                  placeholder="证件号"
+                  placeholder={IDENTITY_VERIFY.CARD_NUMBER}
                   value={cardId}
                   onChange={e =>
                     CertificationStore.changeInfoItem(e.target.value, 'cardId')
@@ -184,7 +199,7 @@ class VerifiedIdentity extends Component {
           disabled={!this.canSubmit()}
           onClick={this.onSubmit}
         >
-          下一步
+          {IDENTITY_VERIFY.NEXT_STEP}
         </Button>
       </div>
     )

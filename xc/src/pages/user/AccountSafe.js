@@ -1,22 +1,26 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Header from '../../components/common/Header'
-import {inject, observer} from 'mobx-react'
+import { inject, observer } from 'mobx-react'
 import './AccountSafe.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class AccountSafe extends Component {
   render() {
     const {
       history,
-      userStore: {hasPayPassword}
+      userStore: { hasPayPassword },
+      localeStore: {
+        locale: { ACCOUNT_SAFE }
+      }
     } = this.props
 
     return (
       <div id="account-safe">
         <Header
-          title="安全中心"
+          title={ACCOUNT_SAFE.SAFETY_CENTER}
           isShadow
           isFixed
           bgPrimary
@@ -24,7 +28,7 @@ class AccountSafe extends Component {
         />
         <div className="list">
           <Link to="/password/reset">
-            <p>重置登录密码</p>
+            <p>{ACCOUNT_SAFE.RESET_LOGIN_PWD}</p>
             <img
               className="arrow"
               src={require('../../assets/images/arrow-right.png')}
@@ -32,7 +36,11 @@ class AccountSafe extends Component {
             />
           </Link>
           <Link to={`/password/${hasPayPassword ? 'repay' : 'pay'}`}>
-            <p>{hasPayPassword ? '重置交易密码' : '设置交易密码'}</p>
+            <p>
+              {hasPayPassword
+                ? ACCOUNT_SAFE.RESET_PAY_PWD
+                : ACCOUNT_SAFE.SET_PAY_PWD}
+            </p>
             <img
               className="arrow"
               src={require('../../assets/images/arrow-right.png')}
