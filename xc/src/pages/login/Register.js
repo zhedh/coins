@@ -6,7 +6,6 @@ import {UserApi} from '../../api'
 import {REG, TOAST_DURATION, COUNT_DOWN} from '../../utils/constants'
 import {isEmail, isMobile} from "../../utils/reg"
 import {compatibleFixedButton, getQueryParam} from '../../utils/common'
-import AccountHeader from '../../components/partial/AccountHeader'
 import Captcha from '../../components/common/Captcha'
 import openPwdImg from '../../assets/images/open-pwd.png'
 import closePwdImg from '../../assets/images/close-pwd.png'
@@ -14,6 +13,7 @@ import './Register.scss'
 import AccountLangHeader from "../../components/partial/AccountLangHeader";
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class Register extends Component {
   state = {
@@ -90,15 +90,16 @@ class Register extends Component {
   }
 
   getCode = async () => {
-    const {userStore} = this.props
+    const {userStore} = this.props;
+    const {localeStore: {locale: {REGISTER}}} = this.props;
     const {account, captcha, captchaKey} = this.state
     if (!isEmail(account) && !isMobile(account)) {
-      Toast.info('请填写正确的邮箱或者手机号', TOAST_DURATION)
+      Toast.info(REGISTER.PHONE_OR_EMAIL_ERR, TOAST_DURATION)
       return
     }
 
     if (!captcha || captcha.length !== 4) {
-      Toast.info('请输入4图形验证码', TOAST_DURATION)
+      Toast.info(REGISTER.INPUT_FOUR_GRAPH_CODE, TOAST_DURATION)
       return
     }
 
@@ -122,25 +123,26 @@ class Register extends Component {
   }
 
   onSubmit = () => {
-    const {userStore, history} = this.props
+    const {userStore, history} = this.props;
+    const {localeStore: {locale: {REGISTER}}} = this.props;
     const {
       account,
       code,
       password,
       passwordConfirm,
       recommendCode
-    } = this.state
+    } = this.state;
 
     if (!REG.EMAIL.test(account) && !REG.MOBILE.test(account)) {
-      Toast.info('账号输入错误', TOAST_DURATION)
+      Toast.info(REGISTER.ACCOUNT_ERR, TOAST_DURATION)
       return
     }
     if (!REG.PASSWORD.test(password)) {
-      Toast.info('密码最少8位，字母加数字', TOAST_DURATION)
+      Toast.info(REGISTER.PASSWORD_ERR, TOAST_DURATION)
       return
     }
     if (password !== passwordConfirm) {
-      Toast.info('两次密码不一致', TOAST_DURATION)
+      Toast.info(REGISTER.PASSWORD_CONFIRM_ERR, TOAST_DURATION)
       return
     }
     this.setState({isSubmit: false})
@@ -160,12 +162,13 @@ class Register extends Component {
       }
       Cookies.remove('PRODUCT_ID')
       // Toast.success('注册成功', TOAST_DURATION, () => this.setState({showSuccess: true}))
-      Toast.success('注册成功', TOAST_DURATION, () => history.push('/deposit'))
+      Toast.success(REGISTER.REGISTER_SUCCESS, TOAST_DURATION, () => history.push('/deposit'))
     }).catch(() => this.setState({isSubmit: true}))
   }
 
   render() {
-    const {history} = this.props
+    const {history} = this.props;
+    const {localeStore: {locale: {REGISTER}}} = this.props;
     const {
       account,
       code,
@@ -186,14 +189,13 @@ class Register extends Component {
     return (
       <div id="register">
         <AccountLangHeader onBack={() => history.push('/login')}/>
-        <h1>注册</h1>
-        {/*<AccountHeader title="注册" onHandle={() => history.push('/login')}/>*/}
+        <h1>{REGISTER.REGISTER}</h1>
         <div className="main-content">
           <label>
             <input
               className="input-main"
               type="text"
-              placeholder="邮箱/手机号"
+              placeholder={REGISTER.ACCOUNT_PLACEHOLDER}
               value={account}
               onBlur={this.onAccountBlur}
               onChange={e => this.onInputChange(e, 'account')}
@@ -201,6 +203,7 @@ class Register extends Component {
           </label>
           <label>
             <Captcha
+              placeholder={REGISTER.GRAPH_CODE}
               imgSrc={imgSrc}
               value={captcha}
               onChange={e => this.onInputChange(e, 'captcha')}
@@ -212,21 +215,21 @@ class Register extends Component {
               className="input-main"
               type="text"
               maxLength={6}
-              placeholder="验证码"
+              placeholder={REGISTER.CODE}
               value={code}
               onChange={e => this.onInputChange(e, 'code')}
             />
             <span
               className={`sms-code  ${!isGetSms ? `event-none` : ''}`}
               onClick={this.getCode}>
-              {isGetSms ? '获取验证码' : <span>{`${count}s`}</span>}
+              {isGetSms ? REGISTER.GET_VERIFY_CODE : <span>{`${count}s`}</span>}
             </span>
           </label>
           <label>
             <input
               className="input-main"
               type={pwType}
-              placeholder="密码"
+              placeholder={REGISTER.PASSWORD}
               value={password}
               onChange={e => this.onInputChange(e, 'password')}
             />
@@ -241,7 +244,7 @@ class Register extends Component {
             <input
               className="input-main"
               type={pwConfirmType}
-              placeholder="再次输入密码"
+              placeholder={REGISTER.INPUT_PASSWORD_AGAIN}
               value={passwordConfirm}
               onChange={e => this.onInputChange(e, 'passwordConfirm')}
             />
@@ -256,7 +259,7 @@ class Register extends Component {
             <input
               className="input-main"
               type="text"
-              placeholder="邀请码"
+              placeholder={REGISTER.INVITER_CODE}
               value={recommendCode}
               onChange={e => this.onInputChange(e, 'recommendCode')}
             />
@@ -267,7 +270,7 @@ class Register extends Component {
           className="primary-button"
           disabled={!this.canSubmit() || !isSubmit}
           onClick={this.onSubmit}>
-          立即注册
+          {REGISTER.SUBMIT_LABEL}
         </Button>}
       </div>
     )

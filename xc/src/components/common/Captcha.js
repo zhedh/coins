@@ -2,14 +2,14 @@ import React from 'react';
 import './Captcha.scss'
 
 function CaptchaPng(props) {
-  const {imgSrc, value, onChange, getCaptchaPng} = props;
+  const {imgSrc, value,placeholder, onChange, getCaptchaPng} = props;
 
   return (
     <div id="captcha-box">
       <input
         type="text"
         maxLength={4}
-        placeholder="图形验证码"
+        placeholder={placeholder || "图形验证码"}
         value={value}
         onChange={onChange}
       />

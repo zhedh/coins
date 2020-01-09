@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="[xc] 账">
+    <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/components/common/Captcha.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/common/Captcha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/VeritifiedPwd.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/VeritifiedPwd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/locales/en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/locales/en-US.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/locales/ko-KR.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/locales/ko-KR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/locales/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/locales/zh-CN.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Password.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Password.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xc/src/pages/login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/pages/login/Register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,16 +26,16 @@
     <session id="-472934763">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="110" />
+          <entry key="project.closed" value="111" />
           <entry key="project.open.time.0" value="34" />
           <entry key="project.open.time.1" value="45" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="4" />
-          <entry key="project.open.time.4" value="17" />
+          <entry key="project.open.time.4" value="18" />
           <entry key="project.open.time.5" value="7" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="111" />
+          <entry key="project.opened" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -38,7 +44,7 @@
           <entry key="editorconfig" value="1" />
           <entry key="gitignore" value="8" />
           <entry key="html" value="1" />
-          <entry key="js" value="592" />
+          <entry key="js" value="606" />
           <entry key="json" value="7" />
           <entry key="ko-KR" value="1" />
           <entry key="lock" value="2" />
@@ -58,7 +64,7 @@
           <entry key="HTML" value="1" />
           <entry key="Image" value="53" />
           <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="593" />
+          <entry key="JavaScript" value="607" />
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="SCSS" value="91" />
@@ -71,18 +77,18 @@
         <counts>
           <entry key="gitignore" value="28" />
           <entry key="html" value="1" />
-          <entry key="js" value="19372" />
+          <entry key="js" value="19669" />
           <entry key="scss" value="3289" />
           <entry key="sh" value="35" />
-          <entry key="txt" value="390" />
+          <entry key="txt" value="399" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="35" />
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="19372" />
-          <entry key="PLAIN_TEXT" value="418" />
+          <entry key="JavaScript" value="19669" />
+          <entry key="PLAIN_TEXT" value="427" />
           <entry key="SCSS" value="3289" />
         </counts>
       </usages-collector>
@@ -100,39 +106,50 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xc/src/pages/auth/Auth.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9">
-              <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#462#483#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xc/src/locales/zh-CN.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="1914">
+              <caret line="417" column="18" selection-start-line="417" selection-start-column="18" selection-end-line="417" selection-end-column="18" />
               <folding>
                 <element signature="e#26#292#0" expanded="true" />
-                <element signature="e#5426#6522#0" expanded="true" />
-                <element signature="e#6540#7173#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Login.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/pages/user/VerifiedUpload.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="70" selection-start-line="70" selection-end-line="71" />
+            <state>
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/pages/user/VerifiedResult.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#276#338#0" expanded="true" />
+                <element signature="e#340#404#0" expanded="true" />
+                <element signature="e#406#466#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="9" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -141,54 +158,62 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xc/src/pages/user/LangSwitch.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="20" column="42" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="132">
+              <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/components/common/Captcha.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/locales/en-US.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="54" column="14" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="14" />
+              <folding>
+                <element signature="e#26#402#0" expanded="true" />
+                <element signature="e#417#1760#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Password.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="1672">
+              <caret line="122" selection-start-line="122" selection-end-line="123" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#530#665#0" expanded="true" />
-                <element signature="e#863#1409#0" expanded="true" />
-                <element signature="e#807#903#0" expanded="true" />
-                <element signature="e#1011#1145#0" expanded="true" />
-                <element signature="e#1153#1273#0" expanded="true" />
-                <element signature="e#1281#1403#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xc/src/utils/constants.js">
+        <entry file="file://$PROJECT_DIR$/xc/src/locales/ko-KR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="542" column="1" selection-start-line="542" selection-start-column="1" selection-end-line="542" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="161" column="6" selection-start-line="161" selection-start-column="6" selection-end-line="161" selection-end-column="6" />
+            <state relative-caret-position="308">
+              <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#351#519#0" expanded="true" />
-                <element signature="e#2344#2460#0" expanded="true" />
-                <element signature="e#2468#2501#0" expanded="true" />
+                <element signature="e#26#343#0" expanded="true" />
+                <element signature="e#358#1433#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -198,8 +223,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CONFIG</find>
-      <find>USDT_POINT_LENGTH</find>
       <find>到账</find>
       <find>FaRegQuestionCircle</find>
       <find>componentWillMount</find>
@@ -228,6 +251,8 @@
       <find>充值成功</find>
       <find>USER</find>
       <find>PASSWORD_TYPES</find>
+      <find>ACCOUNT_PLACEHOLDER</find>
+      <find>设置密码</find>
     </findStrings>
     <replaceStrings>
       <replace>COMMON_ASSET</replace>
@@ -247,6 +272,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -257,8 +283,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/xc/src/pages/user/VerifiedIdentity.scss" />
-        <option value="$PROJECT_DIR$/xc/src/pages/user/UserCenter.scss" />
         <option value="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.scss" />
         <option value="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/wallet/Index.js" />
@@ -275,8 +299,6 @@
         <option value="$PROJECT_DIR$/xc/src/utils/format.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/home/GeneralizeDetail.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/wallet/Withdraw.js" />
-        <option value="$PROJECT_DIR$/xc/src/App.js" />
-        <option value="$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/auth/Auth.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/user/VerifiedUpload.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/wallet/Recharge.js" />
@@ -293,21 +315,25 @@
         <option value="$PROJECT_DIR$/xc/src/api/http.js" />
         <option value="$PROJECT_DIR$/xc/src/stores/locale.js" />
         <option value="$PROJECT_DIR$/xc/src/locales/index.js" />
-        <option value="$PROJECT_DIR$/xc/src/locales/en-US.js" />
         <option value="$PROJECT_DIR$/xc/src/assets/static/index.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/user/ContactUs.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/user/LangSwitch.js" />
-        <option value="$PROJECT_DIR$/xc/src/locales/zh-CN.js" />
-        <option value="$PROJECT_DIR$/xc/src/locales/ko-KR.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/user/UserCenter.js" />
         <option value="$PROJECT_DIR$/xc/src/components/partial/AccountLangHeader.scss" />
         <option value="$PROJECT_DIR$/xc/src/pages/login/Login.scss" />
         <option value="$PROJECT_DIR$/xc/src/components/partial/AccountLangHeader.js" />
-        <option value="$PROJECT_DIR$/xc/src/pages/login/Register.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/login/Register.scss" />
         <option value="$PROJECT_DIR$/xc/src/pages/login/Login.js" />
         <option value="$PROJECT_DIR$/xc/src/utils/constants.js" />
+        <option value="$PROJECT_DIR$/xc/src/components/common/Captcha.js" />
+        <option value="$PROJECT_DIR$/xc/src/components/partial/VeritifiedPwd.js" />
+        <option value="$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js" />
         <option value="$PROJECT_DIR$/xc/src/pages/login/Password.js" />
+        <option value="$PROJECT_DIR$/xc/src/locales/ko-KR.js" />
+        <option value="$PROJECT_DIR$/xc/src/locales/en-US.js" />
+        <option value="$PROJECT_DIR$/xc/src/pages/login/Register.js" />
+        <option value="$PROJECT_DIR$/xc/src/App.js" />
+        <option value="$PROJECT_DIR$/xc/src/locales/zh-CN.js" />
       </list>
     </option>
   </component>
@@ -392,6 +418,14 @@
               <item name="xc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -401,6 +435,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="wallet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="coins" type="b2602c69:ProjectViewProjectNode" />
@@ -570,14 +612,8 @@
       <workItem from="1578447850029" duration="4361000" />
       <workItem from="1578464933978" duration="4000" />
       <workItem from="1578465014338" duration="482000" />
-      <workItem from="1578492908711" duration="3826000" />
-    </task>
-    <task id="LOCAL-00010" summary="[mmt] update http">
-      <created>1569486433424</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1569486433424</updated>
+      <workItem from="1578492908711" duration="7787000" />
+      <workItem from="1578534450522" duration="223000" />
     </task>
     <task id="LOCAL-00011" summary="[mmt] update auth.js">
       <created>1569500490477</created>
@@ -915,15 +951,21 @@
       <option name="project" value="LOCAL" />
       <updated>1578495589303</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="[xc] password">
+      <created>1578497034674</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1578497034674</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281257000" />
+    <option name="totallyTimeSpent" value="285441000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="552" y="23" width="1064" height="952" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24065197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -987,7 +1029,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/xc/deploy/zmfund-front" />
     </ignored-roots>
-    <MESSAGE value="[xc] old user auth" />
     <MESSAGE value="[xc] fix" />
     <MESSAGE value="[xc] add simple header" />
     <MESSAGE value="[xc] update home" />
@@ -1012,7 +1053,8 @@
     <MESSAGE value="[xc] 配置生产代码上传环境" />
     <MESSAGE value="[xc] 多语言" />
     <MESSAGE value="[xc] 账号中心多语言切换" />
-    <option name="LAST_COMMIT_MESSAGE" value="[xc] 账号中心多语言切换" />
+    <MESSAGE value="[xc] password" />
+    <option name="LAST_COMMIT_MESSAGE" value="[xc] password" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1026,31 +1068,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xc/src/stores/notice.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/locales/en-US.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mmt/src/locales/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/test/index.md" />
-    <entry file="file://$PROJECT_DIR$/xc/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/pages/wallet/Withdraw.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -1171,56 +1188,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/locales/en-US.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="40" column="4" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
-          <folding>
-            <element signature="e#6540#7148#0" expanded="true" />
-            <element signature="e#8491#9385#0" expanded="true" />
-            <element signature="e#9407#9655#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/locales/ko-KR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6314">
-          <caret line="287" column="23" selection-start-line="287" selection-start-column="23" selection-end-line="287" selection-end-column="23" />
-          <folding>
-            <element signature="e#26#343#0" expanded="true" />
-            <element signature="e#358#1353#0" expanded="true" />
-            <element signature="e#1368#1891#0" expanded="true" />
-            <element signature="e#1902#2363#0" expanded="true" />
-            <element signature="e#2377#2690#0" expanded="true" />
-            <element signature="e#2711#2832#0" expanded="true" />
-            <element signature="e#2849#3174#0" expanded="true" />
-            <element signature="e#3198#3468#0" expanded="true" />
-            <element signature="e#3489#3702#0" expanded="true" />
-            <element signature="e#3713#3746#0" expanded="true" />
-            <element signature="e#3764#3789#0" expanded="true" />
-            <element signature="e#3809#3865#0" expanded="true" />
-            <element signature="e#3881#4087#0" expanded="true" />
-            <element signature="e#4103#4409#0" expanded="true" />
-            <element signature="e#4425#4534#0" expanded="true" />
-            <element signature="e#4551#4623#0" expanded="true" />
-            <element signature="e#4637#5668#0" expanded="true" />
-            <element signature="e#5689#5846#0" expanded="true" />
-            <element signature="e#5862#6009#0" expanded="true" />
-            <element signature="e#6028#6161#0" expanded="true" />
-            <element signature="e#6178#6331#0" expanded="true" />
-            <element signature="e#6349#7808#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/pages/user/ContactUs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1034">
           <caret line="47" column="30" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,10 +1199,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#382#543#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1254,28 +1221,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="19" lean-forward="true" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/stores/locale.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1283,9 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-230">
           <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1300,16 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1331,9 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1341,10 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9">
           <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#462#483#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1359,22 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="20" column="42" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="161" column="6" selection-start-line="161" selection-start-column="6" selection-end-line="161" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#351#519#0" expanded="true" />
-            <element signature="e#2344#2460#0" expanded="true" />
-            <element signature="e#2468#2501#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1387,38 +1306,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="70" selection-start-line="70" selection-end-line="71" />
+        <state relative-caret-position="132">
+          <caret line="70" column="38" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/components/partial/VerifiedCode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="82" selection-start-line="82" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/components/partial/VeritifiedPwd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="77" column="28" lean-forward="true" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/locales/zh-CN.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1914">
+          <caret line="417" column="18" selection-start-line="417" selection-start-column="18" selection-end-line="417" selection-end-column="18" />
+          <folding>
+            <element signature="e#26#292#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/pages/user/VerifiedUpload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/pages/user/VerifiedResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#276#338#0" expanded="true" />
+            <element signature="e#340#404#0" expanded="true" />
+            <element signature="e#406#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="9" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/locales/zh-CN.js">
+    <entry file="file://$PROJECT_DIR$/xc/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="132">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
           <folding>
-            <element signature="e#26#292#0" expanded="true" />
-            <element signature="e#5426#6522#0" expanded="true" />
-            <element signature="e#6540#7173#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/components/common/Captcha.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/locales/en-US.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="54" column="14" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="14" />
+          <folding>
+            <element signature="e#26#402#0" expanded="true" />
+            <element signature="e#417#1760#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/pages/login/Password.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="1672">
+          <caret line="122" selection-start-line="122" selection-end-line="123" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#530#665#0" expanded="true" />
-            <element signature="e#863#1409#0" expanded="true" />
-            <element signature="e#807#903#0" expanded="true" />
-            <element signature="e#1011#1145#0" expanded="true" />
-            <element signature="e#1153#1273#0" expanded="true" />
-            <element signature="e#1281#1403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/locales/ko-KR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding>
+            <element signature="e#26#343#0" expanded="true" />
+            <element signature="e#358#1433#0" expanded="true" />
           </folding>
         </state>
       </provider>

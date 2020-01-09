@@ -17,12 +17,15 @@ export default {
     RESET_LOGIN_PASSWORD: '重置登录密码',
     SET_PAY_PASSWORD: '设置交易密码',
     RESET_PAY_PASSWORD: '重置交易密码',
+    ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
     GRAPH_CODE: '图形验证码',
+    CODE: '验证码',
     GET_VERIFY_CODE: '获取验证码',
     NEXT_STEP: '下一步',
     SET_PASSWORD: '设置密码',
     RESET_PASSWORD: '重置密码',
     PASSWORD_REMARK: '8-20位字符，不可以是纯数字。',
+    PASSWORD: '密码',
     INPUT_PASSWORD_AGAIN: '再次输入密码',
     SET: '设置',
     RESET: '重置',
@@ -49,6 +52,7 @@ export default {
     REGISTER_SUCCESS: '注册成功',
     REGISTER: '注册',
     ACCOUNT_PLACEHOLDER: '邮箱/手机号码',
+    GRAPH_CODE: '图形验证码',
     CODE: '验证码',
     GET_VERIFY_CODE: '获取验证码',
     PASSWORD: '密码',
@@ -312,7 +316,7 @@ export default {
     NEXT_STEP: '下一步'
   },
 
-  VERIFY_RESULT: {
+  VERIFY_UPLOAD: {
     AUTH_EXPLAIN_ONE:
       '请确保照片完整，清晰可见，格式为jpg, jpeg,或png，需小于2M。证件必须 在有效期限内。',
     AUTH_EXPLAIN_TWO:
