@@ -347,10 +347,16 @@ export default {
     COPY_ADDRESS: 'Copy Address',
     ADDRESS_HINT: 'Attention, this is the OMNI USDT address',
     RECHARGE_EXPLAIN: 'Transfer Notes',
+    EXPLAIN_1_ONE: '转入是自动的，',
+    EXPLAIN_1_TWO: '转账需要整个',
+    EXPLAIN_1_THREE: '网络进行确认，您的',
+    EXPLAIN_1_FOUR: '会自动充值到您的账户中。',
     EXPLAIN_1:
       'Transfer is automatic, XC transfer requires confirmation of  the entire XC network. Your XC will be filled automatic to your account. ',
     EXPLAIN_2:
       'This address is the only and unique transfer address, you can use it for multiple deposits. ',
+    EXPLAIN_3_ONE: '本地址禁止充值除',
+    EXPLAIN_3_TWO: '之外的其它资产，任何其它资产充值将不可找回。',
     EXPLAIN_3:
       'Do not deposit any other digital assets except XC to the above address, you will lose your assets permanently. '
   },
@@ -363,11 +369,13 @@ export default {
     LESS_MIN_COUNT: 'Lower Than The Minimum Withdrawal Amount',
     MORE_MAX_COUNT: 'Withdraw Over The Limit',
     ACCOUNT_NO_MORE: 'Not Sufficient Fund',
-    withdraw_success_to_jump:
+    WITHDRAW_SUCCESS_TO_JUMP:
       'Withdrawal Succeeded, Now processing to withdrawal history',
     WITHDRAW_COIN: 'Withdraw',
     WITHDRAW_AMOUNT: 'Withdrawal History',
     ACCOUNT_AVAILABLE: 'Account Balance ',
+    ACCOUNT_AVAILABLE_01: '账户可用',
+    ACCOUNT_AVAILABLE_02: '（包含可提）',
     ACCOUNT_WITHDRAW: 'Account Withdrawable Amount',
     WITHDRAW_ADDRESS: 'Withdrawal Address',
     INPUT_OR_PASTE_ADDRESS: 'Enter or Press the Copy/Paste Button',
