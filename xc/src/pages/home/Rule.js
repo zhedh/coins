@@ -1,14 +1,16 @@
 import React, {Component} from 'react'
+import {inject, observer} from "mobx-react";
 import Header from '../../components/common/Header'
 import {Toast} from 'antd-mobile'
 import {OtherApi} from '../../api'
-import {HOME} from '../../assets/static'
 import './Rule.scss'
 
+@inject('localeStore')
+@observer
 class Rule extends Component {
   state = {
     content: ''
-  }
+  };
 
   componentDidMount() {
     this.getRules()
@@ -17,7 +19,7 @@ class Rule extends Component {
   getRules = () => {
     OtherApi.getRules().then(res => {
       if (res.status !== 1) {
-        Toast.info(res.msg)
+        Toast.info(res.msg);
         return
       }
       this.setState({content: res.data[0].content})
@@ -25,10 +27,11 @@ class Rule extends Component {
   }
 
   render() {
-    const {content} = this.state
+    const {localeStore: {locale: {RULE}}} = this.props;
+    const {content} = this.state;
     return (
       <div id="rule">
-        <Header title={HOME.RULE_TITLE} isFixed isShadow bgPrimary/>
+        <Header title={RULE.TITLE} isFixed isShadow bgPrimary/>
         <div dangerouslySetInnerHTML={{__html: content}}/>
       </div>
     )

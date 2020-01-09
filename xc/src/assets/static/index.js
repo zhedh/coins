@@ -19,7 +19,7 @@ export const FOOTER = {
   LABEL_DEPOSIT: 'X PLAN'
 }
 
-export const HOME = {
+export const ASSET_HOME = {
   TITLE: 'X PLAN',
   IMG_BG: require('../images/2.1/home-banner.png'),
   SUBSCRIBE_ICON: require('../images/2.1/buy-cornor.png'),

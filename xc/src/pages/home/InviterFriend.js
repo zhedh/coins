@@ -7,23 +7,23 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { MdContentCopy } from 'react-icons/md'
 import Header from '../../components/common/Header'
 import { TOAST_DURATION } from '../../utils/constants'
-import { HOME } from '../../assets/static'
+import { ASSET_HOME } from '../../assets/static'
 import './InviterFriend.scss'
 
 class QrCodeBox extends Component {
   state = {
     codeUrl: ''
-  }
+  };
 
   componentDidMount() {
-    const canvas = document.querySelector('.qr-code__box canvas')
-    const codeUrl = canvas.toDataURL('image/png')
+    const canvas = document.querySelector('.qr-code__box canvas');
+    const codeUrl = canvas.toDataURL('image/png');
     this.setState({ codeUrl })
   }
 
   render() {
-    const { inviterUrl } = this.props
-    const { codeUrl } = this.state
+    const { inviterUrl } = this.props;
+    const { codeUrl } = this.state;
 
     return (
       <div className="qr-code__box">
@@ -37,56 +37,59 @@ class QrCodeBox extends Component {
 
 @inject('personStore')
 @inject('userStore')
+@inject('localeStore')
 @observer
 class InviterFriend extends Component {
   componentDidMount() {
-    const { personStore, userStore, history } = this.props
+    const { personStore, userStore, history } = this.props;
+    const {localeStore: {locale: {INVITER_FRIEND}}} = this.props;
     if (!userStore.isOnline()) {
-      Toast.info('请先登录', TOAST_DURATION, () => history.push('/login'))
+      Toast.info(INVITER_FRIEND.PLEASE_LOGIN_FIRST, TOAST_DURATION, () => history.push('/login'))
       return
     }
     personStore.getUserInfo()
   }
 
   render() {
-    const { personStore } = this.props
-    const { userInfo } = personStore
-    const { origin } = window.location
+    const {localeStore: {locale: {INVITER_FRIEND}}} = this.props;
+    const { personStore } = this.props;
+    const { userInfo } = personStore;
+    const { origin } = window.location;
     const inviterUrl =
       origin + '/register?recommendCode=' + userInfo.recommendCode
 
     return (
       <div id="inviter-friend">
-        <Header title="邀请好友" isShadow bgPrimary isFixed />
+        <Header title={INVITER_FRIEND.INVITER_FRIEND} isShadow bgPrimary isFixed />
         <section className="section-text">
           {userInfo.recommendCode}
           <CopyToClipboard
             text={userInfo.recommendCode}
-            onCopy={() => Toast.info('复制成功')}
+            onCopy={() => Toast.info(INVITER_FRIEND.COPY_SUCCESS)}
           >
-            <span>复制邀请码</span>
+            <span>{INVITER_FRIEND.COPY_INVITE_NUM}</span>
           </CopyToClipboard>
         </section>
         <section
           className="section-main"
-          style={{ backgroundImage: `url(${HOME.INVITER_FRIEND_BG})` }}
+          style={{ backgroundImage: `url(${ASSET_HOME.INVITER_FRIEND_BG})` }}
         >
           <div className="qr-wrap">
             <QrCodeBox key={userInfo.recommendCode} inviterUrl={inviterUrl} />
-            <aside>点击或长按二维码保存图片</aside>
+            <aside>{INVITER_FRIEND.CLICK_SAVE_IMG}</aside>
           </div>
 
           <p>
             {inviterUrl}
             <CopyToClipboard
               text={inviterUrl}
-              onCopy={() => Toast.info('复制成功')}
+              onCopy={() => Toast.info(INVITER_FRIEND.COPY_SUCCESS)}
             >
               <MdContentCopy className="icon" />
             </CopyToClipboard>
           </p>
           <div className="link">
-            <Link to="/home/generalize">查看推广</Link>
+            <Link to="/home/generalize">{INVITER_FRIEND.CHECK_REFERRING_DETAILS}</Link>
           </div>
         </section>
       </div>

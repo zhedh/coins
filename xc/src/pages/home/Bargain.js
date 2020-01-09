@@ -6,12 +6,13 @@ import {formatSpecialOffer} from "../../utils/format";
 
 @inject('personStore')
 @inject('productStore')
+@inject('localeStore')
 @observer
 class Bargain extends Component {
   componentDidMount() {
-    const {personStore, productStore} = this.props
-    personStore.getSpecial()
-    personStore.getLastClearTime()
+    const {personStore, productStore} = this.props;
+    personStore.getSpecial();
+    personStore.getLastClearTime();
 
     productStore.getProductId().then(productId => {
       personStore.getSpecialAwards({productId})
@@ -19,7 +20,8 @@ class Bargain extends Component {
   }
 
   render() {
-    const {history, personStore} = this.props
+    const {history, personStore} = this.props;
+    const {localeStore: {locale: {BARGAIN}}} = this.props;
     const {allUsableSpecial, lastClearTime, specialAwards} = personStore
 
     return (
@@ -30,26 +32,25 @@ class Bargain extends Component {
             alt="返回"
             onClick={() => history.goBack()}
           />
-          <span>特价奖励详情</span>
+          <span>{BARGAIN.PROMOTION_REWARDS_DETAILS}</span>
           <aside onClick={() => history.push('/home/bargain/record')}>
-            查看明细
+            {BARGAIN.LOOK_DETAIL}
           </aside>
         </header>
         <section className="section-banner">
           <div className="banner">
             <div className="info">
-              <span>特价XC奖励额度：{formatSpecialOffer(allUsableSpecial)}</span>
+              <span>{BARGAIN.XC_PROMOTION}：{formatSpecialOffer(allUsableSpecial)}</span>
               <br/>
-              <small>上次结算时间：{lastClearTime}</small>
+              <small>{BARGAIN.LAST_SETTLEMENT_TIME}：{lastClearTime}</small>
             </div>
             <button onClick={() => history.push({pathname: '/deposit', state: 1})}>
-              认购
+              {BARGAIN.SUBSCRIB}
             </button>
           </div>
-          {/*<p>* 解锁后的特价XC将直接充值到您的账户</p>*/}
         </section>
         <section className="section-main">
-          <h2>上次结算奖励额度</h2>
+          <h2>{BARGAIN.LAST_REWARDING}</h2>
           <ul>
             {specialAwards.map(award =>
               <li key={award.remark}>
@@ -60,7 +61,7 @@ class Bargain extends Component {
           </ul>
         </section>
         <section className="section-aside">
-          当前得到的奖励额度，有效期为俩个交易日，若俩个交易日结算前未使用，则奖励额度失效，请尽快认购。
+          {BARGAIN.REWARDING_NOTICE}
         </section>
       </div>
     )
