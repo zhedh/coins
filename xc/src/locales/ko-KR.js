@@ -188,7 +188,7 @@ export default {
     GIVE_PROMOTION: '특가 한도 증정',
     FEE: '수수료율',
     FEES: '수수료율',
-    AUTH_MSG_ONE: '您暂未通过实名认证，无法参与',
+    AUTH_MSG_ONE: '실명 인증을 하지 않고 계획에 참여할 수 없습니다',
     AUTH_MSG_TWO: '거래 비밀번호를 설정하지 않아 참여 할 수 없습니다.',
     TO_AUTH: '去认证',
     TO_SET: '설정하러 가기',
