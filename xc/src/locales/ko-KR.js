@@ -136,7 +136,8 @@ export default {
   },
 
   NOTICE_LIST: {
-    TITLE: '공지 리스트'
+    TITLE: '공지 리스트',
+    NO_RECORD: '데이터가 없습니다.'
   },
 
   NOTICE_DETAIL: {

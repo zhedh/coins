@@ -135,7 +135,8 @@ export default {
   },
 
   NOTICE_LIST: {
-    TITLE: 'Announcement Lists'
+    TITLE: 'Announcement Lists',
+    NO_RECORD: 'No Data'
   },
 
   NOTICE_DETAIL: {

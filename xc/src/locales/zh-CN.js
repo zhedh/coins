@@ -134,7 +134,8 @@ export default {
   },
 
   NOTICE_LIST: {
-    TITLE: '公告列表'
+    TITLE: '公告列表',
+    NO_RECORD: '暂无数据'
   },
 
   NOTICE_DETAIL: {

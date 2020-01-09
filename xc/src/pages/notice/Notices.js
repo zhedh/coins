@@ -5,6 +5,7 @@ import { formatTime } from '../../utils/format'
 import NoData from '../../components/common/NoData'
 import './Notices.scss'
 
+@inject('localeStore')
 @inject('noticeStore')
 @observer
 class Notices extends Component {
@@ -14,12 +15,18 @@ class Notices extends Component {
   }
 
   render() {
-    const { history, noticeStore } = this.props
+    const {
+      history,
+      noticeStore,
+      localeStore: {
+        locale: { NOTICE_LIST }
+      }
+    } = this.props
 
     return (
       <div id="notices">
         <Header
-          title="公告列表"
+          title={NOTICE_LIST.TITLE}
           isShadow
           isFixed
           bgPrimary
@@ -39,7 +46,7 @@ class Notices extends Component {
               </ul>
             ))
           ) : (
-            <NoData msg="暂无数据" />
+            <NoData msg={NOTICE_LIST.NO_RECORD} />
           )}
         </section>
       </div>
