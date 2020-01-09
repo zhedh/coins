@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { inject, observer } from 'mobx-react'
+import React, {Component} from 'react'
+import {inject, observer} from 'mobx-react'
 import Header from '../../components/common/Header'
-import { formatTime } from '../../utils/format'
+import {formatTime} from '../../utils/format'
 import NoData from '../../components/common/NoData'
 import './Notices.scss'
 
@@ -10,7 +10,7 @@ import './Notices.scss'
 @observer
 class Notices extends Component {
   componentDidMount() {
-    const { noticeStore } = this.props
+    const {noticeStore} = this.props
     noticeStore.getNotices()
   }
 
@@ -18,10 +18,8 @@ class Notices extends Component {
     const {
       history,
       noticeStore,
-      localeStore: {
-        locale: { NOTICE_LIST }
-      }
-    } = this.props
+      localeStore: {locale: {NOTICE_LIST}}
+    } = this.props;
 
     return (
       <div id="notices">
@@ -38,7 +36,6 @@ class Notices extends Component {
               <ul
                 key={notice.id}
                 className="list-item"
-                // onClick={() => window.location.href = notice.linkUrl}
                 onClick={() => history.push('/notice/' + notice.id)}
               >
                 <li>{notice.title}</li>
@@ -46,7 +43,7 @@ class Notices extends Component {
               </ul>
             ))
           ) : (
-            <NoData msg={NOTICE_LIST.NO_RECORD} />
+            <NoData msg={NOTICE_LIST.NO_RECORD}/>
           )}
         </section>
       </div>
@@ -54,4 +51,4 @@ class Notices extends Component {
   }
 }
 
-export default Notices
+export default Notices;

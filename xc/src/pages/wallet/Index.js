@@ -8,7 +8,7 @@ import {
   formatWalletPrice,
   formatTime
 } from '../../utils/format'
-import { COMMON, WALLET } from '../../assets/static'
+import { ASSET_COMMON, WALLET } from '../../assets/static'
 import GroupLabel from '../../components/common/GroupLabel'
 import WalletApi from '../../api/wallet'
 // import NoData from "../../components/common/NoData"
@@ -25,7 +25,7 @@ const USDT_CARD = {
 
 const WALLET_CARD = {
   bgImg: WALLET.WALLET_XC_IMG,
-  name: COMMON.COIN_NAME,
+  name: ASSET_COMMON.COIN_NAME,
   asset: '',
   rechargeUrl: '/wallet/recharge/',
   withdrawUrl: '/wallet/withdraw/'

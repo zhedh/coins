@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Button } from 'antd-mobile'
-import { AUTH, COMMON } from '../../assets/static'
+import { AUTH, ASSET_COMMON } from '../../assets/static'
 import './DepositResult.scss'
 
 @inject('personStore')
@@ -40,7 +40,7 @@ class DepositResult extends Component {
               className="primary-button hollow"
               onClick={() => history.push({ pathname: '/deposit', state: 1 })}
             >
-              解锁{COMMON.COIN_NAME}
+              解锁{ASSET_COMMON.COIN_NAME}
             </Button>
           )}
         </div>

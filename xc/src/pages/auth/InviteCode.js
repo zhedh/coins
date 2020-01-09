@@ -6,6 +6,7 @@ import { TOAST_DURATION } from '../../utils/constants'
 import './InviteCode.scss'
 
 @inject('userStore')
+@inject('localeStore')
 @observer
 class InviteCode extends Component {
   state = {
@@ -18,9 +19,10 @@ class InviteCode extends Component {
   }
 
   onSubmit = () => {
-    const { code } = this.state
-    const { history, userStore } = this.props
-    const infoKey = userStore.getInfoKey()
+    const { history, userStore } = this.props;
+    const {localeStore: {locale: {AUTH_CODE}}} = this.props;
+    const { code } = this.state;
+    const infoKey = userStore.getInfoKey();
 
     // if (!infoKey) {
     //   Toast.fail('授权失效，请返回重试')
@@ -34,7 +36,7 @@ class InviteCode extends Component {
       })
       .then(res => {
         if (res.status === 200) {
-          Toast.success('授权成功', TOAST_DURATION, () => {
+          Toast.success(AUTH_CODE.AUTH_SUCCESS, TOAST_DURATION, () => {
             history.push('/deposit')
           })
         } else {
@@ -45,19 +47,19 @@ class InviteCode extends Component {
   }
 
   render() {
-    const { code } = this.state
-    const canSubmit = code === ''
+    const {localeStore: {locale: {AUTH_CODE}}} = this.props;
+    const { code } = this.state;
+    const canSubmit = code === '';
 
     return (
       <div id="inviteCode">
-        <Header title="邀请码" />
-        {/* <AccountHeader title="输入邀请码" /> */}
+        <Header title={AUTH_CODE.CODE} />
         <div className="content">
           <label>
             <input
               className="input-main"
               type="text"
-              placeholder="请输入X-PLAN 邀请码"
+              placeholder={AUTH_CODE.INPUT_CODE}
               value={code}
               onChange={e => this.onInputChange(e, 'code')}
             />
@@ -71,7 +73,7 @@ class InviteCode extends Component {
             disabled={canSubmit}
             onClick={this.onSubmit}
           >
-            确认
+            {AUTH_CODE.CONFIRM}
           </Button>
         </div>
       </div>

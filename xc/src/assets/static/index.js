@@ -1,4 +1,4 @@
-export const COMMON = {
+export const ASSET_COMMON = {
   COIN_NAME: 'XC',
   COIN_TITLE: 'X PLAN',
   NO_DATA_IMG: require('../images/xc/no-data.png'),
@@ -44,7 +44,7 @@ export const AUTH = {
   UPLOAD_WRITE: 'X PLAN'
 }
 
-export const DEPOSIT = {
+export const ASSET_DEPOSIT = {
   DRAWER_MENU_ICON: require('../images/2.1/left-drawer.png'),
   COIN_NAME: '参与节点',
   TITLE: 'X PLAN',

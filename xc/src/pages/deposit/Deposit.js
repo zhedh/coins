@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {inject, observer} from 'mobx-react'
 import {Drawer, SegmentedControl, Toast} from 'antd-mobile'
-import {DEPOSIT} from '../../assets/static'
+import {ASSET_DEPOSIT} from '../../assets/static'
 import Header from '../../components/common/Header'
 import DepositBuy from '../../components/partial/DepositBuy'
 import DepositUnlock from '../../components/partial/DepositUnlock'
@@ -10,24 +10,26 @@ import './Deposit.scss'
 @inject('userStore')
 @inject('personStore')
 @inject('productStore')
+@inject('localeStore')
 @observer
 class Deposit extends Component {
   state = {
     showDrawer: false,
     selectTabIndex: 0
-  }
+  };
 
   componentDidMount() {
-    const {userStore, productStore, personStore, location, history} = this.props
-    const selectTabIndex = location.state || this.state.selectTabIndex
-    this.setState({selectTabIndex})
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {userStore, productStore, personStore, location, history} = this.props;
+    const selectTabIndex = location.state || this.state.selectTabIndex;
+    this.setState({selectTabIndex});
 
     if (!userStore.isOnline()) {
-      Toast.info('请先登录', 2, () => history.push('/login'))
+      Toast.info(DEPOSIT.PLEASE_LOGIN_FIRST, 2, () => history.push('/login'));
       return
     }
-    personStore.getUserInfo()
-    personStore.getSpecial()
+    personStore.getUserInfo();
+    personStore.getSpecial();
     productStore.getProducts().then(productId => {
       if (productId) {
         productStore.getProductDetail(productId)
@@ -36,34 +38,35 @@ class Deposit extends Component {
   }
 
   onSegmentedChange = e => {
-    const {selectedSegmentIndex} = e.nativeEvent
+    const {selectedSegmentIndex} = e.nativeEvent;
     this.setState({selectTabIndex: selectedSegmentIndex})
-  }
+  };
 
   selectProduct = id => {
-    const {productStore} = this.props
+    const {productStore} = this.props;
     this.setState({showDrawer: false}, () => {
       productStore.changeProduct(id, true)
     })
-  }
+  };
 
   render() {
-    const {productStore} = this.props
-    const {products, productDetail} = productStore
-    const {showDrawer, selectTabIndex} = this.state
+    const {localeStore: {locale: {DEPOSIT}}} = this.props;
+    const {productStore} = this.props;
+    const {products, productDetail} = productStore;
+    const {showDrawer, selectTabIndex} = this.state;
 
     const sidebar = (
       <div className="sidebar">
         <header className="sidebar-header">
-          <span>{DEPOSIT.SIDEBAR_TITLE}</span>
+          <span>{DEPOSIT.SELECT_PLAN}</span>
           <img
-            src={DEPOSIT.DRAWER_MENU_ICON}
+            src={ASSET_DEPOSIT.DRAWER_MENU_ICON}
             alt="抽屉"
             onClick={() => this.setState({showDrawer: false})}
           />
         </header>
         <ul>
-          <li>全部</li>
+          <li>{DEPOSIT.ALL}</li>
           {products.map(product => (
             <li
               key={product.id}
@@ -75,7 +78,7 @@ class Deposit extends Component {
           ))}
         </ul>
       </div>
-    )
+    );
 
     return (
       <div id="deposit">
@@ -90,14 +93,14 @@ class Deposit extends Component {
               isFixed
               isShadow
               bgPrimary
-              title={DEPOSIT.TITLE}
+              title={DEPOSIT.X_PLAN}
               onHandle={() => this.setState({showDrawer: true})}
-              icon={DEPOSIT.DRAWER_MENU_ICON}
+              icon={ASSET_DEPOSIT.DRAWER_MENU_ICON}
             />
             <section className="select-bar">
               <SegmentedControl
                 className="segmented-control"
-                values={DEPOSIT.TABS}
+                values={[DEPOSIT.X_PLAN, DEPOSIT.PROMOTION]}
                 selectedIndex={selectTabIndex}
                 onChange={this.onSegmentedChange}
               />
@@ -111,4 +114,4 @@ class Deposit extends Component {
   }
 }
 
-export default Deposit
+export default Deposit;
