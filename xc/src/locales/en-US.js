@@ -79,7 +79,7 @@ export default {
   },
 
   BARGAIN: {
-    PROMOTION_REWARDS_DETAILS: '特价奖励详情',
+    PROMOTION_REWARDS_DETAILS: 'Special offer details',
     LOOK_DETAIL: 'Check Details',
     XC_PROMOTION: 'Discounted XC Reward Amount',
     LAST_SETTLEMENT_TIME: 'Last Clearing Time',
@@ -103,7 +103,7 @@ export default {
     REFERRING_LIST: 'Referral List',
     FIRST_GENERATION_REFERRALS: 'First Generation Referral Member Numbers',
     SECOND_GENERATION_REFERRALS: 'Second Generation Referral Member Numbers',
-    REFERRING_TEAM: '推荐团队',
+    REFERRING_TEAM: 'Recommendation team',
     ACTIVE_MEMBER: 'Valid Members',
     NODE_LEVEL: 'Node Level',
     REBATE_PROPORTION: 'Return Rate'
@@ -178,7 +178,7 @@ export default {
 
   DEPOSIT: {
     PLEASE_LOGIN_FIRST: 'Please sign in first',
-    SELECT_PLAN: '选择参与计划',
+    SELECT_PLAN: 'Select participation plan',
     ALL: 'All',
     X_PLAN: 'X PLAY',
     PROMOTION: 'Discount Amount',
@@ -188,9 +188,10 @@ export default {
     GIVE_PROMOTION: 'Given Discount Amount',
     FEE: 'Transfer Fee',
     FEES: 'Transfer Fee',
-    AUTH_MSG_ONE: '您暂未通过实名认证，无法参与',
+    AUTH_MSG_ONE:
+      'You have not passed the real name certification and cannot participate',
     AUTH_MSG_TWO: 'You do not setup trading password, cannot participate yet',
-    TO_AUTH: '去认证',
+    TO_AUTH: 'To authenticate',
     TO_SET: 'Go Setting Up',
     JOIN_PLAN: 'Participate X PLAN',
     CONFIRM_PAYMENT: 'Confirm Payment',
@@ -244,17 +245,18 @@ export default {
   TERMINATION: {
     INPUT_GRAPH_CODE: 'Please Enter Graphic Verification Code',
     INPUT_WALLET_ADDRESS: 'Please Enter Wallet Address',
-    INPUT_PHONE_CODE_01: '请填写',
-    INPUT_PHONE_CODE_02: '手机',
-    INPUT_PHONE_CODE_03: '邮箱',
-    INPUT_PHONE_CODE_04: '验证码',
+    INPUT_PHONE_CODE_01: 'Please Enter ',
+    INPUT_PHONE_CODE_02: 'Mobile',
+    INPUT_PHONE_CODE_03: 'Email',
+    INPUT_PHONE_CODE_04: 'Verification Code',
     INPUT_PHONE_CODE: 'Please Enter Mobile Verification Code',
     INPUT_EMAIL_CODE: 'Please Enter Email Verification Code',
     TERMINATION_SUCCESS: 'Cancel Contract Successfully',
     TERMINATION: 'Cancel Contract',
     RECEIPT_ADDRESS: 'Receiving Address ( XC Address)',
     INPUT_OR_PASTE_ADDRESS: 'Enter or Press the Copy/Paste Button',
-    TAKE_OUT_FIRST_ORDER: '首单在15天内额外扣除：',
+    TAKE_OUT_FIRST_ORDER:
+      'Additional deduction for the first order within 15 days：',
     FEE: 'Fee',
     GRAPH_CODE: 'Graphic Verification Code',
     PHONE_CODE: 'Mobile Verification Code',
@@ -267,8 +269,7 @@ export default {
       '1. Prior to submit cancellation of contract, please transfer your USDT and XC assets to other accounts, cancel contract might cause unnecessary damage. ',
     EXPLAIN_2:
       '2. Once submit the cancellation of contract, customer will not be able to sign in , system will block the current account. ',
-    EXPLAIN_3:
-      '3、系统将核算每个用户，每单的投入的成本，如用户收益没有达到所投入的成本，解除合约后，平台将补足剩余成本部分到用户提交地址；如收益达到或超出所投入的成本，用户解除合约则会扣除剩余收益部分，将参与计划成本部分按50%返还到用户提交的地址中。',
+    EXPLAIN_3: `3、The system will calculate the input cost of each user and each order. If the user's income does not reach the input cost, after the contract is terminated, the platform will make up the remaining cost to the user's submission address; if the income reaches or exceeds the input cost, the user's cancellation of the contract will deduct the remaining income, and return the part of participating in the plan cost to the user's submission address by 50%.`,
     EXPLAIN_4:
       '4. If customer cancel contract within 15 days after participation in X-PLAN, system will reduce 30 XC per order as penalty',
     EXPLAIN_5:
@@ -316,7 +317,7 @@ export default {
     PASSPORT: 'Passport',
     DRIVING_LICENSE: 'Driving License',
     INPUT_MSG: 'Fill In Information',
-    INPUT_REG: '请输入7-18位证件号码',
+    INPUT_REG: 'Please enter a 7-18 digit ID number',
     CONFIRM_MSG_AND_CARD:
       'Please make sure the information you filled is the same in the ID',
     SELECT_AUTH_WAY: 'Please choose the verification methods.',
@@ -330,20 +331,20 @@ export default {
   },
 
   VERIFY_RESULT: {
-    WAITING_FOR_REVIEW: '等待审核',
-    HAD_REVIEWED: '已审核',
-    REVIEWED_FAIL: '失败',
-    SUBMIT_AND_WAIT: '提交成功，等待审核…',
-    RESULT_MSG: '认证结果将会显示在个人中心',
-    VERIFICATION_FAILED: '认证失败！',
-    FAILED_REASON: '失败原因',
-    CONTINUE_TO_VERIFY: '重新验证',
-    CERTIFICATE_PASSED: '认证通过',
-    YOUR_NAME: '您的姓名'
+    WAITING_FOR_REVIEW: 'To be audited',
+    HAD_REVIEWED: 'Verified',
+    REVIEWED_FAIL: 'Rejected',
+    SUBMIT_AND_WAIT: 'Submission succeeded waiting for Verification...',
+    RESULT_MSG: 'Verification result will be shown in personal center',
+    VERIFICATION_FAILED: 'Verification Failed！',
+    FAILED_REASON: 'Reason for failure',
+    CONTINUE_TO_VERIFY: 'Re-verify',
+    CERTIFICATE_PASSED: 'Verification Succeeded',
+    YOUR_NAME: 'Your name'
   },
 
   VERIFY_UPLOAD: {
-    IDENTITY_VERIFICATION: '身份认证',
+    IDENTITY_VERIFICATION: 'Identity Authentication',
     AUTH_EXPLAIN_ONE:
       'Make sure the photo is clear and complete, format in jpg, jpeg or png, smaller than 2 M. The certification must be within the expired date. ',
     AUTH_EXPLAIN_TWO:
@@ -373,16 +374,17 @@ export default {
     COPY_ADDRESS: 'Copy Address',
     ADDRESS_HINT: 'Attention, this is the OMNI USDT address',
     RECHARGE_EXPLAIN: 'Transfer Notes',
-    EXPLAIN_1_ONE: '转入是自动的，',
-    EXPLAIN_1_TWO: '转账需要整个',
-    EXPLAIN_1_THREE: '网络进行确认，您的',
-    EXPLAIN_1_FOUR: '会自动充值到您的账户中。',
+    EXPLAIN_1_ONE: 'Transfer is automatic,',
+    EXPLAIN_1_TWO: 'transfer requires confirmation of  the entire',
+    EXPLAIN_1_THREE: 'network. Your',
+    EXPLAIN_1_FOUR: 'will be filled automatic to your account. ',
     EXPLAIN_1:
       'Transfer is automatic, XC transfer requires confirmation of  the entire XC network. Your XC will be filled automatic to your account. ',
     EXPLAIN_2:
       'This address is the only and unique transfer address, you can use it for multiple deposits. ',
-    EXPLAIN_3_ONE: '本地址禁止充值除',
-    EXPLAIN_3_TWO: '之外的其它资产，任何其它资产充值将不可找回。',
+    EXPLAIN_3_ONE: 'Do not deposit any other digital assets except',
+    EXPLAIN_3_TWO:
+      'to the above address, you will lose your assets permanently.',
     EXPLAIN_3:
       'Do not deposit any other digital assets except XC to the above address, you will lose your assets permanently. '
   },
@@ -400,8 +402,8 @@ export default {
     WITHDRAW_COIN: 'Withdraw',
     WITHDRAW_AMOUNT: 'Withdrawal History',
     ACCOUNT_AVAILABLE: 'Account Balance ',
-    ACCOUNT_AVAILABLE_01: '账户可用',
-    ACCOUNT_AVAILABLE_02: '（包含可提）',
+    ACCOUNT_AVAILABLE_01: 'Account Balance',
+    ACCOUNT_AVAILABLE_02: '',
     ACCOUNT_WITHDRAW: 'Account Withdrawable Amount',
     WITHDRAW_ADDRESS: 'Withdrawal Address',
     INPUT_OR_PASTE_ADDRESS: 'Enter or Press the Copy/Paste Button',
