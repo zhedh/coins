@@ -436,7 +436,7 @@ export default {
   ASIDE: {
     LOADING: '로딩중...',
     PLEASE_LOGIN_FIRST: '로그인 해주세요',
-    HTTP_ERR: '网络错误，请重试'
+    HTTP_ERR: '네트워크 오류'
   }
 
   // ASIDE: {

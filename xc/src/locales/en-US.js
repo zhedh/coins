@@ -440,7 +440,7 @@ export default {
   ASIDE: {
     LOADING: 'Loading...',
     PLEASE_LOGIN_FIRST: 'Please sign in first',
-    HTTP_ERR: '网络错误，请重试'
+    HTTP_ERR: 'Network error'
   }
 
   // ASIDE: {
