@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
-import {observer, inject} from 'mobx-react'
-import {Carousel, WingBlank, Button, Toast} from 'antd-mobile'
-import {IoIosMegaphone, IoIosHelpCircle} from 'react-icons/io'
-import {formatDate, formatSpecialOffer} from '../../utils/format'
-import {ASSET_COMMON, ASSET_HOME} from '../../assets/static'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { observer, inject } from 'mobx-react'
+import { Carousel, WingBlank, Button, Toast } from 'antd-mobile'
+import { IoIosMegaphone, IoIosHelpCircle } from 'react-icons/io'
+import { formatDate, formatSpecialOffer } from '../../utils/format'
+import { ASSET_COMMON, ASSET_HOME } from '../../assets/static'
 import Dialog from '../../components/common/Dialog'
 import SimpleHeader from '../../components/common/SimpleHeader'
 import NoData from '../../components/common/NoData'
@@ -20,7 +20,7 @@ import './Index.scss'
 class Index extends Component {
   state = {
     mySpread: {}
-  };
+  }
 
   componentDidMount() {
     const {
@@ -29,28 +29,30 @@ class Index extends Component {
       personStore,
       noticeStore,
       productStore,
-      localeStore: {locale: {HOME}}
-    } = this.props;
+      localeStore: {
+        locale: { HOME }
+      }
+    } = this.props
 
     if (!userStore.isOnline()) {
-      Toast.info(HOME.PLEASE_LOGIN_FIRST, 2, () => history.push('/login'));
+      Toast.info(HOME.PLEASE_LOGIN_FIRST, 2, () => history.push('/login'))
       return
     }
-    noticeStore.getNotices();
-    personStore.getSpecial();
+    noticeStore.getNotices()
+    personStore.getSpecial()
     productStore.getProducts().then(productId => {
-      personStore.getDepositRecords({productId, status: 0})
-    });
-    this.getMySpread();
+      personStore.getDepositRecords({ productId, status: 0 })
+    })
+    this.getMySpread()
   }
 
   getMySpread = () => {
     OtherApi.getMySpread().then(res => {
       if (res.status !== 1) {
-        Toast.info(res.msg);
+        Toast.info(res.msg)
         return
       }
-      this.setState({mySpread: res.data})
+      this.setState({ mySpread: res.data })
     })
   }
 
@@ -61,20 +63,22 @@ class Index extends Component {
       personStore,
       noticeStore,
       productStore,
-      localeStore: {locale: {HOME}}
-    } = this.props;
-    const {notices} = noticeStore;
-    const {depositRecords} = personStore;
-    const {currentProduct} = productStore;
-    const {mySpread = {}} = this.state;
+      localeStore: {
+        locale: { HOME }
+      }
+    } = this.props
+    const { notices } = noticeStore
+    const { depositRecords } = personStore
+    const { currentProduct } = productStore
+    const { mySpread = {} } = this.state
     const hasRecords =
-      userStore.isOnline() && depositRecords && depositRecords.length > 0;
+      userStore.isOnline() && depositRecords && depositRecords.length > 0
 
     return (
       <div id="home">
         <section
           className="section-banner"
-          style={{backgroundImage: `url(${ASSET_HOME.IMG_BG})`}}
+          style={{ backgroundImage: `url(${ASSET_HOME.IMG_BG})` }}
         >
           <SimpleHeader
             color="#393838"
@@ -85,8 +89,8 @@ class Index extends Component {
             <b>{formatSpecialOffer(personStore.allUsableSpecial)}</b>
             <small>{HOME.AVAILABLE_PROMOTION}</small>
           </div>
-          <Link className="subscribe" to={{pathname: '/deposit', state: 1}}>
-            <img src={ASSET_HOME.SUBSCRIBE_ICON} alt=""/>
+          <Link className="subscribe" to={{ pathname: '/deposit', state: 1 }}>
+            <img src={ASSET_HOME.SUBSCRIBE_ICON} alt="" />
             {HOME.SUBSCRIB}
           </Link>
           <div
@@ -94,8 +98,8 @@ class Index extends Component {
             onClick={() => (notices.length ? history.push('/notices') : '')}
           >
             <label>
-              <IoIosMegaphone className="megaphone"/>
-              {HOME.NOTICE}：
+              <IoIosMegaphone className="megaphone" />
+              {HOME.NOTICE}:
             </label>
             {notices.length ? (
               <WingBlank>
@@ -136,7 +140,7 @@ class Index extends Component {
             <span>{HOME.X_PLAN}</span>
             <Link to="/home/rule">
               {HOME.RULES}
-              <IoIosHelpCircle className="icon"/>
+              <IoIosHelpCircle className="icon" />
             </Link>
           </div>
           {hasRecords ? (
@@ -148,9 +152,7 @@ class Index extends Component {
                     <small>{formatDate(record.unlockTime)}</small>
                   </div>
                   <div className="main">
-                    <small>
-                      {formatDate(record.addTime)}
-                    </small>
+                    <small>{formatDate(record.addTime)}</small>
                     <span>
                       <b>{Number(record.amount).toFixed(0)} </b>
                       {currentProduct.productName}
@@ -161,7 +163,7 @@ class Index extends Component {
             </ul>
           ) : (
             <div className="no-data-wrapper">
-              <NoData img={ASSET_COMMON.NO_DATA_IMG} msg={HOME.JOIN_EVERYDAY}/>
+              <NoData img={ASSET_COMMON.NO_DATA_IMG} msg={HOME.JOIN_EVERYDAY} />
               <Button
                 activeClassName="active"
                 className="primary-button take-apart"

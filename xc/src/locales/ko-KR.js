@@ -393,7 +393,7 @@ export default {
     ACCOUNT_NO_MORE: '계좌 잔액 부족',
     WITHDRAW_SUCCESS_TO_JUMP: '출금 성공, 코인 출금 기록 페이지로 이동 중',
     WITHDRAW_COIN: '코인 출금',
-    WITHDRAW_amount: '코인 출금 기록',
+    WITHDRAW_AMOUNT: '코인 출금 기록',
     ACCOUNT_AVAILABLE: '사용 가능한 계좌(출금 가능도 포함)',
     ACCOUNT_AVAILABLE_01: '사용 가능한 계좌',
     ACCOUNT_AVAILABLE_02: '(출금 가능도 포함)',
@@ -420,7 +420,7 @@ export default {
       '자금의 안전을 위해 코인 출금에 대한 심사를 진행하오니 기다려 주시길 바랍니다.'
   },
 
-  WITHDRAW_record: {
+  WITHDRAW_RECORD: {
     WITHDRAWAL_RECORD: '코인 출금 기록',
     WAITING_FOR_REVIEW: '심사 대기',
     WITHDRAWING: '출금 중',
@@ -436,6 +436,7 @@ export default {
   ASIDE: {
     LOADING: '로딩중...',
     PLEASE_LOGIN_FIRST: '로그인 해주세요',
+    HTTP_ERR: '网络错误，请重试'
   }
 
   // ASIDE: {

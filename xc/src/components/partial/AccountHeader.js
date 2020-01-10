@@ -1,10 +1,13 @@
-import React, {Component} from 'react'
-import {withRouter} from "react-router";
+import React, { Component } from 'react'
+import { withRouter } from 'react-router'
 import './AccountHeader.scss'
+import { observer, inject } from 'mobx-react'
 
+@inject('localeStore')
+@observer
 class AccountHeader extends Component {
   onBack = () => {
-    const {history, onHandle} = this.props
+    const { history, onHandle } = this.props
 
     if (onHandle) {
       onHandle()
@@ -14,7 +17,12 @@ class AccountHeader extends Component {
   }
 
   render() {
-    const {title = '重置密码', msg, hideBack} = this.props
+    const {
+      localeStore: {
+        locale: { PASSWORD }
+      }
+    } = this.props
+    const { title = PASSWORD.RESET_PASSWORD, msg, hideBack } = this.props
 
     return (
       <div className="account-header">
@@ -27,7 +35,7 @@ class AccountHeader extends Component {
         <h1>{title}</h1>
         {msg && <p>{msg}</p>}
       </div>
-    );
+    )
   }
 }
 

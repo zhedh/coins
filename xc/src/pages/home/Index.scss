@@ -45,17 +45,25 @@
       @include clearBack;
       position: absolute;
       bottom: 0;
-      padding: 0 5px 0 64px;
-      width: 20rem;
+      vertical-align: middle;
       font-size: $font-context;
+      max-width: calc(100vw - 88px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px 0 10px;
+
+      .am-wingblank {
+        min-width: 50% !important;
+        max-width: 60% !important;
+      }
+      .am-wingblank.am-wingblank-lg {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
 
       label {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 20px;
-        margin: auto;
-
         display: flex;
         align-items: center;
 
@@ -66,6 +74,7 @@
       }
 
       .item {
+        text-indent: 5px;
         height: 36px;
         line-height: 36px;
         @include overflow(1);
@@ -136,8 +145,8 @@
 
       a {
         @include background-gradient(
-            $primary-color-gradient-from,
-            $primary-color-gradient-to
+          $primary-color-gradient-from,
+          $primary-color-gradient-to
         );
         height: 2.6rem;
         line-height: 2.6rem;

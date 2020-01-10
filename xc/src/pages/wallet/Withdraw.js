@@ -1,14 +1,18 @@
-import React, {Component} from 'react'
-import {inject, observer} from "mobx-react"
-import {Toast, Button} from "antd-mobile"
-import {UserApi, PersonApi} from "../../api"
-import {COIN_POINT_LENGTH, COUNT_DOWN, USDT_POINT_LENGTH} from "../../utils/constants"
-import {isMobile} from "../../utils/reg"
-import {formatCoinPrice} from "../../utils/format"
-import {getImagePath} from "../../utils/file"
-import Header from "../../components/common/Header"
+import React, { Component } from 'react'
+import { inject, observer } from 'mobx-react'
+import { Toast, Button } from 'antd-mobile'
+import { UserApi, PersonApi } from '../../api'
+import {
+  COIN_POINT_LENGTH,
+  COUNT_DOWN,
+  USDT_POINT_LENGTH
+} from '../../utils/constants'
+import { isMobile } from '../../utils/reg'
+import { formatCoinPrice } from '../../utils/format'
+import { getImagePath } from '../../utils/file'
+import Header from '../../components/common/Header'
 import scanIcon from '../../assets/images/scan.svg'
-import Captcha from "../../components/common/Captcha"
+import Captcha from '../../components/common/Captcha'
 import './Withdraw.scss'
 
 @inject('walletStore')
@@ -32,14 +36,14 @@ class Withdraw extends Component {
   }
 
   componentDidMount() {
-    const {match, walletStore, personStore} = this.props
-    const {type} = match.params
-    this.setState({type})
-    walletStore.withdrawInit({type}).then(res => {
+    const { match, walletStore, personStore } = this.props
+    const { type } = match.params
+    this.setState({ type })
+    walletStore.withdrawInit({ type }).then(res => {
       if (res.status !== 1) {
         Toast.show(res.msg)
       }
-    });
+    })
     personStore.getUserInfo()
     this.getCaptchaPng()
   }

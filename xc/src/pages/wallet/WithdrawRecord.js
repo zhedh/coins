@@ -60,13 +60,12 @@ class WithdrawRecord extends Component {
   }
 
   render() {
+    const { records } = this.state
     const {
-      records,
       localeStore: {
         locale: { WITHDRAW_RECORD }
       }
-    } = this.state
-
+    } = this.props
     return (
       <div id="withdraw-record">
         <Header

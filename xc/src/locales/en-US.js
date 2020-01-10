@@ -66,7 +66,7 @@ export default {
     X_PLAN: 'X PLAN',
     AVAILABLE_PROMOTION: 'Valid Discount Amount',
     SUBSCRIB: 'Purchase',
-    NOTICE: 'Announcement ',
+    NOTICE: 'Announcement',
     NO_NOTICE: 'No Announcement',
     EFFECTIVE_USER_COUNT: 'Current Valid Customer Numbers of Team',
     SEE_TEAMS_DETAIL: 'Check Team Details',
@@ -292,6 +292,7 @@ export default {
     INVITER_FRIEND: 'Invite Friends',
     CONTACT_US: 'Contact Customer Service',
     TERMINATION: 'Cancel Contract',
+    LANG_SWITCH: 'Language Switch',
     LOGOUT: 'Sign Out',
     ACTIVE_EXPLAIN: 'Active Customer Description',
     ACTIVE_REMARK:
@@ -439,6 +440,7 @@ export default {
   ASIDE: {
     LOADING: 'Loading...',
     PLEASE_LOGIN_FIRST: 'Please sign in first',
+    HTTP_ERR: '网络错误，请重试'
   }
 
   // ASIDE: {
