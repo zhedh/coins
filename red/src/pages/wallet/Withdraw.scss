@@ -1,0 +1,147 @@
+@import '../../styles/_common';
+
+$text-sub-color: #ABABAB;
+
+#withdraw {
+  @include clearFix;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  //font-family: $font-regular;
+  font-weight: 600;
+
+  header {
+    font-weight: normal;
+
+    .record-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .section-form {
+    padding: 0 20px;
+
+    .row {
+      padding: 13px 20px;
+      line-height: 1.4;
+
+      label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .balance {
+        display: block;
+        padding-top: 8px;
+        color: $primary-color;
+        font-size: $font-assistant;
+      }
+
+      .input-box {
+        position: relative;
+
+        input[type='text'] {
+          box-sizing: border-box;
+          width: 100%;
+          padding: 8px 70px 8px 0;
+          border: none;
+          border-bottom: 1px solid $border-color;
+          font-size: 1.3rem;
+          font-family: $font-regular;
+          font-weight: 600;
+
+          &:focus {
+            border-bottom: 2px solid $primary-color;
+          }
+
+          &::placeholder {
+            color: $text-sub-color;
+          }
+        }
+
+        .file-btn {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 4rem;
+
+          input[type='file'] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            width: 100%;
+          }
+        }
+
+        button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+
+          display: flex;
+          align-items: center;
+          padding: 0;
+          border: none;
+          background: transparent;
+          font-size: 1.3rem;
+          font-family: $font-regular;
+          font-weight: 600;
+
+          img {
+            margin-right: 5px;
+            width: 15px;
+          }
+
+          &.count-down {
+            color: #ccc;
+          }
+        }
+      }
+
+      small {
+        display: flex;
+        justify-content: flex-end;
+        padding: 9px 0;
+        color: $text-sub-color;
+      }
+    }
+
+    .btn-box {
+      padding: 20px 0;
+
+      button {
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        background: $primary-color;
+        color: $white;
+        font-size: $font-context;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .section-aside {
+    padding: 15px 30px;
+    color: $text-sub-color;
+    font-size: $font-assistant;
+
+    p {
+      @include clearBack;
+      padding: 5px 0;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  }
+}

@@ -1,0 +1,256 @@
+@import '../../styles/_common';
+
+.deposit-buy {
+  display: none;
+  height: 90%;
+
+  &.show {
+    display: block;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin: 5rem 2.2rem 0;
+  }
+
+  .gears {
+    @include clearList;
+    margin-top: 20px;
+    padding: 0 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    li {
+      box-sizing: border-box;
+      width: 33.33%;
+      padding: 0 8px 20px;
+
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        height: 5rem;
+        border: 1px solid #e7e7e8;
+        border-radius: 5px;
+        color: #e7e7e8;
+
+        .price {
+          font-size: $font-title;
+        }
+
+        small {
+          margin-top: 6px;
+          font-size: $font-assistant;
+        }
+      }
+
+      &.active {
+        color: $black;
+        border-color: $primary-color;
+
+        .box {
+          position: relative;
+          border-color: $primary-color;
+          color: $primary-color;
+          font-weight: bold;
+          overflow: hidden;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            display: inline-block;
+            width: 7.4rem;
+            height: 2.6rem;
+            background: url('../../assets/images/2.1/select-deposit.png') no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .fee {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-weight: 500;
+      font-size: $font-title;
+      color: #000;
+      border-bottom: 1px solid $border-color;
+
+      span {
+        color: $text-sub-color;
+        font-size: 1.2rem;
+      }
+    }
+
+    small {
+      color: $text-sub-color;
+      font-size: $font-assistant;
+    }
+  }
+
+  aside {
+    margin-bottom: 5rem;
+    padding: 0 20px;
+    font-size: $font-assistant;
+
+    p {
+      text-align: right;
+      color: $text-sub-color;
+
+      a {
+        color: #2564c1;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn {
+    @include clearButton;
+    margin: 0 27% 20px;
+    height: 5rem;
+    border-radius: 0.7rem;
+    color: #fff;
+    background-color: $primary-color;
+    font-size: 1.5rem;
+    text-align: center;
+
+    &.btn-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .confirm-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    display: none;
+    background: rgba(0, 0, 0, 0.4);
+
+    &.show {
+      display: block;
+    }
+
+    .content-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: $white;
+      padding-bottom: 40px;
+
+      h2 {
+        @include clearBack;
+        position: relative;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: $font-title;
+        border-bottom: 1px solid $border-color;
+
+        img {
+          position: absolute;
+          top: 0;
+          right: 20px;
+          bottom: 0;
+          margin: auto;
+          padding: 5px;
+          width: 14px;
+        }
+      }
+
+      .content {
+        box-sizing: border-box;
+        padding: 15px 20px 30px;
+
+        p {
+          @include clearBack;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          font-size: $font-assistant;
+          font-weight: 600;
+
+          &.strong{
+            padding: 6px 0;
+            font-size: $font-title-s;
+          }
+
+          &.assistant {
+            padding: 5px 0;
+            color: $text-sub-color;
+          }
+        }
+
+        .input-box {
+          position: relative;
+          width: 100%;
+          display: inline-block;
+          margin-top: 1rem;
+
+          input {
+            @include clearButton;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border-bottom: 1px solid $black-border-bottom;
+
+            &:focus {
+              border-bottom: 2px solid #000052;
+            }
+
+            &::placeholder {
+              color: $black-font-primary;
+              font-weight: bold;
+            }
+          }
+
+          img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 2.2rem;
+            height: 1.3rem;
+          }
+        }
+
+        .link {
+          margin-bottom: 20px;
+          padding: 10px 0;
+          text-align: right;
+
+          a {
+            display: inline-block;
+            font-weight: bold;
+            padding: 3px 0;
+            font-size: $font-assistant;
+            color: rgba(53, 57, 62, 1);
+          }
+        }
+      }
+
+      .primary-button {
+        margin: 0 20px;
+      }
+    }
+  }
+}

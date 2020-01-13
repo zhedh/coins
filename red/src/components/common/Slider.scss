@@ -1,0 +1,50 @@
+@import '../../styles/mixin';
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+.slider-wrapper {
+  box-sizing: border-box;
+  padding: 20px 0;
+
+  .slick-current {
+    .slider-card {
+      transform: scaleY(1.1);
+    }
+  }
+
+  .slick-dots {
+    li {
+      button {
+        &::before {
+          content: '';
+          width: 17px;
+          height: 3px;
+          display: inline-block;
+          background: #d7d7de;
+        }
+      }
+
+      &.slick-active {
+        button::before {
+          background: #f78550;
+        }
+      }
+    }
+  }
+
+  .slider-card {
+    position: relative;
+
+    h3 {
+      position: absolute;
+      top: 8%;
+      left: 10%;
+      color: $white;
+      font-size: $font-assistant + 0.1;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

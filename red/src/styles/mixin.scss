@@ -1,0 +1,130 @@
+@charset "utf-8";
+@import './_variable';
+
+/*超行溢出显示省略号*/
+@mixin overflow($num: 1, $fontSize: 0, $lineHeight: 1.5) {
+  display: -webkit-box;
+  overflow: hidden;
+  /* autoprefixer: ignore next */
+  -webkit-line-clamp: $num;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+
+  /* autoprefixer: on */
+  @if $fontSize !=0 and $lineHeight {
+    /*高度需要撑开*/
+    line-height: $lineHeight;
+
+    @if $lineHeight < 1.2 {
+      line-height: 1.2;
+      /*最小需要1.2，否则在部分安卓机下第$num+1行会顶部漏出*/
+    }
+
+    height: $num * $fontSize * $lineHeight;
+
+    [data-dpr='2'] & {
+      height: $num * $fontSize * $lineHeight * 2 !important;
+    }
+
+    [data-dpr='3'] & {
+      height: $num * $fontSize * $lineHeight * 3 !important;
+    }
+  }
+}
+
+//transition 兼容写法
+@mixin transition($content: all 0.2s) {
+  -moz-transition: $content;
+  -webkit-transition: $content;
+  -o-transition: $content;
+  transition: $content;
+}
+
+//transfrom 兼容
+@mixin translateX($num: -50%) {
+  -ms-transform: translateX($num);
+  -moz-transform: translateX($num);
+  -webkit-transform: translateX($num);
+  -o-transform: translateX($num);
+  transform: translateX($num);
+}
+
+@mixin translateY($num: -50%) {
+  -ms-transform: translateY($num);
+  -moz-transform: translateY($num);
+  -webkit-transform: translateY($num);
+  -o-transform: translateY($num);
+  transform: translateY($num);
+}
+
+@mixin rotate($deg: 90deg) {
+  -ms-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin background-gradient($color-from, $color-to) {
+  background: $color-from;
+  background: -moz-linear-gradient(left, $color-from 0%, $color-to 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, $color-from),
+    color-stop(100%, $color-to)
+  );
+  background: -webkit-linear-gradient(left, $color-from 0%, $color-to 100%);
+  background: -o-linear-gradient(left, $color-from 0%, $color-to 100%);
+  background: -ms-linear-gradient(left, $color-from 0%, $color-to 100%);
+  background: linear-gradient(to right, $color-from 0%, $color-to 100%);
+  /* stylelint-disable function-name-case */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color-from}', endColorstr='#{$color-to}', GradientType=1);
+  /* stylelint-enable function-name-case */
+}
+
+// 清除内外边距
+@mixin clearBack() {
+  margin: 0;
+  padding: 0;
+}
+
+// 清除列表默认样式
+@mixin clearList() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// 清除input默认样式
+@mixin clearInput() {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+// 清除浮动
+@mixin clearFix() {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// 清除按钮默认样式
+@mixin clearButton() {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+  //display: block;
+  font-family: inherit;
+  outline: none;
+  // position: relative;
+}

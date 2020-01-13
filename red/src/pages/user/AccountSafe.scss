@@ -1,0 +1,29 @@
+@import '../../styles/_common';
+
+#account-safe {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  background-color: #E1E5EE;
+
+  .list {
+    margin-top: 2rem;
+    padding: 0 17.5px;
+    background: $white;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6rem;
+    border-bottom: 1px solid $border-color;
+    color: $text-color;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    .arrow {
+      height: 1.4rem;
+    }
+  }
+}

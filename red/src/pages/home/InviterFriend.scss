@@ -1,0 +1,102 @@
+@import "../../styles/mixin";
+
+#inviter-friend {
+  padding-top: $header-height;
+  line-height: 1.6;
+
+  .section-text {
+    height: 8.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-title;
+
+    span {
+      display: inline-block;
+      font-size: $font-context;
+      color: #2A76DD;
+    }
+  }
+
+  .section-main {
+    margin: 50px 20px;
+    padding: 1rem 0;
+    text-align: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 32rem;
+    border-radius: 20px;
+
+    .qr-code__box {
+      display: inline-block;
+      padding: 1.4rem;
+      transform: translateY(-50px);
+      border-radius: 5px;
+      border: 1px solid $primary-color;
+      background: $white;
+      font-size: 0;
+
+      .qr-code {
+        display: none;
+        width: 10.8rem;
+        height: 10.8rem;
+      }
+
+      img {
+        width: 13rem;
+        height: 13rem;
+      }
+
+      span {
+        display: inline-block;
+        margin-top: 0.8rem;
+        color: $text-sub-color;
+      }
+    }
+
+    .qr-wrap aside {
+      margin-top: 0.5rem;
+      font-size: $font-title-s;
+      font-weight: bold;
+    }
+
+    p {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-top: 4rem;
+      width: 80%;
+      padding: 8px 20px;
+      line-height: 1.2;
+      font-size: $font-context;
+      font-weight: bold;
+      word-break: break-all;
+
+      .icon {
+        margin-left: 10px;
+        font-size: 30px;
+      }
+    }
+
+    .link {
+      margin-top: 5rem;
+      padding: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        border-radius: 7px;
+        background: $primary-color;
+        text-decoration: none;
+        color: $white;
+        font-size: $font-title-s;
+      }
+    }
+  }
+}

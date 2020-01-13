@@ -1,0 +1,36 @@
+@import '../../styles/mixin';
+
+.account-header {
+  box-sizing: border-box;
+  padding: 20px;
+  min-height: 14rem;
+
+  img {
+    padding: 15px 30px 15px 8px;
+    width: 8px;
+
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  h1 {
+    @include clearBack;
+    padding-top: 10px;
+    font-size: 2.8rem;
+    font-weight: normal;
+  }
+
+  p {
+    @include clearBack;
+    padding: 4px 0;
+    font-size: $font-assistant;
+    color: #636875;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .account-header {
+    min-height: 10rem;
+  }
+}

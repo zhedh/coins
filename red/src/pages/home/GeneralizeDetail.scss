@@ -1,0 +1,32 @@
+@import "../../styles/mixin";
+
+#generalize-detail {
+  padding-top: $header-height;
+
+  header {
+    background: $white;
+  }
+
+  ul {
+    @include clearList;
+
+    li {
+      padding: 5px 15px;
+      line-height: 1.6;
+      border-bottom: 1px solid $border-color;
+
+      p {
+        @include clearBack;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 5px 0;
+
+        label {
+          margin-right: 15px;
+          color: $text-sub-color;
+        }
+      }
+    }
+  }
+}

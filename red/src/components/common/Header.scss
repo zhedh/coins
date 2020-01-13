@@ -1,0 +1,49 @@
+@import '../../styles/mixin';
+
+#common-header {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+
+  &.shadow {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+
+  &.bg-White {
+    background: white;
+  }
+
+  &.bg-Primary {
+    position: fixed;
+    color: #fff;
+    @include background-gradient(#e8713a, #ff905c);
+  }
+
+  img {
+    height: 1.5rem;
+    padding: 6px;
+    margin-left: -6px;
+
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+
+  .right-content {
+    font-size: $font-title-s;
+    font-weight: normal;
+  }
+}

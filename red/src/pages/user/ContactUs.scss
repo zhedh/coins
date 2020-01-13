@@ -1,0 +1,32 @@
+@import '../../styles/_common';
+
+#contact-us {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .chat-wrapper {
+    margin-top: 20%;
+    text-align: center;
+
+    img {
+      width: 60%;
+    }
+
+    p {
+      line-height: 1.5;
+      padding: 0 15%;
+    }
+  }
+
+  .arrow-box {
+    padding: 20px;
+    text-align: right;
+
+    img {
+      margin-right: 25%;
+      width: 55px;
+    }
+  }
+}
+

@@ -1,0 +1,15 @@
+@import '../../styles/mixin';
+
+$label-color: #5E7796;
+$label-bg: #E1E5EE;
+
+.group-label {
+  @include clearBack;
+  @include overflow(1);
+  height: 30px;
+  padding: 0 15px;
+  line-height: 30px;
+  background: $label-bg;
+  font-size: $font-assistant;
+  color: $label-color;
+}

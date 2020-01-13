@@ -1,0 +1,115 @@
+@import '../../styles/_common';
+
+#user-center {
+  @include clearFix;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-color: $white;
+
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 23rem;
+    box-sizing: border-box;
+    background: url('../../assets/images/2.1/user-banner.png') center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+
+    .user-box {
+      margin-top: 0.5rem;
+
+      img {
+        width: 6.8rem;
+      }
+
+      p {
+        @include clearBack;
+        padding: 10px 0;
+        font-size: $font-title-s;
+      }
+
+      .tags {
+        display: flex;
+        justify-content: center;
+
+        span {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 5px;
+          height: 2.6rem;
+          padding: 0 10px;
+          line-height: 2.4rem;
+          border: 1px solid $white;
+          border-radius: 1.2rem;
+          text-align: center;
+          opacity: 0.6;
+
+          &.positive img {
+            margin-top: -2px;
+            margin-right: 8px;
+            width: 1.2rem;
+          }
+
+          &.valid img {
+            margin-right: 8px;
+            width: 1.5rem;
+          }
+
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-list > ul {
+    @include clearBack;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    background: #fff;
+
+    li {
+      @include clearList;
+      width: 33.333%;
+      height: 100px;
+      padding-bottom: 20px;
+      text-align: center;
+      color: #ff8851;
+      font-size: 14px;
+
+      img {
+        height: 48px;
+        margin-bottom: 10px;
+      }
+
+      &:last-child img {
+        margin: 4px 0 14px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.f-modal {
+  :global {
+    .am-modal-content {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .am-modal-title {
+      font-size: 1.7rem;
+    }
+
+    p {
+      @include clearBack;
+      text-align: justify;
+      font-size: 1.5rem;
+    }
+  }
+}

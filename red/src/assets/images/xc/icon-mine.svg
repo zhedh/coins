@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="39px" viewBox="0 0 36 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>tab-3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tab-3" transform="translate(-632.000000, -20.000000)" fill-rule="nonzero">
+            <g id="tab-">
+                <rect id="矩形" stroke="#ECECEC" fill="#FFFFFF" x="0.5" y="1.5" width="750" height="93"></rect>
+                <g id="tab" transform="translate(1.000000, 0.000000)" fill="#E8713A">
+                    <g id="我的" transform="translate(628.000000, 20.000000)">
+                        <g id="我的-未选中" transform="translate(3.000000, 0.000000)">
+                            <path d="M21.0408582,23.9124088 C26.5144031,22.4890511 30.7716046,17.9343066 30.7716046,12.2408759 C30.7716046,5.69343066 24.993974,0 17.6959142,0 C10.3978544,0 4.92430953,5.40875912 4.92430953,12.2408759 C4.92430953,17.9343066 8.87742525,22.4890511 14.6550559,23.9124088 C7.35699613,25.0510949 1.57936546,30.459854 0.0589363321,37.0072993 C-0.245149493,38.1459854 0.667107982,39 1.88345128,39 L34.1165487,39 C35.332892,39 36.2451495,37.8613139 35.9410637,37.0072993 C34.1165487,30.1751825 28.338918,25.0510949 21.0408582,23.9124088 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

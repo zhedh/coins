@@ -1,0 +1,20 @@
+@import '../../styles/mixin';
+
+.simple-header {
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 44px;
+  background: $primary-color;
+  color: $white;
+  font-size: $font-title-s;
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}

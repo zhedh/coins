@@ -1,0 +1,27 @@
+@import '../../styles/mixin';
+
+.no {
+  box-sizing: border-box;
+  padding-top: 40%;
+  text-align: center;
+
+  img {
+    width: 50%;
+    margin-top: -20%;
+  }
+
+  .sorry {
+    font-size: 14px;
+    margin: 0 auto 100px;
+    color: rgba(39, 39, 39, 0.6);
+  }
+
+  .goBack {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 4px;
+    color: #fff;
+
+    background: $generalize-linear-gradient;
+  }
+}

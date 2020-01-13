@@ -180,7 +180,7 @@ export default {
     PLEASE_LOGIN_FIRST: 'Please sign in first',
     SELECT_PLAN: 'Select participation plan',
     ALL: 'All',
-    X_PLAN: 'X PLAY',
+    X_PLAN: 'X_PLAN',
     PROMOTION: 'Discount Amount',
     SET_PAY_PASSWORD: 'Please setup trading password',
     ATTEND_SUCCESS: 'Congratulation, Participation Succeeded',

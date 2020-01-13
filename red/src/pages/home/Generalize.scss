@@ -1,0 +1,143 @@
+@import '../../styles/mixin';
+
+$label-color: #5E7796;
+$label-bg: #E1E5EE;
+
+#generalize {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: $white;
+
+  .section-banner {
+    height: 18.7rem;
+    background-size: cover;
+    color: $white;
+
+    h1 {
+      @include clearBack;
+      position: relative;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
+      font-size: $font-title-s;
+
+      .back {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0 15px 0 15px;
+
+        img {
+          width: 0.9rem;
+          transform: rotate(180deg);
+        }
+      }
+
+      .to-inviter {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 0 15px 0 15px;
+        font-size: $font-context;
+        color: $white;
+      }
+    }
+
+    .content {
+      padding: 3rem 0 3.4rem;
+      text-align: center;
+      font-size: 4rem;
+
+      small {
+        display: block;
+        margin-top: 5px;
+        font-size: $font-context;
+      }
+    }
+  }
+
+  .section-main {
+    //padding: 16px 27px 30px;
+
+    .list {
+      @include clearList;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 6.8rem;
+        padding: 0 20px;
+        background: rgba(255, 255, 255, 1);
+        border-bottom: 1px solid #eee;
+
+        p {
+          @include clearBack;
+          display: flex;
+          align-items: center;
+
+          img {
+            margin-right: 12px;
+            width: 2rem;
+          }
+        }
+
+        aside {
+          display: flex;
+          align-items: center;
+          font-size: $font-title;
+          color: $primary-color;
+
+          img {
+            margin-left: 12px;
+            width: 8px;
+          }
+        }
+      }
+    }
+
+    .team {
+      @include clearList;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      //justify-content: space-around;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+        padding: 19px 0 14px;
+        width: 33.33%;
+
+        span {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 6rem;
+          height: 6rem;
+          border-radius: 50%;
+          box-shadow: 0 1px 22px 0 rgba(0, 0, 0, 0.1);
+          font-size: $font-context;
+          font-weight: 500;
+          color: $white;
+          background: linear-gradient(305deg, rgba(255, 195, 150, 1) 0%, rgba(255, 144, 92, 1) 100%);
+        }
+
+        small {
+          display: inline-block;
+          margin-top: 14px;
+          font-size: $font-context;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

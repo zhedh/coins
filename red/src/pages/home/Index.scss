@@ -1,0 +1,248 @@
+@import '../../styles/mixin';
+
+#home {
+  position: relative;
+  padding-top: 19.5rem;
+  padding-bottom: $footer-height;
+
+  header img {
+    width: 1.62rem;
+    height: 1.8rem;
+  }
+
+  .section-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 19.5rem;
+    background-size: cover;
+    background-position: center;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1 {
+      @include clearBack;
+      position: relative;
+      height: 6.5rem;
+      text-align: center;
+      line-height: 6.5rem;
+      font-size: $font-title;
+
+      .fa-user {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20px;
+        margin: auto;
+      }
+    }
+
+    .notice-carousel {
+      @include clearBack;
+      position: absolute;
+      bottom: 0;
+      vertical-align: middle;
+      font-size: $font-context;
+      max-width: calc(100vw - 88px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px 0 10px;
+
+      .am-wingblank {
+        min-width: 50% !important;
+        max-width: 60% !important;
+      }
+      .am-wingblank.am-wingblank-lg {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+
+        .megaphone {
+          font-size: 13px;
+          margin-right: 5px;
+        }
+      }
+
+      .item {
+        text-indent: 5px;
+        height: 36px;
+        line-height: 36px;
+        @include overflow(1);
+      }
+
+      span {
+        margin-left: 15px;
+      }
+    }
+
+    .special {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5%;
+      line-height: 1.5;
+      font-weight: 600;
+
+      b {
+        font-size: 3.2rem;
+        font-weight: bold;
+      }
+
+      small {
+        font-size: 1.2rem;
+      }
+    }
+
+    .subscribe {
+      position: absolute;
+      bottom: 3%;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      line-height: 1.8;
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  .section-main {
+    .f-account {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 12px 0;
+
+      .number {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.7;
+
+        span {
+          font-weight: bold;
+          color: #ff8147;
+          font-size: $font-title + 0.1;
+        }
+
+        small {
+          color: #cacfda;
+          font-size: $font-assistant - 0.1;
+        }
+      }
+
+      a {
+        @include background-gradient(
+          $primary-color-gradient-from,
+          $primary-color-gradient-to
+        );
+        height: 2.6rem;
+        line-height: 2.6rem;
+        color: $white;
+        border: none;
+        border-radius: 12px;
+        padding: 0 10px;
+      }
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 8px 18px;
+      background: #e1e5ee;
+
+      span,
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+        color: #5e7796;
+
+        .icon {
+          margin-left: 6px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .list {
+      @include clearList;
+      padding: 0 20px 20px;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        box-sizing: border-box;
+        height: 60px;
+        border-bottom: 1px solid #ececec;
+
+        small {
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+
+        .main {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          text-align: right;
+          font-size: $font-title;
+
+          b {
+            font-size: 2.4rem;
+          }
+
+          span {
+            color: $primary-color;
+          }
+        }
+
+        .aside {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          line-height: 1.6;
+
+          time {
+            padding-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .no-data-wrapper {
+    padding: 2rem 0;
+
+    .no-data {
+      padding: 5rem 0;
+    }
+
+    .primary-button {
+      margin: 0 20%;
+
+      &.take-apart {
+        color: #fff;
+        @include background-gradient(#e8713a, #ff905c);
+      }
+    }
+  }
+}

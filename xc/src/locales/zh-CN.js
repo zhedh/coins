@@ -178,7 +178,7 @@ export default {
     PLEASE_LOGIN_FIRST: '请先登录',
     SELECT_PLAN: '选择参与计划',
     ALL: '全部',
-    X_PLAN: 'X PLAY',
+    X_PLAN: 'X_PLAN',
     PROMOTION: '特价额度',
     SET_PAY_PASSWORD: '请设置交易密码',
     ATTEND_SUCCESS: '恭喜您，参与成功',

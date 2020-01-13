@@ -1,0 +1,39 @@
+@import '../../styles/_common';
+
+#zbx-Login {
+  .main-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 60px 20px;
+
+    .banner {
+      width: 201px;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      min-height: 76px;
+      padding: 10px;
+      border: 1px solid #cfcfcf;
+      background-color: #fcfcfc;
+      margin-top: 20px;
+      border-radius: 3px;
+
+      &.zbx {
+        margin-top: 80px;
+      }
+
+      p {
+        color: #e8713a;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+  }
+}

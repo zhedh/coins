@@ -1,0 +1,54 @@
+@import './mixin';
+
+.btn-common {
+  position: absolute !important;
+  left: 20px;
+  right: 20px;
+  @include clearButton;
+  height: 5rem;
+  border-radius: 2.5rem;
+  color: #fff;
+  background-color: $primary-color;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+
+  &.btn-common__disabled {
+    opacity: 0.6;
+    color: #fff;
+  }
+
+  &.btn-common__bottom {
+    bottom: 5rem;
+  }
+
+  &.btn-common__active {
+    opacity: 0.5;
+  }
+}
+
+.primary-button {
+  @include clearButton;
+  height: 5rem;
+  // border-radius: 2.5rem;
+  border-radius: 0.8rem;
+  color: #fff;
+  background-color: $primary-color;
+  font-size: 1.5rem;
+  text-align: center;
+
+  &.btn-disabled {
+    // opacity: 0.6;
+    color: #fff;
+    @include background-gradient(#a1a4ac, #d3d6e0);
+  }
+
+  &.am-button-disabled {
+    opacity: 0.6;
+    color: #fff !important;
+  }
+
+  &.active {
+    opacity: 0.5;
+  }
+}

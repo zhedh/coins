@@ -1,0 +1,65 @@
+/* Color variables */
+$black: #000;
+$black-border-bottom: rgba(0, 0, 0, 0.2);
+$black-font-primary: #636875;
+$white: #fff;
+
+/* Default colors */
+// $primary-color: #e8713a; // 主题色
+$primary-color: #ff8147; // 主题色
+// $primary-color-light: #ff8147; // 主题色亮色
+$assistant-color: #f5b99f; // 辅助色
+$primary-color-gradient-from: #fc8c58; // 渐变
+$primary-color-gradient-to: #fec091; // 渐变
+$primary-color-gradient: #e8713a; // 渐变
+$primary-color-gradient: #e8713a;
+
+$succeed-color: #29b056; // 通过、成功
+$warn-color: #fa8100; // 提醒、警告
+$danger-color: #ef4f4f; // 错误、失败
+
+/* Background or border colors */
+$border-color: #e9e9eb;
+$border-input-color: #d1d8e6;
+$background-color: #f7f9fc;
+$background-gray: #f7f7f8;
+$background-group-color: #f0f2f5;
+
+/* Font color */
+$text-color: #25292e;
+$text-sub-color: #9fa3aa;
+$text-disable-color: #b6bfd1;
+$text-placeholder-color: #d1d8e6;
+
+/* Font size */
+$font-assistant: 1.2rem; // 辅助文字
+$font-context: 1.4rem; // 正文
+$font-title-s: 1.6rem; // 小标题、导航
+$font-title: 1.8rem; // 标题文字
+$font-title-l: 2.4rem; // 大标题
+$font-title-xl: 2.8rem; // 大标题
+
+/* Font family */
+$font-style-cn: PingFangSC-Regular, PingFang SC, Hiragino Sans GB, Arial,
+  sans-serif;
+$font-style-en: PingFangSC-Light, PingFang SC, Arial, sans-serif;
+$font-regular: PingFangSC-Regular, PingFang SC, Hiragino Sans GB, Arial,
+  sans-serif;
+$font-serif: SimSun, '宋体', serif;
+
+/* Space width */
+$space-width: 15px;
+$space-width-s: 10px;
+$space-width-l: 20px;
+
+/* Other */
+$box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1);
+$border-radius: 4px;
+$header-height: 44px;
+$footer-height: 49px;
+
+/* business */
+$generalize-linear-gradient: linear-gradient(90deg, #ff9d72 0%, #fd773d 100%);
+$bargain-banner-bg: linear-gradient(90deg, #d74b0a 0%, #fca37a 100%);
+$bargain-banner-btn-bg: $white;
+$bargain-banner-btn-color: $primary-color;

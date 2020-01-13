@@ -180,7 +180,7 @@ export default {
     PLEASE_LOGIN_FIRST: '우선 로그인 해주세요.',
     SELECT_PLAN: '참여 계획 선택',
     ALL: '전부',
-    X_PLAN: 'X PLAY',
+    X_PLAN: 'X_PLAN',
     PROMOTION: '특가 한도',
     SET_PAY_PASSWORD: '거래 비밀번호를 설정해주세요.',
     ATTEND_SUCCESS: '축하합니다, 참여에 성공하셨습니다.',

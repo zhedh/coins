@@ -1,0 +1,149 @@
+@import '../../styles/_common';
+
+#wallet-home {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
+  background: $white;
+
+  section {
+    &.banner {
+      .account {
+        margin: 20px 20px 10px;
+
+        label {
+          line-height: 1.6;
+          font-weight: 600;
+          font-size: $font-context;
+        }
+
+        p {
+          @include clearBack;
+          padding: 0 0 5px;
+          line-height: 1.6;
+          border-bottom: 1px solid #ececec;
+          font-weight: 600;
+          font-size: $font-title-xl;
+
+          small {
+            font-size: $font-context;
+          }
+        }
+
+        b {
+          display: block;
+          padding: 10px 0;
+        }
+      }
+
+      .btn-handle {
+        @include clearList;
+        display: flex;
+        margin: 5px 20px;
+        color: #ff8851;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 1.8;
+          margin-right: 10%;
+          padding: 30px 0;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+
+    &.record-list {
+
+      .loading {
+        padding: 0 20px;
+        text-align: center;
+        color: $text-sub-color;
+      }
+
+      .records {
+        @include clearList;
+        margin-top: 15px;
+        padding: 0 20px;
+        background: $white;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 15px 0 10px;
+          border-bottom: 1px solid $background-color;
+
+          label {
+            display: block;
+
+            time {
+              display: block;
+              margin-top: 5px;
+              font-size: $font-assistant;
+              color: $text-sub-color;
+            }
+          }
+
+          .count {
+            &.add {
+              color: $primary-color;
+            }
+
+            &.minus {
+              color: #477CEE;
+            }
+          }
+
+          p {
+            @include clearBack;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            height: 4.5rem;
+            padding: 0 15px;
+            border-top: 1px solid $background-color;
+          }
+        }
+      }
+
+      //.records {
+      //  @include clearList;
+      //  padding: 14px 0 0;
+      //
+      //  li {
+      //    display: flex;
+      //    flex-direction: row;
+      //    justify-content: space-between;
+      //    align-items: center;
+      //    margin-bottom: 14px;
+      //    padding: 13px 15px;
+      //    background: $white;
+      //    line-height: 1.6;
+      //    font-weight: bold;
+      //
+      //    main {
+      //      display: flex;
+      //      flex-direction: column;
+      //      justify-content: center;
+      //
+      //      small {
+      //        margin-top: 5px;
+      //        color: $text-sub-color;
+      //        font-size: $font-assistant;
+      //      }
+      //    }
+      //  }
+      //}
+    }
+  }
+}
