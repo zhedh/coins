@@ -7,11 +7,11 @@
 
 
 // 切换开发和生产API
-export const ONLINE = false
+export const ONLINE = true;
 
 const COIN = {
   PROD: {
-    API_BASE_URL: 'https://api.zbxcoin.com/api',
+    API_BASE_URL: 'https://redapi.zbxcoin.com/api',
     // XC_AUTH_URL: 'https://test.zbx.one/xplan_authorization',
   },
   DEV: {
