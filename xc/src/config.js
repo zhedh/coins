@@ -5,12 +5,8 @@
 // XC生产访问地址：http://www.zbxcoin.com
 // XC开发访问地址：http://47.75.196.141:81/
 
-
 // 切换开发和生产API
 export const ONLINE = true;
-
-
-
 
 const COIN = {
   PROD: {
@@ -24,4 +20,4 @@ const COIN = {
   }
 };
 
-export const CONFIG = ONLINE ? COIN.PROD : COIN.DEV
+export const CONFIG = ONLINE ? COIN.PROD : COIN.DEV;

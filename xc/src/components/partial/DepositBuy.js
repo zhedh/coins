@@ -105,7 +105,7 @@ class DepositBuy extends Component {
         <div className="fee">
           <p>
             <span>{DEPOSIT.GIVE_PROMOTION}</span>
-            <b>{gearNum ? (gearNum / 10).toFixed(0) : 0}</b>
+            <b>{gearNum ? (gearNum * productDetail.specialRatio).toFixed(0) : 0}</b>
           </p>
           <small>{DEPOSIT.FEES}：{(productDetail.serviceCharge || 0) * 100}%</small>
         </div>

@@ -8,6 +8,8 @@ import {Toast} from 'antd-mobile'
 
 function getLocale() {
   const lang = localStorage.getItem('LANG') || 'zh-cn';
+  console.log(lang);
+  console.log(locales[lang]);
   return locales[lang]
 }
 
@@ -24,7 +26,7 @@ const axiosConfig = {
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
   },
   timeout: 100000
-}
+};
 let instance = axios.create(axiosConfig);
 let requestCount = 0;
 

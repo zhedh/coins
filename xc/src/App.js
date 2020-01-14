@@ -19,7 +19,10 @@ class App extends Component {
 
   componentDidMount() {
     const {localeStore} = stores;
-    const lang = localStorage.getItem('LANG') || 'zh-ch';
+    let lang = localStorage.getItem('LANG') || 'zh-cn';
+    if (lang === 'zh-ch') {
+      lang = 'zh-cn'
+    }
     localeStore.switchLang(lang);
     document.title = 'X PLAN';
   }
