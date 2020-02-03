@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/red/src/components/partial/DepositBuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/components/partial/DepositBuy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/api/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/api/http.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xc/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/xc/src/config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,24 +17,24 @@
     <session id="-472934763">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="121" />
+          <entry key="project.closed" value="122" />
           <entry key="project.open.time.0" value="35" />
           <entry key="project.open.time.1" value="49" />
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="5" />
           <entry key="project.open.time.4" value="21" />
           <entry key="project.open.time.5" value="8" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="123" />
+          <entry key="project.opened" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="aa" value="1" />
           <entry key="editorconfig" value="2" />
-          <entry key="gitignore" value="10" />
+          <entry key="gitignore" value="11" />
           <entry key="html" value="3" />
           <entry key="js" value="681" />
           <entry key="json" value="12" />
@@ -63,7 +58,7 @@
           <entry key="JSON" value="12" />
           <entry key="JavaScript" value="682" />
           <entry key="Markdown" value="9" />
-          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="PLAIN_TEXT" value="19" />
           <entry key="SCSS" value="91" />
           <entry key="SVG" value="3" />
           <entry key="TypeScript" value="10" />
@@ -78,7 +73,7 @@
           <entry key="md" value="111" />
           <entry key="scss" value="3289" />
           <entry key="sh" value="38" />
-          <entry key="txt" value="417" />
+          <entry key="txt" value="426" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -87,7 +82,7 @@
           <entry key="HTML" value="1" />
           <entry key="JavaScript" value="20575" />
           <entry key="Markdown" value="111" />
-          <entry key="PLAIN_TEXT" value="448" />
+          <entry key="PLAIN_TEXT" value="457" />
           <entry key="SCSS" value="3289" />
         </counts>
       </usages-collector>
@@ -106,23 +101,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xc/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="242">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/red/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="105" column="13" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="105" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="460">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -130,7 +122,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red/src/pages/deposit/Deposit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="2134">
               <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -142,7 +134,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red/src/components/partial/DepositBuy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
+            <state relative-caret-position="2134">
               <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
             </state>
           </provider>
@@ -151,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
+            <state relative-caret-position="198">
               <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -166,7 +158,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red/src/locales/zh-CN.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="924">
               <caret line="185" column="18" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="18" />
               <folding>
                 <element signature="e#8739#9276#0" expanded="true" />
@@ -396,28 +388,12 @@
             <path>
               <item name="coins" type="b2602c69:ProjectViewProjectNode" />
               <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="xc" type="462c0819:PsiDirectoryNode" />
+              <item name="red" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="coins" type="b2602c69:ProjectViewProjectNode" />
               <item name="coins" type="462c0819:PsiDirectoryNode" />
               <item name="xc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="xc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="xc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="partial" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -592,14 +568,8 @@
       <workItem from="1578880119501" duration="4392000" />
       <workItem from="1578904420338" duration="1988000" />
       <workItem from="1578926608105" duration="1941000" />
-      <workItem from="1578975596105" duration="1531000" />
-    </task>
-    <task id="LOCAL-00017" summary="[xc] old user auth">
-      <created>1569722330101</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1569722330101</updated>
+      <workItem from="1578975596105" duration="1754000" />
+      <workItem from="1580694319136" duration="266000" />
     </task>
     <task id="LOCAL-00018" summary="[xc] old user auth">
       <created>1569737223036</created>
@@ -937,17 +907,24 @@
       <option name="project" value="LOCAL" />
       <updated>1578904267693</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="[xc] 修改定投比例">
+      <created>1578981839686</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1578981839687</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319436000" />
+    <option name="totallyTimeSpent" value="319925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="552" y="23" width="1064" height="952" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24065197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24065197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -959,8 +936,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49568552" weight="0.32790697" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.48801535" visible="true" weight="0.28255814" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51198465" side_tool="true" visible="true" weight="0.28255814" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.48705655" visible="true" weight="0.28255814" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51294345" side_tool="true" weight="0.28255814" />
       <window_info anchor="bottom" id="TypeScript" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1009,7 +986,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/xc/deploy/zmfund-front" />
     </ignored-roots>
-    <MESSAGE value="[xc] inviter friend" />
     <MESSAGE value="[xc] update user center" />
     <MESSAGE value="[xc] update deposit buy" />
     <MESSAGE value="[xc] update deposit lock" />
@@ -1034,7 +1010,8 @@
     <MESSAGE value="[xc] account" />
     <MESSAGE value="[xc] home" />
     <MESSAGE value="[xc] deposit" />
-    <option name="LAST_COMMIT_MESSAGE" value="[xc] deposit" />
+    <MESSAGE value="[xc] 修改定投比例" />
+    <option name="LAST_COMMIT_MESSAGE" value="[xc] 修改定投比例" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/xc/src/pages/notice/NoticeDetail.js">
@@ -1263,9 +1240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1276,22 +1250,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/red/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/locales/ko-KR.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1254">
           <caret line="202" column="55" selection-start-line="202" selection-start-column="55" selection-end-line="202" selection-end-column="55" />
-          <folding>
-            <element signature="e#358#1433#0" expanded="true" />
-            <element signature="e#2010#2471#0" expanded="true" />
-            <element signature="e#12414#12502#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1299,8 +1261,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1562">
           <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="105" column="13" selection-start-line="104" selection-start-column="29" selection-end-line="105" selection-end-column="13" />
           <folding>
-            <element signature="e#10524#10609#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/pages/deposit/Deposit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/components/partial/DepositBuy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#247#509#0" expanded="true" />
+            <element signature="e#257#378#0" expanded="true" />
+            <element signature="e#387#507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/locales/zh-CN.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="185" column="18" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="18" />
+          <folding>
+            <element signature="e#8739#9276#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1348,60 +1364,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/pages/deposit/Deposit.js">
+    <entry file="file://$PROJECT_DIR$/red/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/locales/zh-CN.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="185" column="18" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="18" />
-          <folding>
-            <element signature="e#8739#9276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#247#509#0" expanded="true" />
-            <element signature="e#257#378#0" expanded="true" />
-            <element signature="e#387#507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/components/partial/DepositBuy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="105" column="13" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="105" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="460">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
