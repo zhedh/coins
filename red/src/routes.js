@@ -1,9 +1,6 @@
 import Loadable from 'react-loadable'
 import Loading from './components/common/Loading'
 
-// import Home from './pages/home/Index'
-// import Login from './pages/login/Login'
-
 const Home = Loadable({
   loader: () => import('./pages/home/Index'),
   loading: Loading
@@ -51,6 +48,10 @@ const Recharge = Loadable({
 })
 const WithdrawRecord = Loadable({
   loader: () => import('./pages/wallet/WithdrawRecord'),
+  loading: Loading
+})
+const StoFlow = Loadable({
+  loader: () => import('./pages/wallet/StoFlow'),
   loading: Loading
 })
 
@@ -178,6 +179,10 @@ export default [
     path: '/wallet/withdraw-record/:type',
     name: 'WithdrawRecord',
     component: WithdrawRecord
+  },{
+    path: '/wallet/sto-flow/:type',
+    name: 'StoFlow',
+    component: StoFlow
   },
 
   // 登陆注册

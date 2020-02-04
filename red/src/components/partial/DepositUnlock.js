@@ -79,6 +79,7 @@ class DepositUnlock extends Component {
       specialOffer,
       userSpecial,
       userWarehouse,
+      userBalance,
     } = productDetail;
 
     return (
@@ -98,19 +99,24 @@ class DepositUnlock extends Component {
           </p>
           <aside>
             <small>
-              {productName}{DEPOSIT.CURRENT_PROMOTION}：{formatSpecialOffer(specialOffer)}
+              {productName}{DEPOSIT.CURRENT_PROMOTION}：{formatSpecialOffer(specialOffer)} USDT
             </small>
             <small>
               {DEPOSIT.FEES}：
               {serviceCharge * 100}%
             </small>
+            {/*使用USDT支付特价额度*/}
+            {/*<small>*/}
+              {/*{productName} {DEPOSIT.BALANCE}：*/}
+              {/*{formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}*/}
+            {/*</small>*/}
             <small>
-              {productName} {DEPOSIT.BALANCE}：
-              {formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}
+              USDT {DEPOSIT.BALANCE}：
+              {formatCoinPrice(userBalance, COIN_POINT_LENGTH)}
             </small>
           </aside>
           <h3>
-            <span>{DEPOSIT.TRADING_AMOUNT}（RED）</span>
+            <span>{DEPOSIT.TRADING_AMOUNT}（USDT）</span>
             <span>
               {formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}
             </span>
@@ -140,7 +146,7 @@ class DepositUnlock extends Component {
               <ul className="groups">
                 <li className="group">
                   <p className="title">
-                    <span>{DEPOSIT.TOTAL_PAYMENT}（{productName}）</span>
+                    <span>{DEPOSIT.TOTAL_PAYMENT}（USDT）</span>
                     <span>{formatCoinPrice(specialOffer * userSpecial, COIN_POINT_LENGTH)}</span>
                   </p>
                   <p>
@@ -151,7 +157,7 @@ class DepositUnlock extends Component {
                 <li className="group">
                   <p className="title">
                     <span>{DEPOSIT.AVAILABLE}</span>
-                    <span>{formatCoinPrice(userWarehouse, COIN_POINT_LENGTH)}</span>
+                    <span>{formatCoinPrice(userBalance, COIN_POINT_LENGTH)}</span>
                   </p>
                   <p>*{DEPOSIT.AMOUNT_TO_DEDUCT}</p>
                 </li>

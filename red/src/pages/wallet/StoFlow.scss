@@ -1,0 +1,41 @@
+@import '../../styles/_common';
+
+.sto-flow {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: $header-height;
+
+  ul {
+    @include clearList;
+    padding: 0 20px;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 10px 0 ;
+      border-bottom: 1px solid $border-color;
+
+      .info{
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+
+        small{
+          margin-top: 8px;
+          font-size: $font-assistant;
+          font-weight: normal;
+          color: $text-sub-color;
+        }
+      }
+
+      .amount{
+        font-weight: bold;
+        font-size: $font-title-s;
+        color: $primary-color;
+      }
+    }
+  }
+}
