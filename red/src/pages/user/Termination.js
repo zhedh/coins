@@ -205,7 +205,7 @@ class Termination extends React.Component {
           bgPrimary
           isFixed
           isShadow
-        ></Header>
+        />
         <section className="section-form">
           <div className="row">
             <label>{TERMINATION.RECEIPT_ADDRESS}</label>

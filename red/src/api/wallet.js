@@ -89,6 +89,24 @@ class WalletApi {
   static getWalletAddress(options = {}) {
     return http.post('/newpay/mywallet', options)
   }
+
+  /**
+   * STO账户流水
+   **/
+  static getStoList(options = {}) {
+    // const arr = new Array(10).fill({
+    //   "remark": "STO增加",
+    //   "amount": 10,
+    //   "addTime": 1553594695
+    // });
+    // const data = {
+    //   "status": 1,
+    //   "msg": "操作成功",
+    //   "data": arr
+    // };
+    // return Promise.resolve(data);
+    return http.post('/userassets/stolist', options)
+  }
 }
 
 export default WalletApi
