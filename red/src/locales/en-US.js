@@ -362,7 +362,8 @@ export default {
     RECORD: 'History',
     LOADING: 'Loading...',
     NO_RECORD: 'No Data',
-    TO_LOWER_THE: 'Bottom of the page~'
+    TO_LOWER_THE: 'Bottom of the page~',
+    STO_ACCOUNT: 'STO Account',
   },
 
   RECHARGE: {
@@ -441,6 +442,14 @@ export default {
     LOADING: 'Loading...',
     PLEASE_LOGIN_FIRST: 'Please sign in first',
     HTTP_ERR: 'Network error'
+  },
+
+  STO_FLOW: {
+    TITLE: 'STO Account Flow',
+    ADD: 'increase',
+    NO_RECORD: 'No Data',
+    TO_LOWER_THE: 'Bottom of the page~',
+    LOADING: 'Loading...',
   }
 
   // ASIDE: {

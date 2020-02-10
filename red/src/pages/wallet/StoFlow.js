@@ -38,14 +38,14 @@ class StoFlow extends Component {
   render() {
     const {
       history,
-      localeStore: {locale: {MY_WALLET}}
+      localeStore: {locale: {STO_FLOW}}
     } = this.props;
     const {list,hasMore} = this.state;
 
     return (
       <div className="sto-flow">
         <Header
-          title="STO 账户流水"
+          title={STO_FLOW.TITLE}
           isShadow
           isFixed
           bgPrimary
@@ -55,12 +55,12 @@ class StoFlow extends Component {
           dataLength={list.length}
           next={this.getList}
           hasMore={hasMore}
-          loader={<p style={{textAlign: 'center'}} className="loading">{MY_WALLET.LOADING}</p>}
+          loader={<p style={{textAlign: 'center'}} className="loading">{STO_FLOW.LOADING}</p>}
           endMessage={
             <p style={{textAlign: 'center', color: '#ccc'}}>
               {list.length <= 0
-                ? MY_WALLET.NO_RECORD
-                : MY_WALLET.TO_LOWER_THE}
+                ? STO_FLOW.NO_RECORD
+                : STO_FLOW.TO_LOWER_THE}
             </p>
           }
         >

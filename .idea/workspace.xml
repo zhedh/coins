@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="922c9e09-5f68-4a48-bd61-b1b657446e95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/red/src/api/wallet.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/api/wallet.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/red/src/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/red/src/pages/user/Termination.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/pages/user/Termination.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/red/src/locales/en-US.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/locales/en-US.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/red/src/locales/ko-KR.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/locales/ko-KR.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/red/src/locales/zh-CN.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/locales/zh-CN.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/red/src/pages/wallet/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/pages/wallet/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/red/src/pages/wallet/Index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/pages/wallet/Index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js" beforeDir="false" afterPath="$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,8 +22,8 @@
     <session id="-472934763">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="124" />
-          <entry key="project.open.time.0" value="35" />
+          <entry key="project.closed" value="126" />
+          <entry key="project.open.time.0" value="36" />
           <entry key="project.open.time.1" value="50" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="5" />
@@ -33,7 +32,7 @@
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="127" />
+          <entry key="project.opened" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,15 +41,15 @@
           <entry key="editorconfig" value="2" />
           <entry key="gitignore" value="17" />
           <entry key="html" value="3" />
-          <entry key="js" value="709" />
+          <entry key="js" value="716" />
           <entry key="json" value="12" />
           <entry key="ko-KR" value="1" />
           <entry key="lock" value="2" />
-          <entry key="md" value="16" />
+          <entry key="md" value="17" />
           <entry key="png" value="53" />
           <entry key="pub" value="1" />
           <entry key="scss" value="94" />
-          <entry key="sh" value="4" />
+          <entry key="sh" value="5" />
           <entry key="svg" value="3" />
           <entry key="ts" value="11" />
           <entry key="txt" value="4" />
@@ -58,12 +57,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Bash" value="4" />
+          <entry key="Bash" value="5" />
           <entry key="HTML" value="3" />
           <entry key="Image" value="53" />
           <entry key="JSON" value="12" />
-          <entry key="JavaScript" value="710" />
-          <entry key="Markdown" value="16" />
+          <entry key="JavaScript" value="717" />
+          <entry key="Markdown" value="17" />
           <entry key="PLAIN_TEXT" value="25" />
           <entry key="SCSS" value="94" />
           <entry key="SVG" value="3" />
@@ -75,20 +74,20 @@
         <counts>
           <entry key="gitignore" value="33" />
           <entry key="html" value="1" />
-          <entry key="js" value="21250" />
+          <entry key="js" value="21371" />
           <entry key="md" value="162" />
           <entry key="scss" value="3522" />
           <entry key="sh" value="38" />
-          <entry key="txt" value="436" />
+          <entry key="txt" value="453" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="38" />
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="21250" />
+          <entry key="JavaScript" value="21371" />
           <entry key="Markdown" value="162" />
-          <entry key="PLAIN_TEXT" value="469" />
+          <entry key="PLAIN_TEXT" value="486" />
           <entry key="SCSS" value="3522" />
         </counts>
       </usages-collector>
@@ -113,21 +112,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            <state relative-caret-position="184">
+              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#239#249#0" expanded="true" />
+                <element signature="e#444#513#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/red/src/pages/home/BargainRecord.js">
+        <entry file="file://$PROJECT_DIR$/red/src/locales/zh-CN.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="63" />
+            <state relative-caret-position="-65">
+              <caret line="435" column="13" selection-start-line="435" selection-start-column="13" selection-end-line="435" selection-end-column="13" />
+              <folding>
+                <element signature="e#4084#4988#0" expanded="true" />
+                <element signature="e#8490#8724#0" expanded="true" />
+                <element signature="e#10532#10617#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -135,59 +148,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/red/src/locales/ko-KR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3432">
-              <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
+            <state relative-caret-position="281">
+              <caret line="448" column="3" selection-start-line="448" selection-start-column="3" selection-end-line="448" selection-end-column="3" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-                <element signature="e#646#790#0" expanded="true" />
-                <element signature="e#812#962#0" expanded="true" />
-                <element signature="e#1106#1217#0" expanded="true" />
-                <element signature="e#1804#1861#0" expanded="true" />
-                <element signature="e#1911#2195#0" expanded="true" />
+                <element signature="e#10098#10343#0" expanded="true" />
+                <element signature="e#12423#12511#0" expanded="true" />
+                <element signature="e#12554#12599#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.scss">
+        <entry file="file://$PROJECT_DIR$/xc/upload.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="281">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/red/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-872">
-                <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/red/upload.sh">
+        <entry file="file://$PROJECT_DIR$/red/src/locales/en-US.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
+            <state relative-caret-position="333">
+              <caret line="451" column="26" selection-start-line="451" selection-start-column="26" selection-end-line="451" selection-end-column="26" />
+              <folding>
+                <element signature="e#8454#10863#0" expanded="true" />
+                <element signature="e#13706#14017#0" expanded="true" />
+                <element signature="e#16984#17094#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -205,6 +198,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/xc/src/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/red/src/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
@@ -213,24 +215,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/red/src/components/common/Slider.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-253">
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <element signature="e#202#435#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>解除合约</find>
       <find>SWITCH</find>
       <find>typeOption</find>
       <find>说明</find>
@@ -260,6 +248,7 @@
       <find>MY_WALLET</find>
       <find>InfiniteScroll</find>
       <find>account</find>
+      <find>增加</find>
     </findStrings>
     <replaceStrings>
       <replace>COMMON_ASSET</replace>
@@ -330,9 +319,6 @@
         <option value="$PROJECT_DIR$/xc/src/locales/en-US.js" />
         <option value="$PROJECT_DIR$/red/README.md" />
         <option value="$PROJECT_DIR$/red/upload.sh" />
-        <option value="$PROJECT_DIR$/red/src/locales/zh-CN.js" />
-        <option value="$PROJECT_DIR$/red/src/locales/en-US.js" />
-        <option value="$PROJECT_DIR$/red/src/locales/ko-KR.js" />
         <option value="$PROJECT_DIR$/red/src/api/person.js" />
         <option value="$PROJECT_DIR$/xc/src/locales/ko-KR.js" />
         <option value="$PROJECT_DIR$/red/src/pages/user/ContactUs.js" />
@@ -350,9 +336,12 @@
         <option value="$PROJECT_DIR$/red/src/pages/user/Termination.js" />
         <option value="$PROJECT_DIR$/red/src/config.js" />
         <option value="$PROJECT_DIR$/red/src/api/wallet.js" />
-        <option value="$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js" />
         <option value="$PROJECT_DIR$/red/src/pages/wallet/Index.scss" />
         <option value="$PROJECT_DIR$/red/src/pages/wallet/Index.js" />
+        <option value="$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js" />
+        <option value="$PROJECT_DIR$/red/src/locales/en-US.js" />
+        <option value="$PROJECT_DIR$/red/src/locales/zh-CN.js" />
+        <option value="$PROJECT_DIR$/red/src/locales/ko-KR.js" />
       </list>
     </option>
   </component>
@@ -415,6 +404,13 @@
               <item name="coins" type="462c0819:PsiDirectoryNode" />
               <item name="red" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="locales" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coins" type="462c0819:PsiDirectoryNode" />
+              <item name="red" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -424,11 +420,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="wallet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="coins" type="b2602c69:ProjectViewProjectNode" />
-              <item name="coins" type="462c0819:PsiDirectoryNode" />
-              <item name="xc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -608,14 +599,8 @@
       <workItem from="1580694319136" duration="752000" />
       <workItem from="1580700484592" duration="2657000" />
       <workItem from="1580796863838" duration="279000" />
-      <workItem from="1580957808367" duration="5271000" />
-    </task>
-    <task id="LOCAL-00020" summary="[xc] fix">
-      <created>1570525751312</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1570525751312</updated>
+      <workItem from="1580957808367" duration="5616000" />
+      <workItem from="1581063114383" duration="1574000" />
     </task>
     <task id="LOCAL-00021" summary="[xc] add simple header">
       <created>1571836405372</created>
@@ -953,14 +938,22 @@
       <option name="project" value="LOCAL" />
       <updated>1580696022841</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="完成sto流水">
+      <created>1580980613794</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1580980613794</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331234000" />
+    <option name="totallyTimeSpent" value="333153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="552" y="23" width="1064" height="952" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24065197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1024,7 +1017,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/xc/deploy/zmfund-front" />
     </ignored-roots>
-    <MESSAGE value="[xc] update deposit buy" />
     <MESSAGE value="[xc] update deposit lock" />
     <MESSAGE value="[xc] update wallet" />
     <MESSAGE value="[xc] update" />
@@ -1049,7 +1041,8 @@
     <MESSAGE value="[xc] deposit" />
     <MESSAGE value="[xc] 修改定投比例" />
     <MESSAGE value="同步最新代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="同步最新代码" />
+    <MESSAGE value="完成sto流水" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成sto流水" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/xc/public/index.html">
@@ -1081,13 +1074,6 @@
     <entry file="file://$PROJECT_DIR$/red/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-61142" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/locales/en-US.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="268" column="14" selection-start-line="268" selection-start-column="14" selection-end-line="268" selection-end-column="14" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/red/src/api/person.js">
@@ -1135,13 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/xc/src/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xc/src/components/partial/DepositBuy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2046">
@@ -1153,13 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8382">
           <caret line="381" selection-start-line="381" selection-end-line="381" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xc/upload.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1194,13 +1166,6 @@
     <entry file="file://$PROJECT_DIR$/xc/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/locales/zh-CN.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="185" column="18" selection-start-line="185" selection-start-column="4" selection-end-line="185" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/red/src/pages/user/ContactUs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -1219,13 +1184,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/locales/ko-KR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1254,9 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="e#538#643#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,9 +1219,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="34" column="10" selection-start-line="28" selection-start-column="8" selection-end-line="34" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,26 +1254,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/red/src/pages/user/AccountSafe.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/WithdrawRecord.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-64">
           <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#897#992#0" expanded="true" />
-            <element signature="e#1022#1110#0" expanded="true" />
-            <element signature="e#1140#1235#0" expanded="true" />
-            <element signature="e#1265#1358#0" expanded="true" />
-            <element signature="e#1389#1445#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,19 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
           <caret line="57" column="6" selection-start-line="51" selection-start-column="4" selection-end-line="57" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/pages/home/BargainRecord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1352,29 +1277,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/components/common/Slider.js">
+    <entry file="file://$PROJECT_DIR$/red/src/api/wallet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-253">
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="17">
+          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/pages/home/BargainRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="63" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#202#435#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/red/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-872">
+          <first_editor relative-caret-position="132">
             <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
           </first_editor>
           <second_editor />
@@ -1388,6 +1318,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/components/common/Slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#202#435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/locales/en-US.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="451" column="26" selection-start-line="451" selection-start-column="26" selection-end-line="451" selection-end-column="26" />
+          <folding>
+            <element signature="e#8454#10863#0" expanded="true" />
+            <element signature="e#13706#14017#0" expanded="true" />
+            <element signature="e#16984#17094#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#444#513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/locales/zh-CN.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-65">
+          <caret line="435" column="13" selection-start-line="435" selection-start-column="13" selection-end-line="435" selection-end-column="13" />
+          <folding>
+            <element signature="e#4084#4988#0" expanded="true" />
+            <element signature="e#8490#8724#0" expanded="true" />
+            <element signature="e#10532#10617#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/red/src/locales/ko-KR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="448" column="3" selection-start-line="448" selection-start-column="3" selection-end-line="448" selection-end-column="3" />
+          <folding>
+            <element signature="e#10098#10343#0" expanded="true" />
+            <element signature="e#12423#12511#0" expanded="true" />
+            <element signature="e#12554#12599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xc/upload.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/xc/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1398,50 +1411,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/xc/src/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/red/src/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="5" column="39" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/api/wallet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/StoFlow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#239#249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/red/src/pages/wallet/Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3432">
-          <caret line="156" column="19" selection-start-line="156" selection-start-column="19" selection-end-line="156" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-            <element signature="e#646#790#0" expanded="true" />
-            <element signature="e#812#962#0" expanded="true" />
-            <element signature="e#1106#1217#0" expanded="true" />
-            <element signature="e#1804#1861#0" expanded="true" />
-            <element signature="e#1911#2195#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

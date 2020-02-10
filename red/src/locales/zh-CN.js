@@ -355,7 +355,8 @@ export default {
     RECORD: '记录',
     LOADING: '加载中...',
     NO_RECORD: '暂无数据',
-    TO_LOWER_THE: '已经到底了!'
+    TO_LOWER_THE: '已经到底了!',
+    STO_ACCOUNT: 'STO账户',
   },
 
   RECHARGE: {
@@ -429,7 +430,15 @@ export default {
   ASIDE: {
     LOADING: '加载中...',
     PLEASE_LOGIN_FIRST: '请先登录',
-    HTTP_ERR: '网络错误，请重试'
+    HTTP_ERR: '网络错误，请重试',
+  },
+
+  STO_FLOW: {
+    TITLE: 'STO 账户流水',
+    ADD: '增加',
+    NO_RECORD: '暂无数据',
+    TO_LOWER_THE: '已经到底了!',
+    LOADING: '加载中...',
   }
 
   // ASIDE: {

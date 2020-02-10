@@ -359,7 +359,8 @@ export default {
     RECORD: '기록',
     LOADING: '로딩중...',
     NO_RECORD: '정보가 없습니다. ',
-    TO_LOWER_THE: '더 이상!'
+    TO_LOWER_THE: '더 이상!',
+    STO_ACCOUNT: 'STO 계좌',
   },
 
   RECHARGE: {
@@ -437,35 +438,13 @@ export default {
     LOADING: '로딩중...',
     PLEASE_LOGIN_FIRST: '로그인 해주세요',
     HTTP_ERR: '네트워크 오류'
+  },
+
+  STO_FLOW: {
+    TITLE: 'STO 계좌 유수',
+    ADD: '증가하다',
+    NO_RECORD: '정보가 없습니다. ',
+    TO_LOWER_THE: '더 이상!',
+    LOADING: '로딩중...',
   }
-
-  // ASIDE: {
-  //   GRAPH_CODE: '图形验证码',
-  //   VERIFY_CODE: '验证码',
-  //   GET_VERIFY_CODE: '获取验证码',
-  //   PASSWORD_CONFIRM_PLACEHOLDER: '再次输入密码',
-  //   INVITER_CODE: '邀请码',
-  //   NEXT_STEP: '下一步',
-  //   SET: '设置',
-  //   RESET: '重置',
-  //   NO_DATA: '暂无数据',
-  //   NO_ANNOUN: '暂无公告',
-  //   LOGIN_TO_VIEW: '登录查看',
-  //
-  //   // footer
-  //   HOMEPAGE: '首页',
-  //   NODE: '节点',
-  //   WALLET: '钱包'
-  // },
-
-  // AUTH: {
-  //   IDENTITY_VERIFICATION: '身份认证',
-  //   SUBMIT_AND_WAIT: '提交成功，等待审核…',
-  //   RESULT_MSG: '认证结果将会显示在个人中心',
-  //   VERIFICATION_FAILED: '认证失败！',
-  //   FAILED_REASON: '失败原因',
-  //   CONTINUE_TO_VERIFY: '重新验证',
-  //   CERTIFICATE_PASSED: '认证通过',
-  //   YOUR_NAME: '您的姓名',
-  // },
 }

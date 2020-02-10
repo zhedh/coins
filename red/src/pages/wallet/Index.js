@@ -157,7 +157,9 @@ class Index extends Component {
                 <b>
                   {MY_WALLET.FREEZING}：{currentCard.locked || 0}
                 </b>
-                <b onClick={() => history.push(`/wallet/sto-flow/${currentCard.name}`)}>STO账户：{currentCard.sto} >></b>
+                <b onClick={() => history.push(`/wallet/sto-flow/${currentCard.name}`)}>
+                  {MY_WALLET.STO_ACCOUNT}：{currentCard.sto} >>
+                </b>
               </aside>
             )}
           </div>
